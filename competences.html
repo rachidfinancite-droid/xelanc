@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - XELANC Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            color: #0b0d16;
+            line-height: 1.6;
+        }
+
+        .competences-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0b0d16;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: #6b7280;
+        }
+
+        .competences-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .competence-card {
+            background: linear-gradient(135deg, #0a1f3a 0%, #0d2847 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .competence-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .comp-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr 340px;
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        /* Bloc 1 - Numéro et Titre */
+        .comp-bloc-1 {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .comp-numero {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1763ff 0%, #0b4fd9 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .comp-titre {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* Bloc 2 - Utilité et Pourquoi */
+        .comp-bloc-2 {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .comp-utilite,
+        .comp-pourquoi {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .comp-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1763ff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comp-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
+        /* Bloc 3 - Cours associé */
+        .comp-bloc-3 {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Course Card Compact */
+        .cours-card-compact {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .cours-card-compact:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .cours-card-image {
+            width: 100%;
+            height: 90px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cours-card-content {
+            padding: 0.5rem;
+        }
+
+        .cours-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #1763ff 0%, #0b4fd9 100%);
+            color: white;
+            font-size: 0.625rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.375rem;
+        }
+
+        .cours-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #0b0d16;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .cours-description {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .cours-stats {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.6875rem;
+            color: #6b7280;
+        }
+
+        .cours-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .cours-stat svg {
+            width: 12px;
+            height: 12px;
+            fill: currentColor;
+        }
+
+        .cours-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .cours-price {
+            display: flex;
+            flex-direction: column;
+            gap: 0.125rem;
+        }
+
+        .cours-price-amount {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1763ff;
+        }
+
+        .cours-price-label {
+            font-size: 0.625rem;
+            color: #9ca3af;
+        }
+
+        .cours-cta {
+            background: linear-gradient(135deg, #1763ff 0%, #0b4fd9 100%);
+            color: white;
+            border: none;
+            padding: 0.375rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cours-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(23, 99, 255, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 1280px) {
+            .comp-grid {
+                grid-template-columns: 250px 1fr 320px;
+                gap: 1.25rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .comp-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .comp-bloc-1 {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .comp-bloc-3 {
+                max-width: 340px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section-header h2 {
+                font-size: 1.875rem;
+            }
+
+            .comp-grid {
+                padding: 1rem;
+            }
+
+            .cours-card-image {
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="competences-section">
+        <div class="section-header">
+            <h2>Compétences Clés en Finance</h2>
+            <p>Maîtrisez les compétences essentielles pour exceller dans le secteur bancaire</p>
+        </div>
+
+        <div class="competences-grid">
+            <!-- Compétence 1 -->
+            <div class="competence-card">
+                <div class="comp-grid">
+                    <div class="comp-bloc-1">
+                        <div class="comp-numero">01</div>
+                        <h3 class="comp-titre">Analyse Financière Avancée</h3>
+                    </div>
+                    <div class="comp-bloc-2">
+                        <div class="comp-utilite">
+                            <span class="comp-label">Utilité</span>
+                            <p class="comp-text">Évaluer la santé financière des entreprises et identifier les opportunités d'investissement.</p>
+                        </div>
+                        <div class="comp-pourquoi">
+                            <span class="comp-label">Pourquoi c'est important</span>
+                            <p class="comp-text">Compétence fondamentale pour prendre des décisions éclairées et minimiser les risques financiers.</p>
+                        </div>
+                    </div>
+                    <div class="comp-bloc-3">
+                        <div class="cours-card-compact">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" alt="Analyse Financière" class="cours-card-image">
+                            <div class="cours-card-content">
+                                <span class="cours-badge">Expert</span>
+                                <h4 class="cours-title">Analyse Financière Professionnelle</h4>
+                                <p class="cours-description">Maîtrisez les techniques d'analyse des états financiers et d'évaluation d'entreprises</p>
+                                <div class="cours-stats">
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        <span>24h</span>
+                                    </div>
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                                        <span>1.2k</span>
+                                    </div>
+                                </div>
+                                <div class="cours-footer">
+                                    <div class="cours-price">
+                                        <span class="cours-price-amount">199€</span>
+                                        <span class="cours-price-label">accès à vie</span>
+                                    </div>
+                                    <button class="cours-cta">Découvrir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétence 2 -->
+            <div class="competence-card">
+                <div class="comp-grid">
+                    <div class="comp-bloc-1">
+                        <div class="comp-numero">02</div>
+                        <h3 class="comp-titre">Gestion des Risques Bancaires</h3>
+                    </div>
+                    <div class="comp-bloc-2">
+                        <div class="comp-utilite">
+                            <span class="comp-label">Utilité</span>
+                            <p class="comp-text">Identifier, mesurer et gérer les risques de crédit, de marché et opérationnels.</p>
+                        </div>
+                        <div class="comp-pourquoi">
+                            <span class="comp-label">Pourquoi c'est important</span>
+                            <p class="comp-text">Protège les institutions financières contre les pertes et assure la conformité réglementaire.</p>
+                        </div>
+                    </div>
+                    <div class="comp-bloc-3">
+                        <div class="cours-card-compact">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Gestion Risques" class="cours-card-image">
+                            <div class="cours-card-content">
+                                <span class="cours-badge">Avancé</span>
+                                <h4 class="cours-title">Risk Management Bancaire</h4>
+                                <p class="cours-description">Techniques de gestion des risques et modèles quantitatifs pour le secteur bancaire</p>
+                                <div class="cours-stats">
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        <span>32h</span>
+                                    </div>
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                                        <span>890</span>
+                                    </div>
+                                </div>
+                                <div class="cours-footer">
+                                    <div class="cours-price">
+                                        <span class="cours-price-amount">249€</span>
+                                        <span class="cours-price-label">accès à vie</span>
+                                    </div>
+                                    <button class="cours-cta">Découvrir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétence 3 -->
+            <div class="competence-card">
+                <div class="comp-grid">
+                    <div class="comp-bloc-1">
+                        <div class="comp-numero">03</div>
+                        <h3 class="comp-titre">Conseil en Investissement</h3>
+                    </div>
+                    <div class="comp-bloc-2">
+                        <div class="comp-utilite">
+                            <span class="comp-label">Utilité</span>
+                            <p class="comp-text">Accompagner les clients dans leurs stratégies d'investissement et la construction de portefeuilles.</p>
+                        </div>
+                        <div class="comp-pourquoi">
+                            <span class="comp-label">Pourquoi c'est important</span>
+                            <p class="comp-text">Créer de la valeur pour les clients et développer une relation de confiance durable.</p>
+                        </div>
+                    </div>
+                    <div class="comp-bloc-3">
+                        <div class="cours-card-compact">
+                            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=200&fit=crop" alt="Conseil Investissement" class="cours-card-image">
+                            <div class="cours-card-content">
+                                <span class="cours-badge">Professionnel</span>
+                                <h4 class="cours-title">Stratégies d'Investissement</h4>
+                                <p class="cours-description">Apprenez à construire et optimiser des portefeuilles d'investissement performants</p>
+                                <div class="cours-stats">
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        <span>28h</span>
+                                    </div>
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                                        <span>1.5k</span>
+                                    </div>
+                                </div>
+                                <div class="cours-footer">
+                                    <div class="cours-price">
+                                        <span class="cours-price-amount">229€</span>
+                                        <span class="cours-price-label">accès à vie</span>
+                                    </div>
+                                    <button class="cours-cta">Découvrir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétence 4 -->
+            <div class="competence-card">
+                <div class="comp-grid">
+                    <div class="comp-bloc-1">
+                        <div class="comp-numero">04</div>
+                        <h3 class="comp-titre">Conformité Réglementaire</h3>
+                    </div>
+                    <div class="comp-bloc-2">
+                        <div class="comp-utilite">
+                            <span class="comp-label">Utilité</span>
+                            <p class="comp-text">Assurer la conformité aux réglementations bancaires et financières en constante évolution.</p>
+                        </div>
+                        <div class="comp-pourquoi">
+                            <span class="comp-label">Pourquoi c'est important</span>
+                            <p class="comp-text">Éviter les sanctions et maintenir la réputation de l'institution dans un environnement régulé.</p>
+                        </div>
+                    </div>
+                    <div class="comp-bloc-3">
+                        <div class="cours-card-compact">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=200&fit=crop" alt="Conformité" class="cours-card-image">
+                            <div class="cours-card-content">
+                                <span class="cours-badge">Expert</span>
+                                <h4 class="cours-title">Réglementation Bancaire</h4>
+                                <p class="cours-description">Maîtrisez Bâle III, MiFID II et les normes de conformité internationales</p>
+                                <div class="cours-stats">
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        <span>20h</span>
+                                    </div>
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                                        <span>670</span>
+                                    </div>
+                                </div>
+                                <div class="cours-footer">
+                                    <div class="cours-price">
+                                        <span class="cours-price-amount">179€</span>
+                                        <span class="cours-price-label">accès à vie</span>
+                                    </div>
+                                    <button class="cours-cta">Découvrir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétence 5 -->
+            <div class="competence-card">
+                <div class="comp-grid">
+                    <div class="comp-bloc-1">
+                        <div class="comp-numero">05</div>
+                        <h3 class="comp-titre">Finance Digitale & FinTech</h3>
+                    </div>
+                    <div class="comp-bloc-2">
+                        <div class="comp-utilite">
+                            <span class="comp-label">Utilité</span>
+                            <p class="comp-text">Comprendre et exploiter les technologies financières émergentes et la transformation digitale.</p>
+                        </div>
+                        <div class="comp-pourquoi">
+                            <span class="comp-label">Pourquoi c'est important</span>
+                            <p class="comp-text">S'adapter à l'évolution du secteur bancaire et rester compétitif dans un monde digital.</p>
+                        </div>
+                    </div>
+                    <div class="comp-bloc-3">
+                        <div class="cours-card-compact">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=200&fit=crop" alt="FinTech" class="cours-card-image">
+                            <div class="cours-card-content">
+                                <span class="cours-badge">Innovation</span>
+                                <h4 class="cours-title">FinTech & Transformation Digitale</h4>
+                                <p class="cours-description">Blockchain, IA, paiements digitaux et innovations qui transforment la finance</p>
+                                <div class="cours-stats">
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        <span>26h</span>
+                                    </div>
+                                    <div class="cours-stat">
+                                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                                        <span>2.1k</span>
+                                    </div>
+                                </div>
+                                <div class="cours-footer">
+                                    <div class="cours-price">
+                                        <span class="cours-price-amount">269€</span>
+                                        <span class="cours-price-label">accès à vie</span>
+                                    </div>
+                                    <button class="cours-cta">Découvrir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

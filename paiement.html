@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement - Financité Institute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--
+=====================================================
+BLOC PAIEMENT PREMIUM - FINANCITÉ INSTITUTE
+Avec vrais logos SVG des moyens de paiement
+Compatible Elementor / WooCommerce
+=====================================================
+-->
+
+<div class="fp-main-container">
+
+  <!-- COLONNE GAUCHE - BLOC 1 + IMAGE -->
+  <div class="fp-left-column">
+
+    <!-- ============ BLOC 1 - RAPPEL OFFRE ============ -->
+    <div class="fp-offer">
+      <div class="fp-offer-icon">🎓</div>
+      <div class="fp-offer-content">
+        <div class="fp-offer-title">Expertise en Analyse Financière</div>
+        <div class="fp-offer-price">119,99 $ – Accès immédiat</div>
+        <div class="fp-offer-proof">Déjà 20 000+ professionnels formés – Certificat officiel inclus</div>
+      </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="fp-image-container">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=800&fit=crop" alt="Finance Analytics" class="fp-main-image">
+    </div>
+
+  </div>
+
+  <!-- COLONNE DROITE - CONTENU PAIEMENT -->
+  <div class="fp-payment">
+
+    <!-- ============ BLOC 2 - TITRE SECTION ============ -->
+    <div class="fp-header">
+      <h3 class="fp-title">Choisissez votre mode de paiement</h3>
+      <div class="fp-secure">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Paiement 100% sécurisé – Accès immédiat à la plateforme après validation</span>
+      </div>
+    </div>
+
+    <!-- ============ BLOC 3 - MOYENS DE PAIEMENT ============ -->
+    <div class="fp-cards">
+
+      <div class="fp-card fp-card--accent-yellow">
+        <div class="fp-card-top">
+          <div class="fp-card-icon fp-card-icon--yellow">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <div class="fp-card-info">
+            <div class="fp-card-title">Mobile Money</div>
+            <div class="fp-card-desc">Paiement instantané via pawaPay</div>
+          </div>
+        </div>
+
+        <!-- Logos -->
+        <div class="fp-card-logos">
+          <div class="fp-logo-box" title="Orange Money">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg"><rect width="40" height="24" rx="4" fill="#FF7900"/><circle cx="20" cy="12" r="7" fill="#fff"/><circle cx="20" cy="12" r="4" fill="#FF7900"/></svg>
+          </div>
+          <div class="fp-logo-box" title="MTN Money">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg"><rect width="40" height="24" rx="4" fill="#FFCC00"/><path d="M10 17V7h3l3.5 6 3.5-6h3v10h-2.5v-6l-3 5h-2l-3-5v6H10z" fill="#0056A4"/></svg>
+          </div>
+          <div class="fp-logo-box" title="M-Pesa">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg"><rect width="40" height="24" rx="4" fill="#4CAF50"/><path d="M8 17V7h3l2 7 2-7h3v10h-2v-7l-2 7h-2l-2-7v7H8z" fill="#fff"/><circle cx="32" cy="12" r="5" fill="#fff"/><path d="M30 12l2 2 3-4" stroke="#4CAF50" stroke-width="1.5"/></svg>
+          </div>
+          <div class="fp-logo-box" title="Airtel Money">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg"><rect width="40" height="24" rx="4" fill="#ED1C24"/><path d="M20 5c-5 0-9 3.5-9 7.5S15 20 20 20s9-3.5 9-7.5S25 5 20 5zm0 12c-3 0-5.5-2-5.5-4.5S17 8 20 8s5.5 2 5.5 4.5S23 17 20 17z" fill="#fff"/></svg>
+          </div>
+          <div class="fp-logo-box" title="Wave">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg"><rect width="40" height="24" rx="4" fill="#1DC8F2"/><path d="M8 14c2-3 4-5 7-5s4 2 5 4c1 2 2 3 4 3s3-1 5-4" stroke="#fff" stroke-width="2.5" fill="none"/></svg>
+          </div>
+        </div>
+
+        <!-- 🔥 FORMULAIRE MOBILE MONEY UNIQUE & PROPRE -->
+        <form method="post" class="fp-mobilemoney-form" style="margin-top:15px;">
+
+          <input type="text" name="client_name" placeholder="Votre nom complet"
+                 required
+                 style="margin-bottom:10px; width:100%; padding:10px; border-radius:6px; border:1px solid #ddd;">
+
+          <input type="email" name="client_email" placeholder="Votre email"
+                 required
+                 style="margin-bottom:10px; width:100%; padding:10px; border-radius:6px; border:1px solid #ddd;">
+
+          <input type="hidden" name="pawapay_amount" value="119.99">
+          <input type="hidden" name="pawapay_country" value="CIV">
+          <input type="hidden" name="pawapay_reason" value="Expertise en Analyse Financière">
+
+          <button type="submit" name="pawapay_submit" class="fp-card-btn fp-card-btn--primary">
+            Continuer avec Mobile Money
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </form>
+
+      </div>
+
+      <!-- CARTE 2 - Carte Bancaire -->
+      <div class="fp-card fp-card--accent-blue">
+        <div class="fp-card-top">
+          <div class="fp-card-icon fp-card-icon--blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <div class="fp-card-info">
+            <div class="fp-card-title">Carte bancaire</div>
+            <div class="fp-card-desc">Paiement sécurisé via Stripe</div>
+          </div>
+        </div>
+        <div class="fp-card-logos">
+          <!-- Ajoutez les logos de cartes bancaires ici si nécessaire -->
+        </div>
+      </div>
+
+      <!-- CARTE 3 - Transfert International -->
+      <div class="fp-card fp-card--light">
+        <div class="fp-card-top">
+          <div class="fp-card-icon fp-card-icon--gray">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="fp-card-info">
+            <div class="fp-card-title">Transfert international</div>
+            <div class="fp-card-desc">Envoi rapide depuis le Maroc</div>
+          </div>
+        </div>
+        <div class="fp-card-logos">
+          <!-- Western Union -->
+          <div class="fp-logo-box fp-logo-box--sm" title="Western Union">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg">
+              <rect width="40" height="24" rx="4" fill="#FFDD00"/>
+              <path d="M6 8l4 8 3-6 3 6 4-8h2l-6 10h-2l-3-5-3 5h-2L4 8h2z" fill="#000"/>
+            </svg>
+          </div>
+          <!-- MoneyGram -->
+          <div class="fp-logo-box fp-logo-box--sm" title="MoneyGram">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg">
+              <rect width="40" height="24" rx="4" fill="#FF6600"/>
+              <circle cx="12" cy="12" r="6" fill="#fff"/>
+              <circle cx="12" cy="12" r="3" fill="#FF6600"/>
+              <path d="M22 8v8l6-4-6-4z" fill="#fff"/>
+            </svg>
+          </div>
+          <!-- Ria -->
+          <div class="fp-logo-box fp-logo-box--sm" title="Ria">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg">
+              <rect width="40" height="24" rx="4" fill="#FF5722"/>
+              <path d="M10 7h6c2.5 0 4 1.5 4 3.5 0 1.5-1 2.7-2.5 3l3 3.5h-3.5l-2.5-3H13v3h-3V7zm3 5h3c.8 0 1.3-.5 1.3-1.2S16.8 9.5 16 9.5h-3v2.5z" fill="#fff"/>
+              <circle cx="28" cy="12" r="5" fill="#fff"/>
+              <circle cx="28" cy="12" r="2" fill="#FF5722"/>
+            </svg>
+          </div>
+          <!-- Wafacash -->
+          <div class="fp-logo-box fp-logo-box--sm" title="Wafacash">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg">
+              <rect width="40" height="24" rx="4" fill="#E31E24"/>
+              <path d="M6 8l3 8 3-5 3 5 3-8" stroke="#FFDD00" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="30" cy="12" r="6" fill="#FFDD00"/>
+              <path d="M28 12h4M30 10v4" stroke="#E31E24" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <!-- Cash Plus -->
+          <div class="fp-logo-box fp-logo-box--sm" title="Cash Plus">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg">
+              <rect width="40" height="24" rx="4" fill="#00A651"/>
+              <circle cx="14" cy="12" r="6" fill="#FFDD00"/>
+              <path d="M12 12h4M14 10v4" stroke="#00A651" stroke-width="2"/>
+              <path d="M24 9v6M27 9v6M30 9v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <!-- Wise -->
+          <div class="fp-logo-box fp-logo-box--sm" title="Wise">
+            <svg viewBox="0 0 40 24" class="fp-logo-svg">
+              <rect width="40" height="24" rx="4" fill="#9FE870"/>
+              <path d="M10 12l5-5v3h10v4H15v3l-5-5z" fill="#163300"/>
+            </svg>
+          </div>
+        </div>
+        <a href="https://wa.me/15557378625?text=Infos%20Transfert%20International" class="fp-card-link">
+          Voir les instructions de paiement
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- CARTE 4 - WhatsApp -->
+      <div class="fp-card fp-card--compact">
+        <div class="fp-card-top">
+          <div class="fp-card-icon fp-card-icon--whatsapp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="fp-card-info">
+            <div class="fp-card-title">Discuter avec l'équipe</div>
+            <div class="fp-card-desc">Réponse sous 5 minutes</div>
+          </div>
+          <a href="https://wa.me/15557378625?text=Bonjour%20j%27aimerais%20discuter%20du%20paiement" class="fp-card-link fp-card-link--inline">
+            Ouvrir WhatsApp
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============ BLOC 4 - RÉASSURANCE ============ -->
+    <div class="fp-footer">
+      <span>❤️ Nous vous accompagnons à chaque étape</span>
+      <span class="fp-footer-sep">•</span>
+      <span>🔒 SSL</span>
+      <span class="fp-footer-sep">•</span>
+      <span>Support 24/7</span>
+    </div>
+
+  </div>
+
+</div>
+
+<style>
+/* ===========================================
+   FINANCITÉ PREMIUM PAYMENT
+   Avec vrais logos SVG
+   =========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+  padding: 2rem;
+}
+
+/* ============ CONTENEUR PRINCIPAL 2 COLONNES ============ */
+.fp-main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============ COLONNE GAUCHE ============ */
+.fp-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fp-image-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.fp-main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ============ COLONNE DROITE ============ */
+.fp-payment {
+  width: 100%;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* ============ BLOC 1 - RAPPEL OFFRE ============ */
+.fp-offer {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.fp-offer-icon {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.fp-offer-content {
+  flex: 1;
+}
+
+.fp-offer-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 3px;
+}
+
+.fp-offer-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0B2451;
+  margin-bottom: 4px;
+}
+
+.fp-offer-proof {
+  font-size: 12px;
+  color: #6B7280;
+  line-height: 1.4;
+}
+
+/* ============ BLOC 2 - HEADER ============ */
+.fp-header {
+  margin-bottom: 18px;
+}
+
+.fp-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.fp-secure {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #6B7280;
+  line-height: 1.4;
+}
+
+.fp-secure svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ============ BLOC 3 - CARTES ============ */
+.fp-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.fp-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.fp-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border-color: #D1D5DB;
+}
+
+.fp-card--accent-yellow {
+  border-left: 3px solid #F4C430;
+}
+
+.fp-card--accent-blue {
+  border-left: 3px solid #0B2451;
+}
+
+.fp-card--light {
+  background: #FAFAFA;
+}
+
+.fp-card--compact {
+  padding: 14px 18px;
+}
+
+.fp-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Icône */
+.fp-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fp-card-icon--yellow { background: #FEF3C7; color: #B45309; }
+.fp-card-icon--blue { background: #DBEAFE; color: #1E40AF; }
+.fp-card-icon--gray { background: #F3F4F6; color: #6B7280; }
+.fp-card-icon--whatsapp { background: #DCFCE7; }
+
+/* Info */
+.fp-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.fp-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.fp-card-desc {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+/* ============ LOGOS ============ */
+.fp-card-logos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 14px 0 16px 54px;
+}
+
+.fp-logo-box {
+  display: inline-block;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.fp-logo-box:hover {
+  transform: scale(1.08);
+}
+
+.fp-logo-svg {
+  display: block;
+  width: 44px;
+  height: 26px;
+}
+
+.fp-logo-box--sm .fp-logo-svg {
+  width: 40px;
+  height: 24px;
+}
+
+/* ============ BOUTONS ============ */
+.fp-card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: #fff;
+  color: #374151;
+  border: 1px solid #D1D5DB;
+  margin-top: 4px;
+}
+
+.fp-card-btn:hover {
+  background: #F9FAFB;
+  border-color: #9CA3AF;
+  color: #111827;
+  text-decoration: none !important;
+}
+
+.fp-card-btn--primary {
+  background: #0B2451;
+  color: #fff;
+  border-color: #0B2451;
+}
+
+.fp-card-btn--primary:hover {
+  background: #1E3A5F;
+  border-color: #1E3A5F;
+  color: #fff;
+}
+
+.fp-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #4B5563;
+  text-decoration: none !important;
+  margin-left: 54px;
+  transition: color 0.2s ease;
+}
+
+.fp-card-link:hover {
+  color: #111827;
+  text-decoration: none !important;
+}
+
+.fp-card-link--inline {
+  margin-left: auto;
+  color: #25D366;
+  font-weight: 600;
+}
+
+.fp-card-link--inline:hover {
+  color: #128C7E;
+}
+
+/* ============ FOOTER ============ */
+.fp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: #9CA3AF;
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #F3F4F6;
+}
+
+.fp-footer-sep {
+  color: #D1D5DB;
+}
+
+/* ============ RESPONSIVE ============ */
+@media screen and (max-width: 1024px) {
+  .fp-main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .fp-left-column {
+    order: 1;
+  }
+
+  .fp-payment {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .fp-main-container {
+    gap: 1.5rem;
+  }
+
+  .fp-offer {
+    padding: 14px 16px;
+  }
+
+  .fp-offer-icon {
+    font-size: 24px;
+  }
+
+  .fp-offer-title {
+    font-size: 14px;
+  }
+
+  .fp-title {
+    font-size: 16px;
+  }
+
+  .fp-card {
+    padding: 14px 16px;
+  }
+
+  .fp-card-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .fp-card-title {
+    font-size: 14px;
+  }
+
+  .fp-card-logos {
+    margin-left: 50px;
+    gap: 6px;
+  }
+
+  .fp-logo-svg {
+    width: 38px;
+    height: 22px;
+  }
+
+  .fp-logo-box--sm .fp-logo-svg {
+    width: 34px;
+    height: 20px;
+  }
+
+  .fp-card-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  .fp-card-link {
+    margin-left: 50px;
+    font-size: 11px;
+  }
+
+  .fp-footer {
+    font-size: 11px;
+    gap: 6px;
+  }
+}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advisory Accelerator - Programme d'élite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-deep: #0a1628;
+      --navy-mid: #142642;
+      --navy-light: #1e3a5f;
+      --gold-accent: #c9a962;
+      --gold-light: #e4d4a8;
+      --gold-glow: rgba(201, 169, 98, 0.15);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --border-subtle: rgba(201, 169, 98, 0.2);
+      --glass-bg: rgba(20, 38, 66, 0.6);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy-deep);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .aa-hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 60px;
+      background: linear-gradient(165deg, var(--navy-deep) 0%, #050d1a 50%, var(--navy-deep) 100%);
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    /* Background decorative elements */
+    .aa-hero::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      left: -150px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .aa-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -200px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(30, 58, 95, 0.5) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Floating decorative shapes */
+    .aa-hero-decor {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .aa-hero-decor-1 {
+      top: 15%;
+      right: 45%;
+      width: 80px;
+      height: 80px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    .aa-hero-decor-2 {
+      bottom: 20%;
+      left: 5%;
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold-accent), transparent);
+      opacity: 0.5;
+    }
+
+    .aa-hero-decor-3 {
+      top: 30%;
+      right: 8%;
+      width: 6px;
+      height: 6px;
+      background: var(--gold-accent);
+      border-radius: 50%;
+      box-shadow: 0 0 20px var(--gold-accent);
+      opacity: 0.6;
+    }
+
+    /* Left content */
+    .aa-hero-content {
+      flex: 1;
+      min-width: 320px;
+      padding-right: 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .aa-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-accent);
+      margin-bottom: 28px;
+      padding: 10px 20px;
+      background: var(--glass-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 100px;
+      backdrop-filter: blur(10px);
+    }
+
+    .aa-hero-badge svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .aa-hero-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .aa-hero-title span {
+      color: var(--gold-accent);
+      font-style: italic;
+    }
+
+    .aa-hero-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 500;
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 32px;
+      opacity: 0.9;
+    }
+
+    .aa-hero-description {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin-bottom: 20px;
+    }
+
+    .aa-hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .aa-hero-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 10px 16px;
+      background: rgba(201, 169, 98, 0.06);
+      border: 1px solid rgba(201, 169, 98, 0.12);
+      border-radius: 8px;
+    }
+
+    .aa-hero-feature svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold-accent);
+    }
+
+    .aa-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--gold-accent) 0%, #a88a4a 100%);
+      color: var(--navy-deep);
+      padding: 18px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow:
+        0 4px 20px rgba(201, 169, 98, 0.3),
+        0 0 0 1px rgba(201, 169, 98, 0.1);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aa-hero-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .aa-hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 8px 30px rgba(201, 169, 98, 0.4),
+        0 0 0 1px rgba(201, 169, 98, 0.2);
+    }
+
+    .aa-hero-cta:hover::before {
+      left: 100%;
+    }
+
+    .aa-hero-cta svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .aa-hero-cta:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Right image */
+    .aa-hero-visual {
+      flex: 1;
+      min-width: 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .aa-hero-image-wrapper {
+      position: relative;
+      padding: 20px;
+    }
+
+    .aa-hero-image-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      bottom: 30px;
+      left: 30px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+
+    .aa-hero-image-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      width: 100px;
+      height: 100px;
+      background: var(--gold-glow);
+      border-radius: 50%;
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    .aa-hero-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(201, 169, 98, 0.1);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .aa-hero-image:hover {
+      transform: scale(1.02) translateY(-5px);
+    }
+
+    /* Stats bar */
+    .aa-hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .aa-hero-stat {
+      text-align: left;
+    }
+
+    .aa-hero-stat-value {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--gold-accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .aa-hero-stat-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ===== BENEFITS SECTION ===== */
+    .aa-benefits {
+      background: var(--text-primary);
+      padding: 100px 60px;
+      position: relative;
+    }
+
+    .aa-benefits-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Section header */
+    .aa-benefits-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .aa-benefits-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(32px, 5vw, 48px);
+      color: var(--navy-deep);
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .aa-benefits-description {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Benefits grid */
+    .aa-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .aa-benefit-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .aa-benefit-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 20px;
+    }
+
+    .aa-benefit-content h3 {
+      font-size: 20px;
+      color: var(--navy-deep);
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .aa-benefit-content p {
+      font-size: 15px;
+      color: var(--navy-mid);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Stats card with CTA */
+    .aa-benefits-stats-card {
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy-light));
+      padding: 60px 40px 40px 40px;
+      border-radius: 20px;
+      margin: 0 auto;
+      color: var(--text-primary);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1100px;
+      box-shadow:
+        0 20px 60px rgba(10, 22, 40, 0.3),
+        0 0 0 1px var(--border-subtle);
+    }
+
+    .aa-benefits-stats-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      margin-bottom: 40px;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
+    .aa-benefits-stats-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      gap: 60px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .aa-benefits-stat {
+      flex: 1 1 0;
+      min-width: 180px;
+    }
+
+    .aa-benefits-stat-value {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 48px;
+      font-weight: bold;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+    }
+
+    .aa-benefits-stat-label {
+      font-size: 16px;
+      margin: 0;
+      opacity: 0.9;
+      color: var(--text-secondary);
+    }
+
+    .aa-benefits-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--gold-accent) 0%, #a88a4a 100%);
+      color: var(--navy-deep);
+      padding: 16px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow:
+        0 4px 20px rgba(201, 169, 98, 0.3),
+        0 0 0 1px rgba(201, 169, 98, 0.1);
+      margin-top: 0;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aa-benefits-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .aa-benefits-cta:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 8px 30px rgba(201, 169, 98, 0.4),
+        0 0 0 1px rgba(201, 169, 98, 0.2);
+    }
+
+    .aa-benefits-cta:hover::before {
+      left: 100%;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .aa-benefits-stats-row {
+        gap: 30px !important;
+      }
+
+      .aa-benefits-stat {
+        min-width: 120px !important;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .aa-hero {
+        padding: 60px 40px;
+      }
+
+      .aa-hero-content {
+        padding-right: 40px;
+      }
+
+      .aa-hero-stats {
+        gap: 30px;
+      }
+
+      .aa-benefits {
+        padding: 80px 40px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .aa-benefits-stats-row {
+        flex-direction: column !important;
+        gap: 30px !important;
+        align-items: center !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .aa-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 24px;
+        min-height: auto;
+      }
+
+      .aa-hero-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+      }
+
+      .aa-hero-description {
+        max-width: 100%;
+      }
+
+      .aa-hero-features {
+        justify-content: center;
+      }
+
+      .aa-hero-stats {
+        justify-content: center;
+      }
+
+      .aa-hero-visual {
+        margin-top: 20px;
+      }
+
+      .aa-hero-image-wrapper::before {
+        display: none;
+      }
+
+      .aa-benefits {
+        padding: 60px 24px;
+      }
+
+      .aa-benefits-header {
+        margin-bottom: 60px;
+      }
+
+      .aa-benefits-grid {
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .aa-benefits {
+        padding: 40px 20px !important;
+      }
+
+      .aa-benefits-title {
+        font-size: 26px !important;
+      }
+
+      .aa-benefit-content h3 {
+        font-size: 16px !important;
+      }
+
+      .aa-benefit-content p {
+        font-size: 13px !important;
+      }
+
+      .aa-benefits-stats-card {
+        padding: 30px 20px !important;
+      }
+
+      .aa-benefits-stats-title {
+        font-size: 22px !important;
+      }
+
+      .aa-benefits-stat-value {
+        font-size: 36px !important;
+      }
+
+      .aa-benefits-stat-label {
+        font-size: 14px !important;
+      }
+
+      .aa-benefits-cta {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .aa-hero {
+        padding: 40px 20px;
+      }
+
+      .aa-hero-title {
+        font-size: 36px;
+      }
+
+      .aa-hero-subtitle {
+        font-size: 18px;
+      }
+
+      .aa-hero-description {
+        font-size: 15px;
+      }
+
+      .aa-hero-cta {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 28px;
+      }
+
+      .aa-hero-stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .aa-hero-stat {
+        text-align: center;
+      }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .aa-hero-badge {
+      animation: fadeInUp 0.7s ease forwards;
+      opacity: 0;
+    }
+
+    .aa-hero-title {
+      animation: fadeInUp 0.7s ease 0.1s forwards;
+      opacity: 0;
+    }
+
+    .aa-hero-subtitle {
+      animation: fadeInUp 0.7s ease 0.2s forwards;
+      opacity: 0;
+    }
+
+    .aa-hero-description {
+      animation: fadeInUp 0.7s ease 0.3s forwards;
+      opacity: 0;
+    }
+
+    .aa-hero-features {
+      animation: fadeInUp 0.7s ease 0.4s forwards;
+      opacity: 0;
+    }
+
+    .aa-hero-cta {
+      animation: fadeInUp 0.7s ease 0.5s forwards;
+      opacity: 0;
+    }
+
+    .aa-hero-stats {
+      animation: fadeInUp 0.7s ease 0.6s forwards;
+      opacity: 0;
+    }
+
+    .aa-hero-visual {
+      animation: fadeInRight 0.8s ease 0.4s forwards;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <header class="aa-hero">
+    <!-- Decorative elements -->
+    <div class="aa-hero-decor aa-hero-decor-1"></div>
+    <div class="aa-hero-decor aa-hero-decor-2"></div>
+    <div class="aa-hero-decor aa-hero-decor-3"></div>
+
+    <!-- Left content -->
+    <div class="aa-hero-content">
+      <div class="aa-hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        Programme d'élite · 90 jours
+      </div>
+
+      <h1 class="aa-hero-title">Advisory<br><span>Accelerator</span></h1>
+
+      <p class="aa-hero-subtitle">De cadre expert à consultant stratégique.</p>
+
+      <p class="aa-hero-description">
+        Un programme intensif de 90 jours qui permet aux cadres expérimentés de se convertir en consultants stratégiques capables de vendre, conduire et livrer des missions à forte valeur.
+      </p>
+
+      <div class="aa-hero-features">
+        <div class="aa-hero-feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          Structurer votre offre
+        </div>
+        <div class="aa-hero-feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          Affirmer votre posture
+        </div>
+        <div class="aa-hero-feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          Obtenir vos premières missions
+        </div>
+      </div>
+
+      <a href="https://36905ea9.sibforms.com/serve/MUIFAMCVXhccYdr7Q-At4GVDL4SHcD_jtStvoS2_TGtgwKO_-hi41urrdY61bR_gZkFkkkyEELDUMJ-dK6kVIPfpHW6MPQh7aEXrv56pLcox6nbjecxUk2EuXDSQZC8epMlQNXtEq3g5TLSO4V8RD16n4ZytlK3tZoNfJLRt70yGdX8NJbJpNE7WgkybxuzN8HNo-LkjbJrEUt0sV" class="aa-hero-cta">
+        Se renseigner sur le programme
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+
+      <div class="aa-hero-stats">
+        <div class="aa-hero-stat">
+          <div class="aa-hero-stat-value">90</div>
+          <div class="aa-hero-stat-label">Jours intensifs</div>
+        </div>
+        <div class="aa-hero-stat">
+          <div class="aa-hero-stat-value">6</div>
+          <div class="aa-hero-stat-label">Missions maîtrisées</div>
+        </div>
+        <div class="aa-hero-stat">
+          <div class="aa-hero-stat-value">3</div>
+          <div class="aa-hero-stat-label">Workshops d'élite</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right image -->
+    <div class="aa-hero-visual">
+      <div class="aa-hero-image-wrapper">
+        <img src="https://xelanc.com/wp-content/uploads/2023/12/PhotoRoom-20231218_110208-e1702976228594.png"
+             alt="Consultant en stratégie"
+             class="aa-hero-image">
+      </div>
+    </div>
+  </header>
+
+  <!-- BENEFITS SECTION -->
+  <section id="benefices" class="aa-benefits">
+    <div class="aa-benefits-container">
+      <!-- Section header -->
+      <div class="aa-benefits-header">
+        <h2 class="aa-benefits-title">
+          Les bénéfices pour vous
+        </h2>
+        <p class="aa-benefits-description">
+          Découvrez ce que ce programme va vous apporter concrètement dans votre carrière de consultant
+        </p>
+      </div>
+
+      <!-- Benefits grid -->
+      <div class="aa-benefits-grid">
+        <div class="aa-benefit-item">
+          <div class="aa-benefit-icon">
+            <span>💰</span>
+          </div>
+          <div class="aa-benefit-content">
+            <h3>Revenus multipliés par 10</h3>
+            <p>Passez de salarié à consultant indépendant avec des tarifs qui reflètent votre vraie valeur et décuplez vos revenus.</p>
+          </div>
+        </div>
+
+        <div class="aa-benefit-item">
+          <div class="aa-benefit-icon">
+            <span>🎯</span>
+          </div>
+          <div class="aa-benefit-content">
+            <h3>Missions de qualité</h3>
+            <p>Attirez des clients qui valorisent votre expertise et sont prêts à payer le juste prix.</p>
+          </div>
+        </div>
+
+        <div class="aa-benefit-item">
+          <div class="aa-benefit-icon">
+            <span>⏰</span>
+          </div>
+          <div class="aa-benefit-content">
+            <h3>Liberté de temps</h3>
+            <p>Travaillez quand vous voulez, où vous voulez, avec qui vous voulez.</p>
+          </div>
+        </div>
+
+        <div class="aa-benefit-item">
+          <div class="aa-benefit-icon">
+            <span>🚀</span>
+          </div>
+          <div class="aa-benefit-content">
+            <h3>Croissance rapide</h3>
+            <p>Développez votre activité en 10 jours au lieu de 10 mois d'essais et d'erreurs.</p>
+          </div>
+        </div>
+
+        <div class="aa-benefit-item">
+          <div class="aa-benefit-icon">
+            <span>🏆</span>
+          </div>
+          <div class="aa-benefit-content">
+            <h3>Reconnaissance professionnelle</h3>
+            <p>Soyez reconnu comme expert dans votre domaine et développez votre autorité.</p>
+          </div>
+        </div>
+
+        <div class="aa-benefit-item">
+          <div class="aa-benefit-icon">
+            <span>🔄</span>
+          </div>
+          <div class="aa-benefit-content">
+            <h3>Impact durable</h3>
+            <p>Créez un business model qui génère des revenus récurrents et durables.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics card with CTA -->
+      <div class="aa-benefits-stats-card">
+        <h3 class="aa-benefits-stats-title">
+          Résultats concrets de nos participants
+        </h3>
+        <div class="aa-benefits-stats-row">
+          <div class="aa-benefits-stat">
+            <div class="aa-benefits-stat-value">10x</div>
+            <p class="aa-benefits-stat-label">Revenu supplémentaire moyen</p>
+          </div>
+          <div class="aa-benefits-stat">
+            <div class="aa-benefits-stat-value">85%</div>
+            <p class="aa-benefits-stat-label">Ont décroché leur première mission</p>
+          </div>
+          <div class="aa-benefits-stat">
+            <div class="aa-benefits-stat-value">10 jours</div>
+            <p class="aa-benefits-stat-label">Temps moyen pour lancer l'activité</p>
+          </div>
+        </div>
+        <a href="#inscription" class="aa-benefits-cta">
+          Obtenir ces bénéfices
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

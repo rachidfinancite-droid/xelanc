@@ -1,45 +1,50 @@
 # Montage vertical 9:16 — « salaire trauma »
 
-Chaîne de montage FFmpeg + Pillow, entièrement locale (aucun crédit externe consommé).
+Chaîne de montage **100 % locale** (FFmpeg + Pillow + Chromium). Aucun crédit externe consommé.
 
 ## Sources
 | Élément | Origine | Durée |
 |---|---|---|
 | Avatar HeyGen (voix ElevenLabs) | vidéo `91c32cab4b7a432d94decdbb0fb6795b` | 182,648 s |
-| Cinématique graines | CloudFront Higgsfield | 10,04 s |
-| Cinématique lion | CloudFront Higgsfield | 5,04 s |
-| Transcription horodatée | projet Descript `852f094e…` export SRT | 39 blocs |
+| Transcription horodatée | projet Descript `852f094e…`, export SRT | 39 blocs |
+
+Les deux cinématiques Higgsfield (graines, lion) ont été **écartées** : 15 s de matière ne
+peuvent pas illustrer 8 scènes, et leur contenu ne correspondait pas au propos.
+Les visuels sont désormais **29 illustrations construites sur mesure**, une par idée.
 
 ## Pipeline
-1. `plan.py` — construit l'EDL (`build/edl.json`) et **valide** les contraintes
-   de rythme : aucun plan > 5 s, cartons ≤ 2,5 s, zooms strictement alternés,
-   cadrage avatar jamais répété deux fois de suite, coupe à chaque frontière de scène.
-2. `textes.py` — rend les mots-clés et les cartons en **Noto Naskh Arabic** via
-   Pillow `direction="rtl", language="ar"` (Raqm/HarfBuzz). Pas de `arabic_reshaper`.
-3. `rendu.py` — rend les 53 segments en 1080×1920 : recadrage centré sur le visage,
-   zoom lent ancré sur le regard, B-roll ralenti 24→30 fps, cartons animés.
-4. `assemblage.py` — concatène, incruste les 13 mots-clés calés sur le SRT,
-   puis **recopie l'audio de l'avatar sans réencodage ni coupe**.
+1. `plan2.py` — construit l'EDL (`build/edl2.json`) et **valide** :
+   Rachid jamais plus de 4,7 s d'affilée à l'écran, aucun plan > 5 s,
+   zooms strictement alternés, cadrage jamais répété, une illustration par idée.
+2. `illus/scenes.py` + `illus/base.py` — les 29 illustrations en HTML/CSS animé
+   (charte navy `#1E2A3B` / crème `#EFE7D8` / or `#B89554`, Noto Naskh Arabic).
+3. `illus/rendu_illus.py` — Chromium piloté **image par image** : toutes les animations
+   sont mises en pause puis leur `currentTime` est forcé à la milliseconde voulue.
+   Le rendu est déterministe, indépendant de la vitesse machine.
+4. `illus/overlays.py` — les mots-clés incrustés sur le visage, en séquences PNG RGBA.
+   Chaque mot est placé à l'intersection entre le moment où il est **prononcé** (SRT)
+   et un plan avatar.
+5. `rendu2.py` — plans avatar : recadrage 9:16 centré sur le visage (x=745),
+   zoom lent ancré sur le regard.
+6. `assemblage2.py` — concat, incrustation, puis **recopie de l'audio sans réencodage**.
 
-## Charte
-navy `#1E2A3B` · crème `#EFE7D8` · or `#B89554`
-
-## Relancer
-```sh
-python3 plan.py && python3 textes.py && python3 rendu.py && python3 assemblage.py
-```
-
-## Résultat livré
+## Résultat
 
 `salaire-trauma-vertical.mp4` — 1080×1920, 30 fps, H.264, 182,73 s.
 
-| Contrainte demandée | Résultat |
-|---|---|
-| Changement visuel toutes les 3–5 s | 53 plans, moyenne **3,45 s**, le plus long **4,8 s** |
-| Zoom lent alterné avant/arrière | 35 plans avatar, alternance `IOIOIO…` sans répétition |
-| Alternance large / serré | large ×12, moyen ×11, serré ×12, jamais deux fois de suite |
-| Mots-clés arabes animés | 13, calés au SRT, tiers inférieur (ne couvrent jamais le visage) |
-| Cartons pleins écran ≤ 2,5 s | 7 cartons, max **2,4 s** |
-| Cinématiques refragmentées | 11 fragments, **11 cadrages distincts**, exposition relevée |
-| Recadrage 9:16 visage bien placé | crop centré x=745, zoom ancré sur le regard |
-| Audio avatar intact | **empreinte PCM identique à la source, bit à bit** |
+| | v1 | v2 |
+|---|---|---|
+| Rachid à l'image | 75,3 % | **43,8 %** |
+| Illustrations | 16,1 % | **56,2 %** |
+| Plage la plus longue sans illustration | 12,8 s | **4,6 s** |
+| Plages > 5 s | 13 | **0** |
+| Visuels distincts | 3 | **30** |
+| Illustrations calées sur le propos | 1 / 11 | **29 / 29** |
+
+Audio avatar : **empreinte PCM identique à la source, bit à bit.**
+
+## Relancer
+```sh
+python3 plan2.py && python3 illus/rendu_illus.py && python3 rendu2.py \
+  && python3 illus/overlays.py && python3 assemblage2.py
+```

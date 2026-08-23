@@ -12,14 +12,21 @@ AV_FRAMING = {
     "moyen": (520,  924, 485, 22),
     "serre": (440,  782, 525, 46),
 }
-# --- Cadrages B-roll (source 1280x720) ---
+# --- Cadrages B-roll (source 1280x720) -----------------------------------
+# La cinematique graines raconte une progression : semis (0-4 s) -> pousse
+# (5-10 s). Chaque fragment prend un moment ET un cadrage differents.
 BR_FRAMING = {
-    "graines_mains":  (405, 720, 150,   0),
-    "graines_graine": (405, 720, 620,   0),
-    "graines_macro":  (300, 533, 470, 110),
-    "lion_face":      (405, 720, 700,   0),
-    "lion_yeux":      (286, 508, 790,  40),
-    "lion_corps":     (405, 720, 330,   0),
+    "mains_semis":  (405, 720, 180,   0),
+    "graine_pres":  (405, 720, 600,   0),
+    "sol_chaud":    (405, 720, 780,   0),
+    "pousse_jeune": (340, 604, 470, 110),
+    "pousse":       (405, 720, 450,   0),
+    "pousse_macro": (300, 533, 500,  80),
+    "pousse_large": (405, 720, 520,   0),
+    "lion_loin":    (405, 720, 250,   0),
+    "lion_face":    (405, 720, 690,   0),
+    "lion_yeux":    (286, 508, 760,  40),
+    "lion_marche":  (405, 720, 430,   0),
 }
 
 # Beats : (kind, duree, param)
@@ -31,17 +38,17 @@ BEATS = [
     ("av",   4.4, None),
     ("card", 2.4, "C1"),
     ("av",   4.2, None),
-    ("br",   2.6, ("graines", "graines_mains", 0.4)),
+    ("br",   2.6, ("graines", "mains_semis",  1.0)),
     ("av",   4.0, None),
     ("av",   3.4, None),
-    ("br",   2.8, ("graines", "graines_graine", 3.4)),
+    ("br",   2.8, ("graines", "graine_pres",  3.4)),
     ("av",   2.8, None),
     ("av",   4.8, None),
     # ---------- S2 : 31.4 -> 51.0  « c'est un systeme » ----------
     ("av",   2.2, None),
     ("card", 2.4, "C2"),
     ("av",   4.4, None),
-    ("br",   2.6, ("graines", "graines_macro", 6.6)),
+    ("br",   2.6, ("graines", "sol_chaud",    4.6)),
     ("av",   4.2, None),
     ("av",   3.8, None),
     # ---------- S3 : 51.0 -> 78.2  « je suis venu en fuyant » ----------
@@ -49,26 +56,26 @@ BEATS = [
     ("card", 2.4, "C3"),
     ("av",   4.4, None),
     ("av",   4.2, None),
-    ("br",   2.6, ("lion", "lion_corps", 0.3)),
+    ("br",   2.6, ("lion",    "lion_loin",    0.2)),
     ("av",   4.6, None),
     ("av",   3.2, None),
-    ("br",   2.8, ("graines", "graines_mains", 6.9)),
+    ("br",   2.8, ("graines", "pousse_jeune", 6.0)),
     # ---------- S4 : 78.2 -> 93.4  « une autre facon de gagner » ----------
     ("av",   4.4, None),
     ("av",   3.6, None),
-    ("br",   2.6, ("graines", "graines_graine", 1.6)),
+    ("br",   2.6, ("graines", "pousse",       6.9)),
     ("av",   4.6, None),
     # ---------- S5 : 93.4 -> 109.8  « le resultat inattendu » ----------
     ("card", 2.4, "C4"),
     ("av",   4.2, None),
     ("av",   4.4, None),
-    ("br",   2.6, ("graines", "graines_macro", 2.2)),
+    ("br",   2.6, ("graines", "pousse_macro", 7.4)),
     ("av",   2.8, None),
     # ---------- S6 : 109.8 -> 131.0  « la porte de sortie » ----------
     ("card", 2.4, "C5"),
     ("av",   4.6, None),
     ("av",   3.8, None),
-    ("br",   2.8, ("lion", "lion_face", 2.2)),
+    ("br",   2.8, ("lion",    "lion_face",    2.2)),
     ("av",   4.4, None),
     ("av",   3.2, None),
     # ---------- S7 : 131.0 -> 157.2  « regles, pratiques, valeurs » ----------
@@ -76,15 +83,15 @@ BEATS = [
     ("av",   4.6, None),
     ("av",   4.4, None),
     ("av",   3.8, None),
-    ("br",   2.6, ("graines", "graines_mains", 3.9)),
+    ("br",   2.6, ("graines", "pousse_large", 7.0)),
     ("av",   4.8, None),
     ("av",   3.8, None),
     # ---------- S8 : 157.2 -> 181.2  « la prison ou le lion ? » ----------
     ("av",   4.2, None),
-    ("br",   2.6, ("lion", "lion_yeux", 0.9)),
+    ("br",   2.6, ("lion",    "lion_yeux",    2.5)),
     ("av",   4.4, None),
     ("av",   3.6, None),
-    ("br",   2.8, ("lion", "lion_face", 2.1)),
+    ("br",   2.8, ("lion",    "lion_marche",  2.45)),
     ("av",   3.4, None),
     ("av",   3.4, None),
     # ---------- Outro ----------

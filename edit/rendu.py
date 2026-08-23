@@ -13,8 +13,10 @@ RALENTI = 1.25              # B-roll 24 -> 30 fps : 1 image source = 1 image sor
 
 # fraction verticale du visage dans chaque cadrage -> point d'ancrage du zoom
 ANCRE_Y = {"large": 0.278, "moyen": 0.301, "serre": 0.325,
-           "graines_mains": 0.50, "graines_graine": 0.50, "graines_macro": 0.50,
-           "lion_face": 0.42, "lion_yeux": 0.40, "lion_corps": 0.50}
+           "mains_semis": 0.45, "graine_pres": 0.55, "sol_chaud": 0.50,
+           "pousse_jeune": 0.55, "pousse": 0.58, "pousse_macro": 0.55,
+           "pousse_large": 0.58, "lion_loin": 0.45, "lion_face": 0.42,
+           "lion_yeux": 0.40, "lion_marche": 0.48}
 
 ENC = ["-c:v", "libx264", "-preset", "medium", "-crf", "18",
        "-pix_fmt", "yuv420p", "-r", str(FPS), "-g", "60", "-an"]
@@ -44,10 +46,10 @@ def commande(s, i):
         vf = (f"setpts={RALENTI}*PTS,fps={FPS},crop={cw}:{ch}:{cx}:{cy},"
               f"scale={PRE}:flags=lanczos,"
               f"{zoompan(s['zoom'], n, ANCRE_Y[s['framing']], 0.07)},"
-              f"unsharp=6:6:0.75:6:6:0.0,"
-              f"eq=saturation=1.06:contrast=1.04,"          # matiere chaude
-              f"colorbalance=rs=-0.03:bs=0.05,"             # ombres vers le navy
-              f"vignette=PI/5")
+              f"unsharp=7:7:0.75:7:7:0.0,"
+              f"eq=brightness=0.055:contrast=1.05:saturation=1.12:gamma=1.32,"
+              f"colorbalance=rs=-0.02:bs=0.03,"             # ombres vers le navy
+              f"vignette=PI/6.5")
         cmd = ["ffmpeg", "-y", "-v", "error", "-ss", str(s["src_in"]),
                "-t", f"{besoin:.3f}", "-i", f"{SRC}/{s['clip']}_raw.mp4",
                "-vf", vf, "-frames:v", str(n)]

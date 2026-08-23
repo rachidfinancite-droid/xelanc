@@ -61,7 +61,7 @@ def muxer():
     sh(["ffmpeg", "-y", "-v", "error",
         "-i", f"{ED}/build/visuel_mots.mp4", "-i", f"{SRC}/avatar_raw.mp4",
         "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy", "-c:a", "copy",
-        "-shortest", "-movflags", "+faststart",
+        "-movflags", "+faststart",
         "/home/user/xelanc/salaire-trauma-vertical.mp4"])
 
 

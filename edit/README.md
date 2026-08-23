@@ -28,3 +28,18 @@ navy `#1E2A3B` · crème `#EFE7D8` · or `#B89554`
 ```sh
 python3 plan.py && python3 textes.py && python3 rendu.py && python3 assemblage.py
 ```
+
+## Résultat livré
+
+`salaire-trauma-vertical.mp4` — 1080×1920, 30 fps, H.264, 182,73 s.
+
+| Contrainte demandée | Résultat |
+|---|---|
+| Changement visuel toutes les 3–5 s | 53 plans, moyenne **3,45 s**, le plus long **4,8 s** |
+| Zoom lent alterné avant/arrière | 35 plans avatar, alternance `IOIOIO…` sans répétition |
+| Alternance large / serré | large ×12, moyen ×11, serré ×12, jamais deux fois de suite |
+| Mots-clés arabes animés | 13, calés au SRT, tiers inférieur (ne couvrent jamais le visage) |
+| Cartons pleins écran ≤ 2,5 s | 7 cartons, max **2,4 s** |
+| Cinématiques refragmentées | 11 fragments, **11 cadrages distincts**, exposition relevée |
+| Recadrage 9:16 visage bien placé | crop centré x=745, zoom ancré sur le regard |
+| Audio avatar intact | **empreinte PCM identique à la source, bit à bit** |

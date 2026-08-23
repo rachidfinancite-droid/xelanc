@@ -1,0 +1,5 @@
+# Rushes et rendus intermediaires du montage (volumineux, regenerables)
+media/
+edit/build/
+edit/segments/
+*.mp4

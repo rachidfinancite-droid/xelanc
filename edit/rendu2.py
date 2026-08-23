@@ -6,6 +6,12 @@ from concurrent.futures import ThreadPoolExecutor
 SRC, SEG = "/home/user/xelanc/media/source", "/home/user/xelanc/edit/segments2"
 FPS, W, H, PRE = 30, 1080, 1920, "1620:2880"
 ANCRE_Y = {"large": 0.278, "moyen": 0.301, "serre": 0.325}
+
+# Correction du calage labial. Les levres de l'avatar HeyGen bougent AVANT le
+# son : au temps t de la timeline on va donc chercher l'image du visage au
+# temps t - AVANCE dans la source. L'audio n'est jamais touche — il reste
+# recopie bit a bit — et les illustrations gardent leur calage sur le SRT.
+AVANCE = float(os.environ.get("AVANCE_LEVRES", "0.120"))
 ENC = ["-c:v", "libx264", "-preset", "medium", "-crf", "18",
        "-pix_fmt", "yuv420p", "-r", str(FPS), "-g", "60", "-an"]
 
@@ -20,7 +26,7 @@ def commande(s, i):
           f"zoompan=z='{z}':x='(iw-iw/zoom)*0.5':y='(ih-ih/zoom)*{ay}'"
           f":d=1:s={W}x{H}:fps={FPS},"
           f"unsharp=5:5:0.55:5:5:0.0,vignette=PI/5.5")
-    return (["ffmpeg", "-y", "-v", "error", "-ss", str(s["start"]),
+    return (["ffmpeg", "-y", "-v", "error", "-ss", f"{max(0.0, s['start'] - AVANCE):.4f}",
              "-i", f"{SRC}/avatar_raw.mp4", "-vf", vf, "-frames:v", str(n)]
             + ENC + [f"{SEG}/seg_{i:03d}.mp4"]), n
 

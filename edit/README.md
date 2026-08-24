@@ -16,8 +16,12 @@ Les visuels sont désormais **29 illustrations construites sur mesure**, une par
 1. `plan2.py` — construit l'EDL (`build/edl2.json`) et **valide** :
    Rachid jamais plus de 4,7 s d'affilée à l'écran, aucun plan > 5 s,
    zooms strictement alternés, cadrage jamais répété, une illustration par idée.
-2. `illus/scenes.py` + `illus/base.py` — les 29 illustrations en HTML/CSS animé
-   (charte navy `#1E2A3B` / crème `#EFE7D8` / or `#B89554`, Noto Naskh Arabic).
+2. `illus/scenes.py` + `illus/base.py` — les 29 illustrations en HTML/CSS animé.
+   Textes **en français**, chiffres latins. Charte navy `#132338` sur fond
+   `#0B1524`, gris argenté `#AEBBC9`, blanc pur. Typographie **Inter**,
+   embarquée en base64 (`fonts_inline.py`) : aucun accès réseau au rendu.
+   Composition **alignée à gauche** — le centrage systématique était ce qui
+   donnait au montage son air de diapositive générique.
 3. `illus/rendu_illus.py` — Chromium piloté **image par image** : toutes les animations
    sont mises en pause puis leur `currentTime` est forcé à la milliseconde voulue.
    Le rendu est déterministe, indépendant de la vitesse machine.
@@ -25,7 +29,11 @@ Les visuels sont désormais **29 illustrations construites sur mesure**, une par
    Chaque mot est placé à l'intersection entre le moment où il est **prononcé** (SRT)
    et un plan avatar.
 5. `rendu2.py` — plans avatar : recadrage 9:16 centré sur le visage (x=745),
-   zoom lent ancré sur le regard.
+   zoom lent ancré sur le regard, et **correction du calage labial** : au temps
+   *t* de la timeline, l'image du visage est prise au temps *t − 120 ms* de la
+   source (`AVANCE_LEVRES`). Les lèvres de l'avatar HeyGen bougent avant le son ;
+   corriger côté image plutôt que côté audio laisse la piste intacte et les
+   illustrations calées.
 6. `assemblage2.py` — concat, incrustation, puis **recopie de l'audio sans réencodage**.
 
 ## Résultat
@@ -41,7 +49,7 @@ Les visuels sont désormais **29 illustrations construites sur mesure**, une par
 | Visuels distincts | 3 | **30** |
 | Illustrations calées sur le propos | 1 / 11 | **29 / 29** |
 
-Audio avatar : **empreinte PCM identique à la source, bit à bit.**
+Audio avatar : **empreinte PCM identique à la source, bit à bit** — vérifiée à chaque assemblage.
 
 ## Relancer
 ```sh

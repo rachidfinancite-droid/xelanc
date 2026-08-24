@@ -21,13 +21,13 @@ SEEK  = "(t) => { document.getAnimations().forEach(a => { a.currentTime = t; });
 
 
 def rendre(nav, sid, duree):
-    inner, css = SCENES[sid][1], SCENES[sid][2]
+    _, inner, css, gap = SCENES[sid]
     tmp = f"{ED}/build/frames/{sid}"
     shutil.rmtree(tmp, ignore_errors=True)
     os.makedirs(tmp, exist_ok=True)
 
     pg = nav.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
-    pg.set_content(page(inner, duree, css), wait_until="load")
+    pg.set_content(page(inner, duree, css, gap), wait_until="load")
     pg.evaluate("() => document.fonts.ready")
     n_anim = pg.evaluate(PAUSE)
 

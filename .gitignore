@@ -5,3 +5,5 @@ edit/segments/
 *.mp4
 edit/illus/mp4/
 edit/segments2/
+__pycache__/
+*.pyc

@@ -9,9 +9,26 @@ devise: EUR             # abonnements en €, cours à l'unité affiché en USD 
 derniere_mise_a_jour: 2026-10-08
 
 objectifs:
-  cash_30j: null
-  cash_90j: null
-  cash_12m: null
+  cash_mensuel_cible: 100000 USD (≈ 86 000 €) — Rachid 2026-10-08, visée mars 2027
+  repartition_cible: {high_ticket_fia: 38000, b2b_banques: 25000, xelanc: 18000, bootcamps: 5000}   # € / mois [H]
+  plan: excellence/plan-activation-100k.md
+
+portefeuille:
+  - ligne: FIA — Financité Institute Academy (https://financite-institute-academy.com)
+    offres:
+      - {nom: Advisory Accelerator, prix: "≈ 3 000 € [M agent site, sans source exacte]", formules: [Advisor Pro, Premium, Exécutif], paiement: échelonné + prise en charge employeur, prix_affiche: non (par e-mail)}
+      - {nom: DAF Dirigeant Augmenté (CDAF), prix: "dès 2 375 € [M site]", duree: 16 semaines}
+      - {nom: Business Leader Augmenté (CBL), prix: null, duree: 12 semaines}
+      - {nom: Bootcamps présentiels Casablanca, dates: ["Advisory 22→31/10/2026", "Chargé de clientèle entreprise 18→22/11/2026"], prix: null}
+      - {nom: Mandats B2B banques, references: [Attijariwafa, Bank of Africa, CIH, Bank Assafa, Société Générale, Umnia, Bank Al Yousr, Centre Mohammed VI]}
+  - ligne: Xelanc / Excellence (https://xelanc.org) — voir offre ci-dessous
+
+agents_du_projet:      # synthèse lue le 2026-10-08 (lecture seule)
+  meta: "compte FEF : 2 624 $ dépensés, CPL 0,60 $, 20,6 % gaspillé (Audience Network), 0 inscrit Advisory sur 512 leads Meta, synchro Meta→Brevo coupée depuis 07/05, plan Xelanc non lancé"
+  site_fia: "/advisory/ refaite, 32 qualifiés non rappelés, séquences non chargées dans Brevo, clé Brevo exposée"
+  site_xelanc: "cours 13,90 €, paiement OK pour 5 cours / 5 bloqués, aucun achat test, Brevo sans crédits, pas de pixel/GA4"
+  orchestre: "offre fondateurs 299 € à vie 500 places Black Friday 27–30/11 ; Thinkific = 73 acheteurs payants mesurés (pas 400)"
+
 
 tresorerie:
   cash_en_banque: null
@@ -24,7 +41,7 @@ offre:                  # un élément par produit/programme — prix absents du
     prix: 0
     role: porte d'entrée / capture de leads
   - nom: Cours à l'unité (produit d'appel)
-    prix: 14 USD (≈ 12 €)      # [M] Rachid 2026-10-08
+    prix: 13,90 €               # [M] site Xelanc 07/10 (Rachid parle de 14 $ — à aligner)
   - nom: Mensuel « Tous les cours » (sans certificats, tuteur IA 1 q/jour)
     prix: 29 €/mois            # [M] xelanc.org/membership
     modalites_paiement: sans engagement
@@ -75,7 +92,7 @@ mesures: []             # historique daté : {date, periode, depense, leads, rdv
 
 bassins:                # {nom, zone, fonction, sam, cp90, scores: {S,A,V,D,C,E}, scb, verdict, date}
   - nom: Anciens acheteurs (cours à 120 €)
-    taille: 400             # [M] Rachid 2026-10-08
+    taille: 400             # Rachid 2026-10-08 — CONFLIT : Thinkific = 73 acheteurs payants mesurés (agent Données), à trancher
     statut: campagne de réactivation en préparation
     prevision: {pessimiste: "18 conv. ≈ 3,4 k€", central: "36 conv. (9 %) ≈ 7 k€", optimiste: "67 conv. ≈ 13 k€"}
     objectif: 40 conversions (10 %) ≈ 8 k€ encaissés sous 15 jours

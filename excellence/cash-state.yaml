@@ -73,7 +73,15 @@ sources_connectees:
 
 mesures: []             # historique daté : {date, periode, depense, leads, rdv, ventes, cash_encaisse, source}
 
-bassins: []             # {nom, zone, fonction, sam, cp90, scores: {S,A,V,D,C,E}, scb, verdict, date}
+bassins:                # {nom, zone, fonction, sam, cp90, scores: {S,A,V,D,C,E}, scb, verdict, date}
+  - nom: Anciens acheteurs (cours à 120 €)
+    taille: 400             # [M] Rachid 2026-10-08
+    statut: campagne de réactivation en préparation
+    prevision: {pessimiste: "18 conv. ≈ 3,4 k€", central: "36 conv. (9 %) ≈ 7 k€", optimiste: "67 conv. ≈ 13 k€"}
+    objectif: 40 conversions (10 %) ≈ 8 k€ encaissés sous 15 jours
+  - nom: Apprenants formés pour le compte de banques
+    taille: 5000            # [H] Rachid « peut-être »
+    statut: après la campagne des 400 (utiliser son taux mesuré pour calibrer)
 
 previsions:
   - date: 2026-10-08
@@ -91,6 +99,11 @@ hypotheses:
   - {texte: churn mensuel, valeur: "12 %", impact_si_faux: moyen à 3 mois, fort à 12 mois, comment_mesurer: résiliations, statut: ouverte}
   - {texte: frais de paiement, valeur: "4 %", impact_si_faux: faible, comment_mesurer: relevés passerelle, statut: ouverte}          # {texte, valeur, impact_si_faux, comment_mesurer, statut: ouverte|validee|invalidee}
 
-decisions: []           # {date, decision, cash_attendu, echeance, resultat_reel}
+decisions:              # {date, decision, cash_attendu, echeance, resultat_reel}
+  - date: 2026-10-08
+    decision: "Réactivation des 400 : email migration (J0) → offre ancien client annuel 179–190 € (J+4) → relances J+7 / J+10 → repli mensuel 29 €"
+    cash_attendu: 7000
+    echeance: 15 jours après envoi
+    resultat_reel: null
 
 actions_en_cours: []    # {action, qui, avant, cash_attendu, statut}

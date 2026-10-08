@@ -17,10 +17,10 @@ objectifs:
 portefeuille:
   - ligne: FIA — Financité Institute Academy (https://financite-institute-academy.com)
     offres:
-      - {nom: Advisory Accelerator, prix: "≈ 3 000 € [M agent site, sans source exacte]", formules: [Advisor Pro, Premium, Exécutif], paiement: échelonné + prise en charge employeur, prix_affiche: non (par e-mail)}
+      - {nom: Advisory Accelerator, prix: {advisor_pro: 2890, advisor_premium: 3790, advisor_executif: 4390}, source: "brochure Advisory-Accelerator-3.pdf (mai 2026) [M]", options: {mentorat_1to1_15h: 890, coaching_6_mois: 900, alliance_annuelle: 900, bootcamp_en_ligne: 1290, bootcamp_presentiel: 2490}, paiement: échelonné sans frais + prise en charge employeur, prix_affiche: non (par e-mail), prochaine_cohorte: 2026-11-01, campagne: excellence/campagne-advisory-cohorte-novembre.md}
       - {nom: DAF Dirigeant Augmenté (CDAF), prix: "dès 2 375 € [M site]", duree: 16 semaines}
       - {nom: Business Leader Augmenté (CBL), prix: null, duree: 12 semaines}
-      - {nom: Bootcamps présentiels Casablanca, dates: ["Advisory 22→31/10/2026", "Chargé de clientèle entreprise 18→22/11/2026"], prix: null}
+      - {nom: Bootcamps présentiels Casablanca, dates: ["Advisory : fin de la 1re semaine de décembre 2026 (produit séparé, journées vendables à définir)", "Chargé de clientèle entreprise 18→22/11/2026"], prix: null}
       - {nom: Mandats B2B banques, references: [Attijariwafa, Bank of Africa, CIH, Bank Assafa, Société Générale, Umnia, Bank Al Yousr, Centre Mohammed VI]}
   - ligne: Xelanc / Excellence (https://xelanc.org) — voir offre ci-dessous
 
@@ -81,7 +81,7 @@ cible:
 tunnel:
   canaux_acquisition: []       # à préciser (ads, réseau 50 000 anciens, LinkedIn…)
   etapes: [accès libre gratuit ou cours 14 $, page de paiement, upsell mensuel 29 € / annuel 299 € / premium 459 €]
-  qui_vend: null
+  qui_vend: Loubna (appels), Rachid (live, vidéos, LinkedIn)
 
 sources_connectees:
   adspirer: false        # https://adspirer.ai/connections

@@ -11,6 +11,7 @@ derniere_mise_a_jour: 2026-10-08
 objectifs:
   cash_mensuel_cible: 100000 USD (≈ 86 000 €) — Rachid 2026-10-08, visée mars 2027
   repartition_cible: {high_ticket_fia: 38000, b2b_banques: 25000, xelanc: 18000, bootcamps: 5000}   # € / mois [H]
+  b2b: EN PAUSE — décision Rachid 2026-10-08 (focus particuliers)
   plan: excellence/plan-activation-100k.md
 
 portefeuille:
@@ -130,6 +131,12 @@ hypotheses:
   - {texte: frais de paiement, valeur: "4 %", impact_si_faux: faible, comment_mesurer: relevés passerelle, statut: ouverte}          # {texte, valeur, impact_si_faux, comment_mesurer, statut: ouverte|validee|invalidee}
 
 decisions:              # {date, decision, cash_attendu, echeance, resultat_reel}
+  - date: 2026-10-08
+    decision: "Priorité n°1 = Advisory Accelerator en retargeting des prospects existants (hors inscrits). B2B banques en pause."
+    segments: {S1_chauds_qualifies: "32 → appel + WhatsApp perso sous 48 h", S2_tiedes_bon_profil: "≈150 → WhatsApp + invitation soirée live + emails", S3_froids: "≈350 → emails + audience personnalisée Meta", S4_inscrits: "≈20+ → témoignages + parrainage, pas de retargeting"}
+    echeance_urgence: bootcamp Advisory 22/10/2026
+    cash_attendu: "21–51 k€ sur 30–45 jours [H, panier ≈ 3 000 €]"
+    resultat_reel: null
   - date: 2026-10-08
     decision: "Réactivation des 400 : email migration (J0) → offre ancien client annuel 179–190 € (J+4) → relances J+7 / J+10 → repli mensuel 29 €"
     cash_attendu: 7000

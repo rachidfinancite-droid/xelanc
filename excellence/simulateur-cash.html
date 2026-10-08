@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulateur cash Xelanc</title>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f4f3ef;--surface:#fcfcfb;--border:#e3e1da;--grid:#ebe9e3;
+  --text:#0b0b0b;--text-2:#52514e;--muted:#8a8984;--accent:#1c5cab;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;
+}
+@media (prefers-color-scheme:dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --bg:#111110;--surface:#1a1a19;--border:#2e2e2b;--grid:#2a2a27;
+    --text:#ffffff;--text-2:#c3c2b7;--muted:#8f8e86;--accent:#86b6ef;
+    --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#111110;--surface:#1a1a19;--border:#2e2e2b;--grid:#2a2a27;
+  --text:#ffffff;--text-2:#c3c2b7;--muted:#8f8e86;--accent:#86b6ef;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 48px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px}
+h1{font-size:24px;margin:0;letter-spacing:-.01em}
+.sub{color:var(--text-2);margin:4px 0 0;font-size:14px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;color:var(--text-2);padding:8px 14px;font:inherit;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--text);color:var(--surface)}
+.card{min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px}
+.kpis{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.kpi .lab{color:var(--text-2);font-size:13px}
+.kpi .val{font-size:26px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.kpi.hero .val{font-size:40px}
+.kpi .note{color:var(--muted);font-size:12px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:12px;align-items:start}
+h2{font-size:15px;margin:0 0 4px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-2);margin:6px 0 10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:10px;height:10px;border-radius:3px;display:inline-block}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{fill:var(--text-2);font-size:12px;font-variant-numeric:tabular-nums}
+svg .tot{fill:var(--text);font-weight:600}
+.tip{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:8px 10px;font-size:13px;box-shadow:0 6px 20px rgba(0,0,0,.12);display:none;z-index:10;min-width:170px}
+.tip b{display:block;margin-bottom:2px}
+.tip .row{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{white-space:nowrap;padding:7px 6px;border-bottom:1px solid var(--grid);text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--text-2);font-weight:500}
+tfoot td{font-weight:650;border-bottom:0}
+details{border-top:1px solid var(--grid);padding:10px 0}
+details:first-of-type{border-top:0;padding-top:0}
+summary{cursor:pointer;font-weight:600;display:flex;align-items:center;gap:8px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"▾";margin-left:auto;color:var(--muted)}
+details:not([open]) summary::after{content:"▸"}
+.p{display:grid;grid-template-columns:1fr 64px;gap:2px 10px;align-items:center;margin-top:8px}
+.p label{font-size:13px;color:var(--text-2);grid-column:1/3;display:flex;justify-content:space-between}
+.p label output{color:var(--text);font-variant-numeric:tabular-nums;font-weight:600}
+.p input[type=range]{grid-column:1/3;width:100%;accent-color:var(--accent)}
+.hint{font-size:12px;color:var(--muted);margin:2px 0 0}
+.foot{color:var(--muted);font-size:12px;margin-top:16px}
+.verdict{margin-top:12px}
+.verdict p{margin:6px 0 0;color:var(--text-2)}
+.btn{border:1px solid var(--border);background:var(--surface);color:var(--text-2);border-radius:8px;padding:6px 10px;font:inherit;font-size:13px;cursor:pointer}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.kpi.hero{grid-column:1/3}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Simulateur cash Xelanc</h1>
+      <p class="sub">Novembre 2026 → janvier 2027 · trois bases existantes + acquisition pub/organique · chiffres estimés, à recaler sur le réel</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <div class="seg" role="group" aria-label="Scénario">
+        <button data-sc="P">Pessimiste</button><button data-sc="C" aria-pressed="true">Central</button><button data-sc="O">Optimiste</button>
+      </div>
+      <button class="btn" id="theme" title="Basculer clair/sombre" aria-label="Basculer clair/sombre">Thème</button>
+    </div>
+  </header>
+
+  <section class="kpis">
+    <div class="card kpi hero"><div class="lab">Cash net encaissé sur 3 mois</div><div class="val" id="k-cash">–</div><div class="note" id="k-cash-n"></div></div>
+    <div class="card kpi"><div class="lab">Abonnés payants gagnés</div><div class="val" id="k-subs">–</div><div class="note" id="k-subs-n"></div></div>
+    <div class="card kpi"><div class="lab">Revenu récurrent / mois fin janv.</div><div class="val" id="k-mrr">–</div><div class="note">mensuels actifs + annuels lissés</div></div>
+    <div class="card kpi"><div class="lab">Cours à l'unité vendus</div><div class="val" id="k-cours">–</div><div class="note" id="k-cours-n"></div></div>
+  </section>
+
+  <div class="grid">
+    <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0">
+      <div class="card">
+        <h2>Cash net par mois et par source</h2>
+        <div class="legend" id="legend"></div>
+        <div id="chart-m"></div>
+      </div>
+      <div class="card">
+        <h2>Contribution de chaque source (3 mois)</h2>
+        <div id="chart-s" style="margin-top:8px"></div>
+      </div>
+      <div class="card">
+        <h2>Tableau détaillé</h2>
+        <div style="overflow-x:auto"><table id="tbl"></table></div>
+      </div>
+      <div class="card verdict" id="verdict"></div>
+    </div>
+
+    <aside class="card" id="params" aria-label="Paramètres de simulation"></aside>
+  </div>
+
+  <p class="foot">Modèle : abonnés répartis selon le mix mensuel / annuel / premium ; l'annuel et le premium sont encaissés en une fois, le mensuel chaque mois avec résiliation ; frais de paiement déduits. Pub/organique : chaque cohorte d'inscrits convertit 60 % le mois même, 25 % le mois suivant, 15 % le mois d'après. Les 400 sont comptés en novembre, les 5 000 sur nov.–déc., les 20 000 envoyés par lots sur les trois mois. Non compté : revente des offres high ticket, contrats B2B banques.</p>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const MOIS=["Novembre","Décembre","Janvier"];
+const SRC=[
+  {id:"a400",nom:"400 anciens acheteurs",court:"400 acheteurs",c:"--s1"},
+  {id:"a5k",nom:"5 000 anciens participants",court:"5 000 participants",c:"--s2"},
+  {id:"p20k",nom:"20 000 prospects high ticket",court:"20 000 prospects",c:"--s3"},
+  {id:"ads",nom:"Pub & organique (nouveaux)",court:"Pub & organique",c:"--s4"},
+];
+// Paramètres : [clé, libellé, min, max, pas, unité, groupe]
+const DEF=[
+  ["prixMens","Mensuel (€/mois)",9,59,1,"€","g"],
+  ["prixAnn","Annuel (€)",99,499,1,"€","g"],
+  ["prixPrem","Premium (€)",199,799,1,"€","g"],
+  ["prixCours","Cours à l'unité (€)",5,30,1,"€","g"],
+  ["mixAnn","Part annuel dans les abonnés",0,100,1,"%","g"],
+  ["mixPrem","Part premium dans les abonnés",0,50,1,"%","g"],
+  ["churn","Résiliation mensuelle (mensuel)",0,30,1,"%","g"],
+  ["frais","Frais de paiement",0,10,0.5,"%","g"],
+
+  ["a400_n","Taille de la base",0,2000,10,"","a400"],
+  ["a400_del","Emails délivrés",30,100,1,"%","a400"],
+  ["a400_spont","S'abonnent seuls au prix plein",0,10,0.1,"%","a400"],
+  ["a400_offre","Prix offre ancien client (€)",99,299,1,"€","a400"],
+  ["a400_conv","Prennent l'offre (des restants)",0,30,0.5,"%","a400"],
+
+  ["a5k_n","Taille de la base",0,10000,100,"","a5k"],
+  ["a5k_del","Emails délivrés",30,100,1,"%","a5k"],
+  ["a5k_open","Ouvrent",5,70,1,"%","a5k"],
+  ["a5k_sign","Créent un compte (des ouvreurs)",5,70,1,"%","a5k"],
+  ["a5k_conv","Comptes → abonnés",0,15,0.5,"%","a5k"],
+
+  ["p20_n","Taille de la base",0,40000,500,"","p20k"],
+  ["p20_del","Emails délivrés",30,100,1,"%","p20k"],
+  ["p20_conv","Délivrés → abonnés",0,5,0.1,"%","p20k"],
+  ["p20_cours","Délivrés → achat cours",0,8,0.1,"%","p20k"],
+
+  ["ads_m1","Comptes gratuits — novembre",0,15000,100,"","ads"],
+  ["ads_m2","Comptes gratuits — décembre",0,15000,100,"","ads"],
+  ["ads_m3","Comptes gratuits — janvier",0,15000,100,"","ads"],
+  ["ads_conv","Comptes → abonnés",0,8,0.1,"%","ads"],
+  ["ads_cours","Comptes → achat cours",0,10,0.1,"%","ads"],
+];
+const SC={
+  C:{prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:45,mixPrem:8,churn:12,frais:4,
+     a400_n:400,a400_del:85,a400_spont:1.8,a400_offre:179,a400_conv:9,
+     a5k_n:5000,a5k_del:75,a5k_open:35,a5k_sign:35,a5k_conv:4,
+     p20_n:20000,p20_del:70,p20_conv:1,p20_cours:2,
+     ads_m1:3000,ads_m2:2500,ads_m3:3000,ads_conv:2,ads_cours:4},
+  P:{prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:35,mixPrem:5,churn:15,frais:4,
+     a400_n:400,a400_del:80,a400_spont:0.9,a400_offre:179,a400_conv:4.5,
+     a5k_n:5000,a5k_del:65,a5k_open:25,a5k_sign:25,a5k_conv:2,
+     p20_n:20000,p20_del:55,p20_conv:0.4,p20_cours:1,
+     ads_m1:1500,ads_m2:1200,ads_m3:1500,ads_conv:1.2,ads_cours:2.5},
+  O:{prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:50,mixPrem:12,churn:8,frais:4,
+     a400_n:400,a400_del:90,a400_spont:3.3,a400_offre:179,a400_conv:16,
+     a5k_n:5000,a5k_del:85,a5k_open:45,a5k_sign:45,a5k_conv:6,
+     p20_n:20000,p20_del:80,p20_conv:2,p20_cours:3,
+     ads_m1:6000,ads_m2:5000,ads_m3:6000,ads_conv:3,ads_cours:5},
+};
+const GROUPS=[["g","Prix & comportement (toutes sources)",null],["a400","400 anciens acheteurs","--s1"],["a5k","5 000 anciens participants","--s2"],["p20k","20 000 prospects high ticket","--s3"],["ads","Pub & organique","--s4"]];
+let P={...SC.C};
+
+const eur=v=>Math.round(v).toLocaleString("fr-FR")+" €";
+const keur=v=>Math.abs(v)>=1000?(v/1000).toLocaleString("fr-FR",{maximumFractionDigits:1})+" k€":eur(v);
+const int=v=>Math.round(v).toLocaleString("fr-FR");
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+function model(p){
+  const ma=p.mixAnn/100, mp=p.mixPrem/100, mm=Math.max(0,1-ma-mp), ch=p.churn/100, fee=1-p.frais/100;
+  const out={};
+  // nouveaux abonnés par mois (au prix catalogue) + encaissements spécifiques
+  const S={a400:[0,0,0],a5k:[0,0,0],p20k:[0,0,0],ads:[0,0,0]};
+  const C={a400:[0,0,0],a5k:[0,0,0],p20k:[0,0,0],ads:[0,0,0]}; // cours vendus
+  const X={a400:[0,0,0],a5k:[0,0,0],p20k:[0,0,0],ads:[0,0,0]}; // cash hors mix (offre)
+  // 400
+  const d4=p.a400_n*p.a400_del/100, sp=d4*p.a400_spont/100, of=(d4-sp)*p.a400_conv/100;
+  S.a400[0]=sp; X.a400[0]=of*p.a400_offre;
+  const offre400=of;
+  // 5000
+  const s5=p.a5k_n*p.a5k_del/100*p.a5k_open/100*p.a5k_sign/100;
+  const sub5=s5*p.a5k_conv/100; S.a5k=[sub5*.5,sub5*.5,0];
+  // 20000
+  const d20=p.p20_n*p.p20_del/100; const sp20=[.3,.4,.3];
+  S.p20k=sp20.map(x=>x*d20*p.p20_conv/100); C.p20k=sp20.map(x=>x*d20*p.p20_cours/100);
+  // ads cohortes
+  const acc=[p.ads_m1,p.ads_m2,p.ads_m3], lag=[.6,.25,.15];
+  for(let i=0;i<3;i++){for(let j=0;j<=i;j++){S.ads[i]+=acc[j]*p.ads_conv/100*lag[i-j];C.ads[i]+=acc[j]*p.ads_cours/100*lag[i-j];}}
+  let totSubs=0,totCours=0,mrr=0;
+  for(const s of SRC){
+    let act=0; const cash=[0,0,0], nAnn=[];
+    for(let i=0;i<3;i++){
+      const n=S[s.id][i]; act=act*(1-ch)+n*mm;
+      const brut=n*ma*p.prixAnn+n*mp*p.prixPrem+act*p.prixMens+C[s.id][i]*p.prixCours+X[s.id][i];
+      cash[i]=brut*fee;
+    }
+    const subs=S[s.id].reduce((a,b)=>a+b,0)+(s.id==="a400"?offre400:0);
+    const nSub=S[s.id].reduce((a,b)=>a+b,0);
+    const annuelEncaisse=nSub*ma*p.prixAnn+nSub*mp*p.prixPrem+(s.id==="a400"?offre400*p.a400_offre:0);
+    mrr+=act*p.prixMens+annuelEncaisse/12;
+    const cours=C[s.id].reduce((a,b)=>a+b,0);
+    totSubs+=subs; totCours+=cours;
+    out[s.id]={cash,total:cash.reduce((a,b)=>a+b,0),subs,cours};
+  }
+  out.tot={cash:[0,1,2].map(i=>SRC.reduce((a,s)=>a+out[s.id].cash[i],0)),subs:totSubs,cours:totCours,mrr};
+  out.tot.total=out.tot.cash.reduce((a,b)=>a+b,0);
+  return out;
+}
+
+// ---------- paramètres ----------
+function buildParams(){
+  const el=document.getElementById("params");
+  el.innerHTML='<h2>Paramètres de simulation</h2><p class="hint">Bouge un curseur : tout se recalcule. Les boutons de scénario réinitialisent les valeurs.</p>';
+  for(const [g,label,col] of GROUPS){
+    const d=document.createElement("details"); if(g==="g"||g==="p20k") d.open=true;
+    d.innerHTML=`<summary>${col?`<span class="sw" style="background:var(${col})"></span>`:""}${label}</summary>`;
+    for(const [k,l,mn,mx,st,u,gr] of DEF){ if(gr!==g) continue;
+      const w=document.createElement("div"); w.className="p";
+      w.innerHTML=`<label for="${k}">${l}<output id="o-${k}"></output></label><input type="range" id="${k}" min="${mn}" max="${mx}" step="${st}">`;
+      d.appendChild(w);
+      w.querySelector("input").addEventListener("input",e=>{P[k]=+e.target.value;sync(k);render();});
+    }
+    el.appendChild(d);
+  }
+}
+function fmtParam(k){const d=DEF.find(x=>x[0]===k),v=P[k],u=d[5];
+  return u==="%"?v.toLocaleString("fr-FR")+" %":u==="€"?v.toLocaleString("fr-FR")+" €":int(v);}
+function sync(k){(k?[k]:Object.keys(P)).forEach(k=>{const i=document.getElementById(k);if(!i)return;i.value=P[k];document.getElementById("o-"+k).textContent=fmtParam(k);});}
+
+// ---------- graphiques ----------
+const tip=document.getElementById("tip");
+function showTip(e,html){tip.innerHTML=html;tip.style.display="block";const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8);tip.style.left=x+"px";tip.style.top=(e.clientY+14)+"px";}
+function hideTip(){tip.style.display="none";}
+
+function niceMax(v){if(v<=0)return 1000;const p=Math.pow(10,Math.floor(Math.log10(v)));const n=[1,2,2.5,5,10].find(m=>m*p>=v);return n*p;}
+
+function chartMonths(r){
+  const W=Math.max(320,document.getElementById("chart-m").clientWidth||720),H=W<500?240:300,L=52,R=8,T=24,B=30,iw=W-L-R,ih=H-T-B;
+  const max=niceMax(Math.max(...r.tot.cash)*1.08), bw=Math.min(120,iw/3*0.5);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cash net par mois, empilé par source">`;
+  for(let t=0;t<=4;t++){const v=max*t/4,y=T+ih-ih*t/4;
+    s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--grid)" stroke-width="1"/><text x="${L-8}" y="${y+4}" text-anchor="end">${keur(v)}</text>`;}
+  MOIS.forEach((m,i)=>{
+    const cx=L+iw/3*(i+.5), x=cx-bw/2; let y=T+ih;
+    const segs=SRC.map(src=>({src,v:r[src.id].cash[i]})).filter(o=>o.v>0);
+    segs.forEach((o,k)=>{const h=o.v/max*ih, top=k===segs.length-1;
+      const hh=Math.max(0,h-(k>0?2:0)); y-=h;
+      const rx=top?4:0;
+      s+= top?`<path d="M${x},${y+h-(k>0?2:0)} V${y+rx} Q${x},${y} ${x+rx},${y} H${x+bw-rx} Q${x+bw},${y} ${x+bw},${y+rx} V${y+h-(k>0?2:0)} Z" fill="var(${o.src.c})"/>`
+             :`<rect x="${x}" y="${y}" width="${bw}" height="${hh}" fill="var(${o.src.c})"/>`;
+    });
+    s+=`<text class="tot" x="${cx}" y="${T+ih-r.tot.cash[i]/max*ih-8}" text-anchor="middle">${keur(r.tot.cash[i])}</text>`;
+    s+=`<text x="${cx}" y="${H-8}" text-anchor="middle">${m}</text>`;
+    s+=`<rect class="hit" data-i="${i}" x="${cx-iw/6}" y="${T}" width="${iw/3}" height="${ih}" fill="transparent"/>`;
+  });
+  s+=`<line x1="${L}" x2="${W-R}" y1="${T+ih}" y2="${T+ih}" stroke="var(--muted)" stroke-width="1"/></svg>`;
+  const el=document.getElementById("chart-m"); el.innerHTML=s;
+  el.querySelectorAll(".hit").forEach(h=>{
+    h.addEventListener("mousemove",e=>{const i=+h.dataset.i;
+      showTip(e,`<b>${MOIS[i]}</b>`+SRC.map(src=>`<div class="row"><span><span class="sw" style="background:var(${src.c})"></span> ${src.nom}</span><span>${eur(r[src.id].cash[i])}</span></div>`).join("")+`<div class="row" style="border-top:1px solid var(--grid);margin-top:4px;padding-top:4px"><span>Total</span><b style="margin:0">${eur(r.tot.cash[i])}</b></div>`);});
+    h.addEventListener("mouseleave",hideTip);
+  });
+}
+
+function chartSources(r){
+  const W=Math.max(320,document.getElementById("chart-s").clientWidth||720),rowH=40,L=W<500?150:220,R=64,H=SRC.length*rowH+8,iw=W-L-R;
+  const max=Math.max(...SRC.map(s=>r[s.id].total),1);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cash net par source sur 3 mois">`;
+  SRC.forEach((src,i)=>{const y=i*rowH+6,v=r[src.id].total,w=Math.max(2,v/max*iw),pct=r.tot.total?v/r.tot.total*100:0;
+    s+=`<text x="${L-10}" y="${y+18}" text-anchor="end">${W<500?src.court:src.nom}</text>`;
+    s+=`<path d="M${L},${y+4} H${L+w-4} Q${L+w},${y+4} ${L+w},${y+8} V${y+20} Q${L+w},${y+24} ${L+w-4},${y+24} H${L} Z" fill="var(${src.c})"/>`;
+    s+=`<text class="tot" x="${L+w+8}" y="${y+18}">${keur(v)}</text>`;
+    s+=`<rect class="hit" data-i="${i}" x="0" y="${y}" width="${W}" height="${rowH-4}" fill="transparent"/>`;
+    void pct;});
+  s+=`<line x1="${L}" x2="${L}" y1="0" y2="${H}" stroke="var(--muted)"/></svg>`;
+  const el=document.getElementById("chart-s"); el.innerHTML=s;
+  el.querySelectorAll(".hit").forEach(h=>{
+    h.addEventListener("mousemove",e=>{const src=SRC[+h.dataset.i],o=r[src.id];
+      showTip(e,`<b>${src.nom}</b><div class="row"><span>Cash net 3 mois</span><span>${eur(o.total)}</span></div><div class="row"><span>Part du total</span><span>${(r.tot.total?o.total/r.tot.total*100:0).toFixed(0)} %</span></div><div class="row"><span>Abonnés</span><span>${int(o.subs)}</span></div><div class="row"><span>Cours vendus</span><span>${int(o.cours)}</span></div>`);});
+    h.addEventListener("mouseleave",hideTip);
+  });
+}
+
+function table(r){
+  let h=`<thead><tr><th>Source</th>${MOIS.map(m=>`<th>${m.slice(0,4)}.</th>`).join("")}<th>Total</th><th>Abonnés</th><th>Cours</th></tr></thead><tbody>`;
+  SRC.forEach(s=>{const o=r[s.id];h+=`<tr><td><span class="sw" style="background:var(${s.c})"></span> ${s.nom}</td>${o.cash.map(v=>`<td>${eur(v)}</td>`).join("")}<td><b>${eur(o.total)}</b></td><td>${int(o.subs)}</td><td>${int(o.cours)}</td></tr>`;});
+  h+=`</tbody><tfoot><tr><td>Total</td>${r.tot.cash.map(v=>`<td>${eur(v)}</td>`).join("")}<td>${eur(r.tot.total)}</td><td>${int(r.tot.subs)}</td><td>${int(r.tot.cours)}</td></tr></tfoot>`;
+  document.getElementById("tbl").innerHTML=h;
+}
+
+function verdict(r){
+  const best=[...SRC].sort((a,b)=>r[b.id].total-r[a.id].total)[0];
+  const share=r.tot.total?r[best.id].total/r.tot.total*100:0;
+  // sensibilité : +10 % relatifs sur chaque taux de conversion clé
+  const keys=[["a400_conv","Offre aux 400"],["a5k_conv","Conversion des 5 000"],["p20_conv","Conversion des 20 000"],["ads_conv","Conversion pub/organique"],["mixAnn","Part d'annuels"]];
+  const gains=keys.map(([k,l])=>{const q={...P};q[k]=P[k]*1.1;return [l,model(q).tot.total-r.tot.total];}).sort((a,b)=>b[1]-a[1]);
+  document.getElementById("verdict").innerHTML=`<h2>💰 Lecture de la Tête Grise</h2>
+  <p><b>${best.nom}</b> pèse ${share.toFixed(0)} % du cash simulé : c'est la source à soigner en premier.</p>
+  <p>Levier le plus rentable : <b>${gains[0][0]}</b>. +10 % sur ce taux = <b>+${eur(gains[0][1])}</b> sur 3 mois. Ensuite : ${gains[1][0]} (+${eur(gains[1][1])}), ${gains[2][0]} (+${eur(gains[2][1])}).</p>`;
+}
+
+function render(){
+  const r=model(P);
+  document.getElementById("k-cash").textContent=eur(r.tot.total);
+  document.getElementById("k-cash-n").textContent=MOIS.map((m,i)=>m.slice(0,3)+". "+keur(r.tot.cash[i])).join(" · ");
+  document.getElementById("k-subs").textContent=int(r.tot.subs);
+  document.getElementById("k-subs-n").textContent="toutes sources, hors cours à l'unité";
+  document.getElementById("k-mrr").textContent=eur(r.tot.mrr);
+  document.getElementById("k-cours").textContent=int(r.tot.cours);
+  document.getElementById("k-cours-n").textContent="à "+P.prixCours+" € (≈ 14 $)";
+  chartMonths(r); chartSources(r); table(r); verdict(r);
+}
+
+document.getElementById("legend").innerHTML=SRC.map(s=>`<span><span class="sw" style="background:var(${s.c})"></span>${s.nom}</span>`).join("");
+document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  P={...SC[b.dataset.sc]};sync();render();}));
+document.getElementById("theme").addEventListener("click",()=>{
+  const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  r.dataset.theme=dark?"light":"dark";render();});
+buildParams();sync();render();
+let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(render,120);});
+</script>
+</body>
+</html>

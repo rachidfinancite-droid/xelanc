@@ -115,7 +115,7 @@ J0 = mercredi 14 octobre (si les prérequis sont prêts). Clôture : samedi 31 o
 | 4 | Page /advisory/ : bandeau « Prochaine cohorte 1er novembre · bootcamp début décembre » | Agent Site FIA | 1 h |
 | 5 | Liens de paiement par formule, comptant et échelonné | Rachid + agent site | ½ jour |
 | 6 | Lien de RDV de Loubna (agenda) | Loubna | 1 h |
-| 7 | **WhatsApp** : vrai numéro de Loubna. Pour écrire à 600 personnes, il faut **WhatsApp Business API** (Brevo WhatsApp, modèles de messages validés par Meta) : une liste de diffusion simple n'arrive qu'à ceux qui ont enregistré le numéro | Rachid | 1–3 jours (validation des modèles) |
+| 7 | WhatsApp Business API : **déjà en place** (Rachid, 08/10). À vérifier : numéro, palier d'envoi, note de qualité, modèles validés, opt-in des contacts | Rachid / Tête Grise dès accès Brevo | ½ jour + validation des modèles par Meta (quelques heures à 1 jour) |
 | 8 | Ressource offerte (PDF « Les 6 clients… » + grille de tarification) | Tête Grise / agent site | 1 jour |
 | 9 | Soirée en ligne : créneau, lien Zoom, formulaire d'inscription | Rachid | ½ jour |
 | 10 | 2–3 témoignages d'anciens (vidéo ou citation signée) | Loubna auprès des inscrits | 3–5 jours |
@@ -147,3 +147,32 @@ l'encaissement.
 
 Envoyés · ouverts · clics prix · OUI WhatsApp · inscrits à la soirée · présents ·
 RDV pris · RDV honorés · ventes par formule · cash encaissé · désinscriptions et plaintes.
+
+## 10. WhatsApp : règles et modèles
+
+**Règles de la WhatsApp Business API à respecter**
+- Hors des 24 h qui suivent un message du prospect, on ne peut envoyer **que des modèles validés par Meta** (catégorie « Marketing »).
+- Un clic sur un bouton de réponse rapide **ouvre la fenêtre de 24 h** : Loubna peut alors écrire librement. Chaque modèle a donc des boutons.
+- N'écrire qu'aux contacts qui ont donné leur numéro avec consentement (formulaires Meta, conversations WhatsApp entrantes, formulaires du site).
+- Meta limite le nombre de messages marketing par personne : un échec de livraison n'est pas une erreur à renvoyer.
+- Surveiller la note de qualité du numéro : des blocages ou signalements la font baisser et réduisent le palier d'envoi.
+
+**Modèles à faire valider** ({{1}} = prénom)
+
+**WA-1 · Annonce (J0)** — en-tête : photo de Rachid ou visuel Advisory
+> Bonjour {{1}}, ici Loubna de Financité Institute. Vous vous étiez intéressé(e) à l'Advisory Accelerator. Deux dates à noter : la prochaine cohorte démarre le **1er novembre**, et le bootcamp de Casablanca a lieu **début décembre**. Souhaitez-vous recevoir la brochure et les modalités ?
+> Boutons : « Oui, envoyez-moi » · « Voir le programme » (lien) · « Pas pour le moment »
+
+**WA-2 · Invitation soirée (J3)**
+> {{1}}, le Pr El Maataoui anime une soirée en ligne le {{2}} à {{3}} : « Comment se facture une mission de conseil en Afrique en 2026 ». 45 minutes, questions en direct. On vous réserve une place ?
+> Boutons : « Je m'inscris » · « Envoyez-moi le replay »
+
+**WA-3 · Réponse à l'objection (J9, uniquement ouvreurs/cliqueurs)** — en-tête : vidéo de 60 s de Rachid
+> {{1}}, la question qu'on nous pose le plus : « Est-ce compatible avec mon poste actuel ? » Rachid y répond en une minute. Le programme se paie aussi en plusieurs fois.
+> Boutons : « Parler à Loubna » · « Voir les formules »
+
+**WA-4 · Clôture (J16)**
+> {{1}}, les inscriptions à la cohorte du 1er novembre ferment demain soir. Si vous avez une dernière question, je suis disponible aujourd'hui.
+> Boutons : « Je m'inscris » · « Une question »
+
+Toute réponse « Pas pour le moment » ou « stop » retire le contact de la campagne.

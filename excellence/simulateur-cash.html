@@ -12,7 +12,7 @@
   --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;
 }
 @media (prefers-color-scheme:dark){
-  :root:where(:not([data-theme="light"])){
+  :root:not([data-theme="light"]){
     color-scheme:dark;
     --bg:#111110;--surface:#1a1a19;--border:#2e2e2b;--grid:#2a2a27;
     --text:#ffffff;--text-2:#c3c2b7;--muted:#8f8e86;--accent:#86b6ef;
@@ -62,15 +62,22 @@ summary{cursor:pointer;font-weight:600;display:flex;align-items:center;gap:8px;l
 summary::-webkit-details-marker{display:none}
 summary::after{content:"▾";margin-left:auto;color:var(--muted)}
 details:not([open]) summary::after{content:"▸"}
-.p{display:grid;grid-template-columns:1fr 64px;gap:2px 10px;align-items:center;margin-top:8px}
-.p label{font-size:13px;color:var(--text-2);grid-column:1/3;display:flex;justify-content:space-between}
-.p label output{color:var(--text);font-variant-numeric:tabular-nums;font-weight:600}
-.p input[type=range]{grid-column:1/3;width:100%;accent-color:var(--accent)}
+.p{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;align-items:center;margin-top:10px}
+.p label{font-size:13px;color:var(--text-2)}
+.num{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--border);border-radius:8px;background:var(--bg);padding:2px 8px}
+.num:focus-within{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 30%,transparent)}
+.num input{width:76px;border:0;background:none;color:var(--text);font:inherit;font-weight:600;text-align:right;font-variant-numeric:tabular-nums;padding:4px 0}
+.num input:focus{outline:none}
+.num span{color:var(--muted);font-size:12px;min-width:12px}
+.p input[type=range]{grid-column:1/3;width:100%;accent-color:var(--accent);margin:0}
+.warn{font-size:12px;color:var(--s2);margin:6px 0 0}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 4px}
 .hint{font-size:12px;color:var(--muted);margin:2px 0 0}
 .foot{color:var(--muted);font-size:12px;margin-top:16px}
 .verdict{margin-top:12px}
 .verdict p{margin:6px 0 0;color:var(--text-2)}
 .btn{border:1px solid var(--border);background:var(--surface);color:var(--text-2);border-radius:8px;padding:6px 10px;font:inherit;font-size:13px;cursor:pointer}
+@media (min-width:901px){#params{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}}
 @media (max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.kpi.hero{grid-column:1/3}}
 </style>
 </head>
@@ -114,10 +121,10 @@ details:not([open]) summary::after{content:"▸"}
       <div class="card verdict" id="verdict"></div>
     </div>
 
-    <aside class="card" id="params" aria-label="Paramètres de simulation"></aside>
+    <aside class="card" id="params" aria-label="Paramètres de simulation"><h2>Paramètres de simulation</h2><p class="hint">Les paramètres s'affichent quand la page est ouverte dans un navigateur (Chrome, Safari, Edge…) avec JavaScript activé.</p></aside>
   </div>
 
-  <p class="foot">Modèle : abonnés répartis selon le mix mensuel / annuel / premium ; l'annuel et le premium sont encaissés en une fois, le mensuel chaque mois avec résiliation ; frais de paiement déduits. Pub/organique : chaque cohorte d'inscrits convertit 60 % le mois même, 25 % le mois suivant, 15 % le mois d'après. Les 400 sont comptés en novembre, les 5 000 sur nov.–déc., les 20 000 envoyés par lots sur les trois mois. Non compté : revente des offres high ticket, contrats B2B banques.</p>
+  <p class="foot">Modèle : abonnés répartis selon le mix mensuel / annuel / premium ; l'annuel et le premium sont encaissés en une fois, le mensuel chaque mois avec résiliation ; frais de paiement déduits. Les 400 sont comptés en novembre ; le calendrier des 5 000, des 20 000 et de la conversion pub se règle dans « Calendrier des encaissements ». Non compté : revente des offres high ticket, contrats B2B banques.</p>
 </div>
 <div class="tip" id="tip"></div>
 
@@ -162,25 +169,31 @@ const DEF=[
   ["ads_m3","Comptes gratuits — janvier",0,15000,100,"","ads"],
   ["ads_conv","Comptes → abonnés",0,8,0.1,"%","ads"],
   ["ads_cours","Comptes → achat cours",0,10,0.1,"%","ads"],
+
+  ["a5k_m1","5 000 : part des abonnés en novembre (reste en déc.)",0,100,5,"%","t"],
+  ["p20_m1","20 000 : part envoyée en novembre",0,100,5,"%","t"],
+  ["p20_m2","20 000 : part envoyée en décembre (reste en janv.)",0,100,5,"%","t"],
+  ["lag0","Pub : conversion le mois de l'inscription",0,100,5,"%","t"],
+  ["lag1","Pub : conversion le mois suivant (reste à M+2)",0,100,5,"%","t"],
 ];
 const SC={
-  C:{prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:45,mixPrem:8,churn:12,frais:4,
+  C:{a5k_m1:50,p20_m1:30,p20_m2:40,lag0:60,lag1:25,prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:45,mixPrem:8,churn:12,frais:4,
      a400_n:400,a400_del:85,a400_spont:1.8,a400_offre:179,a400_conv:9,
      a5k_n:5000,a5k_del:75,a5k_open:35,a5k_sign:35,a5k_conv:4,
      p20_n:20000,p20_del:70,p20_conv:1,p20_cours:2,
      ads_m1:3000,ads_m2:2500,ads_m3:3000,ads_conv:2,ads_cours:4},
-  P:{prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:35,mixPrem:5,churn:15,frais:4,
+  P:{a5k_m1:50,p20_m1:30,p20_m2:40,lag0:60,lag1:25,prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:35,mixPrem:5,churn:15,frais:4,
      a400_n:400,a400_del:80,a400_spont:0.9,a400_offre:179,a400_conv:4.5,
      a5k_n:5000,a5k_del:65,a5k_open:25,a5k_sign:25,a5k_conv:2,
      p20_n:20000,p20_del:55,p20_conv:0.4,p20_cours:1,
      ads_m1:1500,ads_m2:1200,ads_m3:1500,ads_conv:1.2,ads_cours:2.5},
-  O:{prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:50,mixPrem:12,churn:8,frais:4,
+  O:{a5k_m1:50,p20_m1:30,p20_m2:40,lag0:60,lag1:25,prixMens:29,prixAnn:299,prixPrem:459,prixCours:12,mixAnn:50,mixPrem:12,churn:8,frais:4,
      a400_n:400,a400_del:90,a400_spont:3.3,a400_offre:179,a400_conv:16,
      a5k_n:5000,a5k_del:85,a5k_open:45,a5k_sign:45,a5k_conv:6,
      p20_n:20000,p20_del:80,p20_conv:2,p20_cours:3,
      ads_m1:6000,ads_m2:5000,ads_m3:6000,ads_conv:3,ads_cours:5},
 };
-const GROUPS=[["g","Prix & comportement (toutes sources)",null],["a400","400 anciens acheteurs","--s1"],["a5k","5 000 anciens participants","--s2"],["p20k","20 000 prospects high ticket","--s3"],["ads","Pub & organique","--s4"]];
+const GROUPS=[["g","Prix & comportement (toutes sources)",null],["a400","400 anciens acheteurs","--s1"],["a5k","5 000 anciens participants","--s2"],["p20k","20 000 prospects high ticket","--s3"],["ads","Pub & organique","--s4"],["t","Calendrier des encaissements",null]];
 let P={...SC.C};
 
 const eur=v=>Math.round(v).toLocaleString("fr-FR")+" €";
@@ -201,12 +214,12 @@ function model(p){
   const offre400=of;
   // 5000
   const s5=p.a5k_n*p.a5k_del/100*p.a5k_open/100*p.a5k_sign/100;
-  const sub5=s5*p.a5k_conv/100; S.a5k=[sub5*.5,sub5*.5,0];
+  const sub5=s5*p.a5k_conv/100; const f5=Math.min(1,p.a5k_m1/100); S.a5k=[sub5*f5,sub5*(1-f5),0];
   // 20000
-  const d20=p.p20_n*p.p20_del/100; const sp20=[.3,.4,.3];
+  const d20=p.p20_n*p.p20_del/100; const q1=Math.min(1,p.p20_m1/100), q2=Math.min(1-q1,p.p20_m2/100); const sp20=[q1,q2,Math.max(0,1-q1-q2)];
   S.p20k=sp20.map(x=>x*d20*p.p20_conv/100); C.p20k=sp20.map(x=>x*d20*p.p20_cours/100);
   // ads cohortes
-  const acc=[p.ads_m1,p.ads_m2,p.ads_m3], lag=[.6,.25,.15];
+  const acc=[p.ads_m1,p.ads_m2,p.ads_m3], l0=Math.min(1,p.lag0/100), l1=Math.min(1-l0,p.lag1/100), lag=[l0,l1,Math.max(0,1-l0-l1)];
   for(let i=0;i<3;i++){for(let j=0;j<=i;j++){S.ads[i]+=acc[j]*p.ads_conv/100*lag[i-j];C.ads[i]+=acc[j]*p.ads_cours/100*lag[i-j];}}
   let totSubs=0,totCours=0,mrr=0;
   for(const s of SRC){
@@ -230,24 +243,33 @@ function model(p){
 }
 
 // ---------- paramètres ----------
+const STORE="xelanc-simulateur-v1";
+function save(){try{localStorage.setItem(STORE,JSON.stringify(P));}catch(e){}}
+function load(){try{const v=JSON.parse(localStorage.getItem(STORE)||"null");if(v&&typeof v==="object"){for(const k in SC.C){if(typeof v[k]==="number"&&isFinite(v[k]))P[k]=v[k];}return true;}}catch(e){}return false;}
 function buildParams(){
   const el=document.getElementById("params");
-  el.innerHTML='<h2>Paramètres de simulation</h2><p class="hint">Bouge un curseur : tout se recalcule. Les boutons de scénario réinitialisent les valeurs.</p>';
+  el.innerHTML='<h2>Paramètres de simulation</h2><p class="hint">Tape une valeur dans une case ou bouge le curseur : tout se recalcule. Tes réglages sont gardés dans ce navigateur.</p><div class="tools"><button class="btn" id="reset" type="button">Revenir au scénario central</button></div><p class="warn" id="mixwarn" hidden>Part annuel + part premium dépasse 100 % : réduis l\'une des deux.</p>';
   for(const [g,label,col] of GROUPS){
-    const d=document.createElement("details"); if(g==="g"||g==="p20k") d.open=true;
+    const d=document.createElement("details"); d.open=true;
     d.innerHTML=`<summary>${col?`<span class="sw" style="background:var(${col})"></span>`:""}${label}</summary>`;
     for(const [k,l,mn,mx,st,u,gr] of DEF){ if(gr!==g) continue;
       const w=document.createElement("div"); w.className="p";
-      w.innerHTML=`<label for="${k}">${l}<output id="o-${k}"></output></label><input type="range" id="${k}" min="${mn}" max="${mx}" step="${st}">`;
+      const unit=u==="%"?"%":u==="€"?"€":"";
+      w.innerHTML=`<label for="${k}">${l}</label><span class="num"><input type="number" id="${k}" inputmode="decimal" min="0" step="${st}"><span>${unit}</span></span><input type="range" id="r-${k}" min="${mn}" max="${mx}" step="${st}" aria-label="${l}">`;
       d.appendChild(w);
-      w.querySelector("input").addEventListener("input",e=>{P[k]=+e.target.value;sync(k);render();});
+      const num=w.querySelector('input[type=number]'), rng=w.querySelector('input[type=range]');
+      num.addEventListener("input",()=>{const v=parseFloat(String(num.value).replace(",","."));if(!isFinite(v)||v<0)return;P[k]=v;rng.value=v;changed();});
+      num.addEventListener("change",()=>sync(k));
+      rng.addEventListener("input",()=>{P[k]=+rng.value;num.value=P[k];changed();});
     }
     el.appendChild(d);
   }
+  document.getElementById("reset").addEventListener("click",()=>{P={...SC.C};pressScenario("C");sync();changed();});
 }
-function fmtParam(k){const d=DEF.find(x=>x[0]===k),v=P[k],u=d[5];
-  return u==="%"?v.toLocaleString("fr-FR")+" %":u==="€"?v.toLocaleString("fr-FR")+" €":int(v);}
-function sync(k){(k?[k]:Object.keys(P)).forEach(k=>{const i=document.getElementById(k);if(!i)return;i.value=P[k];document.getElementById("o-"+k).textContent=fmtParam(k);});}
+function changed(){document.querySelectorAll(".seg button").forEach(x=>{if(!scenarioMatches(x.dataset.sc))x.setAttribute("aria-pressed","false");});save();render();}
+function scenarioMatches(sc){return Object.keys(SC[sc]).every(k=>SC[sc][k]===P[k]);}
+function pressScenario(sc){document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.sc===sc)));}
+function sync(k){(k?[k]:Object.keys(P)).forEach(k=>{const n=document.getElementById(k),r=document.getElementById("r-"+k);if(n)n.value=P[k];if(r)r.value=P[k];});}
 
 // ---------- graphiques ----------
 const tip=document.getElementById("tip");
@@ -322,6 +344,7 @@ function verdict(r){
 }
 
 function render(){
+  const mw=document.getElementById("mixwarn");if(mw)mw.hidden=P.mixAnn+P.mixPrem<=100;
   const r=model(P);
   document.getElementById("k-cash").textContent=eur(r.tot.total);
   document.getElementById("k-cash-n").textContent=MOIS.map((m,i)=>m.slice(0,3)+". "+keur(r.tot.cash[i])).join(" · ");
@@ -336,11 +359,11 @@ function render(){
 document.getElementById("legend").innerHTML=SRC.map(s=>`<span><span class="sw" style="background:var(${s.c})"></span>${s.nom}</span>`).join("");
 document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{
   document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed",x===b));
-  P={...SC[b.dataset.sc]};sync();render();}));
+  P={...SC[b.dataset.sc]};sync();save();render();}));
 document.getElementById("theme").addEventListener("click",()=>{
   const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
   r.dataset.theme=dark?"light":"dark";render();});
-buildParams();sync();render();
+buildParams();if(load()){const m=["P","C","O"].find(scenarioMatches);pressScenario(m||"");}sync();render();
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(render,120);});
 </script>
 </body>

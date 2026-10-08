@@ -67,8 +67,8 @@ J0 = mercredi 14 octobre (si les prérequis sont prêts). Clôture : samedi 31 o
 | **J0** | Email (de Rachid) | **Annonce : cohorte 01/11 + bootcamp début décembre.** Court, personnel, lien programme + brochure | Informer | Ouverture, clic programme |
 | J0 + 2 h | WhatsApp (Loubna) — A et D | Même info en 3 lignes + « Voulez-vous la brochure et les modalités ? Répondez OUI » | Micro-oui | Réponse OUI → appel |
 | J2 | Email | **Ressource offerte** : « Les 6 clients qui paient un conseiller financier, et combien » (tiré de la brochure) + grille de tarification d'une mission | Réciprocité | Téléchargement |
-| J3 | Email + WhatsApp | **Invitation au webinaire** « Conseiller augmenté par l'IA » (mer. 21/10, 19 h) — voir § 11 | Engagement | Inscription au webinaire |
-| **21/10** | Webinaire (Zoom) | Démonstration IA sur un cas PME, offre en fin de séance — voir § 11 | Autorité + preuve | Présence ≥ 20 min, questions |
+| J3 | Email + WhatsApp | **Invitation au webinaire** « Défi Consultant Augmenté » (mer. 21/10, 19 h) — voir § 11 | Engagement | Inscription au webinaire |
+| **21/10** | Webinaire (Zoom) | Défi en 3 épreuves (positionnement, offre, premier message), offre en fin de séance — voir § 11 | Autorité + preuve | Présence ≥ 20 min, questions |
 | J7 | Email | Replay + **témoignage** d'un ancien + lien RDV de 20 min avec Loubna | Preuve sociale | RDV pris |
 | J9 | WhatsApp (ouvreurs non convertis) | Vidéo de Rachid, 60 s : réponse à l'objection n° 1 (prix → mensualités ; temps → 5–6 h/semaine) | Lever l'objection | Réponse, RDV |
 | J10 | Email | **Les 3 formules + FAQ**, présentées de l'Exécutif au Pro, avec mensualités. Bonus Alliance jusqu'au 25/10 | Ancrage + décision | Clic sur les prix |
@@ -164,7 +164,7 @@ RDV pris · RDV honorés · ventes par formule · cash encaissé · désinscript
 > Boutons : « Oui, envoyez-moi » · « Voir le programme » (lien) · « Pas pour le moment »
 
 **WA-2 · Invitation soirée (J3)**
-> {{1}}, le Pr El Maataoui anime une soirée en ligne le {{2}} à {{3}} : « Comment se facture une mission de conseil en Afrique en 2026 ». 45 minutes, questions en direct. On vous réserve une place ?
+> {{1}}, le Pr El Maataoui lance le **Défi Consultant Augmenté** le {{2}} à {{3}} : en 60 minutes, vous construisez votre offre de conseil avec l'IA, en direct. On vous réserve une place ?
 > Boutons : « Je m'inscris » · « Envoyez-moi le replay »
 
 **WA-3 · Réponse à l'objection (J9, uniquement ouvreurs/cliqueurs)** — en-tête : vidéo de 60 s de Rachid
@@ -177,34 +177,39 @@ RDV pris · RDV honorés · ventes par formule · cash encaissé · désinscript
 
 Toute réponse « Pas pour le moment » ou « stop » retire le contact de la campagne.
 
-## 11. Webinaire « Conseiller augmenté par l'IA » (remplace la soirée)
+## 11. Webinaire « Défi Consultant Augmenté » (remplace la soirée)
+
+**Public** : cadres (finance, gestion, management) qui veulent devenir consultants, et
+consultants débutants. Pas les banquiers en particulier.
 
 **Date recommandée : mercredi 21 octobre 2026, 19 h (Casablanca)** = 18 h Abidjan/Dakar,
 19 h Kinshasa. Laisse 10 jours d'appels avant la clôture du 31/10.
 
-**Positionnement retenu**
-- Titre : **« Conseiller augmenté par l'IA : de banquier à conseiller du dirigeant »**
-- Sous-titre : *En direct : un diagnostic de financement PME monté avec l'IA en 30 minutes, et comment le facturer.*
-- Pourquoi : l'angle « statut et responsabilité » est celui qui a le mieux marché en pub
-  (374 leads à 0,67–0,77 $ [M]) ; la démonstration porte sur un geste que l'audience connaît
-  (le dossier de crédit) ; la fin parle d'argent (facturer la mission), ce qui mène à Advisory.
-- Message clé : *l'IA fait l'analyse, le conseiller fait le jugement. C'est le jugement qui se facture.*
+**Titre retenu (format défi)**
+- **« Le Défi Consultant Augmenté : construisez votre offre de conseil en 60 minutes avec l'IA »**
+- Sous-titre : *Webinaire en direct avec le Pr Rachid El Maataoui, pour les cadres qui veulent passer au conseil sans perdre trois ans à apprendre le métier.*
+- Promesse : l'IA raccourcit l'apprentissage (méthodes de cabinet), fait gagner du temps
+  sur les livrables et permet de démarrer plus vite. Les participants **repartent avec un
+  résultat construit pendant la séance**.
 
-**Déroulé (75 min)**
-| Min | Séquence | But |
+Variantes de titre testables :
+- « Cadre aujourd'hui, consultant demain : le raccourci IA en 60 minutes »
+- « 60 minutes pour poser votre activité de conseil, avec l'IA comme associé »
+
+**Déroulé (75 min) : trois épreuves du défi**
+| Min | Séquence | Ce que le participant obtient |
 |---|---|---|
-| 0–5 | Accueil, promesse, qui est Rachid | Autorité |
-| 5–15 | Ce que l'IA change en 2026 : l'exécution ne se paie plus, le jugement oui. Les 3 erreurs du banquier qui veut devenir conseiller | Prise de conscience |
-| 15–40 | **Démonstration en direct** : PME sous-financée (cas de la brochure) → états financiers → diagnostic → besoin de financement → note au dirigeant, avec l'IA. Montrer où l'humain décide | Preuve, « je peux le faire » |
-| 40–50 | Comment vendre cette mission : à qui (les 6 profils de clients), à quel prix, sous quelle forme | Projection financière |
-| 50–60 | Advisory Accelerator : cohorte du 1er novembre, bootcamp début décembre, 3 formules, bonus réservé aux participants (72 h) | Offre |
-| 60–75 | Questions en direct ; lien RDV Loubna à l'écran | Lever les objections |
+| 0–8 | Le défi expliqué ; pourquoi l'IA change la courbe d'apprentissage du consultant ; qui est Rachid | La règle du jeu |
+| 8–25 | **Épreuve 1 · Mon positionnement** : à partir de son parcours, l'IA aide à définir qui il sert et sur quel problème | Une phrase de positionnement |
+| 25–42 | **Épreuve 2 · Mon offre** : transformer l'expertise en offre packagée (livrable, durée, prix) | Une offre de conseil écrite |
+| 42–52 | **Épreuve 3 · Mon premier message** : le message d'approche d'un premier client | Un message prêt à envoyer |
+| 52–62 | Ce que l'IA ne fait pas : le jugement, la posture, la relation. Advisory Accelerator : cohorte du 1er novembre, bootcamp début décembre, 3 formules, bonus réservé aux participants (72 h) | La suite logique |
+| 62–75 | Questions en direct ; lien RDV Loubna à l'écran | — |
 
-**Cadeau aux présents** : « Kit du conseiller augmenté — 10 prompts pour un diagnostic
-financier PME » (remis en fin de séance, pas avant : il fait rester jusqu'au bout).
-Replay disponible **48 h seulement**.
+**Cadeau aux présents** : « Kit Consultant Augmenté — les prompts du défi » (remis en fin
+de séance). Replay disponible **48 h seulement**.
 
-**Rappels** : email J-1, email + WhatsApp H-1, WhatsApp H-0 (« on démarre »).
+**Rappels** : email J-1, email + WhatsApp H-1, WhatsApp H-0 (« le défi commence »).
 
 **Attendu [H]** : 600 invités + LinkedIn → 120–200 inscrits → 35 % présents (40–70)
 → 15–20 % prennent RDV → 30 % signent → **3 à 5 ventes ≈ 10–17 k€** de CA, inclus dans

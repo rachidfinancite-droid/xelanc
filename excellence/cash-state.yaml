@@ -80,8 +80,11 @@ bassins:                # {nom, zone, fonction, sam, cp90, scores: {S,A,V,D,C,E}
     prevision: {pessimiste: "18 conv. ≈ 3,4 k€", central: "36 conv. (9 %) ≈ 7 k€", optimiste: "67 conv. ≈ 13 k€"}
     objectif: 40 conversions (10 %) ≈ 8 k€ encaissés sous 15 jours
   - nom: Apprenants formés pour le compte de banques
-    taille: 5000            # [H] Rachid « peut-être »
+    taille: 5000            # [H] Rachid « peut-être » — majorité d'emails personnels
     statut: après la campagne des 400 (utiliser son taux mesuré pour calibrer)
+    approche_recommandee: "email ancien participant SANS promesse de cours transféré → accès libre + 1 cours offert, envoi par lots de 500"
+    prevision: {pessimiste: "~200 comptes, ~4 abonnés ≈ 1 k€", central: "~460 comptes, ~18 abonnés ≈ 4 k€", optimiste: "~860 comptes, ~50 abonnés ≈ 12 k€"}
+    risques: [promesse non tenue → plaintes spam qui dégradent la délivrabilité du domaine, données collectées via mandat bancaire (loi 09-08 / CNDP), droits sur contenus payés par les banques]
 
 previsions:
   - date: 2026-10-08

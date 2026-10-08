@@ -2,8 +2,11 @@
 # Lu au début de chaque session, mis à jour à la fin. Ne pas supprimer l'historique.
 
 projet: Excellence
-devise: null            # ex. EUR, MAD
-derniere_mise_a_jour: null
+marque: Xelanc (https://xelanc.org) — « L'excellence en finance, augmentée par l'IA »
+editeur: Xelanc Groupe — Pr Rachid El Maataoui (fondateur, autorité de certification)
+lancement: 2026-11-01   # accès anticipé, « places fondateur limitées »
+devise: null            # ex. EUR, MAD — à confirmer
+derniere_mise_a_jour: 2026-10-08
 
 objectifs:
   cash_30j: null
@@ -15,15 +18,37 @@ tresorerie:
   charges_fixes_mensuelles: null
   budget_ads_mensuel: null
 
-offre:                  # un élément par produit/programme
-  - nom: null
+modele_economique: freemium → abonnement annuel   # source xelanc.org/certificats [M]
+offre:                  # un élément par produit/programme — prix absents du site au 2026-10-08
+  - nom: Accès libre (compte gratuit, sans carte bancaire)
+    prix: 0
+    role: porte d'entrée / capture de leads
+  - nom: Formule annuelle (inclut les 6 certificats + bibliothèque + tuteur IA 24/7)
     prix: null
-    modalites_paiement: null   # comptant / acompte X % / N échéances
+    modalites_paiement: null   # comptant / mensualisé ?
+    remboursement: met fin à l'accès et annule les certificats
     cout_delivery_par_client: null
+  - nom: Certificats (5 cours, 100+ capsules, 6–8 semaines à 2–3 h/sem, examen 60 min + étude de cas)
+    liste: [Chargé d'affaires PME, Analyste financier risque, Banquier conseil, Analyste financier corporate, Financier d'entreprise, Investment Banker (déc. 2026)]
+    prix_unitaire: null        # vendu seul ou uniquement via l'annuel ?
+  - nom: Cours à l'unité (25 capsules, accès à vie)
+    liste: [Analyse financière × IA, Risque de crédit, Business plan × IA, DCF × IA, Modélisation Excel, Dossier de crédit]
+    prix: null
+actifs_preuve_sociale:
+  - 30 ans de parcours haute finance
+  - 50 000+ professionnels formés en Afrique
+  - logos employeurs : Attijariwafa bank, CIH Bank, Bourse de Casablanca, ANAPEC
+  - aucun témoignage client sur le site (manque)
 
 cible:
-  fonctions: []         # métiers / fonctions visés
-  zones: []             # pays / villes actuellement adressés
+  fonctions:            # [M] site
+    - chargés d'affaires / analystes crédit banque d'entreprise (segment PME)
+    - analystes juniors, middle-office, contrôleurs vers l'analyse
+    - banquiers / gestionnaires de comptes vers le conseil dirigeant
+    - analystes FP&A, contrôleurs de gestion, consultants
+    - financiers de PME, comptables
+    - analystes M&A / TS / PE (Investment Banker, déc. 2026)
+  zones: [Maroc (probable, [H]), Afrique francophone ([H]), version EN disponible]
   payeur: null          # particulier / employeur / mixte
 
 tunnel:

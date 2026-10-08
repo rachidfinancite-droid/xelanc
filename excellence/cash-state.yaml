@@ -5,7 +5,7 @@ projet: Excellence
 marque: Xelanc (https://xelanc.org) — « L'excellence en finance, augmentée par l'IA »
 editeur: Xelanc Groupe — Pr Rachid El Maataoui (fondateur, autorité de certification)
 lancement: 2026-11-01   # accès anticipé, « places fondateur limitées »
-devise: null            # ex. EUR, MAD — à confirmer
+devise: EUR             # abonnements en €, cours à l'unité affiché en USD (14 $) — paiement carte + Mobile Money
 derniere_mise_a_jour: 2026-10-08
 
 objectifs:
@@ -23,15 +23,24 @@ offre:                  # un élément par produit/programme — prix absents du
   - nom: Accès libre (compte gratuit, sans carte bancaire)
     prix: 0
     role: porte d'entrée / capture de leads
-  - nom: Formule annuelle (inclut les 6 certificats + bibliothèque + tuteur IA 24/7)
-    prix: null
-    modalites_paiement: null   # comptant / mensualisé ?
+  - nom: Cours à l'unité (produit d'appel)
+    prix: 14 USD (≈ 12 €)      # [M] Rachid 2026-10-08
+  - nom: Mensuel « Tous les cours » (sans certificats, tuteur IA 1 q/jour)
+    prix: 29 €/mois            # [M] xelanc.org/membership
+    modalites_paiement: sans engagement
+  - nom: Annuel « Cours et certificats » (tuteur IA 5 q/jour) — « le + choisi »
+    prix: 299 €/an             # [M] paiement unique
+  - nom: Premium « Accompagnement IA » (tuteur illimité)
+    prix: 459 €/an             # [M] paiement unique
+  - nom: Formule annuelle (ancienne entrée, voir ci-dessus)
+    prix: 299
+    modalites_paiement: paiement unique
     remboursement: met fin à l'accès et annule les certificats
     cout_delivery_par_client: null
   - nom: Certificats (5 cours, 100+ capsules, 6–8 semaines à 2–3 h/sem, examen 60 min + étude de cas)
     liste: [Chargé d'affaires PME, Analyste financier risque, Banquier conseil, Analyste financier corporate, Financier d'entreprise, Investment Banker (déc. 2026)]
     prix_unitaire: null        # vendu seul ou uniquement via l'annuel ?
-  - nom: Cours à l'unité (25 capsules, accès à vie)
+  - nom: Catalogue cours (25 capsules, accès à vie) — 100+ cours, 10 parcours, 5 nouveaux cours/mois
     liste: [Analyse financière × IA, Risque de crédit, Business plan × IA, DCF × IA, Modélisation Excel, Dossier de crédit]
     prix: null
 actifs_preuve_sociale:
@@ -52,8 +61,8 @@ cible:
   payeur: null          # particulier / employeur / mixte
 
 tunnel:
-  canaux_acquisition: []       # ads Meta, Google, LinkedIn, réseau, WhatsApp, webinaire…
-  etapes: []                   # lead → qualif → RDV → closing → paiement
+  canaux_acquisition: []       # à préciser (ads, réseau 50 000 anciens, LinkedIn…)
+  etapes: [accès libre gratuit ou cours 14 $, page de paiement, upsell mensuel 29 € / annuel 299 € / premium 459 €]
   qui_vend: null
 
 sources_connectees:
@@ -66,7 +75,21 @@ mesures: []             # historique daté : {date, periode, depense, leads, rdv
 
 bassins: []             # {nom, zone, fonction, sam, cp90, scores: {S,A,V,D,C,E}, scb, verdict, date}
 
-hypotheses: []          # {texte, valeur, impact_si_faux, comment_mesurer, statut: ouverte|validee|invalidee}
+previsions:
+  - date: 2026-10-08
+    periode: nov 2026 – jan 2027
+    modele: script scratchpad prev.py (cohortes, conversion étalée 60/25/15 %, frais 4 %)
+    pessimiste: {comptes_gratuits_mois: 1200-1500, ca_3m: 7400, cash_net_3m: 7100, mrr_fin_janv: 1200}
+    central:    {comptes_gratuits_mois: 2500-3000, ca_3m: 30000, cash_net_3m: 28800, mrr_fin_janv: 4200, ca_par_mois: [6700, 10000, 13300]}
+    optimiste:  {comptes_gratuits_mois: 5000-6000, ca_3m: 99000, cash_net_3m: 95000, mrr_fin_janv: 13000}
+
+hypotheses:
+  - {texte: volume de comptes gratuits / mois, valeur: 3000 central, impact_si_faux: proportionnel au CA, comment_mesurer: inscriptions WordPress + Brevo, statut: ouverte}
+  - {texte: taux gratuit → abonnement payant, valeur: "2 % (1,2–3 %)", impact_si_faux: levier n°1 du CA, comment_mesurer: suivi cohortes mensuel, statut: ouverte}
+  - {texte: taux gratuit → achat cours 14 $, valeur: "4 % (2,5–5 %)", impact_si_faux: faible sur CA, comment_mesurer: ventes cours, statut: ouverte}
+  - {texte: mix abonnés mensuel/annuel/premium, valeur: "55/38/7", impact_si_faux: fort sur le cash (l'annuel = ~60 % du CA), comment_mesurer: ventes par formule, statut: ouverte}
+  - {texte: churn mensuel, valeur: "12 %", impact_si_faux: moyen à 3 mois, fort à 12 mois, comment_mesurer: résiliations, statut: ouverte}
+  - {texte: frais de paiement, valeur: "4 %", impact_si_faux: faible, comment_mesurer: relevés passerelle, statut: ouverte}          # {texte, valeur, impact_si_faux, comment_mesurer, statut: ouverte|validee|invalidee}
 
 decisions: []           # {date, decision, cash_attendu, echeance, resultat_reel}
 

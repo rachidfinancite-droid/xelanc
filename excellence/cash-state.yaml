@@ -1,0 +1,48 @@
+# Mémoire de la Tête Grise — projet Excellence
+# Lu au début de chaque session, mis à jour à la fin. Ne pas supprimer l'historique.
+
+projet: Excellence
+devise: null            # ex. EUR, MAD
+derniere_mise_a_jour: null
+
+objectifs:
+  cash_30j: null
+  cash_90j: null
+  cash_12m: null
+
+tresorerie:
+  cash_en_banque: null
+  charges_fixes_mensuelles: null
+  budget_ads_mensuel: null
+
+offre:                  # un élément par produit/programme
+  - nom: null
+    prix: null
+    modalites_paiement: null   # comptant / acompte X % / N échéances
+    cout_delivery_par_client: null
+
+cible:
+  fonctions: []         # métiers / fonctions visés
+  zones: []             # pays / villes actuellement adressés
+  payeur: null          # particulier / employeur / mixte
+
+tunnel:
+  canaux_acquisition: []       # ads Meta, Google, LinkedIn, réseau, WhatsApp, webinaire…
+  etapes: []                   # lead → qualif → RDV → closing → paiement
+  qui_vend: null
+
+sources_connectees:
+  adspirer: false        # https://adspirer.ai/connections
+  brevo: null
+  gmail: null
+  calendar: null
+
+mesures: []             # historique daté : {date, periode, depense, leads, rdv, ventes, cash_encaisse, source}
+
+bassins: []             # {nom, zone, fonction, sam, cp90, scores: {S,A,V,D,C,E}, scb, verdict, date}
+
+hypotheses: []          # {texte, valeur, impact_si_faux, comment_mesurer, statut: ouverte|validee|invalidee}
+
+decisions: []           # {date, decision, cash_attendu, echeance, resultat_reel}
+
+actions_en_cours: []    # {action, qui, avant, cash_attendu, statut}

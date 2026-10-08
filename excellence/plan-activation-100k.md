@@ -4,6 +4,22 @@ Rédigé par la Tête Grise le 2026-10-08. Destiné à Rachid et aux agents du p
 (Publicité Meta, Site FIA, Site Xelanc, Orchestre Marketing). Chaque chiffre est
 étiqueté : [M] mesuré, [E] estimé, [H] hypothèse.
 
+## 0. Ordre de poussée (version pragmatique, 2026-10-08)
+
+On pousse ce qui est prêt, dans l'ordre, sans attendre le reste.
+
+| Ordre | Produit / action | Prêt ? | Petite action restante | Cash attendu [H] | Cash quand |
+|---|---|---|---|---|---|
+| 1 | Advisory : rappeler les 32 qualifiés | Maintenant | Sortir la liste de Brevo | 10–24 k€ | sous 2–3 semaines |
+| 2 | Bootcamp Advisory 22→31/10 | Maintenant | Message WhatsApp/LinkedIn perso aux leads chauds | selon places restantes | avant le 22/10 |
+| 3 | Mandats banques (8 clients) | Maintenant | 8 appels de Rachid aux responsables formation | ≈ 25 k€ par mandat | 30–60 jours |
+| 4 | Xelanc : 5 cours payables + abonnements | 1 jour | 1 achat test par formule | 1–3 k€ en octobre | immédiat |
+| 5 | Relance des anciens acheteurs (73 mesurés) | 1–2 jours | Recharger Brevo, envoyer depuis xelanc.com (domaine déjà validé) | ≈ 1,5 k€ | sous 15 jours |
+| 6 | 20 000 prospects : top engagés → appel high ticket | 2–3 jours | Brevo rechargé + extraction des plus engagés | ≈ 9 k€ (3 ventes) | novembre |
+| 7 | Bootcamp Chargé de clientèle 18→22/11 | Maintenant | Même message que n° 2 après le 22/10 | selon places | avant le 18/11 |
+| — | DAF Dirigeant / Business Leader | Pas prêt | Dates de session à jour + pages | — | décembre |
+| — | Lancement Xelanc complet, pubs Meta, Black Friday | Pas prêt | Mesure, 5 cours bloqués, compte Meta | voir simulateur | novembre |
+
 ## 1. La cible en euros
 
 100 000 $ ≈ **86 000 € encaissés par mois** [E, taux ≈ 1,16]. Visée : **mars 2027**

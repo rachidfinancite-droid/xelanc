@@ -57,7 +57,7 @@ cible:
     - analystes FP&A, contrôleurs de gestion, consultants
     - financiers de PME, comptables
     - analystes M&A / TS / PE (Investment Banker, déc. 2026)
-  zones: [Maroc (probable, [H]), Afrique francophone ([H]), version EN disponible]
+  zones: ["Maroc (probable, [H])", "Afrique francophone ([H])", "version EN disponible"]
   payeur: null          # particulier / employeur / mixte
 
 tunnel:
@@ -85,6 +85,16 @@ bassins:                # {nom, zone, fonction, sam, cp90, scores: {S,A,V,D,C,E}
     approche_recommandee: "email ancien participant SANS promesse de cours transféré → accès libre + 1 cours offert, envoi par lots de 500"
     prevision: {pessimiste: "~200 comptes, ~4 abonnés ≈ 1 k€", central: "~460 comptes, ~18 abonnés ≈ 4 k€", optimiste: "~860 comptes, ~50 abonnés ≈ 12 k€"}
     risques: [promesse non tenue → plaintes spam qui dégradent la délivrabilité du domaine, données collectées via mandat bancaire (loi 09-08 / CNDP), droits sur contenus payés par les banques]
+  - nom: Prospects high ticket non convertis (DAF Dirigeant, Business Leader… 3–4 k$)
+    taille: 20000           # [M] Rachid 2026-10-08, intérêt sur 3–4 ans, frein = prix
+    approche: downsell vers abonnement (annuel 299 € mis en avant), envoi par lots
+    hypotheses: {delivrabilite: "55/70/80 %", conv_abonne_sur_delivres: "0,4/1/2 %", achat_cours: "1/2/3 %", panier_moyen_90j: "≈237 €"}
+    prevision: {pessimiste: "44 abonnés ≈ 9,5 k€", central: "140 abonnés ≈ 35 k€", optimiste: "320 abonnés ≈ 88 k€"}
+recap_bases_existantes_2026-10-08:
+  pessimiste: {abonnes: 66, cash: 13900}
+  central:    {abonnes: 194, cash: 46200}
+  optimiste:  {abonnes: 437, cash: 112600}
+  note: hors acquisition ads/organique (prévision séparée, central 30 k€ sur nov–janv)
 
 previsions:
   - date: 2026-10-08

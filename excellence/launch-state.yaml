@@ -1,0 +1,64 @@
+# Journal de Launch — lancement Xelanc
+# Lu au début de chaque session, mis à jour à la fin. Ne pas supprimer l'historique.
+# Étiquettes : [M] mesuré, [E] estimé, [H] hypothèse.
+
+lancement:
+  produit: Xelanc (https://xelanc.org)
+  j0: 2026-11-01            # dimanche, ouverture douce
+  black_friday: 2026-11-27 → 2026-11-30
+  fin_du_lancement: 2027-01-31   # bilan J+91, puis pilotage courant
+  phase_en_cours: "0 · Préparation"
+  plan: excellence/plan-lancement-xelanc.md   # à produire par le mode Définir
+  derniere_mise_a_jour: 2026-10-17
+
+objectifs:                  # repris de cash-state.yaml, prévision Tête Grise du 2026-10-17
+  cible_central: {cash_net_nov_janv: 85000, nouveaux_payants: {nov: 158, dec: 142, janv: 109}, comptes_flux_mois: 3000, conversion_90j: "2,5 %", part_annuel_premium: "≥ 55 %"}
+  plancher_pessimiste: {cash_net_nov_janv: 20000, nouveaux_payants: {nov: 46, dec: 42, janv: 32}}
+  devise: EUR
+
+prerequis:                  # statut : vert (preuve), rouge, inconnu. Dernière preuve connue entre parenthèses.
+  - {id: P1, quoi: "Brevo crédité, domaine xelanc.org authentifié (SPF/DKIM/DMARC), sortie du plafond 300 emails/jour", qui: Agent Site Xelanc + Rachid, statut: rouge, preuve: "Brevo sans crédits (agents, 08/10)"}
+  - {id: P2, quoi: "Clé Brevo exposée et jeton Meta régénérés, snippet 13 désactivé", qui: Agent Site FIA + Meta, statut: rouge, preuve: "agents, 08/10"}
+  - {id: P3, quoi: "Achat test réussi par formule (cours, mensuel, annuel, premium), carte et Mobile Money", qui: Agent Site Xelanc, statut: rouge, preuve: "aucun achat test (08/10)"}
+  - {id: P4, quoi: "5 cours bloqués débloqués (jeton Thinkific en 401)", qui: Agent Site Xelanc, statut: rouge, preuve: "08/10"}
+  - {id: P5, quoi: "Pixel + API Conversions + GA4 + UTM sur toutes les pubs et tous les emails", qui: Meta + Agent Site Xelanc, statut: rouge, preuve: "pas de pixel ni GA4 (08/10)"}
+  - {id: P6, quoi: "Nouveau compte Meta en €, Audience Network exclu", qui: Meta + Rachid, statut: inconnu, preuve: "feu vert en attente (08/10)"}
+  - {id: P7, quoi: "Prix alignés partout (13,90 € vs 14 $, 459 € présent partout, plus d'ancien 299 $/599 $)", qui: Agent Site Xelanc + Orchestre, statut: rouge, preuve: "08/10"}
+  - {id: P8, quoi: "Compteurs de /competences/ cohérents avec les cartes, doublon supprimé, statut sur les 17 cartes sans date", qui: Agent Site Xelanc, statut: rouge, preuve: "relevé Tête Grise 17/10 [M]"}
+  - {id: P9, quoi: "Au moins 3 témoignages + 1 extrait vidéo public + durée par capsule + prix sur les pages parcours", qui: Agent Site Xelanc + Loubna, statut: rouge, preuve: "aucun visible au 17/10 [M]"}
+  - {id: P10, quoi: "Listes d'exclusion : segments Advisory A–D, inscrits bootcamps, désinscrits", qui: Agent Site FIA, statut: inconnu, preuve: null}
+  - {id: P11, quoi: "Les 9 compétences du 01/11 accessibles après paiement", qui: Agent Site Xelanc, statut: inconnu, preuve: null}
+
+portes:
+  - {id: G0, nom: Prêt à ouvrir, date: 2026-10-29, statut: à venir, verdict: null}
+  - {id: G1, nom: Lot suivant, date: "H+48 après le 1er lot de chaque base", statut: à venir, verdict: null}
+  - {id: G2, nom: Conversion, date: 2026-11-09, statut: à venir, verdict: null}
+  - {id: G3, nom: Pub en scale, date: 2026-11-16, statut: à venir, verdict: null}
+  - {id: G4, nom: Black Friday prêt, date: 2026-11-25, statut: à venir, verdict: null}
+  - {id: G5, nom: Bilans, date: "2026-12-01 et 2027-01-31", statut: à venir, verdict: null}
+
+vagues:                     # détail : .claude/skills/launch-xelanc/references/phases-et-calendrier.md §3
+  - {id: V0, segment: Inscrits « premier cercle » du pré-lancement, taille: null, depart: 2026-11-01, statut: à planifier}
+  - {id: V1, segment: Anciens acheteurs, taille: "73 mesurés ou 400 (à trancher)", depart: 2026-11-02, statut: à planifier}
+  - {id: V2, segment: Apprenants formés pour les banques, taille: "≈ 5 000 [H]", depart: 2026-11-03, statut: à planifier}
+  - {id: V3, segment: Prospects high ticket non convertis, taille: 20000, depart: 2026-11-05, statut: à planifier}
+  - {id: V4, segment: Trafic froid (Meta, LinkedIn, organique), taille: "≈ 3 000 comptes/mois [H]", depart: "tests 2026-10-27, scale après G3", statut: à planifier}
+  - {id: BF, segment: Bases non converties + liste d'attente, taille: null, depart: 2026-11-27, statut: à planifier}
+
+collisions:
+  - "Campagne Advisory : segments A–D sollicités jusqu'au 31/10 puis bootcamp Casablanca → exclus des vagues Xelanc jusqu'au 07/12"
+  - "Webinaire Advisory mer. 21/10 : pas de live Xelanc la même semaine"
+  - "Bootcamp Chargé de clientèle entreprise 18 → 22/11 : inscrits exclus des vagues Xelanc jusqu'au 22/11"
+  - "20 000 prospects : les plus engagés restent dans la piste d'appel high ticket"
+
+decisions_en_attente:       # Rachid
+  - "Offre fondateurs : « 299 € à vie » ou « 299 €/an, prix bloqué à vie » (recommandé par la Tête Grise)"
+  - "Anciens acheteurs : 73 (Thinkific) ou 400 ?"
+  - "Budget pub mensuel et date des tests Meta"
+  - "Qui appelle (Loubna ?) et quel numéro WhatsApp"
+  - "Nombre d'inscrits « premier cercle » à date (taille de la vague 0)"
+  - "Accès test à l'espace membre pour vérifier onboarding et vidéos"
+
+mesures: []                 # {date, periode, indicateur, valeur, source, etiquette}
+ajustements: []             # {date, signal, ajustement, effet_attendu, verification_le, critere_annulation, resultat}
+decisions: []               # {date, decision, par, porte}

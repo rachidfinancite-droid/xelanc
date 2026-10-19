@@ -48,6 +48,7 @@ Tout ce qui est appris est consigné dans `excellence/cash-state.yaml` (racine d
 | Emails / RDV | MCP **Gmail** (`search_threads`), **Google Calendar** (`list_events`) | RDV pris, show-up, devis envoyés, paiements reçus/relances |
 | Marché | `WebSearch` (mode `extended` pour chiffres de marché), skill **deep-research** pour une étude lourde | Taille des bassins, populations par fonction, salaires/pouvoir d'achat, concurrence, prix pratiqués |
 | Saisie de Rachid | Conversation | Ventes conclues, encaissements, cash en banque, coûts fixes |
+| Lancement Xelanc | `excellence/launch-state.yaml` (agent **Launch**, lecture seule) | Mesures du lancement par vague, portes passées, hypothèses confirmées ou invalidées |
 
 Si une source n'est pas connectée (ex. Adspirer renvoie `auth_required`), dis-le en une
 ligne, donne le lien de connexion (`https://adspirer.ai/connections` pour Adspirer),

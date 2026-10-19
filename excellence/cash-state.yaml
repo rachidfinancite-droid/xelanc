@@ -6,7 +6,7 @@ marque: Xelanc (https://xelanc.org) — « L'excellence en finance, augmentée p
 editeur: Xelanc Groupe — Pr Rachid El Maataoui (fondateur, autorité de certification)
 lancement: 2026-11-01   # accès anticipé, « places fondateur limitées »
 devise: EUR             # abonnements en €, cours à l'unité affiché en USD (14 $) — paiement carte + Mobile Money
-derniere_mise_a_jour: 2026-10-08
+derniere_mise_a_jour: 2026-10-17
 
 objectifs:
   cash_mensuel_cible: 100000 USD (≈ 86 000 €) — Rachid 2026-10-08, visée mars 2027
@@ -29,6 +29,8 @@ agents_du_projet:      # synthèse lue le 2026-10-08 (lecture seule)
   site_fia: "/advisory/ refaite, 32 qualifiés non rappelés, séquences non chargées dans Brevo, clé Brevo exposée"
   site_xelanc: "cours 13,90 €, paiement OK pour 5 cours / 5 bloqués, aucun achat test, Brevo sans crédits, pas de pixel/GA4"
   orchestre: "offre fondateurs 299 € à vie 500 places Black Friday 27–30/11 ; Thinkific = 73 acheteurs payants mesurés (pas 400)"
+  lecture_site_2026-10-17: "Tête Grise sur xelanc.org : prix clairs (29 €/mois, 299 €/an, 459 €/an), 5 parcours certifiants, tuteur IA, certificat vérifiable + badge LinkedIn. Page /competences/ : 38 cartes, 9 marquées « disponible le 1er novembre », 12 datées nov–déc, 17 sans statut, compteurs d'en-tête (16 dispo) incohérents avec les cartes, doublon « Analyse financière du risque de crédit ». Aucun témoignage, aucun extrait vidéo public, pas de durée par capsule, pas de prix sur les pages parcours, aucun organisme accréditeur nommé."
+  comparaison_cfi_2026-10-17: "CFI : 7 certifications (FMVA 39 cours, 120–200 h), ≈ 2 M d'apprenants cumulés, 629 k cours terminés et 17,5 k certifications en 2025, 497–847 $/an. Xelanc : même architecture (freemium → annuel certifiant), prix −40 %, angle IA + français + Afrique ; écart sur profondeur du catalogue, preuve sociale, reconnaissance du certificat et canal entreprises."
 
 
 tresorerie:
@@ -121,6 +123,16 @@ previsions:
     pessimiste: {comptes_gratuits_mois: 1200-1500, ca_3m: 7400, cash_net_3m: 7100, mrr_fin_janv: 1200}
     central:    {comptes_gratuits_mois: 2500-3000, ca_3m: 30000, cash_net_3m: 28800, mrr_fin_janv: 4200, ca_par_mois: [6700, 10000, 13300]}
     optimiste:  {comptes_gratuits_mois: 5000-6000, ca_3m: 99000, cash_net_3m: 95000, mrr_fin_janv: 13000}
+  - date: 2026-10-17
+    periode: nov 2026 – oct 2029 (3 ans), Xelanc seul, hors B2B et high ticket
+    modele: script scratchpad potentiel.py (cohortes, conversion 60/25/15 %, upgrade mensuel→annuel, renouvellement annuel, frais 4 %)
+    contexte: "Rachid estime la qualité du site proche de CFI. Recalage des taux de conversion et de rétention, pas du trafic."
+    effet_qualite_seule_meme_trafic: "+26 % de cash an 1 (221 → 279 k€), +43 % an 3 (428 → 612 k€)"
+    pessimiste: {comptes_an1: 20000, payants_an1: 350, actifs_fin_an1: 250, cash_an1: 76000, cash_mois12: 7000, actifs_fin_an3: 470, cash_an3: 157000}
+    central:    {comptes_an1: 44500, payants_an1: 1280, actifs_fin_an1: 1070, cash_an1: 324000, cash_nov_janv: 85000, cash_mois12: 32000, actifs_fin_an3: 3100, cash_an3: 1000000, cash_mois36: 87000}
+    optimiste:  {comptes_an1: 89000, payants_an1: 3500, actifs_fin_an1: 3100, cash_an1: 962000, cash_mois12: 96000, actifs_fin_an3: 11900, note: "an 3 au-delà du plafond B2C Afrique francophone sans B2B ni Europe"}
+    plafond_marche: "SAM ≈ 100–200 k professionnels finance francophones solvables et atteignables [H] ; maturité 1,5–3 % → 2 000–6 000 abonnés ≈ 0,5–1,4 M€/an. Banques Maroc ≈ 42 k agents (BAM 2018) [E]."
+    lecture: "100 k$/mois avec Xelanc seul ≈ fin 2029 en central. Le levier qui casse le plafond = licences B2B (le modèle CFI) et la francophonie hors Afrique."
 
 hypotheses:
   - {texte: volume de comptes gratuits / mois, valeur: 3000 central, impact_si_faux: proportionnel au CA, comment_mesurer: inscriptions WordPress + Brevo, statut: ouverte}
@@ -128,6 +140,8 @@ hypotheses:
   - {texte: taux gratuit → achat cours 14 $, valeur: "4 % (2,5–5 %)", impact_si_faux: faible sur CA, comment_mesurer: ventes cours, statut: ouverte}
   - {texte: mix abonnés mensuel/annuel/premium, valeur: "55/38/7", impact_si_faux: fort sur le cash (l'annuel = ~60 % du CA), comment_mesurer: ventes par formule, statut: ouverte}
   - {texte: churn mensuel, valeur: "12 %", impact_si_faux: moyen à 3 mois, fort à 12 mois, comment_mesurer: résiliations, statut: ouverte}
+  - {texte: "recalage qualité 2026-10-17 (central)", valeur: "conversion 2,5 % (1,5–3,5), mix 45/47/8, churn 9 %, upgrade mensuel→annuel 2 %/mois, renouvellement annuel 55 %", impact_si_faux: "la conversion et le renouvellement font l'essentiel de l'écart", comment_mesurer: "cohortes de novembre : conversion à 90 j, part d'annuels, résiliations ; renouvellement mesurable seulement en nov 2027", statut: ouverte}
+  - {texte: "trafic : comptes gratuits/mois hors bases", valeur: "3 000 → 3 500 → 4 500 (central)", impact_si_faux: "proportionnel ; la qualité du site ne le crée pas", comment_mesurer: "inscriptions par source (UTM), coût par compte gratuit", statut: ouverte}
   - {texte: frais de paiement, valeur: "4 %", impact_si_faux: faible, comment_mesurer: relevés passerelle, statut: ouverte}          # {texte, valeur, impact_si_faux, comment_mesurer, statut: ouverte|validee|invalidee}
 
 decisions:              # {date, decision, cash_attendu, echeance, resultat_reel}

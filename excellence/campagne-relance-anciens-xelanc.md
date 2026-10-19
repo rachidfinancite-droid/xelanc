@@ -3,12 +3,17 @@
 Conception : Tête Grise, 2026-10-19. Statut : **à valider**, rien n'est envoyé.
 Étiquettes : [M] mesuré, [E] estimé, [H] hypothèse.
 
-## 1. Qui
+## 1. Qui (mis à jour le 19/10 d'après l'agent Site Xelanc [M])
 
-- Personnes ayant acheté un cours chez Financité (≈ 120 € à l'époque).
-- **Taille à trancher** : 73 acheteurs payants mesurés dans Thinkific [M agent Données] contre 400 annoncés [Rachid].
-  La liste « payeurs » (Thinkific + Stripe Delaware + Stripe Dubaï) tranche la question.
-- Exclus : toute personne déjà abonnée à Xelanc.
+- Consolidation Thinkific + Stripe : **233 payeurs, 56 431 $** encaissés au total.
+- Base Afrique subsaharienne : 529 personnes, dont 472 payeurs (≈ 134 en ligne, ≈ 340 hors ligne, Western Union / virement).
+- Règle de Rachid : « inscrit = a payé ».
+- **Éligibles à l'offre 179 € : 213** (décision Rachid 19/10 : 299 − 120 = 179 € pour 1 an ; exclus : DAF, programmes, gros tickets — 257 exclus).
+- Fichiers (Mac, non publiés) : `~/Travail/Export-FTA-2026-10-19/` (xlsx, page HTML, CSV au format Brevo).
+- Exclus aussi : toute personne déjà abonnée à Xelanc.
+
+**Conséquence canal** : une grande partie des payeurs a payé hors ligne. Pour eux, **WhatsApp passe avant l'email**,
+et il faut une voie de paiement hors ligne (Loubna prend la demande, Rachid valide le paiement).
 
 ## 2. Le principe
 
@@ -120,12 +125,22 @@ ils passent gratuitement en Premium (459 €) la première année. Personne ne d
 
 ## 6. Ce qu'on peut en attendre [H]
 
-Hypothèses : 85 % d'emails délivrés, 50 % d'ouverture, 1,8 % s'abonnent seuls à 299 €,
-9 % des restants prennent l'offre à 179 €, frais de paiement 4 %.
+Hypothèses : 85 % joignables, 1,8 % s'abonnent seuls à 299 €, 9 % des restants prennent l'offre à 179 €
+(fourchette 5–15 %), frais de paiement 4 %.
 
-| Base | Abonnés seuls (299 €) | Offre (179 €) | **Total** | **Cash** |
+| Scénario | Abonnés seuls (299 €) | Offre (179 €) | **Total** | **Cash** |
 |---|---|---|---|---|
-| 73 acheteurs | 1 | 5–6 | **≈ 7** | **≈ 1,3 k€** |
-| 400 acheteurs | 6 | 30 | **≈ 36** | **≈ 7 k€** |
+| Pessimiste (5 %) | 2 | 9 | **11** | **≈ 2,1 k€** |
+| **Central (9 %)** | 3 | 16 | **19** | **≈ 3,6 k€** |
+| Optimiste (15 %) | 4 | 27 | **31** | **≈ 5,8 k€** |
 
-Seuil d'alerte : moins de 5 % de conversion à J+7 → revoir l'objet des emails et appeler les ouvreurs.
+Seuil d'alerte : moins de 5 % de conversion à J+7 → Loubna appelle les ouvreurs et les cliqueurs.
+
+## 7. Points bloquants relevés dans la session Site Xelanc (19/10)
+
+- **Aucun achat de contrôle** ; **aucun paiement Mobile Money n'a abouti**. Critique pour une base africaine.
+- **Pas de correspondance** entre les anciens cours Thinkific et les 15 cours LearnWorlds.
+- 7 cours présentés sur xelanc.org n'existent pas dans LearnWorlds (à ouvrir ou à masquer).
+- Les 4 modèles WhatsApp soumis (n° 24–27) ne couvrent pas cette campagne : WA-A reste à soumettre.
+- Vérification d'entreprise Meta refusée : plafond 2 000 contacts/jour (suffisant pour 213).
+- Préfixes de clés Stripe affichés en clair dans la session : clés à régénérer.

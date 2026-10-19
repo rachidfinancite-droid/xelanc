@@ -95,7 +95,9 @@ mesures: []             # historique daté : {date, periode, depense, leads, rdv
 
 bassins:                # {nom, zone, fonction, sam, cp90, scores: {S,A,V,D,C,E}, scb, verdict, date}
   - nom: Anciens acheteurs (cours à 120 €)
-    taille: 400             # Rachid 2026-10-08 — CONFLIT : Thinkific = 73 acheteurs payants mesurés (agent Données), à trancher
+    taille: 213             # [M] éligibles offre 179 € (agent Site Xelanc 19/10) — 233 payeurs consolidés Thinkific+Stripe, 56 431 $ ; base Afrique subsaharienne 529 dont 472 payeurs (≈340 hors ligne)
+    offre: 179 € l'annuel la 1re année (décision Rachid 19/10)
+    prevision_2026-10-19: {pessimiste: 2100, central: 3600, optimiste: 5800}   # € cash
     statut: campagne de réactivation en préparation
     prevision: {pessimiste: "18 conv. ≈ 3,4 k€", central: "36 conv. (9 %) ≈ 7 k€", optimiste: "67 conv. ≈ 13 k€"}
     objectif: 40 conversions (10 %) ≈ 8 k€ encaissés sous 15 jours

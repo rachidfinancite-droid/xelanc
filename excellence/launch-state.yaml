@@ -39,7 +39,7 @@ portes:
 
 vagues:                     # détail : .claude/skills/launch-xelanc/references/phases-et-calendrier.md §3
   - {id: V0, segment: Inscrits « premier cercle » du pré-lancement, taille: null, depart: 2026-11-01, statut: à planifier}
-  - {id: V1, segment: Anciens acheteurs, taille: "73 mesurés ou 400 (à trancher)", depart: 2026-11-02, statut: à planifier}
+  - {id: V1, segment: Anciens acheteurs, taille: "73 mesurés ou 400 (à trancher)", depart: 2026-11-02, statut: "planifiée (Tête Grise 19/10) — excellence/campagne-relance-anciens-xelanc.md : E1 02/11 → offre 179 € 06/11 → clôture 13/11 → repli 29 €/mois 16/11"}
   - {id: V2, segment: Apprenants formés pour les banques, taille: "≈ 5 000 [H]", depart: 2026-11-03, statut: à planifier}
   - {id: V3, segment: Prospects high ticket non convertis, taille: 20000, depart: 2026-11-05, statut: à planifier}
   - {id: V4, segment: Trafic froid (Meta, LinkedIn, organique), taille: "≈ 3 000 comptes/mois [H]", depart: "tests 2026-10-27, scale après G3", statut: à planifier}

@@ -46,7 +46,9 @@ honnêtement (« votre cours a été refait ; vous accédez à sa nouvelle versi
 **Ceux qui s'abonnent d'eux-mêmes au prix plein (avant le 06/11)** ne reçoivent pas l'offre :
 ils passent gratuitement en Premium (459 €) la première année. Personne ne doit se sentir floué.
 
-## 4. Les messages (vouvoiement, signés du Pr El Maataoui)
+## 4. Les messages (vouvoiement, signés « L'équipe Xelanc », captures de la plateforme)
+
+Modèles HTML v2 : `excellence/emails/relance-anciens-e1.html` et `relance-anciens-e2.html` (images dans `excellence/emails/img/`).
 
 ### E1 · Lun. 02/11 · « Votre cours vous attend sur Xelanc »
 > Objet : Votre cours {{cours}} est disponible sur votre nouvel espace
@@ -63,7 +65,7 @@ ils passent gratuitement en Premium (459 €) la première année. Personne ne d
 > plus de 100 cours, des parcours certifiants et un tuteur IA disponible à toute heure.
 >
 > Bonne reprise,
-> Pr Rachid El Maataoui
+> L'équipe Xelanc
 
 ### WA-A · Mer. 04/11 (non-ouvreurs) · modèle à valider par Meta
 > Bonjour {{1}}, votre cours {{2}} est disponible sur votre nouvel espace Xelanc. Votre accès vous attend.
@@ -92,7 +94,7 @@ ils passent gratuitement en Premium (459 €) la première année. Personne ne d
 > Vous préférez payer par Mobile Money, Western Union ou virement ? Répondez à cet email ou
 > écrivez-nous sur WhatsApp : Loubna s'occupe de vous.
 >
-> Pr Rachid El Maataoui
+> L'équipe Xelanc
 
 ### E3 · Lun. 09/11 · Ce que contient l'annuel
 > Objet : Ce que les certificats changent concrètement

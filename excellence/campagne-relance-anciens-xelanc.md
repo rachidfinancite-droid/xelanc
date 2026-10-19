@@ -46,7 +46,10 @@ honnêtement (« votre cours a été refait ; vous accédez à sa nouvelle versi
 **Ceux qui s'abonnent d'eux-mêmes au prix plein (avant le 06/11)** ne reçoivent pas l'offre :
 ils passent gratuitement en Premium (459 €) la première année. Personne ne doit se sentir floué.
 
-## 4. Les messages (vouvoiement, signés « L'équipe Xelanc », captures de la plateforme)
+## 4. Les messages (vouvoiement, signés « Loubna, l'équipe Financité Institute », remise en contexte d'abord, captures de la plateforme)
+
+**Version v3 (19/10) = référence** : les modèles HTML ci-dessous remplacent les textes de cette section.
+E1 commence par le rappel : « Je suis Loubna, de l'équipe Financité Institute. En [2022], vous vous étiez inscrit(e) au cours [X]… Je reviens vers vous aujourd'hui avec du nouveau. »
 
 Modèles HTML v2 : `excellence/emails/relance-anciens-e1.html` et `relance-anciens-e2.html` (images dans `excellence/emails/img/`).
 

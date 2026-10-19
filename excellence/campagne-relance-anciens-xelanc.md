@@ -89,6 +89,9 @@ ils passent gratuitement en Premium (459 €) la première année. Personne ne d
 > L'offre reste valable jusqu'au **vendredi 13 novembre à minuit**.
 > {{lien_offre}}
 >
+> Vous préférez payer par Mobile Money, Western Union ou virement ? Répondez à cet email ou
+> écrivez-nous sur WhatsApp : Loubna s'occupe de vous.
+>
 > Pr Rachid El Maataoui
 
 ### E3 · Lun. 09/11 · Ce que contient l'annuel

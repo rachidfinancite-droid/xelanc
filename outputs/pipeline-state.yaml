@@ -1,0 +1,13 @@
+last_updated: "2026-10-23T00:00:00+01:00"
+
+courses:
+  - cours_id: null   # à attribuer
+    cours_slug: "analyse-financiere-ia"
+    cours_title: "Analyse financière à l'IA"
+    plan_file: "outputs/cours-analyse-financiere-ia.yaml"
+    veille_file: "outputs/veille-ia-analyse-financiere.md"
+    plan_validated: false
+    sections: []
+    timeline:
+      - { ts: "2026-10-23", event: "veille 5 voix LinkedIn + CFI produite" }
+      - { ts: "2026-10-23", event: "plan 5 sections × 5 capsules proposé par l'Architecte, en attente de validation" }

@@ -1,0 +1,309 @@
+cours_id: null   # à attribuer dans pipeline-state.yaml
+cours_slug: "analyse-financiere-ia"
+cours_title: "Analyse financière à l'IA"
+cours_methode: "Diagnostic financier complet conduit avec l'IA, sous protocole de vérification"
+niveau: "Perfectionnement"
+audience: >
+  Analystes financiers de niveau intermédiaire (crédit, contrôle de gestion,
+  FP&A, conseil) qui maîtrisent déjà l'analyse financière : SIG, bilan
+  fonctionnel, tableau de flux, ratios. Aisance Excel intermédiaire. Aucune
+  compétence en code requise. Contexte francophone (PCG, CGNC, SYSCOHADA, IFRS).
+duree_video_totale: "~75 min (25 capsules × 3 min)"
+duree_apprentissage_active: "8-10 heures (vidéo + interactifs + atelier fil rouge)"
+
+mvp_cours: >
+  À l'issue de ce cours, vous conduisez un diagnostic financier complet avec
+  l'IA, de la liasse brute à la note d'analyse, deux à trois fois plus vite,
+  et vous êtes en mesure de garantir chaque chiffre qui en sort.
+
+objectifs_finaux:
+  - "Répartir le travail entre l'IA, Excel ou Python et votre jugement d'analyste"
+  - "Rédiger des prompts d'analyste structurés, réutilisables et auto-critiques"
+  - "Extraire, fiabiliser et retraiter des états financiers avec l'IA, sans erreur de saisie"
+  - "Produire un diagnostic complet (rentabilité, BFR, trésorerie, solvabilité) et une projection assistés par l'IA"
+  - "Appliquer un protocole de vérification qui rend chaque chiffre défendable"
+
+fil_rouge:
+  societe: "Atlas Distribution SA (cas pédagogique fictif)"
+  description: >
+    Distributeur de biens de consommation, ~450 M MAD de chiffre d'affaires,
+    3 exercices de comptes, rapport de gestion, communiqué de résultats, dossier
+    de demande de crédit à moyen terme. Les données sont construites pour
+    contenir des pièges réalistes : erreurs d'extraction PDF, élément non
+    récurrent, crédit-bail, dérive du BFR, covenant proche de la limite.
+  mission: >
+    L'apprenant est l'analyste chargé d'émettre un avis sur la demande de
+    crédit d'Atlas. Chaque capsule fait avancer le dossier ; la capsule 5.5
+    livre la note d'analyse finale et la recommandation.
+  kit_fil_rouge:
+    - "Liasses PDF Atlas N-2, N-1, N (format scanné et format numérique)"
+    - "Rapport de gestion et annexes"
+    - "Communiqué de résultats et transcription d'une conférence analystes"
+    - "Classeur Excel de travail Atlas (onglets remplis capsule après capsule)"
+    - "Corrigé de la note d'analyse finale"
+
+ressources_transverses:
+  - "Bibliothèque de prompts de l'analyste (une fiche par capsule, version Claude / ChatGPT / Copilot)"
+  - "Protocole de vérification en 3 contrôles (fiche A4)"
+  - "Carte des outils IA pour l'analyste (mise à jour trimestrielle)"
+  - "Grille de chronométrage sans IA / avec IA"
+
+sections:
+
+  - section_id: 1
+    section_roman: "I"
+    section_title: "La posture de l'analyste augmenté"
+    section_subtitle: "Avant le premier prompt, répartir les rôles"
+    section_mvp: >
+      Savoir ce que l'IA fait bien, ce qu'elle fait mal, et ce qui reste de
+      votre seule responsabilité.
+    paragraphes:
+      - num: "§ 1.1"
+        title: "L'IA raisonne, elle ne calcule pas"
+        idea_breve: >
+          Partage des rôles entre le modèle (lire, structurer, rédiger), le
+          tableur ou le code (calculer) et l'analyste (juger et signer).
+        verbe: "s'approprier"
+        ressources: ["Schéma de répartition des rôles", "Fiche prompt 1.1"]
+        fil_rouge: "Découverte du dossier Atlas et de la mission de crédit."
+      - num: "§ 1.2"
+        title: "Choisir le bon outil"
+        idea_breve: >
+          ChatGPT, Claude, Copilot, Gemini, Perplexity : quel outil pour quelle
+          tâche d'analyse, critères de choix plutôt que classement.
+        verbe: "distinguer"
+        ressources: ["Carte des outils IA pour l'analyste"]
+        fil_rouge: "Affecter un outil à chaque étape du dossier Atlas."
+      - num: "§ 1.3"
+        title: "Les cinq défaillances à connaître"
+        idea_breve: >
+          Hallucination, erreur de calcul, source inventée, dérive de contexte,
+          complaisance : les reconnaître sur des sorties réelles.
+        verbe: "identifier"
+        ressources: ["Galerie de 10 erreurs d'IA commentées"]
+        fil_rouge: "Repérer les erreurs dans une première analyse d'Atlas produite sans précaution."
+      - num: "§ 1.4"
+        title: "Confidentialité et anonymisation"
+        idea_breve: >
+          Ce qui peut entrer dans un outil IA, ce qui ne doit jamais y entrer,
+          et comment anonymiser un dossier client en deux minutes.
+        verbe: "décider"
+        ressources: ["Check-list de confidentialité", "Prompt d'anonymisation"]
+        fil_rouge: "Anonymiser le dossier Atlas avant tout traitement."
+      - num: "§ 1.5"
+        title: "Le protocole de vérification"
+        idea_breve: >
+          Trois contrôles systématiques (rapprochement, recalcul, traçabilité
+          de la source) qui accompagneront chaque capsule du cours.
+        verbe: "s'engager"
+        ressources: ["Fiche protocole en 3 contrôles"]
+        fil_rouge: "Ouvrir le journal de vérification du dossier Atlas."
+
+  - section_id: 2
+    section_roman: "II"
+    section_title: "Le prompt de l'analyste"
+    section_subtitle: "Savoir où l'on va, et comment le demander"
+    section_mvp: >
+      Voir le livrable final, puis maîtriser l'écriture de prompts qui
+      produisent un travail d'analyste, pas un texte générique.
+    paragraphes:
+      - num: "§ 2.1"
+        title: "Le livrable cible"
+        idea_breve: >
+          La note d'analyse finale d'Atlas, montrée d'emblée : ce que l'IA a
+          produit, ce que l'analyste a corrigé, ce qu'il a ajouté.
+        verbe: "interpréter"
+        ressources: ["Note d'analyse Atlas annotée"]
+        fil_rouge: "Lecture critique du livrable final que l'apprenant devra reproduire."
+      - num: "§ 2.2"
+        title: "Anatomie d'un prompt d'analyste"
+        idea_breve: >
+          Rôle, contexte, tâche, contraintes, format, avec les données isolées
+          des instructions par des balises.
+        verbe: "construire"
+        ressources: ["Gabarit de prompt d'analyste"]
+        fil_rouge: "Premier prompt structuré sur le compte de résultat d'Atlas."
+      - num: "§ 2.3"
+        title: "Faire raisonner, faire douter"
+        idea_breve: >
+          Exiger un raisonnement visible, une auto-critique et un avocat du
+          diable : les trois techniques qui réduisent les erreurs.
+        verbe: "diagnostiquer"
+        ressources: ["Trois prompts de contre-analyse"]
+        fil_rouge: "Faire contester par l'IA sa propre lecture d'Atlas."
+      - num: "§ 2.4"
+        title: "Capitaliser ses prompts"
+        idea_breve: >
+          Instructions permanentes, projets, bibliothèque personnelle : ne plus
+          jamais réécrire le même prompt.
+        verbe: "organiser"
+        ressources: ["Bibliothèque de prompts", "Modèle d'instructions permanentes"]
+        fil_rouge: "Créer le projet « Dossier Atlas » avec ses instructions permanentes."
+      - num: "§ 2.5"
+        title: "Mesurer le gain réel"
+        idea_breve: >
+          Chronométrer une tâche sans IA puis avec IA, vérification comprise :
+          le seul gain qui compte est le gain net.
+        verbe: "calculer"
+        ressources: ["Grille de chronométrage"]
+        fil_rouge: "Établir le chronomètre de référence pour le reste du dossier."
+
+  - section_id: 3
+    section_roman: "III"
+    section_title: "Collecter et fiabiliser les données"
+    section_subtitle: "Une analyse ne vaut que ses entrées"
+    section_mvp: >
+      Constituer, avec l'IA, un jeu de données propre, retraité et sourcé, sur
+      lequel le diagnostic peut s'appuyer sans risque.
+    paragraphes:
+      - num: "§ 3.1"
+        title: "Extraire une liasse sans erreur"
+        idea_breve: >
+          Passer d'un PDF, même scanné, à un tableau exploitable, puis
+          rapprocher les totaux pour prouver l'exactitude de l'extraction.
+        verbe: "contrôler"
+        ressources: ["Prompt d'extraction", "Classeur de rapprochement"]
+        fil_rouge: "Extraire les trois liasses d'Atlas et détecter les deux erreurs d'extraction."
+      - num: "§ 3.2"
+        title: "Retraiter avec méthode"
+        idea_breve: >
+          Bilan fonctionnel, crédit-bail, éléments non récurrents : l'IA propose
+          les retraitements, l'analyste les justifie.
+        verbe: "décider"
+        ressources: ["Grille des retraitements usuels PCG / CGNC / SYSCOHADA / IFRS"]
+        fil_rouge: "Retraiter le crédit-bail et isoler la plus-value exceptionnelle d'Atlas."
+      - num: "§ 3.3"
+        title: "Faire parler les annexes"
+        idea_breve: >
+          Lire rapport de gestion et annexes avec l'IA pour repérer engagements
+          hors bilan, changements de méthode et signaux faibles.
+        verbe: "identifier"
+        ressources: ["Prompt de lecture des annexes", "Liste des 15 signaux faibles"]
+        fil_rouge: "Découvrir la caution donnée par Atlas à une filiale."
+      - num: "§ 3.4"
+        title: "Une recherche sectorielle sourcée"
+        idea_breve: >
+          Recherche approfondie avec citations, puis vérification de chaque
+          source : benchmark et contexte de marché sans inventer.
+        verbe: "vérifier"
+        ressources: ["Prompt de recherche approfondie", "Grille de fiabilité des sources"]
+        fil_rouge: "Positionner les marges d'Atlas face à son secteur."
+      - num: "§ 3.5"
+        title: "Le dossier de données propre"
+        idea_breve: >
+          Assembler un jeu de données unique, documenté et versionné : la base
+          que toute la suite de l'analyse utilisera.
+        verbe: "structurer"
+        ressources: ["Modèle de dictionnaire de données"]
+        fil_rouge: "Figer l'onglet « Données Atlas » du classeur de travail."
+
+  - section_id: 4
+    section_roman: "IV"
+    section_title: "Le diagnostic assisté"
+    section_subtitle: "Du chiffre au jugement"
+    section_mvp: >
+      Produire un diagnostic financier complet avec l'IA en gardant la main sur
+      chaque conclusion.
+    paragraphes:
+      - num: "§ 4.1"
+        title: "Rentabilité et marges"
+        idea_breve: >
+          SIG, marges et rentabilité des capitaux : l'IA calcule par formules
+          Excel ou code, l'analyste interprète.
+        verbe: "calculer"
+        ressources: ["Prompt SIG et marges", "Modèle Excel de rentabilité"]
+        fil_rouge: "Diagnostic de rentabilité d'Atlas sur trois exercices."
+      - num: "§ 4.2"
+        title: "Expliquer les écarts"
+        idea_breve: >
+          Décomposer une variation en effets prix, volume et mix, et en tirer
+          une explication défendable.
+        verbe: "interpréter"
+        ressources: ["Modèle d'analyse prix-volume-mix"]
+        fil_rouge: "Expliquer la baisse de marge brute d'Atlas en N."
+      - num: "§ 4.3"
+        title: "BFR et trésorerie"
+        idea_breve: >
+          Tableau de flux, cycle de conversion du cash, dérive du BFR :
+          localiser où le cash se perd.
+        verbe: "diagnostiquer"
+        ressources: ["Prompt tableau de flux", "Modèle BFR en jours"]
+        fil_rouge: "Mettre au jour la dérive du crédit clients d'Atlas."
+      - num: "§ 4.4"
+        title: "Structure et solvabilité"
+        idea_breve: >
+          Endettement, capacité de remboursement, covenants : mesurer la marge
+          de sécurité réelle.
+        verbe: "évaluer"
+        ressources: ["Modèle ratios et covenants"]
+        fil_rouge: "Constater qu'Atlas est à 0,2 point de son covenant."
+      - num: "§ 4.5"
+        title: "Forces, faiblesses, conviction"
+        idea_breve: >
+          Passer d'une liste de ratios à une conviction argumentée, en faisant
+          challenger sa synthèse par l'IA.
+        verbe: "argumenter"
+        ressources: ["Gabarit de synthèse diagnostique"]
+        fil_rouge: "Rédiger la synthèse diagnostique d'Atlas."
+
+  - section_id: 5
+    section_roman: "V"
+    section_title: "Projeter, restituer, industrialiser"
+    section_subtitle: "Du diagnostic à la décision"
+    section_mvp: >
+      Projeter, tester, conclure et livrer, puis installer une pratique de
+      l'IA durable et gouvernée.
+    paragraphes:
+      - num: "§ 5.1"
+        title: "Projeter avec l'IA dans Excel"
+        idea_breve: >
+          Construire une projection et des scénarios avec l'assistant IA du
+          tableur, en auditant chaque formule générée.
+        verbe: "projeter"
+        ressources: ["Modèle de projection à 3 scénarios", "Prompt d'audit de formules"]
+        fil_rouge: "Projeter Atlas sur la durée du crédit demandé."
+      - num: "§ 5.2"
+        title: "Stress tests sans coder"
+        idea_breve: >
+          Faire écrire et exécuter le code des sensibilités par l'IA : le
+          calcul est réel, l'analyste lit le résultat.
+        verbe: "simuler"
+        ressources: ["Prompt de stress test", "Gabarit de matrice de sensibilité"]
+        fil_rouge: "Tester la capacité de remboursement d'Atlas sous trois chocs."
+      - num: "§ 5.3"
+        title: "La note d'analyse"
+        idea_breve: >
+          Rédiger une note de comité claire et nuancée avec l'IA, puis la
+          passer au protocole de vérification.
+        verbe: "rédiger"
+        ressources: ["Gabarit de note de crédit", "Check-list de relecture"]
+        fil_rouge: "Rédiger la note finale et la recommandation sur Atlas."
+      - num: "§ 5.4"
+        title: "Automatiser l'analyse récurrente"
+        idea_breve: >
+          Agents, connecteurs et modèles réutilisables : transformer le dossier
+          Atlas en routine pour les prochains dossiers.
+        verbe: "automatiser"
+        ressources: ["Modèle de routine d'analyse", "Carte des connecteurs"]
+        fil_rouge: "Rejouer le dossier sur un second client en une fraction du temps."
+      - num: "§ 5.5"
+        title: "Signer en responsabilité"
+        idea_breve: >
+          Piste d'audit, politique IA d'équipe, cadre réglementaire :
+          l'analyste reste seul responsable de ce qu'il signe.
+        verbe: "s'engager"
+        ressources: ["Modèle de politique IA d'équipe", "Journal de vérification complété"]
+        fil_rouge: "Clôturer le dossier Atlas, bilan chronométré sans IA / avec IA."
+
+created_at: "2026-10-23"
+validated_by_rachid: false
+notes_architecte: >
+  Positionnement tiré de la veille (outputs/veille-ia-analyse-financiere.md) :
+  Boucher, Radojičić, Martinez, Aharonoff et Hopper enseignent l'IA pour la
+  finance ; aucun n'enseigne le diagnostic complet mené avec l'IA. Le fil rouge
+  Atlas et le protocole de vérification en 3 contrôles sont nos deux
+  différenciants. La valorisation (DCF, multiples) est volontairement hors
+  périmètre (public crédit et diagnostic) ; elle peut devenir un cours 2.
+  Section IV la plus dense techniquement : prévoir des interactifs variés.
+  Le cas Atlas est fictif et doit être construit (liasses, annexes, pièges)
+  avant la production de la Section III.

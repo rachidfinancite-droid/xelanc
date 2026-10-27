@@ -45,6 +45,7 @@ releves_site:
 
 lecons_methode:
   - {date: 2026-10-27, lecon: "Ne pas raisonner sur le e-learning grand public (Udemy, Domestika). Benchmark = CFI, qui vend des certifications. Nos marchés achètent la reconnaissance professionnelle : le point d'entrée est le certificat métier, et le message part de la douleur de carrière (emploi, progression). Toujours partir de nos propres données (ventes de certificats Financité, leads Pipedrive, appels de Loubna) avant les modèles génériques."}
+  - {date: 2026-10-27, lecon: "Xelanc n'est pas un Financité bis : plateforme en libre-service sur abonnement (modèle CFI). Ni session, ni cohorte, ni pipeline commercial. La pub amène sur le site, et c'est le site qui vend la richesse ; les certificats sont inclus et passés en autonomie. Ne pas réintroduire de mécanique de vente humaine (formulaires de leads, appels de conclusion) dans les recommandations."}
 
 questions_ouvertes:
   - "Répartition des 233 anciens payeurs et des 20 000 prospects par porte (banque / entreprise) ?"
@@ -69,4 +70,5 @@ decisions:   # {date, decision, par, effet_attendu, verification_le, resultat}
     effet_attendu: "cible ≈ 47–86 k (banque) + 56–158 k (entreprise) en Afrique + Maghreb [E/H] ; 1 280 payants an 1 = 0,5–1,2 % de pénétration avec les deux portes contre 1,5–2,7 % avec la banque seule"
     verification_le: 2026-11-09
     resultat: null
+  - {date: 2026-10-27, decision: "Produit = plateforme en libre-service sur abonnement (modèle CFI) : compte, abonnement, richesse, certificats en autonomie ; ni session, ni cohorte, ni pipeline ; la pub amène au site, le site vend", par: Rachid}
   - {date: 2026-10-27, decision: "Point d'entrée de chaque porte = le certificat dédié au métier (pas un cours) ; message = douleur de carrière (accès à l'emploi, progression), puis preuve", par: Rachid}

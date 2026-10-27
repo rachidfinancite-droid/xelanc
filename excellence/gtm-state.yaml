@@ -14,7 +14,7 @@ diagnostics:
       - "Zéro témoignage ni vidéo de preuve [M 27/10]"
       - "≈ 25 200 contacts possédés via Brevo, plafond 300/jour = 84 jours pour un passage [E]"
     decision_n1: "Positionnement de lancement unique : banquiers entreprise/PME + analystes crédit, Maroc + Afrique francophone ; promesse dossier de crédit IA vérifié CGNC/SYSCOHADA + certificat ; annuel 299 € en héros"
-    statut_decision: en attente de Rachid
+    statut_decision: "reformulée le 2026-10-27 — Rachid garde le positionnement plateforme globale des métiers de la finance ; la cible unique devient la 1re porte poussée en acquisition, pas l'identité"
 
 releves_site:
   - date: 2026-10-27
@@ -28,4 +28,12 @@ questions_ouvertes:
   - "Contenu réellement payable et complet au 01/11 ?"
   - "Budget Brevo (lever le plafond) et budget de tests Meta ?"
 
-decisions: []   # {date, decision, par, effet_attendu, verification_le, resultat}
+decisions:   # {date, decision, par, effet_attendu, verification_le, resultat}
+  - date: 2026-10-27
+    decision: "Positionnement = plateforme globale des métiers de la finance (banquiers, analystes, financiers d'entreprise, non-financiers, banque d'affaires, fonds), sur le modèle CFI. On ne l'abandonne pas, on le structure."
+    par: Rachid
+    cadrage_gtm: "3 étages : promesse de plateforme (une) → portes par métier (une page, une promesse, un certificat, une preuve chacune) → ordre de poussée en acquisition décidé par la mesure. Le diagnostic 2 minutes devient l'aiguilleur. Un abonnement ouvre tout."
+    travail: point par point, point 1 = client idéal et positionnement
+    effet_attendu: null
+    verification_le: null
+    resultat: null

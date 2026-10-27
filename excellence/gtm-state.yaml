@@ -1,0 +1,31 @@
+# Journal de l'agent GTM — go-to-market Xelanc
+# Lu au début de chaque session, mis à jour à la fin. Ne pas supprimer l'historique.
+# Étiquettes : [M] mesuré, [E] estimé, [H] hypothèse.
+
+derniere_mise_a_jour: 2026-10-27
+
+diagnostics:
+  - date: 2026-10-27
+    fichier: excellence/diagnostic-gtm-2026-10-27.md
+    contexte: "J-5 avant l'ouverture douce du 01/11"
+    feux: {icp_payeur: orange, proposition_valeur: orange, offre_prix: orange, preuve: rouge, canaux: rouge, entonnoir_mesure: rouge, capacite_commerciale: orange, objectif_marche: orange}
+    ruptures:
+      - "Aucune compétence datée du 01/11 sur /competences/, compteurs 34/38/35, doublon [M 27/10]"
+      - "Zéro témoignage ni vidéo de preuve [M 27/10]"
+      - "≈ 25 200 contacts possédés via Brevo, plafond 300/jour = 84 jours pour un passage [E]"
+    decision_n1: "Positionnement de lancement unique : banquiers entreprise/PME + analystes crédit, Maroc + Afrique francophone ; promesse dossier de crédit IA vérifié CGNC/SYSCOHADA + certificat ; annuel 299 € en héros"
+    statut_decision: en attente de Rachid
+
+releves_site:
+  - date: 2026-10-27
+    accueil: "« Maîtriser la nouvelle finance avec l'IA » ; 0 €, 29 €/mois, 299 €/an, 459 €/an, Équipes sur devis ; logos sans alt ; 0 témoignage ; aucune mention de lancement"
+    membership: "carte Mensuel liste les certificats (contredit la FAQ) ; « 2 mois offerts » = 49 € ≈ 1,7 mois ; remboursement 5 jours tant qu'aucun certificat ; 6 certificats annoncés, 5 cartes"
+    competences: "35 cartes ; compteurs 34 (titre) / 38 (filtre) / « 15 disponibles » ; datées 16 (10/11 → 30/11, 1 en déc.), 3 « prochainement », 16 sans statut ; aucune au 01/11 ; doublon « Analyse financière du risque de crédit »"
+
+questions_ouvertes:
+  - "Qui paie : particulier ou employeur ?"
+  - "Offre fondateurs : à vie ou prix bloqué à vie ?"
+  - "Contenu réellement payable et complet au 01/11 ?"
+  - "Budget Brevo (lever le plafond) et budget de tests Meta ?"
+
+decisions: []   # {date, decision, par, effet_attendu, verification_le, resultat}

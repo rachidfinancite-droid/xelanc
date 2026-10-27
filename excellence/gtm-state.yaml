@@ -24,7 +24,15 @@ enseignements_kinshasa_2026-10:
   lecture: "confiance personnelle convertible au prix fort ; marque Xelanc sans pont avec Financité = confiance remise à zéro ; accroche trop avancée (valo) ; 2022 = conclusion humaine + paiement hors ligne (≈ 340 / 472 payeurs hors ligne [M]), pas vente par la pub"
   regles_proposees: ["chaque porte affiche la confiance héritée (Financité, Rachid, banques, témoignages)", "chaque porte a un humain au bout (WhatsApp Loubna, paiement assisté)", "distinguer marchés chauds (relation) et froids (preuve)"]
 
-audits:
+mesures_pub_2026-10-27:   # source : session « Agent publicité Meta », API Meta lue le 27/10 ~14 h 30 UTC [M]
+  evaluation_kinshasa: {periode: "23→26/10", depense_usd: 37.56, inscriptions: 5, achats_attribues: 0, statut: "réactivée le 27/10 après paiement FEF, 10 $/j"}
+  valo2: {depense_usd: 21.11, clics: 156, cpc_usd: 0.135, inscriptions: 4, paniers: 2, debuts_paiement: 3, cout_par_inscription_usd: "≈ 5"}
+  campagnes_trafic: {depense_usd: "≈ 18.5", clics: "≈ 670", inscriptions: 0, statut: "en pause le 27/10"}
+  pixel_30j: {AddToCart: 126, InitiateCheckout: 102, CompleteRegistration: 29, Purchase: "3 (dont 1 test à 1 €)"}
+  premium_459: "commande 3664, 22/10, Guinée — AVANT la campagne Évaluation, origine non établie"
+  annuel_299_togo: "commande 3810, venue d'un email, en attente de virement (paiement hors ligne)"
+  lecture_gtm: "valo2 = seule créa qui produit inscriptions et débuts de paiement ; trafic = clics vides ; fuite principale = paiement (102 débuts → 2 achats réels)"
+
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 
 releves_site:

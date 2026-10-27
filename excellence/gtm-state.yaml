@@ -23,6 +23,7 @@ releves_site:
     competences: "35 cartes ; compteurs 34 (titre) / 38 (filtre) / « 15 disponibles » ; datées 16 (10/11 → 30/11, 1 en déc.), 3 « prochainement », 16 sans statut ; aucune au 01/11 ; doublon « Analyse financière du risque de crédit »"
 
 questions_ouvertes:
+  - "Répartition des 233 anciens payeurs et des 20 000 prospects par porte (banque / entreprise) ?"
   - "Qui paie : particulier ou employeur ?"
   - "Offre fondateurs : à vie ou prix bloqué à vie ?"
   - "Contenu réellement payable et complet au 01/11 ?"
@@ -36,4 +37,11 @@ decisions:   # {date, decision, par, effet_attendu, verification_le, resultat}
     travail: point par point, point 1 = client idéal et positionnement
     effet_attendu: null
     verification_le: null
+    resultat: null
+  - date: 2026-10-27
+    decision: "Deux portes ouvertes en même temps au lancement : Banquier-analyste et Financier d'entreprise"
+    par: Rachid
+    etude: excellence/profondeur-portes-2026-10-27.md
+    effet_attendu: "cible ≈ 47–86 k (banque) + 56–158 k (entreprise) en Afrique + Maghreb [E/H] ; 1 280 payants an 1 = 0,5–1,2 % de pénétration avec les deux portes contre 1,5–2,7 % avec la banque seule"
+    verification_le: 2026-11-09
     resultat: null

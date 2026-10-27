@@ -16,6 +16,14 @@ diagnostics:
     decision_n1: "Positionnement de lancement unique : banquiers entreprise/PME + analystes crédit, Maroc + Afrique francophone ; promesse dossier de crédit IA vérifié CGNC/SYSCOHADA + certificat ; annuel 299 € en héros"
     statut_decision: "reformulée le 2026-10-27 — Rachid garde le positionnement plateforme globale des métiers de la finance ; la cible unique devient la 1re porte poussée en acquisition, pas l'identité"
 
+corrections:
+  - {date: 2026-10-27, quoi: "Pixels Meta en place et bien gérés (Rachid). L'axe entonnoir et mesure du diagnostic du 27/10 reposait sur une preuve du 08/10, il est corrigé : pixel vert, GA4 et UTM à confirmer avec l'agent concerné."}
+
+enseignements_kinshasa_2026-10:
+  faits: "pub vidéo sur l'évaluation d'entreprise (Kinshasa) + email « votre compte déménage » aux anciens ; 1 Premium 459 € payé par quelqu'un qui connaît Financité ; quelques paniers ; quelques comptes gratuits ; connexions des comptes migrés non mesurées [M qualitatif, chiffres à récupérer]"
+  lecture: "confiance personnelle convertible au prix fort ; marque Xelanc sans pont avec Financité = confiance remise à zéro ; accroche trop avancée (valo) ; 2022 = conclusion humaine + paiement hors ligne (≈ 340 / 472 payeurs hors ligne [M]), pas vente par la pub"
+  regles_proposees: ["chaque porte affiche la confiance héritée (Financité, Rachid, banques, témoignages)", "chaque porte a un humain au bout (WhatsApp Loubna, paiement assisté)", "distinguer marchés chauds (relation) et froids (preuve)"]
+
 audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 

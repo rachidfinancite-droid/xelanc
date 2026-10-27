@@ -34,6 +34,7 @@ mesures_pub_2026-10-27:   # source : session « Agent publicité Meta », API Me
   lecture_gtm: "valo2 = seule créa qui produit inscriptions et débuts de paiement ; trafic = clics vides"
   correction_2026-10-27: "102 InitiateCheckout = compteur d'ÉVÉNEMENTS du pixel sur 30 j (API pixel stats, lu par l'agent Meta à 14 h 26 UTC), pas des personnes ; tests internes probablement inclus ; 43 sur 21→27/10 (dont 18 le 25/10). Le « 97 % d'abandon » est retiré tant que WooCommerce (commandes en attente / échouées / annulées, paniers abandonnés, hors tests) ne l'a pas confirmé."
 
+audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 
 releves_site:

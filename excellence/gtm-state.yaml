@@ -43,6 +43,9 @@ releves_site:
     membership: "carte Mensuel liste les certificats (contredit la FAQ) ; « 2 mois offerts » = 49 € ≈ 1,7 mois ; remboursement 5 jours tant qu'aucun certificat ; 6 certificats annoncés, 5 cartes"
     competences: "35 cartes ; compteurs 34 (titre) / 38 (filtre) / « 15 disponibles » ; datées 16 (10/11 → 30/11, 1 en déc.), 3 « prochainement », 16 sans statut ; aucune au 01/11 ; doublon « Analyse financière du risque de crédit »"
 
+lecons_methode:
+  - {date: 2026-10-27, lecon: "Ne pas raisonner sur le e-learning grand public (Udemy, Domestika). Benchmark = CFI, qui vend des certifications. Nos marchés achètent la reconnaissance professionnelle : le point d'entrée est le certificat métier, et le message part de la douleur de carrière (emploi, progression). Toujours partir de nos propres données (ventes de certificats Financité, leads Pipedrive, appels de Loubna) avant les modèles génériques."}
+
 questions_ouvertes:
   - "Répartition des 233 anciens payeurs et des 20 000 prospects par porte (banque / entreprise) ?"
   - "Qui paie : particulier ou employeur ?"
@@ -66,3 +69,4 @@ decisions:   # {date, decision, par, effet_attendu, verification_le, resultat}
     effet_attendu: "cible ≈ 47–86 k (banque) + 56–158 k (entreprise) en Afrique + Maghreb [E/H] ; 1 280 payants an 1 = 0,5–1,2 % de pénétration avec les deux portes contre 1,5–2,7 % avec la banque seule"
     verification_le: 2026-11-09
     resultat: null
+  - {date: 2026-10-27, decision: "Point d'entrée de chaque porte = le certificat dédié au métier (pas un cours) ; message = douleur de carrière (accès à l'emploi, progression), puis preuve", par: Rachid}

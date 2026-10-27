@@ -12,7 +12,7 @@ Agent GTM, 27/10/2026 (J-5). Statut : **projet à valider par Rachid**. Rien n'e
 | E3 | La confiance va à Financité et au Pr El Maataoui, pas encore à Xelanc. La vente Premium (22/10) vient d'une personne qui connaît la maison | Commande 3664 [M] |
 | E4 | En 2022, la pub apportait des contacts et des humains concluaient : environ 340 payeurs sur 472 ont payé hors ligne | Relevé du 19/10 [M] |
 | E5 | Ta voix et ton visage convertissent. La vidéo valo 2 est la seule pub qui produit des comptes (4) et des débuts de paiement (3). Les pubs « trafic » donnent des clics sans inscrits | API Meta du 27/10 [M] |
-| E6 | Des gens commencent à payer sans finir. Le pixel compte 28 débuts de paiement les 25 et 26/10, pour 0 achat. Ce sont des événements et non des personnes : à confirmer dans WooCommerce | Pixel [M] ; WooCommerce à venir |
+| E6 | **Le pixel gonfle les paniers.** La pub envoie directement sur la page de paiement, produit déjà au panier : chaque clic compte comme « panier » et « début de paiement ». Dans la réalité, 4 personnes ont voulu payer en un mois, et une seule a payé. Le blocage est sur la page de paiement elle-même | Relevé WooCommerce du 27/10 [M], §5 |
 | E7 | Le référencement a une base solide (98 pages), mais il ne sert pas encore les portes et le Maroc y est absent (exemples en FCFA) | `diagnostic-seo-2026-10-27.md` [M] |
 | E8 | Les volumes restent très petits (37,56 $ de pub) : on lit des signaux, on ne tire pas de conclusions | Règle d'échantillon |
 
@@ -26,7 +26,7 @@ Agent GTM, 27/10/2026 (J-5). Statut : **projet à valider par Rachid**. Rien n'e
 | D4 | Une porte, c'est **une audience, un message, une pub, une page, des emails et une mesure qui lui sont propres**. La marque, l'offre et l'abonnement restent communs | ✅ 27/10 |
 | D5 | **Règles de confiance** : chaque porte affiche « Xelanc, par Financité Institute », le Pr El Maataoui, les banques et des témoignages. Chaque porte a **un humain au bout** (WhatsApp de Loubna, paiement assisté). On distingue les **marchés chauds** (relation) et les **marchés froids** (preuve) | ⏳ |
 | D6 | **Pub** : on garde valo 2 jusqu'au 01/11 (arrêt si plus de 5 $ par compte et aucun achat au-delà de 100 $ cumulés). Les pubs trafic restent coupées. **Reciblage avec un message de confiance** à 0,50–1 $ par jour. À partir du 01/11, des vidéos face caméra par porte | ⏳ |
-| D7 | **Le paiement passe avant tout nouvel achat de clics** : rappel des paniers et des paiements commencés sous 48 h, virement et Mobile Money assisté mis en avant | ⏳ (chiffres WooCommerce attendus) |
+| D7 | **Le paiement passe avant tout nouvel achat de clics** : régler le virement (coordonnées ou retrait), faire un vrai paiement Mobile Money avec un numéro congolais, alléger les moyens de paiement (afficher les euros, pas les AED), envoyer les pubs vers la page de l'offre et non vers le paiement, et rappeler les 3 personnes bloquées | ⏳ |
 
 ## 3. Les instructions par agent (envoyées seulement après le « go » de Rachid)
 
@@ -44,7 +44,7 @@ Agent GTM, 27/10/2026 (J-5). Statut : **projet à valider par Rachid**. Rien n'e
 4. Juger chaque pub sur les inscriptions, puis sur les achats, jamais sur les clics.
 
 **Agent Site Xelanc.**
-1. Fournir le relevé WooCommerce (demande du 27/10, en lecture seule).
+1. Appliquer D7 : virement, test réel du Mobile Money, allègement des moyens de paiement, affichage en euros.
 2. Mettre « par Financité Institute » sur l'accueil et le paiement.
 3. Un bouton WhatsApp et une voie de virement visibles sur la page de paiement.
 4. Corriger les incohérences : compteurs de /competences/, carte Mensuel, et ce qui ouvre réellement le 01/11.
@@ -57,7 +57,7 @@ Agent GTM, 27/10/2026 (J-5). Statut : **projet à valider par Rachid**. Rien n'e
 3. Lever le plafond d'envoi.
 
 **Loubna.**
-1. Rappeler les paniers et les paiements commencés.
+1. Rappeler les 3 personnes bloquées (Togo, plus 2 en RDC), avec une voie de paiement assisté.
 2. Recueillir 3 témoignages et une vidéo (dont l'acheteur Premium, s'il est d'accord).
 3. Accompagner les paiements hors ligne.
 
@@ -78,6 +78,34 @@ Agent GTM, 27/10/2026 (J-5). Statut : **projet à valider par Rachid**. Rien n'e
 3. Qui paie : la personne seule en novembre, ou l'employeur aussi ?
 4. Le « go retargeting », une fois le message de confiance prêt.
 
-## 5. Paiement : relevé WooCommerce
+## 5. Paiement : relevé WooCommerce (agent Site Xelanc, 27/10, lecture seule [M])
 
-*À compléter à réception du relevé de l'agent Site Xelanc.*
+Période : du 28/09 au 27/10. Le relevé nominatif est réservé à Rachid ; il se trouve sur son Mac (`~/Travail/GTM-XELANC/`).
+
+**22 commandes, dont 19 tests internes.** Ce sont les essais en bac à sable PawaPay, les recettes Stripe et les commandes de Rachid.
+Sur la période : aucun brouillon, aucune commande échouée et aucune en attente de paiement en ligne.
+
+**4 vraies personnes ont voulu payer :**
+
+| Pays | Formule | Où elle en est |
+|---|---|---|
+| Guinée | Premium, 459 € | **Payé** par carte le 22/10. C'est le seul encaissement réel du mois |
+| Togo | Annuel, 299 € | **Bloqué** depuis le 26/10. Il a choisi le virement, qui est activé **sans coordonnées bancaires** |
+| RDC (probable) | Annuel, 299 € | A saisi son email sur la page de paiement le 26/10, sans valider |
+| RDC (probable) | Mensuel, 29 € | A saisi son email le 24/10, sans valider |
+
+**Ce que ça démontre**
+- **Les 46 paniers et 28 débuts de paiement du pixel (25 et 26/10) correspondent à une seule personne identifiée, et à aucune commande.**
+  - Les liens de pub `/commander/?add-to-cart=…` ouvrent la page de paiement dès le clic.
+  - Le pixel mesure donc des arrivées sur la page de paiement, pas une intention d'achat.
+- **Aucune vraie tentative Mobile Money de tout le mois.** PawaPay n'a été testé qu'en simulation, le 20/10.
+- **Le visiteur froid de Kinshasa tombe sur un formulaire à 299 € sans avoir vu l'offre.** C'est le principal défaut du parcours.
+
+**Défauts à corriger** (décision D7)
+1. Le virement est proposé sans coordonnées bancaires : un client réel est bloqué.
+2. Le Mobile Money n'a jamais été testé en réel. À vérifier : l'affichage pour la RDC, les opérateurs proposés (M-Pesa, Orange, Airtel), le format du téléphone, les champs obligatoires.
+3. La pub envoie directement au paiement.
+4. Trop de moyens de paiement en même temps : deux paiements par carte, Apple Pay et Google Pay, Mobile Money, virement. De plus, Stripe encaisse en dirhams des Émirats (AED).
+
+**Non consultés** : les tableaux de bord Stripe et PawaPay (accès de Rachid nécessaires).
+**À confirmer par Rachid** : un panier à 299 € du 18/10, au nom de la famille, exclu du décompte.

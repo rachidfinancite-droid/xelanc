@@ -16,6 +16,9 @@ diagnostics:
     decision_n1: "Positionnement de lancement unique : banquiers entreprise/PME + analystes crédit, Maroc + Afrique francophone ; promesse dossier de crédit IA vérifié CGNC/SYSCOHADA + certificat ; annuel 299 € en héros"
     statut_decision: "reformulée le 2026-10-27 — Rachid garde le positionnement plateforme globale des métiers de la finance ; la cible unique devient la 1re porte poussée en acquisition, pas l'identité"
 
+audits:
+  - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
+
 releves_site:
   - date: 2026-10-27
     accueil: "« Maîtriser la nouvelle finance avec l'IA » ; 0 €, 29 €/mois, 299 €/an, 459 €/an, Équipes sur devis ; logos sans alt ; 0 témoignage ; aucune mention de lancement"

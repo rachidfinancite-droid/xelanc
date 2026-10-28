@@ -36,7 +36,7 @@ Agent GTM, 27/10/2026 (J-5). Statut : **projet à valider par Rachid**. Rien n'e
 
 ## 3. Les instructions par agent (envoyées seulement après le « go » de Rachid)
 
-**Agent SEO.** Les « pages de porte » de son brief sont les landing pages univers (D10). Brief transmis le 27/10 : il donne d'abord son avis, puis attend l'accord de Rachid.
+**Agent SEO.** Il fait les pages qui décrivent les métiers, pour le référencement naturel. **Les landing pages univers ne sont pas de son ressort** : elles relèvent de l'agent webmaster (cahier des charges : `cahier-des-charges-landing-pages-univers.md`). Il faut corriger son brief du 27/10 sur ce point. Brief transmis le 27/10 : il donne d'abord son avis, puis attend l'accord de Rachid.
 1. Les deux pages de porte, qui servent aussi d'atterrissage aux pubs et aux emails.
 2. Un bloc « essayez en accès libre » dans chaque notion et chaque guide.
 3. Les chiffres de la Search Console.

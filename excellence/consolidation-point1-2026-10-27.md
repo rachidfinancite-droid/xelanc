@@ -27,15 +27,16 @@ Agent GTM, 27/10/2026 (J-5). Statut : **projet à valider par Rachid**. Rien n'e
 | D2 | Trois étages : **une promesse de plateforme**, puis **des portes par métier**, puis **un ordre de poussée fixé par la mesure**. Un abonnement ouvre tout. Le diagnostic en 2 minutes sert d'aiguilleur | ✅ 27/10 |
 | D3 | **Deux portes, ouvertes en même temps** : Banquier-analyste et Financier d'entreprise. Banque d'affaires et fonds suivront en décembre. Non-financiers : à trancher | ✅ 27/10 |
 | D4 | Une porte, c'est **une audience, un message, une pub, une page, des emails et une mesure qui lui sont propres**. La marque, l'offre et l'abonnement restent communs | ✅ 27/10 |
+| D10 | **Une landing page « univers » par porte** (Banquier-analyste, Financier d'entreprise). C'est là qu'arrivent toutes les pubs, **pas sur une page certificat**. Elle replace le visiteur dans son environnement, avec un copywriting sur les enjeux du domaine, ce qui s'y passe et pourquoi il doit absolument s'y mettre. Elle affiche les certificats du domaine, les contenus et des liens pour voir tout de suite ce qu'il obtient. Elle martèle l'idée centrale : **tout est dans un seul abonnement**. Elle se termine par un appel à l'action vers l'abonnement | ✅ 28/10 (Rachid) |
 | D9 | **Le produit est une plateforme en libre-service, sur le modèle CFI** : on crée son compte, on s'abonne, et on accède à toute la bibliothèque du métier, comme un outil de travail quotidien. On entre quand on veut, on suit son programme, on passe ses évaluations et on obtient un certificat publiable et vérifiable. **Pas de session, pas de cohorte, pas de pipeline commercial.** La pub (notoriété, acquisition, reciblage) parle du problème et de notre solution, et amène les gens **sur le site**. C'est le site qui vend : le visiteur découvre la richesse de la plateforme et s'abonne, avec un ou deux certificats inclus | ✅ 27/10 (Rachid) |
 | D8 | **Le point d'entrée de chaque porte est le certificat du métier**, pas un cours. Le message part de la douleur de carrière : accéder à l'emploi, progresser, être reconnu. Il apporte ensuite la preuve que le certificat y répond. Les cours sont le contenu du certificat, pas l'objet de la pub | ✅ 27/10 (Rachid) |
 | D5 | **Règles de confiance** : chaque porte affiche « Xelanc, par Financité Institute », le Pr El Maataoui, les banques et des témoignages. Un **humain en assistance** (WhatsApp de Loubna) aide à payer et répond aux questions ; il ne mène pas de vente. On distingue les **marchés chauds** (relation) et les **marchés froids** (preuve) | ⏳ |
-| D6 | **Pub** : on garde valo 2 jusqu'au 01/11 (arrêt si plus de 5 $ par compte et aucun achat au-delà de 100 $ cumulés). Les pubs trafic restent coupées. **Reciblage avec un message de confiance** à 0,50–1 $ par jour. À partir du 01/11, des vidéos face caméra **sur le certificat de chaque porte** (douleur de carrière, puis preuve), qui amènent sur la page certificat du site. La vente se fait sur le site, en libre-service | ⏳ |
+| D6 | **Pub** : on garde valo 2 jusqu'au 01/11 (arrêt si plus de 5 $ par compte et aucun achat au-delà de 100 $ cumulés). Les pubs trafic restent coupées. **Reciblage avec un message de confiance** à 0,50–1 $ par jour. À partir du 01/11, des vidéos face caméra **sur le certificat de chaque porte** (douleur de carrière, puis preuve), qui amènent sur la landing page univers de la porte (D10). La vente se fait sur le site, en libre-service | ⏳ |
 | D7 | **Le paiement passe avant tout nouvel achat de clics** : régler le virement (coordonnées ou retrait), faire un vrai paiement Mobile Money avec un numéro congolais, alléger les moyens de paiement (afficher les euros, pas les AED), envoyer les pubs vers la page de l'offre et non vers le paiement, et rappeler les 3 personnes bloquées | ⏳ |
 
 ## 3. Les instructions par agent (envoyées seulement après le « go » de Rachid)
 
-**Agent SEO.** Brief transmis le 27/10 : il donne d'abord son avis, puis attend l'accord de Rachid.
+**Agent SEO.** Les « pages de porte » de son brief sont les landing pages univers (D10). Brief transmis le 27/10 : il donne d'abord son avis, puis attend l'accord de Rachid.
 1. Les deux pages de porte, qui servent aussi d'atterrissage aux pubs et aux emails.
 2. Un bloc « essayez en accès libre » dans chaque notion et chaque guide.
 3. Les chiffres de la Search Console.
@@ -75,6 +76,8 @@ Agent GTM, 27/10/2026 (J-5). Statut : **projet à valider par Rachid**. Rien n'e
 - Recaler la prévision en deux portes.
 - Ouvrir l'hypothèse « paiement assisté et virement ».
 - Décaler la base des 20 000 si le débit d'envoi ne suit pas.
+
+**Cours et catalogue** : Rachid règle le sujet directement avec le webmaster et les agents de contenu (28/10). Il sort du périmètre GTM.
 
 ## 4. Questions ouvertes pour Rachid
 

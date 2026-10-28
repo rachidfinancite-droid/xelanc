@@ -71,4 +71,5 @@ decisions:   # {date, decision, par, effet_attendu, verification_le, resultat}
     verification_le: 2026-11-09
     resultat: null
   - {date: 2026-10-27, decision: "Produit = plateforme en libre-service sur abonnement (modèle CFI) : compte, abonnement, richesse, certificats en autonomie ; ni session, ni cohorte, ni pipeline ; la pub amène au site, le site vend", par: Rachid}
+  - {date: 2026-10-28, decision: "Une landing page univers par porte (pas une page certificat) : copywriting sur les enjeux du domaine, certificats du domaine affichés, contenus et liens vers les ressources, matraquage « tout dans un seul abonnement », appel à l'action vers l'abonnement. Cours et catalogue gérés par Rachid avec le webmaster.", par: Rachid}
   - {date: 2026-10-27, decision: "Point d'entrée de chaque porte = le certificat dédié au métier (pas un cours) ; message = douleur de carrière (accès à l'emploi, progression), puis preuve", par: Rachid}

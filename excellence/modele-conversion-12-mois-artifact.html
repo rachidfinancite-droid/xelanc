@@ -1,0 +1,171 @@
+<title>Modèle de conversion Xelanc</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{
+  --bg:#f6f7f9;--card:#ffffff;--ink:#14181f;--muted:#5b6472;--line:#e3e6eb;
+  --accent:#1d4ed8;--cash:#15803d;--cost:#b45309;--neg:#b91c1c;--soft:#eef2ff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1217;--card:#171b22;--ink:#e8ebf0;--muted:#9aa3b2;--line:#2a303a;
+    --accent:#7aa2ff;--cash:#4ade80;--cost:#fbbf24;--neg:#f87171;--soft:#1c2333;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1217;--card:#171b22;--ink:#e8ebf0;--muted:#9aa3b2;--line:#2a303a;
+  --accent:#7aa2ff;--cash:#4ade80;--cost:#fbbf24;--neg:#f87171;--soft:#1c2333;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto;padding-block:24px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:24px;margin:0 0 4px}
+h2{font-size:17px;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px 18px}
+label{display:block;font-size:13px;color:var(--muted)}
+label b{display:block;color:var(--ink);font-weight:600;font-size:14px;margin-bottom:2px}
+input{width:100%;min-width:0;margin-top:4px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.kpi{background:var(--soft);border-radius:10px;padding:12px}
+.kpi span{display:block;font-size:12px;color:var(--muted)}
+.kpi strong{font-size:22px;font-variant-numeric:tabular-nums}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:13.5px}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--card)}
+thead th{color:var(--muted);font-weight:600}
+tr.tot td{font-weight:700}
+.pos{color:var(--cash)}.neg{color:var(--neg)}.cst{color:var(--cost)}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+svg text{fill:var(--muted);font-size:11px}
+.cohort td{font-size:12.5px}
+.warn{border-left:4px solid var(--cost)}
+</style>
+<main>
+<h1>Modèle de conversion Xelanc · novembre 2026 → octobre 2027</h1>
+<p class="sub">Modèle par cohortes : chaque mois d'inscrits gratuits se convertit petit à petit sur plusieurs mois. Tous les chiffres sont des <strong>hypothèses</strong>, modifiables ci-dessous ; les tableaux se recalculent aussitôt.</p>
+
+<section class="card">
+<h2>Hypothèses</h2>
+<div class="grid">
+  <label><b>Inscrits gratuits par jour</b>20 villes × 4 à 5 par ville<input id="parJour" type="number" value="80" min="0"></label>
+  <label><b>Jours par mois</b><input id="jours" type="number" value="30" min="1"></label>
+  <label><b>Conversion mensuelle d'une cohorte</b>en % des inscrits du mois, chaque mois<input id="convMois" type="number" value="2.5" step="0.1" min="0"></label>
+  <label><b>Nombre de mois de conversion</b>4 mois × 2,5 % = 10 % au total<input id="nbMois" type="number" value="4" min="1" max="12"></label>
+  <label><b>Cash encaissé par nouvel abonné (€)</b>mélange annuel 299 €, Premium 459 €, mensuel 29 €<input id="valeur" type="number" value="240" min="0"></label>
+  <label><b>Frais de paiement (%)</b>Stripe, PawaPay<input id="frais" type="number" value="4" step="0.5" min="0"></label>
+  <label><b>Coût d'un inscrit, 1er mois ($)</b>Meta en apprentissage<input id="cpi1" type="number" value="5" step="0.1" min="0"></label>
+  <label><b>Coût d'un inscrit, en croisière ($)</b>à partir du 3e mois<input id="cpi3" type="number" value="2" step="0.1" min="0"></label>
+  <label><b>Taux de change ($ → €)</b><input id="fx" type="number" value="0.86" step="0.01" min="0"></label>
+  <label><b>Conseillers de conversion</b>équipe humaine<input id="equipe" type="number" value="2" min="0"></label>
+  <label><b>Coût mensuel d'un conseiller ($)</b>≈ 8 000 DH<input id="salaire" type="number" value="800" min="0"></label>
+  <label><b>Autres charges fixes (€ / mois)</b>Brevo, plateforme, hébergement, outils<input id="fixes" type="number" value="1000" min="0"></label>
+</div>
+<p class="note">Lecture : une cohorte de 2 400 inscrits en novembre donne 60 abonnés en novembre, 60 en décembre, 60 en janvier et 60 en février, soit 10 % au total. Le mois de décembre additionne donc les abonnés de la cohorte de novembre et ceux de la cohorte de décembre, et ainsi de suite jusqu'à la stabilisation. Le 2e mois, le coût d'un inscrit est la moyenne entre le 1er mois et la croisière. Non compté : les renouvellements des abonnements annuels (à partir de novembre 2027) et les autres canaux (bases d'emails, référencement).</p>
+</section>
+
+<section class="card">
+<h2>Résultat sur 12 mois</h2>
+<div class="kpis" id="kpis"></div>
+</section>
+
+<section class="card">
+<h2>Cash, charges et net par mois</h2>
+<div class="legend"><span><i style="background:var(--cash)"></i>Cash encaissé (net de frais)</span><span><i style="background:var(--cost)"></i>Charges (pub + équipe + fixes)</span><span><i style="background:var(--accent)"></i>Net cumulé</span></div>
+<div class="wrap"><svg id="chart" viewBox="0 0 1100 300" width="100%" height="300" role="img" aria-label="Cash, charges et net cumulé par mois"></svg></div>
+</section>
+
+<section class="card">
+<h2>Détail mois par mois</h2>
+<div class="wrap"><table id="tab"></table></div>
+</section>
+
+<section class="card">
+<h2>Abonnés par cohorte</h2>
+<p class="note" style="margin-top:0">Chaque ligne est un mois d'inscription ; chaque colonne, le mois où ses abonnés paient.</p>
+<div class="wrap"><table id="coh" class="cohort"></table></div>
+</section>
+
+<section class="card warn">
+<h2>Points de vigilance</h2>
+<ul>
+  <li><strong>La conversion de 10 % est un objectif, pas encore une mesure.</strong> On la vérifie par cohorte, à 30, 60 et 90 jours. Pour tester un scénario plus prudent, mettez la conversion mensuelle à 1,25 %, soit 5 % au total.</li>
+  <li><strong>La capacité de l'équipe</strong> : la ligne « ventes par conseiller et par jour » doit rester autour de 5 à 6. Au-delà, il faut ajouter un conseiller.</li>
+  <li><strong>Le volume d'emails</strong> : 2 400 nouveaux inscrits par mois dépassent le plafond actuel de Brevo (300 emails par jour). Il faut un forfait sans plafond, compté dans les charges fixes.</li>
+  <li><strong>La trésorerie</strong> : la pub se paie avant que les cohortes ne convertissent. Regarder le net cumulé des premiers mois.</li>
+</ul>
+</section>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const mois=["nov. 26","déc. 26","janv. 27","févr. 27","mars 27","avr. 27","mai 27","juin 27","juil. 27","août 27","sept. 27","oct. 27"];
+const eur=v=>Math.round(v).toLocaleString("fr-FR")+" €";
+const n0=v=>Math.round(v).toLocaleString("fr-FR");
+function calc(){
+  const p={};["parJour","jours","convMois","nbMois","valeur","frais","cpi1","cpi3","fx","equipe","salaire","fixes"].forEach(k=>p[k]=parseFloat($(k).value)||0);
+  const insc=p.parJour*p.jours, c=p.convMois/100, N=12, M=Math.round(p.nbMois);
+  const rows=[];let cumNet=0,cumCash=0,cumAb=0,cumCharges=0;const coh=[];
+  for(let m=0;m<N;m++){
+    coh[m]=[];for(let k=0;k<N;k++)coh[m][k]=(k>=m&&k-m<M)?insc*c:0;
+    let nouv=0;for(let co=0;co<=m;co++)if(m-co<M)nouv+=insc*c;
+    const brut=nouv*p.valeur, frais=brut*p.frais/100, cash=brut-frais;
+    const cpi=m===0?p.cpi1:(m===1?(p.cpi1+p.cpi3)/2:p.cpi3);
+    const pub=insc*cpi*p.fx, equipe=p.equipe*p.salaire*p.fx, charges=pub+equipe+p.fixes, net=cash-charges;
+    cumNet+=net;cumCash+=cash;cumAb+=nouv;cumCharges+=charges;
+    rows.push({m,insc,nouv,cumAb,brut,frais,cash,cpi,pub,equipe,fixes:p.fixes,charges,net,cumNet,
+      vpc:p.equipe>0?nouv/(p.equipe*22):0,cpv:nouv>0?charges/nouv:0});
+  }
+  render(rows,coh,{cumNet,cumCash,cumAb,cumCharges,insc});
+}
+function render(r,coh,t){
+  const minCum=Math.min(...r.map(x=>x.cumNet));
+  const pay=r.findIndex(x=>x.cumNet>=0);
+  $("kpis").innerHTML=[
+    ["Inscrits gratuits sur 12 mois",n0(t.insc*12)],
+    ["Nouveaux abonnés sur 12 mois",n0(t.cumAb)],
+    ["Cash encaissé (net de frais)",eur(t.cumCash)],
+    ["Charges totales",eur(t.cumCharges)],
+    ["Résultat net sur 12 mois",eur(t.cumNet)],
+    ["Cash mensuel en régime (oct. 27)",eur(r[11].cash)],
+    ["Besoin de trésorerie maximal",minCum<0?eur(-minCum):"aucun"],
+    ["Net cumulé positif à partir de",pay>=0?mois[pay]:"au-delà de 12 mois"]
+  ].map(([a,b])=>`<div class="kpi"><span>${a}</span><strong>${b}</strong></div>`).join("");
+  const L=[["Inscrits du mois",x=>n0(x.insc)],["Nouveaux abonnés du mois",x=>n0(x.nouv)],["Abonnés cumulés",x=>n0(x.cumAb)],
+    ["Cash brut",x=>eur(x.brut),"pos"],["Frais de paiement",x=>"− "+eur(x.frais),"cst"],["Cash encaissé net",x=>eur(x.cash),"pos"],
+    ["Coût d'un inscrit ($)",x=>x.cpi.toFixed(2)],["Pub",x=>"− "+eur(x.pub),"cst"],["Équipe de conversion",x=>"− "+eur(x.equipe),"cst"],["Autres charges fixes",x=>"− "+eur(x.fixes),"cst"],
+    ["Charges totales",x=>"− "+eur(x.charges),"cst"],["Net du mois",x=>eur(x.net),"net"],["Net cumulé",x=>eur(x.cumNet),"net"],
+    ["Coût par abonné (charges ÷ abonnés)",x=>x.nouv?eur(x.cpv):"—"],["Ventes par conseiller et par jour (22 j)",x=>x.vpc.toFixed(1)]];
+  let h="<thead><tr><th></th>"+mois.map(m=>`<th>${m}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
+  const tot={0:t.insc*12,1:t.cumAb,3:r.reduce((a,x)=>a+x.brut,0),4:r.reduce((a,x)=>a+x.frais,0),5:t.cumCash,7:r.reduce((a,x)=>a+x.pub,0),8:r.reduce((a,x)=>a+x.equipe,0),9:r.reduce((a,x)=>a+x.fixes,0),10:t.cumCharges,11:t.cumNet};
+  L.forEach(([lab,f,cl],i)=>{
+    const strong=(i===5||i===10||i===11)?' class="tot"':'';
+    h+=`<tr${strong}><td>${lab}</td>`+r.map(x=>{let c=cl==="net"?(x[i===11?"net":"cumNet"]>=0?"pos":"neg"):(cl||"");return `<td class="${c}">${f(x)}</td>`}).join("");
+    let tv="";if(i in tot){const v=tot[i];tv=(i===0||i===1)?n0(v):((i===4||i>=7&&i<=10)?"− "+eur(v):eur(v));}
+    h+=`<td>${tv}</td></tr>`;
+  });
+  $("tab").innerHTML=h+"</tbody>";
+  let c="<thead><tr><th>Cohorte</th>"+mois.map(m=>`<th>${m}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
+  coh.forEach((row,i)=>{c+=`<tr><td>${mois[i]}</td>`+row.map(v=>`<td>${v?n0(v):""}</td>`).join("")+`<td>${n0(row.reduce((a,b)=>a+b,0))}</td></tr>`;});
+  c+=`<tr class="tot"><td>Total du mois</td>`+mois.map((_,k)=>`<td>${n0(coh.reduce((a,row)=>a+row[k],0))}</td>`).join("")+`<td>${n0(t.cumAb)}</td></tr>`;
+  $("coh").innerHTML=c+"</tbody>";
+  // graphique
+  const W=1100,H=300,pl=70,pr=20,pt=15,pb=30,iw=W-pl-pr,ih=H-pt-pb;
+  const vals=r.flatMap(x=>[x.cash,x.charges,x.cumNet]);const max=Math.max(...vals,1),min=Math.min(0,...vals);
+  const y=v=>pt+ih*(max-v)/(max-min);const bw=iw/12;
+  let s="";for(let g=0;g<=4;g++){const v=min+(max-min)*g/4;s+=`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${pl-6}" y="${y(v)+4}" text-anchor="end">${Math.round(v/1000)} k€</text>`;}
+  s+=`<line x1="${pl}" x2="${W-pr}" y1="${y(0)}" y2="${y(0)}" stroke="var(--muted)"/>`;
+  r.forEach((x,i)=>{const x0=pl+i*bw+bw*0.15,w=bw*0.33;
+    s+=`<rect x="${x0}" y="${y(x.cash)}" width="${w}" height="${Math.max(0,y(0)-y(x.cash))}" fill="var(--cash)" rx="2"><title>${mois[i]} · cash ${eur(x.cash)}</title></rect>`;
+    s+=`<rect x="${x0+w+2}" y="${y(x.charges)}" width="${w}" height="${Math.max(0,y(0)-y(x.charges))}" fill="var(--cost)" rx="2"><title>${mois[i]} · charges ${eur(x.charges)}</title></rect>`;
+    s+=`<text x="${pl+i*bw+bw/2}" y="${H-10}" text-anchor="middle">${mois[i]}</text>`;});
+  s+=`<polyline fill="none" stroke="var(--accent)" stroke-width="2.5" points="${r.map((x,i)=>`${pl+i*bw+bw/2},${y(x.cumNet)}`).join(" ")}"/>`;
+  r.forEach((x,i)=>s+=`<circle cx="${pl+i*bw+bw/2}" cy="${y(x.cumNet)}" r="3.5" fill="var(--accent)"><title>${mois[i]} · net cumulé ${eur(x.cumNet)}</title></circle>`);
+  $("chart").innerHTML=s;
+}
+document.querySelectorAll("input").forEach(i=>i.addEventListener("input",calc));
+calc();
+</script>

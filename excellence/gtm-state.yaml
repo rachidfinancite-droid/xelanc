@@ -46,6 +46,13 @@ modele_conversion_2026-10-28:   # logique retenue par Rachid
   a_mesurer: "conversion réelle par cohorte d'inscription (J30, J60, J90), ventes par conseiller et par jour, appels nécessaires par vente"
   note_methode: "l'humain ne remplace pas le libre-service : pas de formulaires de leads ni de sessions ; il travaille les inscrits gratuits"
 
+canal_linkedin_2026-10-28:   # proposé par Rachid, en discussion
+  idee: "10 €/jour de promotion + InMail (Message Ads) aux RAF, DAF et fonctions financières ; message « faites payer l'abonnement par votre employeur »"
+  lecture_gtm: "canal de qualité (contexte professionnel, synergie avec le badge LinkedIn du certificat, ouvre le payeur employeur) ; plus cher par contact que Meta ; complément de précision, pas remplaçant du volume Meta"
+  prerequis: ["Insight Tag LinkedIn + UTM", "landing Univers Finance d'entreprise en ligne", "modèle de lettre de demande de prise en charge à l'employeur", "facture et devis au nom de l'entreprise"]
+  test_propose: "2 à 3 semaines, 10-15 €/jour, Maroc + Côte d'Ivoire + Sénégal ; 1 pub vidéo de Rachid + 1 Message Ad aux RAF ; juger au coût par abonné et à la part payée par l'employeur"
+  vigilance: "formule « démissionnez » : risque d'image auprès des employeurs, qui sont aussi nos clients B2B et nos références"
+
 audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 

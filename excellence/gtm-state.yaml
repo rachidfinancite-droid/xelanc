@@ -61,6 +61,12 @@ canal_google_youtube_2026-10-28:   # en discussion
   impact_estime: "Search 10-15 €/jour ≈ 120-250 inscrits/mois, plus qualifiés que Meta [H] ; YouTube = autorité + reciblage, impact indirect"
   pratique_cle: "importer dans Google Ads les abonnements conclus par l'équipe humaine (conversions hors ligne) pour qu'il optimise sur les inscrits qui paient"
 
+question_marches_solvables_2026-10-28:
+  constat_rachid: "31 manifestations d'intérêt, 0 abonnement hors une personne qui connaît Financité ; doute sur maturité, pouvoir d'achat et solvabilité africaine ; idée de traduire et viser les marchés anglo-saxons"
+  lecture_gtm: "trop tôt pour conclure : quelques jours, entonnoir cassé (paiement, virement, landing pages, relance, équipe pas encore active). Historique contraire : 472 payeurs en Afrique subsaharienne, dont ≈ 340 hors ligne [M]. Le problème mesuré est d'abord le chemin de paiement et l'absence d'humain, pas la solvabilité"
+  avis: "pas de bascule anglo-saxonne maintenant (concurrence CFI/WSP/Coursera, CPC ≈ ×10, perte des différenciants français/SYSCOHADA/Afrique, traduction des cours et vidéos). Leviers de solvabilité d'abord : employeur payeur (B2B, licences équipes), prix et paiement adaptés (point 2), marchés francophones solvables (France, Belgique, Suisse, Canada) en test"
+  porte_de_decision: "fin novembre : si la cohorte de novembre, entonnoir réparé, convertit < 2 % à J30, ouvrir un test francophone solvable à 10 €/jour ; l'anglais reste une option 2027"
+
 audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 

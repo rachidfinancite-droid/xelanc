@@ -40,6 +40,12 @@ inscrits_gratuits_2026-10-28:
   lecture_gtm: "risque « inscrits non solvables » réduit ; coût par inscrit encore non stabilisé (Meta en apprentissage) ; à juger après sortie d'apprentissage et ≈ 300 inscrits"
   projection_20_villes: "pessimiste 1 200 / central 2 400 / optimiste 4 800 inscrits par mois pour ≈ 5 200 €/mois de pub [H] ; rentabilité décidée par coût par inscrit × conversion (seuil : coût par vente ≤ 120 €)"
 
+modele_conversion_2026-10-28:   # logique retenue par Rachid
+  principe: "maximiser les inscrits gratuits (actif) ; conversion visée 10 % étalée sur 3 mois ; relance automatique + équipe humaine de conversion (2 personnes à ≈ 800 $/mois, 5-6 abonnements par jour chacune) sur les inscrits, en plus du libre-service"
+  coherence: "2 personnes × 5,5/j × 22 j ≈ 240 ventes/mois = 2 400 inscrits/mois à 10 % (scénario central 20 villes) ; 3 600 inscrits/mois à 10 % ≈ 86 k€/mois ≈ cible 100 k$ (3 personnes) [H]"
+  a_mesurer: "conversion réelle par cohorte d'inscription (J30, J60, J90), ventes par conseiller et par jour, appels nécessaires par vente"
+  note_methode: "l'humain ne remplace pas le libre-service : pas de formulaires de leads ni de sessions ; il travaille les inscrits gratuits"
+
 audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 

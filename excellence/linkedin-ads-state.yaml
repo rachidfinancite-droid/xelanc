@@ -1,0 +1,114 @@
+# Journal de l'agent LinkedIn Ads (tenu par .claude/agents/linkedin-ads.md)
+# Étiquettes : [M] mesuré, [E] estimé, [H] hypothèse.
+statut: "stratégie rédigée le 2026-10-31 (lecture seule) ; aucune campagne créée ; en attente de la décision n°1 de Rachid et des prérequis bloquants"
+derniere_mise_a_jour: 2026-10-31   # + personas et potentiel par pays
+
+source_canal: "excellence/gtm-state.yaml → canal_linkedin_2026-10-28 (10 €/jour + Message Ads aux RAF/DAF, test 2–3 semaines, Maroc + Côte d'Ivoire + Sénégal)"
+
+strategie:
+  - date: 2026-10-31
+    fichier: excellence/linkedin-strategie-2026-10-31.md
+    verdict: "LinkedIn = porte employeur + précision, pas canal de volume particulier. Coût par compte gratuit estimé 50-270 € [E/H] contre ≈ 5 $ sur Meta [M 27/10]. Un abonné individuel via LinkedIn coûterait 300-1 200 € [E/H], au-dessus du seuil 120 €. Le test ne bouge pas le cash de novembre ; il mesure le payeur employeur (Équipes 249 €/place, dès 3 ou 5 places [M])."
+    decision_n1: "Valider le rôle et un plafond de 1 600 € (Phase 1 : 1 100 €, 10/11→07/12 ; Phase 2 Message Ad : 500 €, 07/12→18/12) ; aucun euro avant P1-P4 ; avant le 06/11"
+    phases: ["Phase 0 (31/10→09/11) prérequis gratuits + LinkedIn organique", "Phase 1 (10/11→07/12) 2 campagnes contenu sponsorisé Finance d'entreprise + Banque, 20 €/j chacune, lecture 24/11, verdict 08/12", "Phase 2 (07/12→18/12) 1 Message Ad à la porte gagnante, texte validé"]
+    criteres_arret: "pas de verdict < 100 clics ou 500 € par porte ; stop porte si clic→compte < 2 % ; arrêt payant si 1 100 € sans devis ni abonné ; passage Phase 2 si coût/compte < 60 € et ≥ 1 devis qualifié"
+    objectifs_si_valide: "coût/demande de devis Équipes ≤ 150 € ; coût/vente Équipes ≤ 310 € ; part employeur ≥ 50 % ; échelle 1 500-3 000 €/mois pour ≈ 2 ventes Équipes/mois [H]"
+
+reperes_cout_E:   # tous estimés, jamais mesurés pour Xelanc
+  cpc_moyen_eur: "5,98 (Dreamdata mars 2026 via The Ad Spend, données vendeur)"
+  cpm_moyen_eur: "34"
+  cpl_finance_usd: "100-300 (blogs d'agences, non traçables)"
+  afrique: "≈ 2 $ le clic (un blog) ; aucune source fiable par pays ; hypothèse de travail 3-8 € [H]"
+  message_ad: "0,25-1,00 $ par envoi, ouverture 40-55 %, clic 3-4 % (blogs)"
+  membres_linkedin: "Maroc ≈ 7,02 M (déc. 2025), Côte d'Ivoire ≈ 1,617 M (janv. 2025), Sénégal ≈ 1,3 M (début 2025) [E NapoleonCat/Osiris, comptes inscrits]"
+  audience_finance_senior_3_pays: "≈ 100-175 k [H, parts 4-6 % et 25-30 % non sourcées] ; à remplacer par la prévision Campaign Manager"
+
+releve_site_2026-10-31:
+  tracking: "GA4 G-1197EQWRNE et pixel Meta présents ; capture UTM présente ; aucun Insight Tag LinkedIn détecté dans le HTML public [M]"
+  landing_univers: "/univers/banque/ et /univers/finance-entreprise/ = 404 [M]"
+  equipes: "249 €/place/an, 'dès 3' (bandeau, FAQ) vs 'à partir de 5' (grille) ; devis 48 h ; facture + virement ; 'près de 10 000' vs '50 000' ; aucune lettre de prise en charge [M]"
+  membership: "29 €/mois, 299 €/an, 459 €/an ; certificats seulement annuel/Premium ; pas de mention de facture entreprise [M]"
+  competences: "compteurs toujours incohérents (34/38/15 vs 16 cartes datées), aucune carte datée du 01/11 [M]"
+
+acces_donnees_ads:
+  adspirer: "non vérifiable le 2026-10-31 : outils Adspirer absents de la session (https://adspirer.ai/connections)"
+  supermetrics_linkedin_ads: "source LIA présente, NOT_AUTHENTICATED"
+  historique_linkedin: "aucun lu"
+  page_entreprise: "linkedin.com/company/108065517 (lien relevé sur le site)"
+
+prerequis:
+  P1_acces_campaign_manager_adspirer: "à faire — Rachid, avant 03/11"
+  P2_insight_tag_et_conversions: "à faire — Agent Site, avant 06/11 (aucun tag détecté 31/10)"
+  P3_landing_univers_finance_entreprise: "à faire — webmaster, avant 08/11 (404 au 31/10)"
+  P4_voie_employeur: "à produire — lettre de prise en charge, devis/pro forma, /equipes/ corrigée, avant 08/11"
+  P5_preuve: "témoignages et compétence datée du 01/11 (Launch P8/P9)"
+  P6_utm_linkedin: "convention proposée : utm_source=linkedin&utm_medium=paid_social&utm_campaign=xel-li-<porte>-<mois>&utm_content=<angle>"
+  P7_video_rachid: "à planifier, avant 12/11"
+
+structure_campagnes: []   # rien créé (mode lecture seule)
+structure_proposee:
+  - {id: C1, nom: "Finance d'entreprise", budget_jour_eur: 20, format: "vidéo Rachid 30-45 s", cibles: "Finance/Compta, manager+, RAF/DAF/CdG, PME 11-1000, MA+CI+SN"}
+  - {id: C2, nom: "Banque", budget_jour_eur: 20, format: "vidéo Rachid, accroche carrière", cibles: "Banque/services financiers, crédit/risque/clientèle entreprise, MA+CI+SN"}
+  - {id: C3, nom: "Message Ad RAF/DAF", budget_total_eur: 500, condition: "après verdict Phase 1, texte validé par Rachid"}
+  - {id: C4, nom: "Reciblage", budget_jour_usd_min: 10, condition: "audience ≥ 300 membres reconnus"}
+
+resultats: []
+decisions: []
+decisions_attendues_rachid:
+  - "Valider rôle LinkedIn + plafond 1 600 € (ou test d'une seule porte à 25 €/j, 500 €)"
+  - "Accès Campaign Manager + connexion Adspirer/Supermetrics"
+  - "Employeur comme payeur sur LinkedIn ; réponse humaine 48 h pour les devis Équipes (compatibilité avec D9 ?)"
+  - "Seuil Équipes 3 ou 5 places"
+  - "Vidéo : qui, quand (12/11)"
+  - "DAF Dirigeant (FIA) vs Équipes pour le Message Ad (avec Tête Grise)"
+  - "Validation conformité CNDP/loi 09-08 avant tout envoi de liste à LinkedIn"
+questions_ouvertes:
+  - "Compte LinkedIn Ads (Campaign Manager) existant ? ID du compte et page entreprise liée ?"
+  - "Budget total du test et plafond hebdomadaire ? (proposé : 1 600 € jusqu'au 18/12)"
+  - "Rachid tourne-t-il la vidéo, et quand ?"
+  - "Insight Tag éventuellement chargé via gestionnaire de balises sous consentement : à confirmer avec l'agent Site"
+
+personas:   # version 2 du 2026-10-31 (remplace la v1 jugée banale par Rachid)
+  - date: 2026-10-31
+    fichier: excellence/linkedin-personas-2026-10-31.md
+    corrections_rachid: ["[R] banque/RH Maroc = plans annuels, one-to-one : LinkedIn en appui seulement", "[R] hors Maroc ce sont les métiers qui décident (directeurs de marché, d'activité, de ligne métier) : cibler ces prescripteurs avec des parcours déterminés"]
+    erreurs_v1: ["persona banque = RH/formation (faux hors Maroc)", "proposition générique 'certifiez vos équipes'", "Maroc scoré 92 avec Message Ad (retiré)", "DAF/RAF comme fonction LinkedIn (n'existe pas : Finance, Accounting, Sales, BD, Operations...)", "parts de décideurs sans appui", "parcours non reliés aux certificats réels", "audiences par pays x métier < 300 membres non vues"]
+    personas_metiers: ["Directeur marché PME/Entreprises", "Directeur crédit/engagements", "Directeur risques", "Directeur recouvrement", "Directeur réseau/régional/agence", "Directeur marché Pro/Particuliers", "Microfinance", "DAF/RAF", "Directeur commercial/activité", "Dirigeant PME"]
+    parcours_prets: {reseau_marche_PME: "Chargé d'affaires entreprise (+ Banquier conseil)", credit: "Analyste financier risque (+ Monter un dossier de crédit 15/11)", agence: "Banquier conseil (+ Gérer un portefeuille de clients PME 23/11)", DAF: "Financier d'entreprise, bloqué : 'Réaliser une levée de dette bancaire' = prochainement disponible"}
+    sans_parcours: ["recouvrement", "impayés/provisionnement", "conformité/LCB-FT", "scoring", "microfinance", "professionnels/particuliers (pas de certificat)", "directeur d'activité (1 carte)", "dirigeant (pas d'offre)"]
+    decision_n1: "Test hors Maroc par 'directeur réseau + marché PME' (pôles UEMOA+CEMAC), parcours Chargé d'affaires entreprise, Message Ad signé Rachid ≈ 760-880 noms, 450 €, dès le 10/11 ; Maroc = appui 150 € max ; critère : ≥ 3 conversations qualifiées sur ≥ 600 envois [H]"
+    budget_1600: {maroc_appui: 150, test1_reseau_PME: 450, test2_credit_risques: 300, test3_DAF_conditionnel: 500, reserve: 200}
+    questions_terrain_rachid: ["derniers deals : qui a signé, quel service, délai", "Maroc : mois du plan annuel", "hors Maroc : quel métier décide, quel budget", "résultats recherchés par les banques", "parcours qui se vendent et manquants", "références hors Maroc citables ?", "directeurs joignables sur LinkedIn ?", "pilote 5-10 places sur budget du métier ?"]
+    ambiguites_site: ["A1 seuil 3/5", "A2 10 000/50 000", "A3 cas = cohortes, prix = plateforme", "A4 pages FIA contradictoires", "A5 levée de dette non sortie", "A6 15 cartes sans statut", "A7 pas de Comment commander / lettre / devis", "A8 pas de page par problème de résultat"]
+
+potentiel_pays:
+  - date: 2026-10-31
+    version: 2
+    source_membres: "DataReportal Digital 2025, portée publicitaire LinkedIn début 2025 (membres inscrits) [M source tierce] ; Campaign Manager inaccessible : chiffre exact seulement via l'outil d'audience du compte"
+    membres_linkedin_k: {Maroc: 6000, Algerie: 4800, Tunisie: 2400, Cote_d_Ivoire: 1600, Cameroun: 1400, Senegal: 1300, RDC: 830, Madagascar: 520, Benin: 580, Rwanda: 480, Burkina_Faso: 450, Mali: 420, Togo: 380, Guinee: 300, Gabon: 280, Congo_Brazzaville: 250, Mauritanie: 160}
+    methode_E_H: "directeurs bancaires LinkedIn = effectif bancaire × 3 % direction × 85 % présents ; répartition par métier [H] : PME 12 %, crédit 10 %, risques 8 %, recouvrement 6 %, réseau 40 %, pro/particuliers 10 % ; finance/compta niveau direction hors banque = membres × 0,24-0,48 %"
+    audiences_regroupees_E_H: {UEMOA_directeurs_banque: 975, CEMAC: "330-460", RDC: "150-255", total_SSA_francophone: "1 460-1 690", marche_PME_plus_reseau: "760-880", credit_risques_recouvrement: "350-405"}
+    contrainte: "LinkedIn refuse < 300 membres : audiences par pays x métier (30-140 personnes) à regrouper par pôle"
+    scores_marche: {Maroc: 92, Cote_d_Ivoire: 72, Senegal: 72, Togo: 61, Cameroun: 57, Tunisie: 56, Benin: 56, Gabon: 55, RDC: 51, Guinee: 48, Burkina_Faso: 46, Mali: 46, Algerie: 43, Congo_Brazzaville: 43, Rwanda: 43, Madagascar: 41, Mauritanie: 32}
+    scores_linkedin_payant: {Maroc: 37, Cote_d_Ivoire: 72, Senegal: 72, Togo: 61, Cameroun: 57, Benin: 56, Gabon: 55, RDC: 51, Guinee: 48, Burkina_Faso: 46, Mali: 46, Congo_Brazzaville: 43, Rwanda: 43, Madagascar: 41, Tunisie: 34, Mauritanie: 32, Algerie: 26}
+    facteur_adequation_H: "Maroc 0,4 [R one-to-one] ; Tunisie et Algérie 0,6 [H] ; autres 1,0"
+    role_linkedin: {Maroc: "appui one-to-one (preuve, prise de contact, cartographie, rappel par liste ≤ 150 €)", hors_Maroc: "ciblage de prescripteurs métiers nommés par pôle, Message Ad signé Rachid, pilote 5-10 places"}
+    pays_proposes_par_moi: [Benin, Togo, Burkina_Faso, Mali, Guinee, Madagascar]
+    pole_UEMOA: "CI, SN, BJ, TG, BF, ML"
+    pole_CEMAC: "CM, GA, CG"
+    a_ecarter: ["Algérie (paiement euro [H])", "Mauritanie", "Rwanda (anglophone)", "Madagascar", "Burkina Faso et Mali (risque [H])"]
+    a_surveiller: ["RDC (paiement Mobile Money non testé)", "Guinée", "Tunisie (paiement euro, process proche du Maroc [H])"]
+
+banques_par_pays:
+  - date: 2026-10-31
+    fichier: excellence/linkedin-banques-par-pays-2026-10-31.md
+    cadrage_rachid: "cible = vrais directeurs de banque (crédit, marché GE/PME, risques) ; Maroc one-to-one ; formés au Maroc : 1 200 BOA, 200 SG, 500 CIH [R]"
+    regle_francophone: "français langue de travail bancaire ; ambigus : Guinée-Bissau, Guinée équatoriale, Rwanda, Burundi, Maurice (hors périmètre)"
+    banques_par_pays: {Maroc: "24 [M secondaire BAM 2025]", Algerie: "20-21 [M secondaire]", Tunisie: "22 résidentes [M secondaire]", Mauritanie: "17 [M IMF 2024]", Cote_d_Ivoire: "29 [M BCEAO 2025]", Senegal: "29 [M BCEAO 2025]", Burkina: "16 [M 2023]", Mali: "13 [M 2023]", Niger: "14 [M 2023]", Benin: "12 [M 2023]", Togo: "14 [M 2023]", Guinee_Bissau: "6 [M 2023]", Cameroun: "19 [M COBAC/BEAC 2024]", Congo: "10 [M] (9 presse 2025)", Tchad: "10 [M]", Gabon: "8 [M]", Guinee_equatoriale: "5 [M]", Centrafrique: "4 [M]", RDC: "15 [E]", Madagascar: "12-13 [E]", Guinee: "20 [M BCRG 03/2023]", Djibouti: "10 [M secondaire]", Comores: "4 [M secondaire]", Rwanda: "9 [M secondaire]", Burundi: "14-16 [E]"}
+    totaux: {pole_Maghreb_Mauritanie: "83 banques ; utiles 31-39 ; directeurs 145-263", pole_UEMOA: "133 banques (136 officiel 2025) ; utiles 52-66 ; directeurs 206-390", pole_CEMAC: "56 banques ; utiles 26-31 ; directeurs 95-169", pole_autres: "86 banques ; utiles 39-45 ; directeurs 145-253", total_general: "358 banques ; utiles 148-181 ; directeurs 591-1 075", coeur_francophone: "327 ; 135-166 ; 546-997", hors_Maroc: "303 ; 126-155 ; 492-898"}
+    methode_E_H: "utiles = 40 % (marchés > 20 banques), 50-60 % (8-20), 60-75 % (< 8) ; directeurs = 4-6 par banque utile (3-5 petits marchés, 6-9 grandes banques marocaines) ; présence LinkedIn 60-85 % [H]"
+    groupes_multi_pays: {Ecobank: 13, Bank_of_Africa: 12, Atlantique_AFG: 11, Coris: 9, Orabank: 8, BSIC: 8, Societe_Generale: "7 en retrait", UBA: 6, BGFIBank: "5+CEMAC", NSIA: 5}
+    part_groupes_UEMOA: "88 sur 130 ≈ 68 % [E classification par nom] ; CEMAC 38 sur 56 à capitaux étrangers [M COBAC 2024]"
+    non_comptes: ["liste nominative BAM (403)", "Algérie 2026", "Tunisie offshore", "noms Mauritanie", "noms CEMAC par pays", "UEMOA 2025 par banque hors CI/SN", "Madagascar 12 vs 13", "4e banque Comores", "effectifs/parts de marché par banque (donc utiles et directeurs = [H])"]
+    consequence_linkedin: ["liste nominative de banques plutôt qu'audience large", "plancher 300 contourné par liste d'entreprises + séniorité direction ; à confirmer dans Campaign Manager", "campagne par pôle (UEMOA, CEMAC) pas par pays", "Message Ad de Rachid à un directeur adapté à 200-400 envois par pôle", "approche groupe d'abord : Bank of Africa (12 pays) via la relation marocaine, Ecobank, Coris, Orabank, Atlantique/AFG, BSIC", "Maroc = one-to-one, LinkedIn en appui"]
+    questions_rachid: ["lien capitalistique BOA Maroc / groupe Bank of Africa et accès au siège", "banques déjà clientes de Financité hors Maroc", "directeurs joignables sur LinkedIn ?", "liste de banques cibles et directeurs déjà connus"]

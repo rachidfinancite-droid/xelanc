@@ -1,0 +1,20 @@
+# Journal de l'agent LinkedIn Ads (tenu par .claude/agents/linkedin-ads.md)
+statut: "à démarrer — aucune campagne LinkedIn en cours"
+derniere_mise_a_jour: 2026-10-31
+
+source_canal: "excellence/gtm-state.yaml → canal_linkedin_2026-10-28 (10 €/jour + Message Ads aux RAF/DAF, test 2–3 semaines, Maroc + Côte d'Ivoire + Sénégal)"
+
+prerequis:
+  insight_tag_et_utm: "à vérifier"
+  landing_univers_finance_entreprise: "à vérifier"
+  lettre_prise_en_charge_employeur: "à produire"
+  facture_devis_entreprise: "à produire"
+  acces_donnees_ads: "à vérifier (Adspirer ou Supermetrics)"
+
+structure_campagnes: []
+resultats: []
+decisions: []
+questions_ouvertes:
+  - "Compte LinkedIn Ads (Campaign Manager) existant ? ID du compte et page entreprise liée ?"
+  - "Budget total du test et plafond hebdomadaire ?"
+  - "Rachid tourne-t-il la vidéo, et quand ?"

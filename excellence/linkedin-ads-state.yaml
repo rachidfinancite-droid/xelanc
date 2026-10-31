@@ -1,5 +1,5 @@
 # Journal de l'agent LinkedIn Ads (tenu par .claude/agents/linkedin-ads.md)
-statut: "à démarrer — aucune campagne LinkedIn en cours"
+statut: "à démarrer — aucune campagne LinkedIn en cours ; agent opérateur via Adspirer (création en PAUSED après plan approuvé)"
 derniere_mise_a_jour: 2026-10-31
 
 source_canal: "excellence/gtm-state.yaml → canal_linkedin_2026-10-28 (10 €/jour + Message Ads aux RAF/DAF, test 2–3 semaines, Maroc + Côte d'Ivoire + Sénégal)"
@@ -9,7 +9,7 @@ prerequis:
   landing_univers_finance_entreprise: "à vérifier"
   lettre_prise_en_charge_employeur: "à produire"
   facture_devis_entreprise: "à produire"
-  acces_donnees_ads: "à vérifier (Adspirer ou Supermetrics)"
+  acces_donnees_ads: "à vérifier : Adspirer connecté à LinkedIn (get_connections_status) — https://adspirer.ai/connections"
 
 structure_campagnes: []
 resultats: []

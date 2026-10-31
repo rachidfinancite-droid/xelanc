@@ -73,6 +73,16 @@ linkedin_bassin_principal_2026-10-31:
   points_a_trancher: ["réouverture du B2B mis en pause le 08/10", "offre Équipes : prix par siège, pilote, facture, tableau de suivi manager", "porte 2 élargie aux comptables (direction financière ET comptable)"]
   leviers: ["calendrier : budgets formation 2027 arbitrés de novembre à janvier", "fonds de formation employeurs (Maroc : CSF/OFPPT ; Côte d'Ivoire : FDFP ; Sénégal : 3FPT) à vérifier pour la formation en ligne", "8 banques déjà clientes de Financité"]
 
+zones_ombre_b2b_linkedin_2026-10-31:   # regard indépendant demandé par Rachid
+  - "l'acheteur n'est pas l'utilisateur : en banque, le budget formation appartient au capital humain / académie interne, pas au DAF ; achats, référencement fournisseur, plan de formation annuel"
+  - "facturation depuis Xelanc FZCO (Dubaï) vers une banque marocaine ou ouest-africaine : devises, retenue à la source, TVA, autorisations de change ; quelle entité facture ?"
+  - "conflit de canaux : vendre des places à 249 € à des banques qui achetaient des mandats Financité à ≈ 25 k€ ; et DAF Dirigeant à 2 375 € face à Xelanc à 299 €"
+  - "message contradictoire : au salarié on vend la carrière (partir, monter), à l'employeur il faut vendre la performance et la rétention"
+  - "le produit B2B n'est pas le même : tableau de suivi, affectation, rapports, factures en monnaie locale, conformité des données ; places achetées et non utilisées = pas de renouvellement"
+  - "la vente aux banques est relationnelle (8 banques clientes, Rachid) : la pub LinkedIn y sert peu ; elle sert les PME et les directions financières"
+  - "cycle B2B de 2 à 6 mois : peu de cash avant février ; l'objectif 100 k$ en mars reste porté par d'autres lignes"
+  - "dispersion : Meta 20 villes, LinkedIn, Google, SEO, landing pages, Black Friday, Advisory, bootcamps, avec une équipe de vente d'une personne"
+
 audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 

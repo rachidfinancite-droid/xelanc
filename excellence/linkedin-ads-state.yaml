@@ -1,20 +1,69 @@
 # Journal de l'agent LinkedIn Ads (tenu par .claude/agents/linkedin-ads.md)
-statut: "à démarrer — aucune campagne LinkedIn en cours ; agent opérateur via Adspirer (création en PAUSED après plan approuvé)"
+# Étiquettes : [M] mesuré, [E] estimé, [H] hypothèse.
+statut: "stratégie rédigée le 2026-10-31 (lecture seule) ; aucune campagne créée ; en attente de la décision n°1 de Rachid et des prérequis bloquants"
 derniere_mise_a_jour: 2026-10-31
 
 source_canal: "excellence/gtm-state.yaml → canal_linkedin_2026-10-28 (10 €/jour + Message Ads aux RAF/DAF, test 2–3 semaines, Maroc + Côte d'Ivoire + Sénégal)"
 
-prerequis:
-  insight_tag_et_utm: "à vérifier"
-  landing_univers_finance_entreprise: "à vérifier"
-  lettre_prise_en_charge_employeur: "à produire"
-  facture_devis_entreprise: "à produire"
-  acces_donnees_ads: "à vérifier : Adspirer connecté à LinkedIn (get_connections_status) — https://adspirer.ai/connections"
+strategie:
+  - date: 2026-10-31
+    fichier: excellence/linkedin-strategie-2026-10-31.md
+    verdict: "LinkedIn = porte employeur + précision, pas canal de volume particulier. Coût par compte gratuit estimé 50-270 € [E/H] contre ≈ 5 $ sur Meta [M 27/10]. Un abonné individuel via LinkedIn coûterait 300-1 200 € [E/H], au-dessus du seuil 120 €. Le test ne bouge pas le cash de novembre ; il mesure le payeur employeur (Équipes 249 €/place, dès 3 ou 5 places [M])."
+    decision_n1: "Valider le rôle et un plafond de 1 600 € (Phase 1 : 1 100 €, 10/11→07/12 ; Phase 2 Message Ad : 500 €, 07/12→18/12) ; aucun euro avant P1-P4 ; avant le 06/11"
+    phases: ["Phase 0 (31/10→09/11) prérequis gratuits + LinkedIn organique", "Phase 1 (10/11→07/12) 2 campagnes contenu sponsorisé Finance d'entreprise + Banque, 20 €/j chacune, lecture 24/11, verdict 08/12", "Phase 2 (07/12→18/12) 1 Message Ad à la porte gagnante, texte validé"]
+    criteres_arret: "pas de verdict < 100 clics ou 500 € par porte ; stop porte si clic→compte < 2 % ; arrêt payant si 1 100 € sans devis ni abonné ; passage Phase 2 si coût/compte < 60 € et ≥ 1 devis qualifié"
+    objectifs_si_valide: "coût/demande de devis Équipes ≤ 150 € ; coût/vente Équipes ≤ 310 € ; part employeur ≥ 50 % ; échelle 1 500-3 000 €/mois pour ≈ 2 ventes Équipes/mois [H]"
 
-structure_campagnes: []
+reperes_cout_E:   # tous estimés, jamais mesurés pour Xelanc
+  cpc_moyen_eur: "5,98 (Dreamdata mars 2026 via The Ad Spend, données vendeur)"
+  cpm_moyen_eur: "34"
+  cpl_finance_usd: "100-300 (blogs d'agences, non traçables)"
+  afrique: "≈ 2 $ le clic (un blog) ; aucune source fiable par pays ; hypothèse de travail 3-8 € [H]"
+  message_ad: "0,25-1,00 $ par envoi, ouverture 40-55 %, clic 3-4 % (blogs)"
+  membres_linkedin: "Maroc ≈ 7,02 M (déc. 2025), Côte d'Ivoire ≈ 1,617 M (janv. 2025), Sénégal ≈ 1,3 M (début 2025) [E NapoleonCat/Osiris, comptes inscrits]"
+  audience_finance_senior_3_pays: "≈ 100-175 k [H, parts 4-6 % et 25-30 % non sourcées] ; à remplacer par la prévision Campaign Manager"
+
+releve_site_2026-10-31:
+  tracking: "GA4 G-1197EQWRNE et pixel Meta présents ; capture UTM présente ; aucun Insight Tag LinkedIn détecté dans le HTML public [M]"
+  landing_univers: "/univers/banque/ et /univers/finance-entreprise/ = 404 [M]"
+  equipes: "249 €/place/an, 'dès 3' (bandeau, FAQ) vs 'à partir de 5' (grille) ; devis 48 h ; facture + virement ; 'près de 10 000' vs '50 000' ; aucune lettre de prise en charge [M]"
+  membership: "29 €/mois, 299 €/an, 459 €/an ; certificats seulement annuel/Premium ; pas de mention de facture entreprise [M]"
+  competences: "compteurs toujours incohérents (34/38/15 vs 16 cartes datées), aucune carte datée du 01/11 [M]"
+
+acces_donnees_ads:
+  adspirer: "non vérifiable le 2026-10-31 : outils Adspirer absents de la session (https://adspirer.ai/connections)"
+  supermetrics_linkedin_ads: "source LIA présente, NOT_AUTHENTICATED"
+  historique_linkedin: "aucun lu"
+  page_entreprise: "linkedin.com/company/108065517 (lien relevé sur le site)"
+
+prerequis:
+  P1_acces_campaign_manager_adspirer: "à faire — Rachid, avant 03/11"
+  P2_insight_tag_et_conversions: "à faire — Agent Site, avant 06/11 (aucun tag détecté 31/10)"
+  P3_landing_univers_finance_entreprise: "à faire — webmaster, avant 08/11 (404 au 31/10)"
+  P4_voie_employeur: "à produire — lettre de prise en charge, devis/pro forma, /equipes/ corrigée, avant 08/11"
+  P5_preuve: "témoignages et compétence datée du 01/11 (Launch P8/P9)"
+  P6_utm_linkedin: "convention proposée : utm_source=linkedin&utm_medium=paid_social&utm_campaign=xel-li-<porte>-<mois>&utm_content=<angle>"
+  P7_video_rachid: "à planifier, avant 12/11"
+
+structure_campagnes: []   # rien créé (mode lecture seule)
+structure_proposee:
+  - {id: C1, nom: "Finance d'entreprise", budget_jour_eur: 20, format: "vidéo Rachid 30-45 s", cibles: "Finance/Compta, manager+, RAF/DAF/CdG, PME 11-1000, MA+CI+SN"}
+  - {id: C2, nom: "Banque", budget_jour_eur: 20, format: "vidéo Rachid, accroche carrière", cibles: "Banque/services financiers, crédit/risque/clientèle entreprise, MA+CI+SN"}
+  - {id: C3, nom: "Message Ad RAF/DAF", budget_total_eur: 500, condition: "après verdict Phase 1, texte validé par Rachid"}
+  - {id: C4, nom: "Reciblage", budget_jour_usd_min: 10, condition: "audience ≥ 300 membres reconnus"}
+
 resultats: []
 decisions: []
+decisions_attendues_rachid:
+  - "Valider rôle LinkedIn + plafond 1 600 € (ou test d'une seule porte à 25 €/j, 500 €)"
+  - "Accès Campaign Manager + connexion Adspirer/Supermetrics"
+  - "Employeur comme payeur sur LinkedIn ; réponse humaine 48 h pour les devis Équipes (compatibilité avec D9 ?)"
+  - "Seuil Équipes 3 ou 5 places"
+  - "Vidéo : qui, quand (12/11)"
+  - "DAF Dirigeant (FIA) vs Équipes pour le Message Ad (avec Tête Grise)"
+  - "Validation conformité CNDP/loi 09-08 avant tout envoi de liste à LinkedIn"
 questions_ouvertes:
   - "Compte LinkedIn Ads (Campaign Manager) existant ? ID du compte et page entreprise liée ?"
-  - "Budget total du test et plafond hebdomadaire ?"
+  - "Budget total du test et plafond hebdomadaire ? (proposé : 1 600 € jusqu'au 18/12)"
   - "Rachid tourne-t-il la vidéo, et quand ?"
+  - "Insight Tag éventuellement chargé via gestionnaire de balises sous consentement : à confirmer avec l'agent Site"

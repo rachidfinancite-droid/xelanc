@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulateur InMail LinkedIn · 6 mois · Xelanc</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1d2433;--mute:#5d6576;--line:#e3e1da;--acc:#0b5cad;--pos:#1a7f4b;--neg:#b3261e;--fix:#eef1f6;--var:#fff8e6}
+@media (prefers-color-scheme:dark){:root{--bg:#14171d;--card:#1c2029;--ink:#e8eaee;--mute:#9aa3b2;--line:#2e3442;--acc:#6aa8f0;--pos:#5cc98e;--neg:#f2867e;--fix:#202634;--var:#2a2618}}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1120px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:17px;margin:0 0 10px}
+.sub{color:var(--mute);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.fix{background:var(--fix)}.var{background:var(--var)}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:middle;border:1px solid var(--line);color:var(--mute)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-size:12px;color:var(--mute);font-weight:600}
+.fixed td{font-size:14px}.src{color:var(--mute);font-size:12px}
+.ctl{display:grid;grid-template-columns:1fr 110px;gap:4px 12px;align-items:center;margin-bottom:10px}
+.ctl label{font-size:14px}.ctl .hint{grid-column:1/3;color:var(--mute);font-size:12px;margin-top:-2px}
+.ctl input[type=range]{grid-column:1/3;width:100%;accent-color:var(--acc)}
+.ctl input[type=number]{width:110px;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);text-align:right;font:inherit}
+.chk{display:flex;gap:8px;align-items:center;margin:6px 0 10px;font-size:14px}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+button{font:inherit;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+button:hover{border-color:var(--acc)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+@media (max-width:820px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .l{font-size:12px;color:var(--mute)}.kpi .v{font-size:22px;font-weight:700}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+.note{font-size:13px;color:var(--mute)}
+.alert{border-left:4px solid var(--neg);padding:8px 12px;background:var(--card);margin:10px 0;font-size:14px}
+.ok{border-left-color:var(--pos)}
+svg{width:100%;height:220px}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--mute)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+details{margin-top:10px}summary{cursor:pointer;color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Simulateur InMail LinkedIn · 6 mois</h1>
+<p class="sub">Xelanc, formule entreprise (achat direct, sans essai gratuit). Tu bouges les données en jaune ; les données en bleu sont fixes, sourcées, et servent de repères. Tout se recalcule semaine par semaine, sur 26 semaines.</p>
+
+<div class="presets">
+  <button data-p="revue">Scénario revue neutre (prudent)</button>
+  <button data-p="central">Scénario central</button>
+  <button data-p="rachid">Scénario Rachid (10 %)</button>
+</div>
+
+<div class="grid">
+<div class="card var">
+<h2>Ce que tu peux changer <span class="tag">variable</span></h2>
+
+<div class="ctl"><label for="liste">Liste chaude retrouvée sur LinkedIn (personnes)</label><input type="number" id="liste" min="0" max="100000" step="500"><input type="range" data-for="liste" min="0" max="70000" step="500"><div class="hint">Tes anciens et prospects Financité que LinkedIn retrouve par leur email, avec leur consentement.</div></div>
+
+<div class="ctl"><label for="froid">Audience froide active atteignable (personnes)</label><input type="number" id="froid" min="0" max="300000" step="1000"><input type="range" data-for="froid" min="0" max="165000" step="1000"><div class="hint">DAF, RAF, comptables confirmés et dirigeants qui ne te connaissent pas, actifs sur LinkedIn.</div></div>
+<div class="chk"><input type="checkbox" id="useFroid"><label for="useFroid">Envoyer aussi à l'audience froide (après la liste chaude)</label></div>
+
+<div class="chk"><input type="checkbox" id="stopPM" checked><label for="stopPM">Ne jamais envoyer à un groupe dont le taux d'achat est sous le seuil de rentabilité</label></div>
+
+<div class="ctl"><label for="tchaud">Taux d'achat, liste chaude (% des envois)</label><input type="number" id="tchaud" min="0" max="15" step="0.05"><input type="range" data-for="tchaud" min="0" max="10" step="0.05"><div class="hint">Revue neutre : 0,2 à 1,5 %, jusqu'à 3 % si sollicitation personnelle.</div></div>
+
+<div class="ctl"><label for="tfroid">Taux d'achat, audience froide (% des envois)</label><input type="number" id="tfroid" min="0" max="15" step="0.01"><input type="range" data-for="tfroid" min="0" max="3" step="0.01"><div class="hint">Revue neutre : 0,02 à 0,2 %, central 0,05 à 0,1 %.</div></div>
+
+<div class="ctl"><label for="cps">Coût d'un envoi (€)</label><input type="number" id="cps" min="0.1" max="2" step="0.01"><input type="range" data-for="cps" min="0.2" max="1.2" step="0.01"><div class="hint">Repère : 0,34 à 0,88 €. Le vrai chiffre viendra de Campaign Manager.</div></div>
+
+<div class="ctl"><label for="depart">Envois de départ par semaine</label><input type="number" id="depart" min="50" max="20000" step="50"><input type="range" data-for="depart" min="50" max="5000" step="50"><div class="hint">250 = 50 par jour ouvré.</div></div>
+
+<div class="ctl"><label for="reinv">Part de l'encaissé réinjectée la semaine suivante (%)</label><input type="number" id="reinv" min="0" max="100" step="5"><input type="range" data-for="reinv" min="0" max="100" step="5"></div>
+
+<div class="ctl"><label for="mult">Montée maximale d'une semaine à l'autre (×)</label><input type="number" id="mult" min="1" max="50" step="0.5"><input type="range" data-for="mult" min="1" max="10" step="0.5"><div class="hint">Prudence : qualité des cibles, délivrance LinkedIn, capacité à servir les clients.</div></div>
+
+<div class="ctl"><label for="apport">Apport maximum de ta poche (€, sur 6 mois)</label><input type="number" id="apport" min="0" max="200000" step="100"><input type="range" data-for="apport" min="0" max="20000" step="100"><div class="hint">Si l'argent réinjecté ne suffit pas, tu complètes jusqu'à ce plafond. Au-delà, les envois s'arrêtent.</div></div>
+
+<div class="ctl"><label for="relance">Taux d'achat au passage suivant (% du passage précédent)</label><input type="number" id="relance" min="0" max="100" step="5"><input type="range" data-for="relance" min="0" max="100" step="5"><div class="hint">On peut renvoyer à la même personne après 45 jours ; elle achète moins.</div></div>
+
+<div class="ctl"><label for="teq">Acheteurs qui achètent aussi des places Équipes (%)</label><input type="number" id="teq" min="0" max="50" step="0.5"><input type="range" data-for="teq" min="0" max="20" step="0.5"></div>
+
+<div class="ctl"><label for="prix">Prix de l'abonnement (€ par an)</label><input type="number" id="prix" min="29" max="3000" step="1"><input type="range" data-for="prix" min="99" max="1500" step="1"></div>
+</div>
+
+<div class="card fix">
+<h2>Données fixes <span class="tag">repères</span></h2>
+<table class="fixed">
+<tr><th>Donnée</th><th>Valeur</th></tr>
+<tr><td>Frais de paiement</td><td>4 %</td></tr>
+<tr><td>Places Équipes (5 places)</td><td>1 245 €</td></tr>
+<tr><td>Un InMail sponsorisé par membre</td><td>tous les 45 jours (≈ 7 semaines)</td></tr>
+<tr><td>Budget minimum LinkedIn</td><td>10 $ par jour et par campagne</td></tr>
+<tr><td>Audience minimum d'une campagne</td><td>300 membres</td></tr>
+<tr><td>Taux d'ouverture observé</td><td>30 à 60 %</td></tr>
+<tr><td>Clic, en part des envois</td><td>0,3 à 3 % (≈ 1 à 1,5 %)</td></tr>
+<tr><td>Achat, audience froide</td><td>0,02 à 0,2 %</td></tr>
+<tr><td>Achat, liste chaude</td><td>0,2 à 1,5 % (3 % au mieux)</td></tr>
+<tr><td>Coût d'un envoi (Afrique de l'Ouest)</td><td>0,34 à 0,88 €</td></tr>
+</table>
+<h2 style="margin-top:16px">Membres LinkedIn par pays</h2>
+<table class="fixed">
+<tr><th>Pays</th><th>Membres</th></tr>
+<tr><td>Maroc</td><td>7,88 M</td></tr><tr><td>Tunisie</td><td>3,08 M</td></tr><tr><td>Côte d'Ivoire</td><td>2,08 M</td></tr><tr><td>Sénégal</td><td>1,70 M</td></tr><tr><td>Cameroun</td><td>1,6 M</td></tr><tr><td>RDC</td><td>1,21 M</td></tr><tr><td>Congo</td><td>0,34 M</td></tr>
+</table>
+<p class="src">Sources : revue neutre du 31/10/2026 (NapoleonCat sept. 2026, documentation LinkedIn, agences). Estimations, à remplacer par la prévision d'audience de Campaign Manager.</p>
+<h2 style="margin-top:16px">Seuils calculés</h2>
+<table class="fixed">
+<tr><td>Taux d'achat pour rembourser la pub</td><td id="seuilPM"></td></tr>
+<tr><td>Taux d'achat pour que la machine se finance seule</td><td id="seuilAF"></td></tr>
+</table>
+</div>
+</div>
+
+<div class="kpis">
+<div class="kpi"><div class="l">Ventes sur 6 mois</div><div class="v" id="kV"></div></div>
+<div class="kpi"><div class="l">Encaissé</div><div class="v" id="kC"></div></div>
+<div class="kpi"><div class="l">Pub dépensée</div><div class="v" id="kP"></div></div>
+<div class="kpi"><div class="l">Solde (encaissé − pub)</div><div class="v" id="kS"></div></div>
+<div class="kpi"><div class="l">Ton apport</div><div class="v" id="kA"></div></div>
+<div class="kpi"><div class="l">Envois</div><div class="v" id="kE"></div></div>
+<div class="kpi"><div class="l">Coût par vente</div><div class="v" id="kCV"></div></div>
+<div class="kpi"><div class="l">Pour toi (part non réinjectée)</div><div class="v" id="kT"></div></div>
+</div>
+<div id="alerts"></div>
+
+<div class="card">
+<h2>Résultat mois par mois</h2>
+<div style="overflow-x:auto"><table id="tm"></table></div>
+</div>
+
+<div class="card" style="margin-top:16px">
+<h2>Semaine par semaine</h2>
+<div class="legend"><span><i style="background:var(--acc)"></i>Encaissé</span><span><i style="background:var(--neg)"></i>Pub dépensée</span></div>
+<svg id="chart" viewBox="0 0 1040 220" preserveAspectRatio="none"></svg>
+<details><summary>Voir le tableau des 26 semaines</summary><div style="overflow-x:auto"><table id="tw"></table></div></details>
+</div>
+
+<div class="card" style="margin-top:16px">
+<h2>Comment le calcul fonctionne</h2>
+<ol class="note">
+<li>Chaque semaine, le budget disponible = la réserve + la part réinjectée de l'encaissé de la semaine précédente. Si ce budget ne paie pas les envois de départ, ton apport complète, jusqu'à son plafond.</li>
+<li>Les envois de la semaine = le plus petit de : envois de la semaine précédente × montée maximale (au moins les envois de départ), ce que le budget paie, les personnes disponibles.</li>
+<li>On envoie d'abord à la liste chaude, puis (si coché) à l'audience froide. Une personne redevient disponible 7 semaines après un envoi, avec un taux d'achat réduit selon le réglage « passage suivant ».</li>
+<li>Les ventes d'une semaine tombent dans la semaine. Encaissé = ventes × prix × 96 % + ventes × part Équipes × 1 245 € × 96 %.</li>
+<li>Si la case est cochée, on n'envoie jamais à un groupe dont le taux d'achat est sous le seuil de rentabilité (par exemple un troisième passage).</li>
+<li>Ce que tu ne réinjectes pas te revient. Le solde = encaissé − pub.</li>
+</ol>
+</div>
+</div>
+
+<script>
+const P={
+ revue:{liste:20000,froid:60000,useFroid:false,tchaud:0.5,tfroid:0.05,cps:0.6,depart:250,reinv:50,mult:3,apport:3000,relance:40,teq:2,prix:299},
+ central:{liste:20000,froid:60000,useFroid:true,tchaud:1.5,tfroid:0.1,cps:0.6,depart:250,reinv:50,mult:3,apport:5000,relance:50,teq:3,prix:299},
+ rachid:{liste:20000,froid:100000,useFroid:true,tchaud:10,tfroid:10,cps:0.42,depart:250,reinv:50,mult:3,apport:2000,relance:50,teq:3,prix:299}
+};
+const ids=["liste","froid","tchaud","tfroid","cps","depart","reinv","mult","apport","relance","teq","prix"];
+const $=id=>document.getElementById(id);
+const eur=n=>(Math.round(n)).toLocaleString('fr-FR')+' €';
+const num=n=>(Math.round(n)).toLocaleString('fr-FR');
+function setP(p){for(const k of ids){$(k).value=p[k];document.querySelector(`[data-for=${k}]`).value=p[k]}$('useFroid').checked=p.useFroid;calc()}
+for(const k of ids){const r=document.querySelector(`[data-for=${k}]`);r.addEventListener('input',()=>{$(k).value=r.value;calc()});$(k).addEventListener('input',()=>{r.value=$(k).value;calc()})}
+$('useFroid').addEventListener('change',calc);$('stopPM').addEventListener('change',calc);
+document.querySelectorAll('[data-p]').forEach(b=>b.addEventListener('click',()=>setP(P[b.dataset.p])));
+const MONTHS=[[1,4],[5,8],[9,13],[14,17],[18,22],[23,26]];
+function calc(){
+ const v={};for(const k of ids)v[k]=parseFloat($(k).value)||0;const useF=$('useFroid').checked;
+ const net=v.prix*0.96, teqv=v.teq/100*1245*0.96, perSale=net+teqv, cps=v.cps, re=v.reinv/100, rel=v.relance/100;
+ $('seuilPM').textContent=(cps/perSale*100).toFixed(2).replace('.',',')+' % des envois';
+ $('seuilAF').textContent=(re>0?(cps/(re*perSale)*100).toFixed(2).replace('.',','):'—')+' % des envois';
+ // pools: [{size, rate, segment, availableFromWeek}]
+ const pools=[];
+ if(v.liste>0)pools.push({n:v.liste,rate:v.tchaud/100,seg:'chaud',from:1,pass:0});
+ if(useF&&v.froid>0)pools.push({n:v.froid,rate:v.tfroid/100,seg:'froid',from:1,pass:0});
+ let reserve=0,prevCash=0,prevSends=0,ownLeft=v.apport,ownUsed=0;const W=[];
+ for(let w=1;w<=26;w++){
+  const reinj=re*prevCash;let funds=reserve+reinj;
+  const pm=cps/perSale,stop=$('stopPM').checked;const avail=pools.filter(p=>p.from<=w&&p.n>0&&(!stop||p.rate>=pm));
+  const people=avail.reduce((s,p)=>s+p.n,0);
+  let target=Math.max(v.depart,Math.floor(prevSends*v.mult));target=Math.min(target,people);
+  let own=0;const need=Math.min(v.depart,people)*cps;
+  if(funds<need&&ownLeft>0){own=Math.min(ownLeft,need-funds);ownLeft-=own;ownUsed+=own;funds+=own}
+  let sends=Math.min(target,Math.floor(funds/cps+1e-9));if(sends<0)sends=0;
+  // allocate: chaud first, lower pass first
+  avail.sort((a,b)=>(a.seg===b.seg?a.pass-b.pass:(a.seg==='chaud'?-1:1)));
+  let left=sends,sales=0,sc=0,sf=0;
+  for(const p of avail){if(left<=0)break;const t=Math.min(left,p.n);p.n-=t;left-=t;sales+=t*p.rate;if(p.seg==='chaud')sc+=t;else sf+=t;
+   if(rel>0&&p.rate*rel>0)pools.push({n:t,rate:p.rate*rel,seg:p.seg,from:w+7,pass:p.pass+1});}
+  const spend=sends*cps;reserve=funds-spend;
+  const cash=sales*perSale;
+  W.push({w,sends,sc,sf,spend,sales,cash,reinj,own,toi:cash*(1-re),reserve});
+  prevCash=cash;prevSends=sends;
+ }
+ const tot=k=>W.reduce((s,x)=>s+x[k],0);
+ const V=tot('sales'),C=tot('cash'),Sp=tot('spend'),E=tot('sends');
+ $('kV').textContent=num(V);$('kC').textContent=eur(C);$('kP').textContent=eur(Sp);
+ const S=C-Sp;$('kS').textContent=eur(S);$('kS').className='v '+(S>=0?'pos':'neg');
+ $('kA').textContent=eur(ownUsed);$('kE').textContent=num(E);
+ $('kCV').textContent=V>0.5?eur(Sp/V):'—';$('kT').textContent=eur(tot('toi'));
+ // alerts
+ const al=[];const last4=W.slice(-4).reduce((s,x)=>s+x.sends,0);
+ if(ownLeft<=0.5&&v.apport>0&&W.some(x=>x.sends===0))al.push(['La machine s\'arrête : ton apport est épuisé et les ventes ne paient pas les envois.','']);
+ if(S<0)al.push(['Le solde est négatif : la pub coûte plus qu\'elle ne rapporte avec ces réglages.','']);
+ if(E>0&&last4===0&&ownLeft>0)al.push(['Toute l\'audience disponible a été utilisée avant la fin des 6 mois : il faut de nouvelles cibles.','']);
+ if(S>=0&&ownUsed<v.apport)al.push(['La machine se finance seule : les ventes paient la suite des envois.','ok']);
+ if(useF&&v.tfroid/100<cps/perSale)al.push([$('stopPM').checked?'L\'audience froide n\'est pas utilisée : à ce taux, chaque envoi froid coûte plus qu\'il ne rapporte.':'L\'audience froide perd de l\'argent à ce taux : ce sont les ventes de la liste chaude qui la financent.','']);
+ if(v.tchaud>3||(useF&&v.tfroid>0.2))al.push(['Attention : un taux réglé au-dessus des repères de la revue neutre (3 % chaud, 0,2 % froid). À confirmer par un test réel.','']);
+ const wk=W.filter(x=>x.sales>0).map(x=>x.sales*perSale);
+ $('alerts').innerHTML=al.map(a=>`<div class="alert ${a[1]}">${a[0]}</div>`).join('');
+ // monthly table
+ let h='<tr><th>Mois</th><th>Envois</th><th>dont liste chaude</th><th>dont froid</th><th>Pub</th><th>Ton apport</th><th>Ventes</th><th>Encaissé</th><th>Réinjecté</th><th>Pour toi</th><th>Solde du mois</th><th>Solde cumulé</th></tr>';
+ let cum=0;
+ MONTHS.forEach(([a,b],i)=>{const r=W.filter(x=>x.w>=a&&x.w<=b);const s=k=>r.reduce((t,x)=>t+x[k],0);const sol=s('cash')-s('spend');cum+=sol;
+  h+=`<tr><td>Mois ${i+1}</td><td>${num(s('sends'))}</td><td>${num(s('sc'))}</td><td>${num(s('sf'))}</td><td>${eur(s('spend'))}</td><td>${eur(s('own'))}</td><td>${s('sales').toFixed(1).replace('.',',')}</td><td>${eur(s('cash'))}</td><td>${eur(s('reinj'))}</td><td>${eur(s('toi'))}</td><td class="${sol>=0?'pos':'neg'}">${eur(sol)}</td><td class="${cum>=0?'pos':'neg'}">${eur(cum)}</td></tr>`});
+ h+=`<tr><th>Total</th><th>${num(E)}</th><th>${num(tot('sc'))}</th><th>${num(tot('sf'))}</th><th>${eur(Sp)}</th><th>${eur(ownUsed)}</th><th>${V.toFixed(1).replace('.',',')}</th><th>${eur(C)}</th><th>${eur(tot('reinj'))}</th><th>${eur(tot('toi'))}</th><th>${eur(S)}</th><th></th></tr>`;
+ $('tm').innerHTML=h;
+ let t='<tr><th>Semaine</th><th>Envois</th><th>Pub</th><th>Apport</th><th>Ventes</th><th>Encaissé</th><th>Réinjecté</th><th>Réserve</th></tr>';
+ W.forEach(x=>t+=`<tr><td>S${x.w}</td><td>${num(x.sends)}</td><td>${eur(x.spend)}</td><td>${eur(x.own)}</td><td>${x.sales.toFixed(1).replace('.',',')}</td><td>${eur(x.cash)}</td><td>${eur(x.reinj)}</td><td>${eur(x.reserve)}</td></tr>`);
+ $('tw').innerHTML=t;
+ // chart
+ const mx=Math.max(1,...W.map(x=>Math.max(x.cash,x.spend)));const bw=1040/26;let g='';
+ W.forEach((x,i)=>{const hc=x.cash/mx*190,hs=x.spend/mx*190;const X=i*bw;
+  g+=`<rect x="${X+4}" y="${200-hc}" width="${bw/2-5}" height="${hc}" fill="var(--acc)"><title>S${x.w} encaissé ${eur(x.cash)}</title></rect>`;
+  g+=`<rect x="${X+bw/2+1}" y="${200-hs}" width="${bw/2-5}" height="${hs}" fill="var(--neg)"><title>S${x.w} pub ${eur(x.spend)}</title></rect>`;
+  if(i%4===0)g+=`<text x="${X+4}" y="215" font-size="10" fill="currentColor" opacity=".6">S${x.w}</text>`});
+ g+=`<line x1="0" y1="200" x2="1040" y2="200" stroke="currentColor" opacity=".25"/>`;
+ $('chart').innerHTML=g;
+}
+setP(P.revue);
+</script>
+</body>
+</html>

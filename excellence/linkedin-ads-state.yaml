@@ -1,7 +1,7 @@
 # Journal de l'agent LinkedIn Ads (tenu par .claude/agents/linkedin-ads.md)
 # Étiquettes : [M] mesuré, [E] estimé, [H] hypothèse.
 statut: "stratégie rédigée le 2026-10-31 (lecture seule) ; aucune campagne créée ; en attente de la décision n°1 de Rachid et des prérequis bloquants"
-derniere_mise_a_jour: 2026-10-31
+derniere_mise_a_jour: 2026-10-31   # + personas et potentiel par pays
 
 source_canal: "excellence/gtm-state.yaml → canal_linkedin_2026-10-28 (10 €/jour + Message Ads aux RAF/DAF, test 2–3 semaines, Maroc + Côte d'Ivoire + Sénégal)"
 
@@ -67,3 +67,30 @@ questions_ouvertes:
   - "Budget total du test et plafond hebdomadaire ? (proposé : 1 600 € jusqu'au 18/12)"
   - "Rachid tourne-t-il la vidéo, et quand ?"
   - "Insight Tag éventuellement chargé via gestionnaire de balises sous consentement : à confirmer avec l'agent Site"
+
+personas:
+  - date: 2026-10-31
+    fichier: excellence/linkedin-personas-2026-10-31.md
+    liste: ["1 Direction banque et microfinance (formation/RH achète ; réseau/engagements prescrit)", "2 DAF/RAF qui équipe son équipe (variante 2b : DAF qui se forme = offre FIA CDAF dès 2 375 €, à arbitrer)", "3 Dirigeant PME (offre non définie, en dernier)"]
+    ordre_demarrage: "1 Banque (Message Ad signé Rachid ≈ 500 €, dès le 10/11, preuves déjà en ligne) ; 2 DAF (≈ 600 €, après la landing univers, ≈ 16/11) ; 3 Dirigeant (attendre décision sur l'offre)"
+    propositions_valeur:
+      banque: "Certifiez vos équipes crédit et clientèle entreprise : 700 directeurs d'agence Bank of Africa et 500 CIH certifiés [M page, accord des banques à obtenir]. Accès plateforme dès 249 € par collaborateur ; cohorte sur proposition."
+      daf: "Faites monter votre équipe finance en compétence : 5 certificats vérifiables, tuteur IA, suivi par collaborateur, 249 € par personne et par an, facturé à l'entreprise. (point faible : aucune preuve entreprise)"
+      dirigeant: "provisoire, non publiable : aucune offre ni prix"
+    ambiguites_site: ["A1 seuil équipes 3 vs 5", "A2 10 000 vs 50 000", "A3 cas BoA/CIH = cohortes présentiel, prix 249 € = plateforme seule", "A4 pages FIA CDAF/Business Leader datées et contradictoires, stats 85 %/90 % non vérifiables", "A5 aucune offre dirigeant Xelanc", "A6 5/6/10 certificats-parcours", "A7 procédure d'achat et lettre de prise en charge absentes", "A8 certificat non diplôme d'État, autorité = fondateur seul", "A9 aucun cas entreprise"]
+    questions_rachid: "Q1-Q12 dans le fichier (seuil 3/5, chiffre 10 k/50 k, accord des banques, offre dirigeant, DAF équipe vs CDAF, cohorte vs D9, qui répond aux banques, expéditeur du Message Ad, témoignage entreprise, page Comment commander, accès Campaign Manager)"
+
+potentiel_pays:
+  - date: 2026-10-31
+    source_membres: "DataReportal Digital 2025, portée publicitaire LinkedIn début 2025 (membres inscrits) [M source tierce] ; Campaign Manager inaccessible : chiffre exact seulement via l'outil d'audience du compte"
+    membres_linkedin_k: {Maroc: 6000, Algerie: 4800, Tunisie: 2400, Cote_d_Ivoire: 1600, Cameroun: 1400, Senegal: 1300, RDC: 830, Madagascar: 520, Benin: 580, Rwanda: 480, Burkina_Faso: 450, Mali: 420, Togo: 380, Guinee: 300, Gabon: 280, Congo_Brazzaville: 250, Mauritanie: 160}
+    note_dates: "NapoleonCat : Maroc 6,08 M (janv. 2025) et 7,02 M (déc. 2025) ; autres pays probablement +10-15 % depuis début 2025 [H] ; correction : la stratégie du 31/10 mélangeait Maroc déc. 2025 et CI/SN début 2025"
+    personas_estimes_E_H: "banque = effectif bancaire × 42 % cadres × 70 % sur LinkedIn ; entreprise = membres × 1,0-1,8 % ; dirigeants = membres × 0,9-1,5 % (surestimation probable ×2-3)"
+    total_vague1_MA_CI_SN: {banque_cadres: "18-24 k (décideurs ≈ 0,9-1,2 k)", finance_senior: "89-160 k (cœur DAF/RAF ≈ 11-19 k)", dirigeants: "80-135 k, très fragile"}
+    scores: {Maroc: 92, Cote_d_Ivoire: 72, Senegal: 72, Togo: 61, Cameroun: 57, Tunisie: 56, Benin: 56, Gabon: 55, RDC: 51, Guinee: 48, Burkina_Faso: 46, Mali: 46, Algerie: 43, Congo_Brazzaville: 43, Rwanda: 43, Madagascar: 41, Mauritanie: 32}
+    pays_proposes_par_moi: [Benin, Togo, Burkina_Faso, Mali, Guinee, Madagascar]
+    vague_1: ["Maroc", "Côte d'Ivoire (Abidjan)", "Sénégal", "option : Cameroun en Message Ad banque seulement"]
+    vague_2_janvier: ["Togo", "Bénin", "Gabon", "Tunisie (si paiement local)"]
+    a_surveiller: ["RDC (canal Meta, paiement Mobile Money non prouvé)", "Guinée"]
+    a_ecarter: ["Algérie (paiement en euro impossible [H])", "Mauritanie", "Congo-Brazzaville", "Rwanda (anglophone)", "Madagascar", "Burkina Faso", "Mali"]
+    cout_linkedin: "aucune source par pays ; hypothèse CPC 3-8 € Maroc/UEMOA/CEMAC, 2-5 € petits marchés [H]"

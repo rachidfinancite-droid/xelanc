@@ -98,3 +98,17 @@ potentiel_pays:
     pole_CEMAC: "CM, GA, CG"
     a_ecarter: ["Algérie (paiement euro [H])", "Mauritanie", "Rwanda (anglophone)", "Madagascar", "Burkina Faso et Mali (risque [H])"]
     a_surveiller: ["RDC (paiement Mobile Money non testé)", "Guinée", "Tunisie (paiement euro, process proche du Maroc [H])"]
+
+banques_par_pays:
+  - date: 2026-10-31
+    fichier: excellence/linkedin-banques-par-pays-2026-10-31.md
+    cadrage_rachid: "cible = vrais directeurs de banque (crédit, marché GE/PME, risques) ; Maroc one-to-one ; formés au Maroc : 1 200 BOA, 200 SG, 500 CIH [R]"
+    regle_francophone: "français langue de travail bancaire ; ambigus : Guinée-Bissau, Guinée équatoriale, Rwanda, Burundi, Maurice (hors périmètre)"
+    banques_par_pays: {Maroc: "24 [M secondaire BAM 2025]", Algerie: "20-21 [M secondaire]", Tunisie: "22 résidentes [M secondaire]", Mauritanie: "17 [M IMF 2024]", Cote_d_Ivoire: "29 [M BCEAO 2025]", Senegal: "29 [M BCEAO 2025]", Burkina: "16 [M 2023]", Mali: "13 [M 2023]", Niger: "14 [M 2023]", Benin: "12 [M 2023]", Togo: "14 [M 2023]", Guinee_Bissau: "6 [M 2023]", Cameroun: "19 [M COBAC/BEAC 2024]", Congo: "10 [M] (9 presse 2025)", Tchad: "10 [M]", Gabon: "8 [M]", Guinee_equatoriale: "5 [M]", Centrafrique: "4 [M]", RDC: "15 [E]", Madagascar: "12-13 [E]", Guinee: "20 [M BCRG 03/2023]", Djibouti: "10 [M secondaire]", Comores: "4 [M secondaire]", Rwanda: "9 [M secondaire]", Burundi: "14-16 [E]"}
+    totaux: {pole_Maghreb_Mauritanie: "83 banques ; utiles 31-39 ; directeurs 145-263", pole_UEMOA: "133 banques (136 officiel 2025) ; utiles 52-66 ; directeurs 206-390", pole_CEMAC: "56 banques ; utiles 26-31 ; directeurs 95-169", pole_autres: "86 banques ; utiles 39-45 ; directeurs 145-253", total_general: "358 banques ; utiles 148-181 ; directeurs 591-1 075", coeur_francophone: "327 ; 135-166 ; 546-997", hors_Maroc: "303 ; 126-155 ; 492-898"}
+    methode_E_H: "utiles = 40 % (marchés > 20 banques), 50-60 % (8-20), 60-75 % (< 8) ; directeurs = 4-6 par banque utile (3-5 petits marchés, 6-9 grandes banques marocaines) ; présence LinkedIn 60-85 % [H]"
+    groupes_multi_pays: {Ecobank: 13, Bank_of_Africa: 12, Atlantique_AFG: 11, Coris: 9, Orabank: 8, BSIC: 8, Societe_Generale: "7 en retrait", UBA: 6, BGFIBank: "5+CEMAC", NSIA: 5}
+    part_groupes_UEMOA: "88 sur 130 ≈ 68 % [E classification par nom] ; CEMAC 38 sur 56 à capitaux étrangers [M COBAC 2024]"
+    non_comptes: ["liste nominative BAM (403)", "Algérie 2026", "Tunisie offshore", "noms Mauritanie", "noms CEMAC par pays", "UEMOA 2025 par banque hors CI/SN", "Madagascar 12 vs 13", "4e banque Comores", "effectifs/parts de marché par banque (donc utiles et directeurs = [H])"]
+    consequence_linkedin: ["liste nominative de banques plutôt qu'audience large", "plancher 300 contourné par liste d'entreprises + séniorité direction ; à confirmer dans Campaign Manager", "campagne par pôle (UEMOA, CEMAC) pas par pays", "Message Ad de Rachid à un directeur adapté à 200-400 envois par pôle", "approche groupe d'abord : Bank of Africa (12 pays) via la relation marocaine, Ecobank, Coris, Orabank, Atlantique/AFG, BSIC", "Maroc = one-to-one, LinkedIn en appui"]
+    questions_rachid: ["lien capitalistique BOA Maroc / groupe Bank of Africa et accès au siège", "banques déjà clientes de Financité hors Maroc", "directeurs joignables sur LinkedIn ?", "liste de banques cibles et directeurs déjà connus"]

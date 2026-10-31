@@ -68,29 +68,33 @@ questions_ouvertes:
   - "Rachid tourne-t-il la vidéo, et quand ?"
   - "Insight Tag éventuellement chargé via gestionnaire de balises sous consentement : à confirmer avec l'agent Site"
 
-personas:
+personas:   # version 2 du 2026-10-31 (remplace la v1 jugée banale par Rachid)
   - date: 2026-10-31
     fichier: excellence/linkedin-personas-2026-10-31.md
-    liste: ["1 Direction banque et microfinance (formation/RH achète ; réseau/engagements prescrit)", "2 DAF/RAF qui équipe son équipe (variante 2b : DAF qui se forme = offre FIA CDAF dès 2 375 €, à arbitrer)", "3 Dirigeant PME (offre non définie, en dernier)"]
-    ordre_demarrage: "1 Banque (Message Ad signé Rachid ≈ 500 €, dès le 10/11, preuves déjà en ligne) ; 2 DAF (≈ 600 €, après la landing univers, ≈ 16/11) ; 3 Dirigeant (attendre décision sur l'offre)"
-    propositions_valeur:
-      banque: "Certifiez vos équipes crédit et clientèle entreprise : 700 directeurs d'agence Bank of Africa et 500 CIH certifiés [M page, accord des banques à obtenir]. Accès plateforme dès 249 € par collaborateur ; cohorte sur proposition."
-      daf: "Faites monter votre équipe finance en compétence : 5 certificats vérifiables, tuteur IA, suivi par collaborateur, 249 € par personne et par an, facturé à l'entreprise. (point faible : aucune preuve entreprise)"
-      dirigeant: "provisoire, non publiable : aucune offre ni prix"
-    ambiguites_site: ["A1 seuil équipes 3 vs 5", "A2 10 000 vs 50 000", "A3 cas BoA/CIH = cohortes présentiel, prix 249 € = plateforme seule", "A4 pages FIA CDAF/Business Leader datées et contradictoires, stats 85 %/90 % non vérifiables", "A5 aucune offre dirigeant Xelanc", "A6 5/6/10 certificats-parcours", "A7 procédure d'achat et lettre de prise en charge absentes", "A8 certificat non diplôme d'État, autorité = fondateur seul", "A9 aucun cas entreprise"]
-    questions_rachid: "Q1-Q12 dans le fichier (seuil 3/5, chiffre 10 k/50 k, accord des banques, offre dirigeant, DAF équipe vs CDAF, cohorte vs D9, qui répond aux banques, expéditeur du Message Ad, témoignage entreprise, page Comment commander, accès Campaign Manager)"
+    corrections_rachid: ["[R] banque/RH Maroc = plans annuels, one-to-one : LinkedIn en appui seulement", "[R] hors Maroc ce sont les métiers qui décident (directeurs de marché, d'activité, de ligne métier) : cibler ces prescripteurs avec des parcours déterminés"]
+    erreurs_v1: ["persona banque = RH/formation (faux hors Maroc)", "proposition générique 'certifiez vos équipes'", "Maroc scoré 92 avec Message Ad (retiré)", "DAF/RAF comme fonction LinkedIn (n'existe pas : Finance, Accounting, Sales, BD, Operations...)", "parts de décideurs sans appui", "parcours non reliés aux certificats réels", "audiences par pays x métier < 300 membres non vues"]
+    personas_metiers: ["Directeur marché PME/Entreprises", "Directeur crédit/engagements", "Directeur risques", "Directeur recouvrement", "Directeur réseau/régional/agence", "Directeur marché Pro/Particuliers", "Microfinance", "DAF/RAF", "Directeur commercial/activité", "Dirigeant PME"]
+    parcours_prets: {reseau_marche_PME: "Chargé d'affaires entreprise (+ Banquier conseil)", credit: "Analyste financier risque (+ Monter un dossier de crédit 15/11)", agence: "Banquier conseil (+ Gérer un portefeuille de clients PME 23/11)", DAF: "Financier d'entreprise, bloqué : 'Réaliser une levée de dette bancaire' = prochainement disponible"}
+    sans_parcours: ["recouvrement", "impayés/provisionnement", "conformité/LCB-FT", "scoring", "microfinance", "professionnels/particuliers (pas de certificat)", "directeur d'activité (1 carte)", "dirigeant (pas d'offre)"]
+    decision_n1: "Test hors Maroc par 'directeur réseau + marché PME' (pôles UEMOA+CEMAC), parcours Chargé d'affaires entreprise, Message Ad signé Rachid ≈ 760-880 noms, 450 €, dès le 10/11 ; Maroc = appui 150 € max ; critère : ≥ 3 conversations qualifiées sur ≥ 600 envois [H]"
+    budget_1600: {maroc_appui: 150, test1_reseau_PME: 450, test2_credit_risques: 300, test3_DAF_conditionnel: 500, reserve: 200}
+    questions_terrain_rachid: ["derniers deals : qui a signé, quel service, délai", "Maroc : mois du plan annuel", "hors Maroc : quel métier décide, quel budget", "résultats recherchés par les banques", "parcours qui se vendent et manquants", "références hors Maroc citables ?", "directeurs joignables sur LinkedIn ?", "pilote 5-10 places sur budget du métier ?"]
+    ambiguites_site: ["A1 seuil 3/5", "A2 10 000/50 000", "A3 cas = cohortes, prix = plateforme", "A4 pages FIA contradictoires", "A5 levée de dette non sortie", "A6 15 cartes sans statut", "A7 pas de Comment commander / lettre / devis", "A8 pas de page par problème de résultat"]
 
 potentiel_pays:
   - date: 2026-10-31
+    version: 2
     source_membres: "DataReportal Digital 2025, portée publicitaire LinkedIn début 2025 (membres inscrits) [M source tierce] ; Campaign Manager inaccessible : chiffre exact seulement via l'outil d'audience du compte"
     membres_linkedin_k: {Maroc: 6000, Algerie: 4800, Tunisie: 2400, Cote_d_Ivoire: 1600, Cameroun: 1400, Senegal: 1300, RDC: 830, Madagascar: 520, Benin: 580, Rwanda: 480, Burkina_Faso: 450, Mali: 420, Togo: 380, Guinee: 300, Gabon: 280, Congo_Brazzaville: 250, Mauritanie: 160}
-    note_dates: "NapoleonCat : Maroc 6,08 M (janv. 2025) et 7,02 M (déc. 2025) ; autres pays probablement +10-15 % depuis début 2025 [H] ; correction : la stratégie du 31/10 mélangeait Maroc déc. 2025 et CI/SN début 2025"
-    personas_estimes_E_H: "banque = effectif bancaire × 42 % cadres × 70 % sur LinkedIn ; entreprise = membres × 1,0-1,8 % ; dirigeants = membres × 0,9-1,5 % (surestimation probable ×2-3)"
-    total_vague1_MA_CI_SN: {banque_cadres: "18-24 k (décideurs ≈ 0,9-1,2 k)", finance_senior: "89-160 k (cœur DAF/RAF ≈ 11-19 k)", dirigeants: "80-135 k, très fragile"}
-    scores: {Maroc: 92, Cote_d_Ivoire: 72, Senegal: 72, Togo: 61, Cameroun: 57, Tunisie: 56, Benin: 56, Gabon: 55, RDC: 51, Guinee: 48, Burkina_Faso: 46, Mali: 46, Algerie: 43, Congo_Brazzaville: 43, Rwanda: 43, Madagascar: 41, Mauritanie: 32}
+    methode_E_H: "directeurs bancaires LinkedIn = effectif bancaire × 3 % direction × 85 % présents ; répartition par métier [H] : PME 12 %, crédit 10 %, risques 8 %, recouvrement 6 %, réseau 40 %, pro/particuliers 10 % ; finance/compta niveau direction hors banque = membres × 0,24-0,48 %"
+    audiences_regroupees_E_H: {UEMOA_directeurs_banque: 975, CEMAC: "330-460", RDC: "150-255", total_SSA_francophone: "1 460-1 690", marche_PME_plus_reseau: "760-880", credit_risques_recouvrement: "350-405"}
+    contrainte: "LinkedIn refuse < 300 membres : audiences par pays x métier (30-140 personnes) à regrouper par pôle"
+    scores_marche: {Maroc: 92, Cote_d_Ivoire: 72, Senegal: 72, Togo: 61, Cameroun: 57, Tunisie: 56, Benin: 56, Gabon: 55, RDC: 51, Guinee: 48, Burkina_Faso: 46, Mali: 46, Algerie: 43, Congo_Brazzaville: 43, Rwanda: 43, Madagascar: 41, Mauritanie: 32}
+    scores_linkedin_payant: {Maroc: 37, Cote_d_Ivoire: 72, Senegal: 72, Togo: 61, Cameroun: 57, Benin: 56, Gabon: 55, RDC: 51, Guinee: 48, Burkina_Faso: 46, Mali: 46, Congo_Brazzaville: 43, Rwanda: 43, Madagascar: 41, Tunisie: 34, Mauritanie: 32, Algerie: 26}
+    facteur_adequation_H: "Maroc 0,4 [R one-to-one] ; Tunisie et Algérie 0,6 [H] ; autres 1,0"
+    role_linkedin: {Maroc: "appui one-to-one (preuve, prise de contact, cartographie, rappel par liste ≤ 150 €)", hors_Maroc: "ciblage de prescripteurs métiers nommés par pôle, Message Ad signé Rachid, pilote 5-10 places"}
     pays_proposes_par_moi: [Benin, Togo, Burkina_Faso, Mali, Guinee, Madagascar]
-    vague_1: ["Maroc", "Côte d'Ivoire (Abidjan)", "Sénégal", "option : Cameroun en Message Ad banque seulement"]
-    vague_2_janvier: ["Togo", "Bénin", "Gabon", "Tunisie (si paiement local)"]
-    a_surveiller: ["RDC (canal Meta, paiement Mobile Money non prouvé)", "Guinée"]
-    a_ecarter: ["Algérie (paiement en euro impossible [H])", "Mauritanie", "Congo-Brazzaville", "Rwanda (anglophone)", "Madagascar", "Burkina Faso", "Mali"]
-    cout_linkedin: "aucune source par pays ; hypothèse CPC 3-8 € Maroc/UEMOA/CEMAC, 2-5 € petits marchés [H]"
+    pole_UEMOA: "CI, SN, BJ, TG, BF, ML"
+    pole_CEMAC: "CM, GA, CG"
+    a_ecarter: ["Algérie (paiement euro [H])", "Mauritanie", "Rwanda (anglophone)", "Madagascar", "Burkina Faso et Mali (risque [H])"]
+    a_surveiller: ["RDC (paiement Mobile Money non testé)", "Guinée", "Tunisie (paiement euro, process proche du Maroc [H])"]

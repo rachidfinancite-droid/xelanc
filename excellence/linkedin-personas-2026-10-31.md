@@ -1,392 +1,215 @@
-# LinkedIn : buyer personas et propositions de valeur, 31 octobre 2026
+# LinkedIn : personas métiers, parcours et potentiel par pays, 31 octobre 2026 (version 2)
 
-Agent LinkedIn Ads, lecture seule. Rien n'est créé dans LinkedIn. Suite de `excellence/linkedin-strategie-2026-10-31.md`.
-Étiquettes : [M] mesuré (relevé du 31/10 sur les pages publiques), [E] estimé (source citée), [H] hypothèse.
-Les chiffres de la page /equipes/ sont des déclarations marketing du site, non vérifiées par un tiers.
+Agent LinkedIn Ads, lecture seule. Rien n'est créé dans LinkedIn. Cette version remplace la première analyse, jugée « banale » par Rachid, à raison.
+Étiquettes : [M] mesuré (relevé du 31/10 sur le site ou donnée de tiers sourcée), [E] estimé (méthode donnée), [H] hypothèse, [R] dit par Rachid (terrain, non vérifié par moi).
 
-## Verdict
+## 0. Ce que ma première analyse avait de faux ou de banal
 
-Ton enseignement est juste : sur LinkedIn on achète un décideur, pas un clic de particulier. Ta liste de trois personas tient, avec trois corrections :
+1. **Je traitais la banque comme un achat RH/formation.** C'est vrai au Maroc ([R] : plans annuels, one-to-one). Hors Maroc, [R] ce sont les métiers qui décident, parce qu'ils ont un résultat à corriger. Mon persona « direction formation/RH » visait le mauvais bureau.
+2. **J'ai vendu un catalogue.** « Certifiez vos équipes », 249 € la place : c'est la phrase de n'importe quel organisme. Un directeur de marché achète une réponse à un problème précis, pas des places.
+3. **J'ai scoré le Maroc à 92 pour la taille et les références**, puis recommandé un Message Ad banque au Maroc. Or le Maroc se gagne en face à face. Une pub n'y apporte rien d'utile. Recommandation retirée.
+4. **« DAF/RAF » comme fonction LinkedIn unique.** LinkedIn ne propose pas « DAF » : ses fonctions sont Finance, Accounting, Sales, Business Development, Operations, Human Resources, Consulting, Entrepreneurship. Le reste passe par des intitulés. Mes parts de « décideurs ≈ 5 % des cadres » n'avaient aucun appui.
+5. **Je n'ai pas relié chaque persona aux certificats réels.** Le tableau ci-dessous le fait, et montre que plusieurs problèmes de résultat de la banque (recouvrement, impayés, provisionnement, conformité) n'ont aucun parcours sur le site.
+6. **Je n'ai pas vu qu'une audience par persona et par pays est minuscule** (quelques dizaines de directeurs). Ce n'est pas un volume de pub, c'est une liste de noms.
 
-1. **« La banque » n'est pas un persona, c'est un secteur.** Celui qui achète est la direction formation / RH, avec la direction du réseau ou des engagements comme prescripteur. Je l'appelle « Direction banque et microfinance ».
-2. **« DAF/RAF » recouvre deux achats différents** : le DAF qui équipe son équipe (offre Xelanc Équipes, 249 € la place) et le DAF qui se forme lui-même (offre FIA, DAF Dirigeant, dès 2 375 € [M]). Une pub ne peut pas dire les deux. Je retiens le premier ; le second est une variante FIA à arbitrer avec la Tête Grise.
-3. **« Le dirigeant » est le persona le moins prêt** : aucune offre Xelanc ne lui est destinée, et l'offre FIA (Business Leader) n'a ni prix ni date à jour sur sa page. Je le garde, en dernier.
+## 1. Verdict
 
-**À démarrer en premier : la banque.** C'est le persona avec le plus de preuves déjà publiées (Bank of Africa 700, CIH 500 [M page]), une page prête (/equipes/), une audience petite donc un test bon marché (≈ 500 €), et le plus gros panier (de 5 k€ à environ 25 k€ par deal [H]). Il rapporte tard : le cash tombe en janvier-février, pas en novembre [H].
+- **Le Maroc est un marché one-to-one.** LinkedIn y sert d'appui : preuve, crédibilité, prise de contact. Budget plafonné à 150 €.
+- **Hors Maroc, LinkedIn sert à joindre des prescripteurs métiers nommés** (directeur réseau, directeur du marché PME, directeur du crédit, directeur des risques), un parcours par problème de résultat, avec un Message Ad signé de toi, d'un directeur à un directeur. Les audiences sont petites : il faut les regrouper par pôle (UEMOA, CEMAC), sinon LinkedIn refuse de les diffuser (minimum 300 membres).
+- **Trois personas sont prêts à être touchés avec un parcours réel : le directeur réseau / agences, le directeur du marché PME-Entreprises et le directeur du crédit.** Le recouvrement, les risques de portefeuille, la conformité, les professionnels/particuliers n'ont pas de parcours : on ne les cible pas tant qu'il n'existe pas.
+- **Le DAF passe après** : le certificat « Financier d'entreprise » inclut « Réaliser une levée de dette bancaire », marquée « Prochainement disponible » sur /competences/ [M 31/10].
 
-## Décision n°1
+## 2. Décision n°1
 
-**Quoi** : ouvrir LinkedIn par le persona « Direction banque et microfinance », en approche ciblée (Message Ad signé de toi + posts de ton profil), avant les DAF. Les DAF suivent quand la landing univers existe ; le dirigeant attend qu'une offre existe.
-**Budget** : 500 € pour la banque, 600 € pour les DAF, 500 € de réserve (total inchangé : 1 600 €) [H].
-**Avant quand** : 06/11 (Insight Tag, /equipes/ corrigée, texte validé par toi).
-**Effet attendu** : 1 à 2 demandes de devis banque d'ici fin novembre [H], soit 0,2 à 0,4 deal si 20 % se concluent [H].
-**Critère de réussite** : au moins 1 demande de devis d'une institution réelle (banque ou microfinance) en 3 semaines. Pas de verdict sur moins de 600 envois.
+**Quoi** : lancer le test hors Maroc par le persona « directeur réseau / marché PME » (pôle UEMOA + CEMAC), parcours **Chargé d'affaires entreprise**, en Message Ad signé de toi vers environ 750-880 noms. Le Maroc : aucune pub, appui LinkedIn seulement. Avant tout cela, répondre aux 8 questions de terrain de la section 8.
+**Budget** : 450 € pour ce test ; plafond global inchangé à 1 600 € [H] (répartition en section 7).
+**Avant quand** : tes réponses au plus tard le 05/11 ; envoi à partir du 10/11 si Insight Tag et correctifs /equipes/ sont faits.
+**Critère de réussite** : au moins 3 conversations qualifiées (réponse ou demande d'appel d'un directeur réel) sur 600 envois au moins [H]. En dessous de 600 envois : pas de verdict.
 
-## 1. Les ambiguïtés de l'offre actuelle qui empêchent d'être clair
+## 3. Carte des personas métiers
 
-Relevé du 31/10 [M]. Chacune se corrige avant la première pub.
+Rappel : au Maroc, l'achat passe par le plan annuel (RH/formation) en one-to-one [R]. Hors Maroc, le métier décide et fait passer l'achat par la RH ou la DG [R]. Tout le reste de ce tableau est [H] tant que tu ne m'as pas donné le terrain (section 8).
 
-| # | Ambiguïté | Où | Pourquoi ça bloque | Correction proposée |
+### 3.1 Banque
+
+| Persona métier | Résultat qu'on lui demande [H] | Douleur chiffrable [H] | Déclencheur [H] | Qui valide derrière lui |
 |---|---|---|---|---|
-| A1 | Seuil d'équipe : « à partir de 3 » (bandeau, FAQ) contre « 5 à 50 » et « dès 1 245 € » (grille) | /equipes/ | Le DAF ne sait pas s'il peut acheter 3 places, ni à quel prix. Aucun tarif pour 3 ou 4 | Un seul seuil. Si 3 : 747 € |
-| A2 | « Près de 10 000 professionnels » (promesse) contre « 50 000 » (chiffres clés) | /equipes/ | Un chiffre faux sur deux détruit la crédibilité devant un financier | Un chiffre sourcé, ou « 10 000 dans les banques, 50 000 au total » si les deux sont vrais |
-| A3 | Les cas (Bank of Africa 700, CIH 500, Société Générale Maroc 200) sont des **parcours en cohorte, digital et présentiel**. Le prix affiché (249 €) est un **accès plateforme seul** | /equipes/ | La preuve vend un produit (cohorte, sur proposition) et le prix en annonce un autre (plateforme). Le décideur croit acheter 700 certifiés pour 249 € la place | Dire « accès plateforme dès 249 € ; cohorte certifiante sur proposition » dans la même phrase que les cas |
-| A4 | Offre dirigeant : CDAF « à partir de 2 375 € » (sessions datées avril-juin 2026 et novembre 2025) ; Business Leader sans prix (session « octobre 2025 »), compteurs à « 0 » | Sites FIA | Impossible d'écrire une promesse datée et chiffrée. Les statistiques de la page CDAF (« 85 % en poste de direction à 3 mois », « 90 % augmentent leur salaire de 30 % ») ne sont pas vérifiables : ne pas les reprendre | Mise à jour des pages FIA par l'agent concerné avant toute pub vers elles |
-| A5 | Aucune offre Xelanc pour le dirigeant. La page Équipes cible « banque et finance » et ne cite « finance pour non-financiers » qu'en une ligne | /equipes/, /competences/ | Le dirigeant ne se reconnaît nulle part | Décision de Rachid (question Q5) |
-| A6 | 5 certificats (Équipes), 6 parcours certifiants (accueil), 10 parcours métiers (Équipes), compteurs de /competences/ incohérents | Site | Le DAF compte ce qu'il achète | Aligner |
-| A7 | Aucune lettre de prise en charge, aucun devis type ni pro forma publié, aucune explication d'achat de places (qui crée les comptes, qui reçoit la facture, délai) | /equipes/ | Procédure d'achat invisible : l'objection « comment je commande ? » reste sans réponse | Page « Comment commander » en 4 étapes |
-| A8 | Le certificat « n'est pas un diplôme d'État » (honnête) et l'autorité de certification est le fondateur seul [M] | Pages certificat | Objection de crédibilité prévisible chez un DAF | Montrer le certificat, la vérification en ligne et les institutions où travaillent les lauréats |
-| A9 | Logos sans lien ni témoignage ; aucun cas **entreprise** (hors banque) | Accueil, /equipes/ | Un DAF de PME n'a aucune preuve qui lui ressemble | 1 ou 2 témoignages de financiers d'entreprise signés |
+| **Directeur du marché PME / Entreprises** | Production de crédit PME, parts de marché, encours et PNB du marché | Chargés d'affaires juniors lents à produire ; dossiers qui reviennent du comité ; objectifs annuels non atteints | Début d'exercice (objectifs), arrivée de jeunes chargés d'affaires, perte d'un client PME | RH ou DG selon le pays [R] ; au Maroc, le plan annuel |
+| **Directeur du crédit / des engagements** | Qualité des dossiers, délai d'octroi, respect de la politique de crédit | Taux de dossiers renvoyés pour complément, délai moyen d'octroi, incidents après octroi | Un impayé significatif sur un dossier mal analysé, nouvelle politique de crédit | DG, comité de crédit |
+| **Directeur des risques** | Qualité du portefeuille, provisionnement, respect des ratios | Taux de créances douteuses, coût du risque | Contrôle de la banque centrale, audit | DG |
+| **Directeur du recouvrement / contentieux** | Taux de récupération, créances douteuses | Montants en retard, ancienneté des impayés | Hausse des impayés | DG |
+| **Directeur réseau / régional / d'agence** | Production commerciale du réseau, qualité du portefeuille local, rentabilité des agences | Agences sous objectif, rotation des chargés de clientèle, portefeuille PME mal suivi | Objectifs de fin d'année, restructuration du réseau | DG, direction commerciale |
+| **Directeur du marché Professionnels / Particuliers** | Production et fidélisation sur la clientèle pro et particuliers | Faible équipement des clients, attrition | Lancement de produit | DG |
+| **Microfinance : directeur du crédit, chef d'agence** | Portefeuille à risque, productivité des agents de crédit | Retards de remboursement, rotation | Audit, bailleur | Conseil, bailleur |
 
-## 2. Persona 1 : Direction banque et microfinance
+### 3.2 Entreprise et dirigeants
 
-### Qui exactement
-| | |
-|---|---|
-| Fonction | Directeur / responsable formation, DRH ou directeur du capital humain (acheteur) ; directeur du réseau, de la banque des entreprises ou des engagements (prescripteur) |
-| Séniorité | Manager, directeur, vice-président |
-| Organisation | Banques de détail et d'entreprise, banques participatives, institutions de microfinance. Plus de 200 salariés pour les banques ; réseaux d'agences pour les SFD |
-| Pays | Maroc d'abord ; Côte d'Ivoire et Sénégal ensuite |
+| Persona métier | Résultat attendu [H] | Douleur chiffrable [H] | Déclencheur [H] | Qui valide |
+|---|---|---|---|---|
+| **DAF / RAF** | Trésorerie, accès au financement bancaire, reporting, arbitrage des investissements | Refus ou lenteur d'un crédit faute de dossier, clôtures longues | Besoin de financement, budget annuel, audit | DG |
+| **Directeur commercial / d'activité** | Marge et rentabilité de son activité | Prix mal fixés, marge érodée, décisions d'investissement sans calcul | Budget, perte de marge | DG |
+| **Dirigeant de PME** | Croissance financée sans étouffer la trésorerie | Lire ses chiffres, négocier avec sa banque | Besoin de crédit, croissance, transmission | Lui-même |
 
-### Qui décide, influence, paie [H sauf mention]
-- **Décide** : la direction des ressources humaines / formation, avec accord de la direction métier (réseau, engagements). Les gros programmes passent par des appels d'offres ou des référencements [H].
-- **Influence** : directeur du réseau, directeur des engagements, risque : ce sont eux qui souffrent des dossiers de mauvaise qualité.
-- **Paie** : le budget de formation de l'institution. Facture et virement existent déjà [M /equipes/].
-- **Budget maîtrisé** : de 1 245 € (5 places) à plusieurs dizaines de milliers d'euros pour une cohorte. Le plan d'activation retient ≈ 25 k€ par mandat [H] ; les références publiées sont 700 et 500 directeurs d'agence certifiés [M page].
+## 4. Parcours par persona, avec ce qui existe réellement
 
-### Douleur et déclencheur
-- **Douleur** : des chargés d'affaires et directeurs d'agence dont la qualité d'analyse de crédit est inégale, du risque à maîtriser, un portefeuille à rentabiliser (mots de la page : « maîtrise du risque et rentabilité du portefeuille ») [M]. L'IA arrive dans l'analyse crédit sans que les équipes soient formées [H].
-- **Déclencheur** [H] : ouverture du plan de formation de l'année suivante (budget annuel, décembre-janvier), un incident de risque, une nouvelle réglementation (BAM, BCEAO), l'arrivée d'une cohorte de jeunes chargés d'affaires.
+**Les 6 certificats de xelanc.org/certificats/ et leurs 5 compétences** [M, relevé du 31/10] :
 
-### Objections et réponses
-| Objection | Réponse à préparer |
-|---|---|
-| Crédibilité du certificat (« pas un diplôme d'État ») | Références publiées, vérification en ligne d'un certificat réel, 30 ans de Financité Institute |
-| Conformité des données (loi 09-08, données des collaborateurs) | Note de conformité d'une page (à produire) |
-| Procédure d'achat (appel d'offres, référencement) | Devis, bon de commande, virement : disponibles ; page « Comment commander » à créer |
-| Temps des équipes | 6 à 8 semaines à 2-3 h par semaine [M], sur téléphone |
-| Prix | 249 € la place, dégressif au-delà de 50 [M] |
-| « Vous êtes une plateforme, nous voulons une cohorte » | Cohorte certifiante sur proposition [M] |
-
-### Ce qu'il achète chez Xelanc
-Accès équipes (5 à 50 collaborateurs) à 249 € par collaborateur et par an, ou cohorte certifiante sur proposition ; programme sur mesure au-delà de 50 [M]. Parcours : demande de proposition, diagnostic de 1 à 2 semaines, accès ouverts à la validation [M].
-
-### Chemin de conversion
-Message Ad ou post sponsorisé → page /equipes/ (variante banque) → formulaire « Demander une proposition » (institution, pays, effectif, métiers) → **réponse sous 48 h ouvrées** [M] → devis et pro forma → bon de commande → virement → ouverture des places.
-**Qui répond** : Loubna accuse réception et qualifie ; **Rachid** reprend la discussion avec la direction formation (piste B2B FIA, comme prévu au diagnostic du 27/10). Le dirigeant d'un mandat bancaire attend un interlocuteur de niveau fondateur [H].
-
-### Ciblage LinkedIn et audience
-| Critère | Valeur |
-|---|---|
-| Intitulés | Responsable formation, directeur formation, DRH, directeur du capital humain, directeur du réseau, directeur des engagements, directeur banque des entreprises |
-| Séniorité | Manager, directeur, vice-président, CXO |
-| Secteurs | Banque, services financiers, microfinance |
-| Taille d'entreprise | 201 salariés et plus (banques) ; 51 et plus (SFD) |
-| Pays | Maroc, Côte d'Ivoire, Sénégal |
-| Exclusions | Étudiants, formateurs et organismes de formation concurrents, collaborateurs de Xelanc et de FIA, contacts du segment Advisory A-D jusqu'au 07/12, liste des clients existants |
-| Méthode | Liste de comptes ciblés (40 à 60 institutions) en complément du ciblage par fonction |
-| **Audience estimée** | **≈ 600 à 1 500 personnes** [H] (1 à 2 % des 42-60 k salariés de banque au Maroc [E], plus la part Côte d'Ivoire et Sénégal des 38 228 salariés de l'UEMOA [M BCEAO/CB-UMOA] et la microfinance) |
-
-Le minimum de LinkedIn pour une audience est de 300 membres : ça passe. Mais une audience de 1 000 personnes sature vite : à 34 € de CPM [E], 500 € suffisent déjà à toucher chacun une dizaine de fois en contenu sponsorisé. D'où le choix du Message Ad (un envoi par personne).
-
-### Format
-**Message Ad** (≈ 600 à 700 envois à 0,5-0,8 $ [E], soit ≈ 350 à 500 €), expéditeur Rachid, texte validé avant envoi. En complément gratuit : 2 posts de ton profil sur les références (avec accord des banques citées). Pas de formulaire LinkedIn : le formulaire du site qualifie mieux (institution, effectif).
-
-### Proposition de valeur (5 secondes)
-> **« Certifiez vos équipes crédit et clientèle entreprise : Financité Institute a déjà certifié 700 directeurs d'agence de Bank of Africa et 500 de CIH Bank. Accès plateforme dès 249 € par collaborateur ; cohorte certifiante sur proposition. »**
-
-Trois preuves à montrer :
-1. **Les cas chiffrés** : Bank of Africa 700, CIH Bank 500, Société Générale Maroc 200 [M page, accord écrit des banques indispensable avant de les citer dans une pub].
-2. **Un certificat réel avec son identifiant et la vérification en ligne**, par exemple XL-ENT-2026-00127 sur xelanc.org [M] : le directeur peut vérifier lui-même.
-3. **Le tableau de bord manager** : suivi de progression, de résultats et de certificats, collaborateur par collaborateur [M].
-
-**Appel à l'action** : « Demander une proposition (réponse sous 48 h) ».
-
-### Test du DAF (ici : le directeur formation)
-| Question | Réponse | Note |
+| Certificat | Compétences | Cas de synthèse |
 |---|---|---|
-| Sait-il ce qu'il obtient ? | Des équipes crédit certifiées, avec suivi | Oui |
-| À quel prix ? | 249 € la place ; cohorte sur proposition | Oui, si A1 et A3 sont corrigées |
-| Pourquoi nous ? | Références bancaires publiées, Financité Institute 30 ans | Oui, **sous réserve d'accord des banques** |
+| **Chargé d'affaires entreprise** | Prospection bancaire ; Lire le secteur et le business model d'une entreprise ; Aspects juridiques et fiscaux de la relation de crédit ; Prévisions financières du business plan ; Financer la croissance de l'entreprise | Financer une ligne de production (industrie) ; Accompagner une entreprise de travaux (BTP, marchés publics) ; Arbitrer la croissance d'un client historique (distribution) |
+| **Analyste financier risque** | Lire le secteur ; Aspects juridiques et fiscaux ; Structurer et réussir son analyse financière ; Analyser un dossier pour décider d'un crédit ; Construire et analyser un business plan | Une demande de crédit de trésorerie (commerce) ; Un projet d'investissement (services) ; Un crédit d'équipement pour une TPE |
+| **Banquier conseil** | Devenir banquier-conseil PME ; Prospection bancaire ; Les grandes décisions financières ; Financer la croissance ; Gestion du portefeuille client PME (sortie novembre 2026) | Un projet d'extension (industrie) ; Une croissance qui étouffe la trésorerie (négoce) ; Une transmission à préparer (entreprise familiale) |
+| **Financier d'entreprise** | Structurer et réussir son analyse financière ; Prévisions financières du business plan ; Les grandes décisions financières ; Réaliser une levée de dette bancaire (**« Prochainement disponible »**) ; Financer la croissance | Un investissement à arbitrer (PME industrielle) ; Une levée de dette à préparer (services) ; Financer l'ouverture d'un site (négoce) |
+| **Analyste financier corporate** | Analyse financière des états de synthèse ; Construire et analyser un business plan ; Prévisions financières ; Les grandes décisions financières ; Comment évaluer une entreprise | Expliquer une baisse de marge ; Choisir entre deux investissements ; Préparer une opération sur le capital |
+| **Investment Banker** | Faire carrière dans les banques d'affaires ; Comment évaluer une entreprise ; Les grandes décisions financières ; Fusions-acquisitions ; Montages LBO | Hors cible LinkedIn actuelle |
 
-## 3. Persona 2 : DAF / RAF qui équipe son équipe
+Dates de sortie sur /competences/ [M] : Devenir chargé d'affaires PME 10/11 ; La finance pour non-financiers 10/11 ; Analyse financière assistée par l'IA 10/11 ; Monter un dossier de crédit 15/11 ; Gérer un portefeuille de clients PME 23/11 ; Devenir chargé de clientèle pro 30/11 ; Banquier augmenté conseil et IA 30/11 ; Analyser le risque de crédit et Origination bancaire clientèle Corporate et Réaliser une levée de dette bancaire : « Prochainement disponible ». **15 cartes n'ont aucun statut**, dont Prospection bancaire, Lire un secteur, Droit et fiscalité du crédit, Financer la croissance, Prévisions financières. Je ne peux donc pas dire quelles compétences d'un certificat sont réellement ouvertes aujourd'hui.
 
-### Qui exactement
-| | |
-|---|---|
-| Fonction | DAF, RAF, directeur financier, responsable comptable et financier, contrôleur de gestion en chef |
-| Séniorité | Directeur, manager, CXO |
-| Organisation | PME et ETI de 11 à 1 000 salariés, hors banque ; équipe finance de 3 à 15 personnes [H] |
-| Pays | Maroc, Côte d'Ivoire, Sénégal |
+### Les parcours déterminés, un problème de résultat par parcours
 
-### Qui décide, influence, paie [H]
-- **Décide** : le DAF/RAF pour des places de formation de son équipe, avec accord du dirigeant au-delà d'un seuil (inconnu, à mesurer).
-- **Influence** : le DG ou gérant, parfois le DRH.
-- **Paie** : budget formation de l'entreprise, ou ligne « amélioration de la fonction finance ». Souvent faible en PME [H].
-- **Budget maîtrisé** : probablement 1 à 3 k€ sans validation lourde [H], ce qui correspond à 5 à 12 places à 249 €.
-
-### Douleur et déclencheur
-- **Douleur** [H] : clôtures lentes, reporting qui prend des jours, trésorerie tendue, équipe de comptables qui ne passe pas à l'analyse, besoin d'intégrer l'IA dans le contrôle de gestion (mots du cahier des charges du 28/10).
-- **Déclencheur** [H] : budget annuel, recrutement raté d'un contrôleur de gestion, audit, ou refus d'un crédit par la banque faute de dossier solide.
-
-### Objections et réponses
-| Objection | Réponse à préparer |
-|---|---|
-| Prix | 249 € la place, soit environ 21 € par mois et par personne, facture et virement |
-| Temps | 2-3 h par semaine, à son rythme, sur téléphone |
-| Crédibilité du certificat | Vérifiable en ligne, badge LinkedIn ; honnêteté : pas un diplôme d'État |
-| Procédure d'achat | Devis, bon de commande, virement ; page « Comment commander » (A7) |
-| « Pas de preuve qui me ressemble » | Aujourd'hui aucun cas d'entreprise : à produire (A9) |
-
-### Ce qu'il achète
-**Accès équipes**, 249 € par collaborateur et par an, à partir de 3 ou 5 places selon la décision A1. Parcours : landing univers Finance d'entreprise → /equipes/ → demande de proposition. Cas particulier : un DAF seul peut acheter l'annuel à 299 € pour lui et demander le remboursement (lettre de prise en charge, à produire).
-
-### Chemin de conversion
-Contenu sponsorisé (vidéo de Rachid) → `/univers/finance-entreprise/` (404 aujourd'hui) → bouton « Équiper mon équipe » → /equipes/ → formulaire → réponse 48 h → devis → bon de commande → virement.
-**Qui répond** : Loubna, devis type et facture pro forma. Rachid n'intervient que sur les comptes de plus de 10 places [H].
-
-### Ciblage LinkedIn et audience
-| Critère | Valeur |
-|---|---|
-| Intitulés | DAF, RAF, directeur financier, responsable administratif et financier, contrôleur de gestion, chef comptable |
-| Séniorité | Directeur, VP, CXO ; manager pour les contrôleurs de gestion |
-| Fonctions | Finance, Comptabilité |
-| Taille | 11 à 1 000 salariés |
-| Secteurs | Tous, hors banque et assurance |
-| Pays | Maroc, Côte d'Ivoire, Sénégal |
-| Exclusions | Étudiants, stagiaires, cabinets de formation, banques, contacts Advisory A-D, clients et abonnés existants |
-| **Audience estimée** | **≈ 8 000 à 25 000** [H] (≈ 8 à 15 % de la fraction manager+ de la fonction finance, estimée à 100-175 k dans trois pays, voir stratégie du 31/10) ; à remplacer par la prévision Campaign Manager |
-
-### Format
-**Contenu sponsorisé** avec vidéo de Rachid (30-45 s) et image unique, 20 € par jour, 3 semaines. **Message Ad** seulement après verdict. Pas de formulaire LinkedIn (voir plus haut).
-
-### Proposition de valeur (5 secondes)
-> **« Faites monter votre équipe finance en compétence : 5 certificats vérifiables, un tuteur IA et un suivi par collaborateur, pour 249 € par personne et par an, facturé à l'entreprise. »**
-
-Trois preuves à montrer :
-1. **Le certificat vérifiable** : un exemple réel, identifiant, vérification en ligne [M].
-2. **Le tableau de bord de suivi** pour le DAF [M].
-3. **Un témoignage de financier d'entreprise** : n'existe pas encore [M]. À défaut : les références institutionnelles citées sur le site, avec la mention « références banque » assumée.
-
-**Appel à l'action** : « Demander un devis pour mon équipe ».
-
-### Test du DAF
-| Question | Réponse | Note |
-|---|---|---|
-| Sait-il ce qu'il obtient ? | Des compétences certifiées pour son équipe | Oui |
-| À quel prix ? | 249 € par personne et par an | Oui, après correction de A1 |
-| Pourquoi nous ? | **Aucune preuve entreprise** ; seulement les références banque et Financité | **Partiel. Le point faible** |
-
-### Variante 2b (à arbitrer) : le DAF qui se forme lui-même
-Offre FIA « DAF Dirigeant Augmenté », dès 2 375 €, 3 mois, 100 % en ligne ou hybride, vente par formulaire puis entretien individuel (Loubna) [M]. Public déclaré : « DAF, RAF, auditeurs et profils financiers » [M]. C'est un autre produit, un autre prix, un autre vendeur. Elle ne doit pas se mélanger avec la proposition d'équipe. Test possible plus tard, par la Tête Grise, sur la même audience avec un message de carrière. Pages à mettre à jour d'abord (A4).
-
-## 4. Persona 3 : le dirigeant qui veut mettre ses équipes à la finance
-
-### Qui exactement
-| | |
-|---|---|
-| Fonction | Directeur général, gérant, fondateur, propriétaire |
-| Séniorité | CXO, propriétaire |
-| Organisation | PME de 11 à 500 salariés, dont les managers prennent des décisions chiffrées sans formation finance |
-| Pays | Maroc, Côte d'Ivoire, Sénégal |
-
-### Qui décide, influence, paie [H]
-Il décide seul et paie sur le budget de l'entreprise. Son DAF/RAF influence : c'est le persona 2. Dans beaucoup de PME, **le dirigeant et le DAF sont la même cible vue de deux côtés** : le DAF propose, le dirigeant signe.
-
-### Douleur et déclencheur [H]
-Des managers qui lisent mal les chiffres, des décisions prises à l'instinct, un banquier qui demande des états financiers que l'équipe ne sait pas lire. Déclencheur : refus de crédit, croissance, levée de fonds, transmission.
-
-### Objections [H]
-Temps (le dirigeant n'a pas le temps), priorité (« la finance est l'affaire du DAF »), preuve (« est-ce adapté aux non-financiers ? »), prix, et surtout : **qu'est-ce que j'achète ?**
-
-### Ce qu'il achète chez Xelanc : aujourd'hui, rien de précis
-Deux pistes possibles, aucune prête :
-- **Xelanc** : places « finance pour non-financiers » à 249 € (la page Équipes en parle en une ligne ; la compétence n'est pas confirmée sur /competences/) [M/H].
-- **FIA** : Business Leader Augmenté, « managers et décideurs », hybride, trois bundles et bootcamp, **sans prix**, session datée octobre 2025, compteurs à « 0 » [M].
-
-### Chemin et qui répond
-Impossible à décrire proprement tant que l'offre n'est pas choisie. Provisoire : contenu sponsorisé → page dédiée « Dirigeants » (à créer) → demande de proposition → Rachid directement, un dirigeant exigeant un interlocuteur de son niveau [H].
-
-### Ciblage LinkedIn et audience
-| Critère | Valeur |
-|---|---|
-| Intitulés | Directeur général, gérant, PDG, fondateur, propriétaire |
-| Séniorité | CXO, propriétaire |
-| Taille | 11 à 500 salariés |
-| Secteurs | Hors banque ; industrie, distribution, services, BTP, agro |
-| Pays | Maroc, Côte d'Ivoire, Sénégal |
-| Exclusions | Mêmes que le persona 2 ; auto-entrepreneurs et indépendants |
-| **Audience estimée** | **≈ 50 000 à 150 000** [H] (hypothèse très fragile : 4 % des membres sont dirigeants ou propriétaires, un tiers dans des entreprises de 11 à 500 salariés) ; à mesurer |
-
-### Format
-Pas de Message Ad à des dirigeants sans un message déjà éprouvé. Contenu sponsorisé « thought leader » à partir de ton profil, puis page.
-
-### Proposition de valeur (provisoire, non publiable)
-> **« Vos managers lisent enfin les chiffres : un parcours finance pour non-financiers, certifié, suivi par équipe, à [prix à fixer] par personne. »**
-
-Trois preuves à montrer : aucune des trois n'est disponible aujourd'hui (pas de cas dirigeant, pas de prix, contenu non confirmé). Les témoignages de la page Business Leader sont de DAF promus, pas de dirigeants [M].
-**Appel à l'action** : « Parler à Rachid » (provisoire).
-
-### Test du DAF
-| Question | Réponse | Note |
-|---|---|---|
-| Sait-il ce qu'il obtient ? | Pas clair : offre non définie | **Non** |
-| À quel prix ? | Aucun prix cohérent (Business Leader sans prix) | **Non** |
-| Pourquoi nous ? | Rachid, Financité, banques ; rien de spécifique dirigeants | Partiel |
-
-## 5. Classement par ordre de démarrage
-
-Effet sur le cash ÷ effort. Chiffres [H] : ils servent à classer, pas à prévoir.
-
-| Rang | Persona | Panier par deal | Cash attendu du test (≈ 6 semaines) | Délai de cash | Effort avant démarrage | Préalables | Verdict |
-|---|---|---|---|---|---|---|---|
-| **1** | **Banque et microfinance** | 5 à 25 k€ | 0,2-0,4 deal soit 1-10 k€ pour ≈ 500 € | 30-90 jours | **Faible** : page existante, preuves existantes | Insight Tag, correction A1-A3, accord des banques citées, texte validé | **Démarrer le 10/11** |
-| 2 | DAF / RAF (équipe) | 1,2 à 2,5 k€ | 0,25-0,75 deal soit 0,3-1,9 k€ pour ≈ 600 € | 15-45 jours | **Élevé** : landing univers (404), preuves entreprise absentes | Landing, témoignage entreprise, A1, A7 | Démarrer vers le 16/11 si la landing est prête |
-| 3 | Dirigeant | 2 à 5 k€ | 0 à 1 k€ | Inconnu | **Très élevé** : offre à définir | Offre, prix, contenu, page | **Attendre.** Pas avant décision Q5 |
-
-Pourquoi la banque d'abord :
-- **Preuve déjà en ligne.** Les trois cas bancaires existent sur /equipes/. Les DAF d'entreprise n'ont aucun cas.
-- **Audience étroite, donc test bon marché.** 600-700 envois suffisent ; une campagne continue de 20 € par jour gaspillerait de la fréquence.
-- **Un seul deal change l'échelle.** 20 places = 4 980 €, soit plus que tout ce que le test DAF peut espérer en six semaines.
-- **Moins de préalables.** Pas besoin de la landing univers : /equipes/ corrigée suffit.
-- **Cohérence avec la Tête Grise.** La ligne « mandats B2B banques » (25 k€/mois visés) existe déjà, avec 8 références. LinkedIn la nourrit sans doublonner.
-
-Pourquoi ce n'est pas un moteur de novembre : un deal banque se signe en 30 à 90 jours [H]. Le test ne bouge pas l'objectif de 85 k€ sur novembre-janvier.
-
-## 6. Plan et budget (1 600 €, inchangé) [H]
-
-| Étape | Dates | Persona | Format | Budget | Statut |
+| Persona | Problème de résultat | Parcours (réel) | Proposition de valeur, une phrase sur SON problème | Preuve qui compte pour lui | Ce qui manque |
 |---|---|---|---|---|---|
-| Préalables | 31/10-09/11 | Tous | Insight Tag, correction /equipes/ (A1-A3, A7), conversions, UTM | 0 € | À faire |
-| Test banque | 10/11-30/11 | 1 | Message Ad signé Rachid (texte validé) + 2 posts organiques | 500 € | Proposé |
-| Test DAF | 16/11-07/12 | 2 | Contenu sponsorisé, 20 €/j, landing univers | 600 € | Proposé, conditionné à la landing |
-| Réserve | Décembre | Gagnant | Deuxième envoi ou reciblage | 500 € | Proposé |
-| Dirigeant | Janvier 2027 au plus tôt | 3 | À définir | 0 € d'ici là | En attente de Q5 |
+| **Directeur réseau / marché PME** | Produire plus de crédit PME avec des chargés de clientèle qui savent prospecter une PME et monter son dossier | **Chargé d'affaires entreprise** (Prospection, Lire le secteur, Droit et fiscalité du crédit, Prévisions BP, Financer la croissance) ; en complément **Banquier conseil** | « Des chargés d'affaires qui prospectent une PME, lisent son secteur et montent son dossier : 6 à 8 semaines, 3 dossiers réels (industrie, BTP, distribution), examen final, certificat vérifiable » | Une banque comparable qui a vu sa production PME progresser ; les 700 et 500 directeurs d'agence certifiés à Bank of Africa et CIH [M site, non vérifié] | Aucun résultat avant/après publié (production, délai) ; références marocaines ; sorties de compétences à confirmer |
+| **Directeur du crédit / des engagements** | Dossiers défendables en comité, moins de retours pour complément | **Analyste financier risque** (Structurer l'analyse, Analyser un dossier pour décider d'un crédit, Droit et fiscalité, Lire un secteur) ; **Monter un dossier de crédit** (15/11) | « Vos analystes lisent le secteur, structurent l'analyse et décident d'un crédit sur 3 dossiers réels (commerce, services, TPE) » | Un dossier-type de crédit complet montré ; le taux de retours avant/après d'une banque | « Analyser le risque de crédit » pas encore sortie ; aucune mesure de délai d'octroi |
+| **Directeur d'agence / régional** | Passer de l'équipement produits au conseil du dirigeant PME, tenir le portefeuille | **Banquier conseil** (+ Gérer un portefeuille de clients PME, 23/11) | « Vos chargés de clientèle deviennent conseillers de leurs dirigeants PME, avec 3 cas : extension, croissance qui étouffe la trésorerie, transmission » | Les directeurs d'agence déjà certifiés (700 et 500) : c'est précisément leur population [M site] | Compétence portefeuille non sortie ; pas de mesure de portefeuille |
+| **Directeur du marché Professionnels** | Équiper et suivre la clientèle pro | « Devenir chargé de clientèle pro » (30/11), poste visé du Banquier conseil | Pas de certificat dédié | — | **Pas de parcours prêt** |
+| **Directeur des risques, du recouvrement, conformité, microfinance** | Créances douteuses, recouvrement, provisionnement, LCB-FT, portefeuille à risque | **Aucun** : la recherche « recouvrement, impayés, provisionnement, LCB-FT, scoring, microfinance » ne ramène aucune carte [M 31/10] | — | — | **À construire ou à ne pas promettre.** La page /equipes/ cite microfinance et recouvrement, mais le catalogue ne suit pas |
+| **DAF / RAF** | Obtenir son financement bancaire, arbitrer ses investissements | **Financier d'entreprise** | « Convaincre votre banque et arbitrer vos investissements : analyse, prévisions, levée de dette, 3 cas d'entreprise » | Un cas de PME | Compétence « levée de dette » non sortie ; aucune preuve entreprise ; **test conditionné à sa sortie** |
+| **Directeur commercial / d'activité** | Marge et rentabilité de son activité | **La finance pour non-financiers** (10/11) seule | « Lisez la rentabilité de votre activité » | — | **Pas de certificat**, une seule carte ; aucune preuve |
+| **Dirigeant de PME** | Financer sa croissance, lire ses chiffres | La finance pour non-financiers + Financer la croissance | « Lisez vos chiffres et préparez votre dossier bancaire » | — | **Pas d'offre.** Business Leader (FIA) sans prix, page d'octobre 2025 |
 
-Conventions d'UTM : `utm_source=linkedin&utm_medium=paid_social&utm_campaign=xel-li-<persona>-<mois>&utm_content=<angle>`, avec `<persona>` valant `banque`, `daf` ou `dirigeant`.
+Brouillons de Message Ad à valider avant tout usage (jamais envoyés ; les banques sont citées dans la première version, à anonymiser sans leur accord écrit) :
 
-Critères d'arrêt :
-- **Banque** : pas de verdict sous 600 envois. Moins de 1 demande de devis réelle après 700 envois : on corrige le texte, un seul test à la fois.
-- **DAF** : mêmes règles que la stratégie du 31/10 (100 clics et 500 € par porte pour un verdict ; arrêt si clic vers demande inférieur à 0,5 % après 100 clics).
-- **Passage à l'échelle** : un coût par demande de devis ≤ 150 € et au moins 1 deal conclu.
+> **Directeur réseau / marché PME (519 caractères).** « Bonjour [Prénom], je suis Rachid El Maataoui, Financité Institute. Sur le marché PME, la production de crédit tient à des chargés d'affaires qui savent prospecter une PME, lire son secteur et monter son dossier. Nous avons certifié 700 directeurs d'agence chez Bank of Africa et 500 chez CIH Bank. Pour votre marché PME : un parcours de 6 à 8 semaines, 2 à 3 h par semaine, validé sur 3 dossiers réels. Quel est votre plus gros frein aujourd'hui : la prospection ou la qualité des dossiers ? Je réponds personnellement. »
+>
+> **Directeur du crédit (438 caractères).** « Bonjour [Prénom], je suis Rachid El Maataoui, Financité Institute. Vos analystes arrivent-ils au comité avec des dossiers que vous pouvez défendre ? Nous avons un parcours de 6 à 8 semaines qui les entraîne à lire le secteur, structurer l'analyse financière et décider d'un crédit, sur 3 dossiers réels (commerce, services, TPE). Quelle part de vos dossiers revient-elle aujourd'hui pour complément d'analyse ? Je réponds personnellement. »
 
-## 7. Ce qu'il ne faut pas faire
+Ces messages posent une question de résultat : la réponse est le premier signal de terrain, pas un clic.
 
-- **Citer Bank of Africa, CIH ou Société Générale dans une pub sans accord écrit.** Ce sont des clients.
-- **Reprendre les statistiques des pages FIA** (85 %, 90 %) : non vérifiables.
-- **Mélanger l'offre d'équipe (249 €) et le DAF Dirigeant (2 375 €)** dans la même pub.
-- **Promettre une promotion ou une hausse de salaire** (interdit au cahier des charges du 28/10).
-- **Envoyer un Message Ad sans ton accord écrit sur le texte.**
-- **Cibler les dirigeants avant d'avoir une offre et un prix.**
-- **Utiliser « démissionnez » ou toute formule qui braque l'employeur.**
-- **Charger une liste de contacts sur LinkedIn sans vérification CNDP / loi 09-08.**
-- **Lancer avant l'Insight Tag et la correction de /equipes/.**
-- **Contacter les segments Advisory A-D avant le 07/12** (collision avec la campagne en cours).
-
-## 8. Questions que Rachid doit trancher
-
-| # | Question | Ma recommandation |
+### Ambiguïtés du site à corriger avant d'écrire à un directeur [M 31/10]
+| # | Ambiguïté | Impact |
 |---|---|---|
-| Q1 | Valider l'ordre : banque, puis DAF, puis dirigeant | Oui |
-| Q2 | Seuil Équipes : 3 ou 5 places ? Tarif pour 3 et 4 places ? | 5 places, un seul chiffre partout |
-| Q3 | Chiffre officiel : 10 000 (banques) ou 50 000 (total) ? | Les deux si vrais, avec la nuance dite |
-| Q4 | Accord écrit de Bank of Africa, CIH et Société Générale pour les citer en pub ? Sinon : formulation anonymisée (« 700 directeurs d'agence d'une grande banque marocaine ») | Demander l'accord ; anonymiser en attendant |
-| Q5 | Dirigeant : quelle offre ? (a) places Xelanc « finance pour non-financiers » à 249 €, (b) Business Leader FIA avec prix et dates à jour, (c) pas d'offre avant 2027 | (c) pour l'instant, sinon (a) |
-| Q6 | DAF : on vend l'équipe (249 €), ou aussi le DAF Dirigeant FIA ? À arbitrer avec la Tête Grise | L'équipe seulement dans la première vague |
-| Q7 | Cohorte certifiante, avec ateliers et coaching humains : compatible avec la décision D9 (« ni session, ni cohorte ») ? La preuve bancaire en dépend | Séparer clairement « plateforme Xelanc » et « cohorte FIA » dans la page |
-| Q8 | Qui répond aux demandes de devis banque : toi, ou Loubna ? Et sous quel délai ? | Loubna accuse réception, toi tu reprends les banques |
-| Q9 | Expéditeur du Message Ad : ton profil ou la page Xelanc ? | Ton profil si LinkedIn l'autorise pour ce compte |
-| Q10 | Un témoignage de financier d'entreprise : qui peut le fournir avant le 16/11 ? | Loubna, 10 demandes |
-| Q11 | Page « Comment commander » + lettre de prise en charge + devis type : qui les rédige ? | GTM le texte, Site la mise en ligne |
-| Q12 | Accès Campaign Manager et connexion Adspirer toujours en attente (stratégie du 31/10) | Priorité 03/11 |
+| A1 | Seuil équipes « dès 3 » (bandeau, FAQ) contre « 5 à 50 », dès 1 245 € (grille) | Un directeur ne sait pas combien il peut commander |
+| A2 | « Près de 10 000 professionnels » contre « 50 000 » | Crédibilité |
+| A3 | Les cas BoA 700 et CIH 500 sont des cohortes avec présentiel (sur proposition) ; le prix de 249 € est un accès plateforme seul | Le prix et la preuve ne parlent pas du même produit |
+| A4 | Pages FIA (CDAF dès 2 375 €, Business Leader sans prix) datées de 2025-2026 et contradictoires ; statistiques 85 % et 90 % non vérifiables | Offre dirigeant inutilisable |
+| A5 | « Réaliser une levée de dette bancaire » : compétence « Prochainement disponible » alors qu'elle fait partie du certificat Financier d'entreprise | Certificat non complétable |
+| A6 | 15 cartes sans statut ; compteurs 34 / 38 / 15 / 16 | On ne sait pas ce qui est ouvert |
+| A7 | Ni lettre de prise en charge, ni page « Comment commander », ni devis type | Le métier ne sait pas comment faire passer l'achat |
+| A8 | Aucune page par problème de résultat ; /equipes/ est un catalogue | Chaque parcours a besoin de sa page : « production de crédit PME », « qualité des dossiers de crédit », « banquier conseil » |
+
+## 5. Rôle de LinkedIn par pays
+
+### Maroc : one-to-one, LinkedIn en appui
+Ce que LinkedIn fait, sans acquisition payante :
+1. **Preuve** : ton profil et la page Xelanc publient les résultats, le bootcamp Chargé de clientèle entreprise du 18 au 22/11 et les cas (avec accord).
+2. **Prise de contact** : demande de connexion suivie d'un message personnel après chaque rencontre ou appel (gratuit).
+3. **Cartographie** : repérer qui vient d'être nommé directeur réseau, crédit ou marché PME dans les 8 banques clientes (déclencheur de contact [H]). Un outil de prospection LinkedIn payant (Sales Navigator) serait utile ; prix non relevé.
+4. **Rappel ciblé** : audience par liste des seuls contacts déjà rencontrés, 150 € plafond. Vérification CNDP / loi 09-08 avant toute liste.
+5. **Plan annuel** : la proposition doit arriver avant l'arbitrage du plan de formation. À toi de me dire quand il se fixe (question Q2).
+
+### Hors Maroc : ciblage des prescripteurs métiers
+- Cible : intitulés de direction + secteur Banque / Services financiers + pays, regroupés par pôle.
+- Format : Message Ad signé de toi ; vidéo courte de toi adressée à un métier précis (« Directeur du crédit : ... ») en contenu sponsorisé pour les audiences trop petites pour un Message Ad ; posts de ton profil comme contenu.
+- Suite : la réponse arrive à toi (WhatsApp ou appel), puis proposition de **pilote de 5 à 10 places** sur un parcours. C'est le seul chemin cohérent avec [R] « les métiers décident ».
+
+## 6. Potentiel par pays (méthode refaite)
+
+### Sources et limites
+- **Campaign Manager inaccessible.** Le chiffre exact par pays, fonction, séniorité et secteur ne vient que de l'outil d'audience du compte publicitaire, une fois connecté (tu y as accès après connexion). Ces chiffres remplaceront les estimations ci-dessous.
+- **Membres LinkedIn : DataReportal, Digital 2025, pages par pays, portée publicitaire LinkedIn début 2025** [M source tierce, membres inscrits, pas actifs]. Les pays hors Maroc sont probablement 10 à 15 % plus hauts aujourd'hui [H]. NapoleonCat : Maroc 6,08 M (janvier 2025), 7,02 M (décembre 2025). Intelpoint (Tunisie 322 k) écarté : incohérent avec DataReportal (2,40 M).
+- Aucun coût LinkedIn par pays n'existe dans les sources. Les coûts restent [H].
+
+### Méthode des estimations
+| Quoi | Calcul |
+|---|---|
+| Effectif bancaire | Sourcé : Maroc 42-60 k [E], Tunisie 20 137 [M BCT], UEMOA 38 228 dont 42,1 % de cadres [M CB-UMOA 2023]. Répartition UEMOA et CEMAC par pays : [H] (CI 35 %, SN 20 %, BF 10 %, ML 9 %, BJ 8 %, TG 8 % ; CEMAC 13-18 k : Cameroun 40 %, Gabon 15 %, Congo 12 %). RDC 6-10 k [H]. Algérie 60-90 k [H], non sourcé |
+| Directeurs bancaires sur LinkedIn (tous métiers) | Effectif × 3 % de postes de direction × 85 % présents sur LinkedIn = 2,55 % de l'effectif [H] |
+| Répartition par métier | Marché PME/Entreprises 12 %, crédit/engagements 10 %, risques 8 %, recouvrement/contentieux 6 %, réseau et agences 40 %, professionnels/particuliers 10 %, autres 14 % [H] |
+| Finance et comptabilité, niveau direction (hors banque) | Membres × 4-6 % de fonction Finance et Accounting × 6-8 % de séniorité Director, VP, CXO = 0,24 à 0,48 % des membres [H]. La moitié environ sont des DAF/RAF au sens strict [H] |
+| Directeurs commerciaux et d'activité | Membres × 14-18 % (Sales, Business Development, Operations) × 6-8 % de séniorité direction = 0,8 à 1,4 % [H]. Non isolable sans intitulés, secteur et taille : j'indique l'ordre de grandeur, pas une cible |
+
+### Tableau pays
+Membres : [M source]. Toutes les autres colonnes : [E/H]. Les chiffres sont des personnes présentes sur LinkedIn, début 2025.
+
+| Pays | Membres | Directeurs bancaires (tous métiers) | dont PME ; crédit ; réseau | Finance et compta, direction (hors banque) | Marché (score /100) | Rôle de LinkedIn | Score LinkedIn payant |
+|---|---|---|---|---|---|---|---|
+| **Maroc** (R) | 6,00 M | 1 070-1 530 | 130-180 ; 105-150 ; 430-610 | 14-29 k | 92 | **Appui, one-to-one [R]** | 37 (marché 92 × 0,4) |
+| Côte d'Ivoire (R) | 1,60 M | ≈ 340 | ≈ 41 ; 34 ; 136 | 3,8-7,7 k | 72 | Ciblage prescripteurs (pôle UEMOA) | 72 |
+| Sénégal (R) | 1,30 M | ≈ 195 | ≈ 23 ; 20 ; 78 | 3,1-6,2 k | 72 | Idem | 72 |
+| Togo (P) | 0,38 M | ≈ 78 | ≈ 9 ; 8 ; 31 | 0,9-1,8 k | 61 | Pôle UEMOA seulement | 61 |
+| Cameroun (R) | 1,40 M | 135-185 | 16-22 ; 13-18 ; 54-74 | 3,4-6,7 k | 57 | Ciblage (pôle CEMAC) | 57 |
+| Bénin (P) | 0,58 M | ≈ 78 | ≈ 9 ; 8 ; 31 | 1,4-2,8 k | 56 | Pôle UEMOA seulement | 56 |
+| Gabon (R) | 0,28 M | 50-70 | 6-8 ; 5-7 ; 20-28 | 0,7-1,3 k | 55 | Pôle CEMAC seulement | 55 |
+| RDC (R) | 0,83 M | 150-255 | 18-31 ; 15-26 ; 60-100 | 2,0-4,0 k | 51 | Ciblage, mais paiement non testé | 51 |
+| Tunisie (R) | 2,40 M | ≈ 515 | ≈ 62 ; 51 ; 206 | 5,8-11,5 k | 56 | À éclaircir : processus probablement proche du Maroc [H] ; paiement en euro bloquant | 34 (56 × 0,6) |
+| Guinée (P) | 0,30 M | 75-100 | 9-12 ; 8-10 ; 30-40 | 0,7-1,4 k | 48 | Surveillance | 48 |
+| Burkina Faso (P) | 0,45 M | ≈ 97 | ≈ 12 ; 10 ; 39 | 1,1-2,2 k | 46 | Pôle UEMOA ; risque sécuritaire [H] | 46 |
+| Mali (P) | 0,42 M | ≈ 88 | ≈ 11 ; 9 ; 35 | 1,0-2,0 k | 46 | Pôle UEMOA ; risque [H] | 46 |
+| Algérie (R) | 4,80 M | 770-1 150 [H non sourcé] | non estimable | 11,5-23 k | 43 | Écarté : paiement en euro quasi impossible [H] | 26 |
+| Congo-Brazzaville (R) | 0,25 M | 40-55 | 5-7 ; 4-6 ; 16-22 | 0,6-1,2 k | 43 | Pôle CEMAC seulement | 43 |
+| Rwanda (R) | 0,48 M | 130-150 [H] | non estimable | 1,2-2,3 k | 43 | Écarté : anglophone | 43 |
+| Madagascar (P) | 0,52 M | 130-180 [H] | non estimable | 1,2-2,5 k | 41 | Écarté | 41 |
+| Mauritanie (R) | 0,16 M | 50-75 [H] | non estimable | 0,4-0,8 k | 32 | Écarté | 32 |
+
+Le « marché » reprend le score de la première version (taille, solvabilité en euro, relation, langue, risque), qui reste valable pour juger l'intérêt commercial d'un pays. Le « score LinkedIn payant » le multiplie par un facteur d'adéquation (0,4 pour le Maroc [R] ; 0,6 pour la Tunisie et l'Algérie, supposées proches du Maroc [H] ; 1,0 pour les autres [R]). Hypothèse de ma part, pas une mesure.
+
+### Pôles regroupés (les seules audiences assez grandes pour LinkedIn)
+LinkedIn ne diffuse pas sous 300 membres. Une audience par pays et par métier (30 à 140 personnes) ne passe jamais. Il faut regrouper.
+
+| Pôle | Pays | Directeurs bancaires | Marché PME | Crédit | Risques | Recouvrement | Réseau / agences |
+|---|---|---|---|---|---|---|---|
+| **UEMOA** | CI, SN, BJ, TG, BF, ML (+ NE, GW) | ≈ 975 | ≈ 117 | ≈ 98 | ≈ 78 | ≈ 58 | ≈ 390 |
+| **CEMAC** | CM, GA, CG (+ TD, CF, GQ) | 330-460 | 40-55 | 33-46 | 26-37 | 20-28 | 130-185 |
+| RDC | RDC | 150-255 | 18-31 | 15-26 | 12-20 | 9-15 | 60-100 |
+| **Total Afrique subsaharienne francophone** | | **1 460-1 690** | **175-203** | **146-169** | **117-135** | **88-101** | **584-676** |
+
+Lecture : le Message Ad « directeur réseau + marché PME » touche environ 760-880 noms ; « crédit + risques + recouvrement » environ 350-405 noms. Pour une institution de microfinance (540 SFD et 4 778 points de service dans l'UEMOA [M BCEAO 12/2023]), je ne peux pas estimer les directeurs présents sur LinkedIn : ils y sont probablement peu présents [H].
+
+### Cohérence avec gtm-state.yaml et le plan
+- Le test noté le 28/10 visait Maroc + Côte d'Ivoire + Sénégal. Je le **modifie** : le Maroc sort de la pub, Abidjan et Dakar passent dans des pôles regroupés.
+- Les 472 payeurs d'Afrique subsaharienne sont des particuliers (≈ 340 hors ligne [M]) : ils prouvent une solvabilité individuelle, pas un budget d'institution. La preuve institutionnelle publiée est marocaine (BoA, CIH, SG Maroc).
+- La RDC porte les meilleurs signaux Meta, mais un directeur de banque à Kinshasa n'est pas un abonné Meta. Paiement Mobile Money jamais testé en réel [M 27/10] : pas de budget LinkedIn avant.
+- France, Belgique, Suisse, Canada (porte de décision de fin novembre) : hors périmètre LinkedIn pour l'instant.
+
+## 7. Plan de démarrage révisé (plafond 1 600 €, [H])
+
+| Étape | Dates | Pays / pôle | Persona métier | Parcours | Format | Budget |
+|---|---|---|---|---|---|---|
+| 0. Terrain et prérequis | 31/10-09/11 | — | — | — | Tes réponses (section 8), Insight Tag, correction A1-A3, A7, A8, une page par parcours, vérification des audiences dans Campaign Manager | 0 € |
+| 1. Maroc, appui | en continu | Maroc | Contacts déjà rencontrés | Selon la discussion | Posts de ton profil ; message personnel après chaque rencontre ; rappel par liste | 150 € max |
+| **2. Test n°1** | **à partir du 10/11** | **Pôles UEMOA + CEMAC** | **Directeur réseau + marché PME** | **Chargé d'affaires entreprise** (+ Banquier conseil) | **Message Ad signé de toi**, ≈ 760-880 envois ; appel de 20 min avec toi ; proposition de pilote de 5 à 10 places | 450 € |
+| 3. Test n°2 | à partir du 17/11 (après la sortie de « Monter un dossier de crédit », 15/11) | UEMOA + CEMAC + RDC | Directeur du crédit + risques | Analyste financier risque | Message Ad ≈ 350-405 envois | 300 € |
+| 4. Test n°3 | après la sortie de « levée de dette » (date inconnue) | CI, SN, Cameroun | DAF / RAF | Financier d'entreprise | Vidéo de toi en contenu sponsorisé | 500 € |
+| 5. Réserve | décembre | Gagnant | — | — | Deuxième envoi | 200 € |
+| Plus tard | — | — | Recouvrement, risques portefeuille, microfinance, directeur d'activité, dirigeant | **À construire** | — | 0 € |
+
+Règles : un test à la fois, une variable (le persona), pas de verdict sous 600 envois, texte validé par toi avant envoi, accord écrit des banques avant de les nommer, exclusions (clients, segments Advisory A à D jusqu'au 07/12, inscrits du bootcamp jusqu'au 22/11). Mesure : réponses et appels obtenus (pas clics), UTM `utm_source=linkedin&utm_medium=message_ad&utm_campaign=xel-li-<persona>-<pôle>`.
+Critères d'arrêt : moins de 1 conversation après 600 envois, on réécrit le message une fois ; deuxième échec, on arrête ce persona. Passage à l'échelle : au moins 1 pilote de 5 places signé, puis proposition à ton « go ».
+Cash attendu [H] : un pilote de 5 places = 1 245 € ; un parcours de 20 places ≈ 5 k€. Le test ne bouge pas novembre ; il mesure s'il existe un chemin Message Ad → appel → pilote.
+
+## 8. Ce que je ne peux pas savoir sans toi : questions de terrain
+
+1. **Les 3 à 5 derniers deals signés avec une banque ou une entreprise** (pays, institution) : quel poste a signé ? Quel service avait lancé la demande ? En combien de temps entre le premier contact et la signature ?
+2. **Maroc, plan annuel** : à quel mois se fixe le plan de formation, qui le prépare, et peut-on entrer en cours d'année ?
+3. **Hors Maroc** : quand ce sont les métiers qui décident, quel métier précisément (réseau, PME, crédit, risques), et par quel budget passe l'achat (budget du métier, RH, DG) ?
+4. **Quels résultats les banques essaient d'améliorer aujourd'hui** : production de crédit PME, qualité des dossiers, impayés et recouvrement, délai d'octroi, conformité ? Classe-les par fréquence de demande.
+5. **Quels parcours se vendent** : les intitulés demandés par les banques, et lesquels n'existent pas sur le site (recouvrement, risque de portefeuille, conformité, microfinance) ? Faut-il les construire ?
+6. **Références hors Maroc** : une banque ou une SFD hors Maroc a-t-elle déjà été formée par Financité Institute ? Peut-on la citer ? Sinon, ma preuve reste marocaine.
+7. **Les directeurs sont-ils joignables sur LinkedIn ?** Dans les pays concernés, les directeurs de banque utilisent-ils LinkedIn ou travaillent-ils par WhatsApp et réseaux personnels ?
+8. **Le pilote de 5 à 10 places** : un directeur de marché peut-il l'acheter sur son budget (sans RH, ni DG) ? À partir de quel montant faut-il un visa ?
+
+Mes autres incertitudes, sans réponse possible hors terrain : le délai d'achat réel par pays, le seuil de signature d'un DAF, la présence réelle des directeurs sur LinkedIn, les coûts LinkedIn locaux, et l'accord des banques pour être citées.
 
 ## 9. Ce que je n'ai pas pu vérifier
-
-- **Adspirer** et tout historique LinkedIn (outils absents de la session).
-- **Les audiences par persona.** Aucune donnée LinkedIn par intitulé et par pays n'est accessible ici. Les trois estimations sont des hypothèses issues du nombre de membres par pays [E NapoleonCat, Osiris].
-- **Les budgets formation des cibles, le seuil de signature d'un DAF, les délais d'achat des banques** : hypothèses de marché, à interroger auprès des 8 banques déjà clientes.
-- **La réalité de l'offre FIA** : pages lues le 31/10, contradictoires sur les dates ; prix du Business Leader absent.
-- **Les cas bancaires** : déclarés par le site, non vérifiés ; l'accord des banques n'est pas connu.
-- **Le chargement de l'Insight Tag** par un gestionnaire de balises sous consentement (aucun tag dans le HTML public).
-
-## Potentiel par pays
-
-Demande de Rachid du 31/10 : mesurer le potentiel LinkedIn pays par pays. Les 11 pays demandés sont marqués (R). Les 6 pays **proposés par moi** sont marqués (P).
-
-### Ce que j'ai pu obtenir, et ce que je n'ai pas pu obtenir
-- **Campaign Manager : inaccessible** (compte non connecté, Adspirer absent de la session). **Le chiffre exact de LinkedIn par pays, par fonction et par séniorité ne peut venir que de l'outil d'audience du compte publicitaire** (« Audience estimée » : on choisit pays, fonction, séniorité, secteur, taille, et il donne la taille). Tu y auras accès une fois le compte connecté (P1). Ce sont ces chiffres qui remplaceront les estimations ci-dessous.
-- **Meilleure approximation sourcée : DataReportal, « Digital 2025 », pages par pays.** DataReportal reprend le chiffre de portée publicitaire donné par les outils publicitaires de LinkedIn (membres inscrits, pas utilisateurs actifs), **début 2025**. J'ai lu ces pages le 31/10 pour les 17 pays. C'est tierce source, pas une mesure Xelanc : je l'étiquette **[M source]**.
-- **NapoleonCat** (via recherche) donne Maroc 6,08 M en janvier 2025 et 7,02 M en décembre 2025, ce qui recoupe DataReportal (6,0 M début 2025) et montre ≈ +15 % sur l'année. **Les autres pays n'ont pas de chiffre plus récent** : les membres actuels sont probablement 10 à 15 % au-dessus du tableau [H]. NapoleonCat bloque la lecture directe de ses pages par mes outils (erreur 403) : je n'ai pas pu le recouper pays par pays.
-- **Correction de mon rapport de stratégie du 31/10** : j'y mélangeais le Maroc de décembre 2025 (7,0 M) et la Côte d'Ivoire et le Sénégal de début 2025. À date égale (début 2025), le Maroc est à 6,0 M. Les ordres de grandeur ne changent pas.
-- **Une source écartée** : Intelpoint (janvier 2025) place la Tunisie à 322 000 utilisateurs, contre 2,40 M chez DataReportal. L'écart est de 1 à 7 : métrique ou méthode différente non expliquée. Je retiens DataReportal.
-- **Aucun chiffre de coût LinkedIn par pays** n'existe dans les sources trouvées (déjà dit dans la stratégie). Les colonnes de coût sont des hypothèses.
-
-### Méthode des estimations de personas (tout est [E] ou [H], aucun [M])
-| Persona | Calcul | Hypothèses clés |
-|---|---|---|
-| Banque, cadres présents sur LinkedIn | Effectif bancaire du pays × 42 % de cadres × 70 % présents sur LinkedIn | Effectifs sourcés : Maroc 42-60 k [E BAM 2018, GPBM 2020], Tunisie 20 137 [M BCT fin 2022], UEMOA 38 228 dont 42,1 % de cadres [M CB-UMOA 2023]. **Répartition de l'UEMOA par pays [H]** (Côte d'Ivoire ≈ 35 %, Sénégal ≈ 20 %, Burkina ≈ 10 %, Mali ≈ 9 %, Bénin ≈ 8 %, Togo ≈ 8 %). CEMAC 13-18 k [H], répartie Cameroun 40 %, Gabon 15 %, Congo 12 %. Autres pays : effectifs [H] de 2 à 10 k sans source |
-| Banque, décideurs (formation, RH, réseau, engagements) | ≈ 5 % des cadres présents [H] | Part de la fonction non sourcée |
-| Entreprise : finance senior (hors banque) | Membres × 4-6 % de fonction finance × 25-30 % de manager et plus, soit 1,0 à 1,8 % des membres | Les deux parts sont mes hypothèses [H]. Dont « cœur » DAF/RAF/contrôleur de gestion en chef/chef comptable : ≈ 12 % de ce groupe [H] |
-| Dirigeants PME/ETI | Membres × 3-5 % de CXO/propriétaires × 30 % dans des entreprises de 11 à 500 salariés, soit 0,9 à 1,5 % des membres | Très fragile : « fondateur » est un titre auto-déclaré, **surestimation probable d'un facteur 2 à 3** [H] |
-
-### Tableau pays × persona
-Membres : **[M source]** DataReportal / LinkedIn, début 2025. Colonnes personas : **[E/H]**, arrondies, personnes présentes sur LinkedIn (début 2025), à confirmer par Campaign Manager.
-
-| Pays | Membres LinkedIn | Banque (cadres ; dont décideurs ≈ 5 %) | Entreprise (finance senior ; dont cœur DAF/RAF) | Dirigeants (très fragile) | Solvabilité en euro | CPC attendu [H] | Score /100 | Rang |
-|---|---|---|---|---|---|---|---|---|
-| **Maroc** (R) | 6,00 M | 12-18 k ; 600-900 | 60-108 k ; 7-13 k | 54-90 k | Bonne (carte, virement ; contrôle des changes courant) | 4-8 € | **92** | 1 |
-| **Côte d'Ivoire** (R, Abidjan) | 1,60 M | ≈ 4 k ; ≈ 200 | 16-29 k ; 2-3,5 k | 14-24 k | Bonne (FCFA fixé à l'euro, Orange/MTN/Moov/Wave) | 3-7 € | **72** | 2 |
-| **Sénégal** (R) | 1,30 M | ≈ 2,2 k ; ≈ 110 | 13-23 k ; 1,6-2,8 k | 12-20 k | Bonne (FCFA, Wave/Orange) | 3-7 € | **72** | 3 |
-| Togo (P) | 0,38 M | ≈ 0,9 k ; ≈ 45 | 3,8-6,8 k ; 0,5-0,8 k | 3-6 k | Correcte (FCFA ; 1 commande Annuel en attente de virement [M 27/10]) | 2-5 € | 61 | 4 |
-| Cameroun (R) | 1,40 M | 1,5-2,1 k ; 75-105 | 14-25 k ; 1,7-3 k | 13-21 k | Correcte (FCFA CEMAC ; cartes peu répandues [H]) | 3-7 € | 57 | 5 |
-| Tunisie (R) | 2,40 M | ≈ 6 k ; ≈ 300 | 24-43 k ; 2,9-5,2 k | 22-36 k | Faible (dinar non convertible, paiements à l'étranger encadrés [H]) | 3-6 € | 56 | 6 |
-| Bénin (P) | 0,58 M | ≈ 0,9 k ; ≈ 45 | 5,8-10 k ; 0,7-1,3 k | 5-9 k | Correcte (FCFA, Mobile Money) | 2-5 € | 56 | 7 |
-| Gabon (R) | 0,28 M | 0,6-0,8 k ; 30-40 | 2,8-5 k ; 0,3-0,6 k | 2,5-4 k | Bonne (revenus élevés, FCFA CEMAC), marché minuscule | 2-5 € | 55 | 8 |
-| RDC (R) | 0,83 M | 1,8-2,9 k ; 90-145 | 8,3-15 k ; 1-1,8 k | 7,5-12,5 k | Faible à moyenne (économie en dollars ; Mobile Money réel jamais testé [M 27/10]) | 2-5 € | 51 | 9 |
-| Guinée (P) | 0,30 M | ≈ 1 k ; ≈ 50 | 3-5,4 k ; 0,4-0,65 k | 2,7-4,5 k | Faible (franc guinéen) ; 1 Premium 459 € payé en Guinée [M 22/10] | 2-4 € | 48 | 10 |
-| Burkina Faso (P) | 0,45 M | ≈ 1,1 k ; ≈ 55 | 4,5-8,1 k ; 0,5-1 k | 4-7 k | Moyenne (FCFA) ; contexte sécuritaire [H] | 2-5 € | 46 | 11 |
-| Mali (P) | 0,42 M | ≈ 1 k ; ≈ 50 | 4,2-7,6 k ; 0,5-0,9 k | 4-6 k | Moyenne (FCFA) ; contexte sécuritaire et financier [H] | 2-5 € | 46 | 12 |
-| Algérie (R) | 4,80 M | 8-15 k [H, non sourcé] ; 400-750 | 48-86 k ; 5,8-10 k | 43-72 k | **Très faible** (dinar non convertible, paiements en euro quasi impossibles [H]) | 3-6 € | 43 | 13 |
-| Congo-Brazzaville (R) | 0,25 M | 0,5-0,6 k ; 25-30 | 2,5-4,5 k ; 0,3-0,5 k | 2-4 k | Faible à moyenne (FCFA CEMAC) | 2-5 € | 43 | 14 |
-| Rwanda (R) | 0,48 M | ≈ 1,6 k [H] ; ≈ 80 | 4,8-8,6 k ; 0,6-1 k | 4-7 k | Moyenne ; **anglophone d'abord**, le français est secondaire | 3-6 € | 43 | 15 |
-| Madagascar (P) | 0,52 M | 1,5-2 k [H] ; 75-100 | 5,2-9,4 k ; 0,6-1,1 k | 5-8 k | Faible (ariary) | 2-4 € | 41 | 16 |
-| Mauritanie (R) | 0,16 M | 0,6-0,9 k [H] ; 30-45 | 1,6-2,9 k ; 0,2-0,35 k | 1,4-2,4 k | Faible | 2-4 € | 32 | 17 |
-
-Lecture : les colonnes banque sont les plus solides pour le Maroc, la Tunisie et l'UEMOA (effectifs publiés). Pour tous les autres pays, les effectifs bancaires sont des ordres de grandeur sans source. **Le total des trois pays de départ, Maroc + Côte d'Ivoire + Sénégal :** banque ≈ 18-24 k cadres (dont ≈ 0,9-1,2 k décideurs), finance senior ≈ 89-160 k (cœur DAF/RAF ≈ 11-19 k). Ces ordres de grandeur recoupent l'audience de 600 à 1 500 décideurs bancaires et de 8 à 25 k DAF utilisée plus haut.
-
-### Score de priorité (hypothèse, 0 à 100)
-Pondération : taille de l'audience persona 25 %, solvabilité et paiement en euro 30 %, preuve et relation déjà acquises avec Xelanc / FIA 25 %, langue et accès 10 %, risque (sécurité, change, paiement non testé) 10 %. Chaque critère est noté de 0 à 5 par mon jugement ; les notes ne sont pas mesurées et se discutent. Le score sert à classer, pas à prédire.
-
-Preuves de relation retenues [M, gtm-state.yaml et cash-state.yaml] : Maroc (8 mandats bancaires FIA, logos, bootcamps à Casablanca) ; Afrique subsaharienne (529 anciens clients dont 472 payeurs, ≈ 340 hors ligne) ; RDC (pubs Meta, 14 inscrits gratuits) ; Guinée (1 Premium 459 € le 22/10) ; Togo (1 commande Annuel en attente de virement) ; Côte d'Ivoire (CPL Meta de 1,11 $ sur l'historique FEF).
-
-### Classement et décision pays
-| Vague | Pays | Pourquoi |
-|---|---|---|
-| **Vague 1** | **Maroc, Côte d'Ivoire (Abidjan), Sénégal** | Seuls pays qui cumulent audience suffisante, euro stable (FCFA fixé à l'euro) ou paiement courant, français et relation existante. Identique au test déjà noté dans gtm-state.yaml (Maroc + Côte d'Ivoire + Sénégal) |
-| Vague 1, option (4e pays) | **Cameroun**, uniquement en Message Ad aux banques (≈ 75-105 décideurs) | Audience 1,4 M, FCFA fixé à l'euro. Aucune relation connue : à tester seulement si le budget le permet, jamais en contenu sponsorisé |
-| **Vague 2** (à partir de janvier, si la vague 1 valide) | Togo (P), Bénin (P), Gabon, Tunisie | Togo et Bénin : FCFA, français, Mobile Money, audience petite mais Lomé et Cotonou accueillent des sièges régionaux [H]. Gabon : minuscule mais solvable, pour le Message Ad banque. Tunisie : grande audience mais le paiement en euro bloque, à ouvrir seulement avec un mode de paiement local |
-| À surveiller | RDC, Guinée (P) | Fort signal Meta (RDC) mais paiement en réel jamais testé et audience LinkedIn de 830 k. La RDC reste un canal Meta et relation ; ni budget LinkedIn ni persona entreprise avant un paiement Mobile Money prouvé |
-| **À écarter pour l'instant** | **Algérie, Mauritanie, Congo-Brazzaville, Rwanda, Madagascar, Burkina Faso (P), Mali (P)** | Algérie : audience énorme (4,8 M) mais paiement en euro quasi impossible [H], un deal Équipes ne se règle pas. Mauritanie et Congo : audience trop petite pour un test. Rwanda : anglophone d'abord. Madagascar : ariary, aucune relation. Burkina et Mali : risque sécuritaire et financier [H] |
-
-### Cohérence avec le plan et les marchés solvables de gtm-state.yaml
-- **Accord** : le test noté le 28/10 vise Maroc, Côte d'Ivoire et Sénégal. Le diagnostic du 27/10 retient Maroc, UEMOA, CEMAC et RDC pour les bancaires. Le bassin bancaire marocain (42-60 k) est le plus gros de l'étude de profondeur, et le Maroc reste sous-servi sur le site (exemples en FCFA).
-- **Écart sur la RDC** : les meilleurs signaux Meta (Kinshasa) ne se transfèrent pas à LinkedIn. La RDC a 830 k membres, un paiement jamais testé, une économie en dollars. Les 14 inscrits viennent d'une pub Meta à l'évaluation d'entreprise [M]. Je ne la mets pas en vague 1 LinkedIn.
-- **Solvabilité** : la question « marchés solvables » de gtm-state.yaml (31 manifestations d'intérêt, 0 abonnement hors une personne qui connaît Financité) vaut aussi ici : un employeur marocain ou ivoirien a une facture, un virement et un budget. Un particulier de Kinshasa non. C'est l'argument pour LinkedIn comme porte employeur.
-- **France, Belgique, Suisse, Canada** (porte de décision de fin novembre dans gtm-state.yaml) : hors de ce tableau. Le coût par clic LinkedIn y est nettement plus haut que sur nos marchés [E]. Ce test reste sur Meta et Google.
-- **Paiement** : le site accepte Orange, MTN, Moov, Wave, carte et virement [M /membership/]. Cela couvre l'UEMOA. Le Mobile Money CEMAC et RDC (M-Pesa, Airtel) est annoncé comme non testé au 27/10 [M]. Pour un contrat Équipes, le virement en euro sur facture suffit au Maroc et en zone FCFA ; c'est la zone dinar (Algérie, Tunisie) qui bloque.
-
-### Ce qui change dans les personas
-- Les audiences des trois personas dans la vague 1 (Maroc, Côte d'Ivoire, Sénégal) sont maintenant recoupées par pays : **banque ≈ 0,9-1,2 k décideurs, DAF/RAF ≈ 11-19 k, dirigeants ≈ 80-135 k (surestimé)**.
-- Le Maroc porte à lui seul environ 60-70 % du potentiel des trois pays [E]. La banque marocaine est donc le premier test du plan, comme proposé plus haut.
-- Pour la banque, deux pays hors vague 1 valent un Message Ad ciblé plus tard : le Cameroun (≈ 75-105 décideurs) et le Gabon (≈ 30-40).
+- Adspirer / Campaign Manager (accès absent) : aucun chiffre d'audience LinkedIn par fonction, séniorité, pays.
+- Les pages FIA : lues le 31/10, contradictoires sur les dates ; prix du Business Leader absent.
+- Les cas de /equipes/ : déclarés par le site, non vérifiés ; accord des banques inconnu.
+- Les compétences réellement ouvertes aujourd'hui (15 cartes sans statut).
 
 ## Sources
-- DataReportal, Digital 2025, pages par pays (lues le 31/10 ; chiffres LinkedIn début 2025, membres inscrits) : https://datareportal.com/reports/digital-2025-morocco ; -algeria (4,80 M) ; -tunisia (2,40 M) ; -mauritania (160 k) ; -senegal (1,30 M) ; -cote-divoire (1,60 M) ; -gabon (280 k) ; -cameroon (1,40 M) ; -rwanda (480 k) ; -democratic-republic-of-the-congo (830 k) ; -republic-of-the-congo (250 k) ; -benin (580 k) ; -togo (380 k) ; -burkina-faso (450 k) ; -mali (420 k) ; -guinea (300 k) ; -madagascar (520 k)
-- NapoleonCat, Maroc : https://stats.napoleoncat.com/linkedin-users-in-morocco/2025/12/ (7,02 M, déc. 2025)
-- Intelpoint (écarté, Tunisie 322 k) : https://intelpoint.co/insights/the-number-of-linkedin-users-in-north-america-is-3-3-times-more-than-all-the-african-regions-combined/
-- Effectifs bancaires : voir `excellence/profondeur-portes-2026-10-27.md` (CB-UMOA 2023, BCT, BAM, GPBM)
-- Pages Xelanc relevées le 31/10 : https://xelanc.org/equipes/ ; /membership/ ; /competences/ ; /certificats/financier-entreprise/ ; /certificats/charge-affaires-entreprise/
-- Pages FIA : https://financite-institute-academy.com/daf-dirigeant-certificate-cdaf/ ; https://financite-institute-academy.com/business-leader/
-- Contexte interne : `excellence/linkedin-strategie-2026-10-31.md`, `profondeur-portes-2026-10-27.md`, `diagnostic-gtm-2026-10-27.md`, `plan-activation-100k.md`, `cahier-des-charges-landing-pages-univers.md`, `conversion/grille-appel-loubna.md`
-- Effectifs et membres : Commission bancaire UMOA 2023 (38 228 salariés) ; NapoleonCat (Maroc 7,02 M, Côte d'Ivoire 1,617 M) ; Osiris (Sénégal)
-- Coût par envoi des Message Ads (0,25-1,00 $) : blogs d'agences, voir stratégie du 31/10
+- DataReportal, Digital 2025, pages par pays (LinkedIn début 2025) : https://datareportal.com/reports/digital-2025-morocco ; -algeria ; -tunisia ; -mauritania ; -senegal ; -cote-divoire ; -gabon ; -cameroon ; -rwanda ; -democratic-republic-of-the-congo ; -republic-of-the-congo ; -benin ; -togo ; -burkina-faso ; -mali ; -guinea ; -madagascar
+- NapoleonCat, Maroc : https://stats.napoleoncat.com/linkedin-users-in-morocco/2025/12/
+- Effectifs bancaires : `excellence/profondeur-portes-2026-10-27.md` (CB-UMOA 2023, BCT, BAM, GPBM) ; BCEAO microfinance 12/2023
+- Site Xelanc relevé le 31/10 : /certificats/ (6 fiches), /competences/, /carrieres/, /equipes/ ; pages FIA CDAF et Business Leader
+- Interne : `excellence/linkedin-strategie-2026-10-31.md`, `gtm-state.yaml`, `plan-activation-100k.md`, `cahier-des-charges-landing-pages-univers.md`

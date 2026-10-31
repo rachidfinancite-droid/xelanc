@@ -67,6 +67,12 @@ question_marches_solvables_2026-10-28:
   avis: "pas de bascule anglo-saxonne maintenant (concurrence CFI/WSP/Coursera, CPC ≈ ×10, perte des différenciants français/SYSCOHADA/Afrique, traduction des cours et vidéos). Leviers de solvabilité d'abord : employeur payeur (B2B, licences équipes), prix et paiement adaptés (point 2), marchés francophones solvables (France, Belgique, Suisse, Canada) en test"
   porte_de_decision: "fin novembre : si la cohorte de novembre, entonnoir réparé, convertit < 2 % à J30, ouvrir un test francophone solvable à 10 €/jour ; l'anglais reste une option 2027"
 
+linkedin_bassin_principal_2026-10-31:
+  vision_rachid: "LinkedIn = vrai bassin du GTM : cibler les financiers et faire payer les employeurs ; deux métiers de départ : banques, et directions financières et comptables des entreprises"
+  avis_gtm: "d'accord sur le fond (contexte carrière, ciblage par fonction, boucle badge LinkedIn, solvabilité via l'employeur) ; deux mouvements distincts : B2C ciblé (professionnel, remboursé ou non) et vrai B2B (licences Équipes vendues aux DRH, DAF, responsables formation) ; Meta reste le volume"
+  points_a_trancher: ["réouverture du B2B mis en pause le 08/10", "offre Équipes : prix par siège, pilote, facture, tableau de suivi manager", "porte 2 élargie aux comptables (direction financière ET comptable)"]
+  leviers: ["calendrier : budgets formation 2027 arbitrés de novembre à janvier", "fonds de formation employeurs (Maroc : CSF/OFPPT ; Côte d'Ivoire : FDFP ; Sénégal : 3FPT) à vérifier pour la formation en ligne", "8 banques déjà clientes de Financité"]
+
 audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 

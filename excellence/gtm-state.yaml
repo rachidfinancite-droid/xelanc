@@ -92,6 +92,11 @@ decisions_b2b_2026-10-31:   # Rachid
   vigilance_capacite: "Loubna porte aussi la conversion des particuliers : prévoir les 2 conseillers B2C pour la libérer sur les banques"
   lecture_gtm: "2-3 banques × 50 accès = 100-150 accès par mois (pas 400-500 par mois : 400-500 = stock cumulé après ≈ 3 mois de signatures) ; 150 accès × 249 € ≈ 37 k€ facturés par mois [H]"
 
+risque_image_prix_b2b_2026-10-31:
+  constat_rachid: "les banques n'achètent pas ce qui paraît bon marché ; xelanc.org avec des cours à 12-19 € fait cheap"
+  releve_site_31_10: "cours à l'unité à 19 € sur /evaluation-entreprise/ ; /equipes/ affiche 249 €/collaborateur/an (moins cher que l'annuel individuel à 299 €) et, sur la même page, le mensuel à 29 € ; « 2 mois offerts » sur /membership/ [M]"
+  recommandation_gtm: "séparer les deux portes d'entrée : xelanc.org pour les particuliers ; une entrée entreprises sans prix publics ni panier (« demander une démonstration ») portée par Financité Institute et la plateforme Xelanc ; prix entreprise sur devis, au-dessus du prix individuel par accès avant remise de volume, vendus en programmes (plateforme + parcours métier + certification + lancement + rapports) ; retirer les cours à l'unité de la vitrine ; pas d'offre fondateurs « à vie »"
+
 audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 

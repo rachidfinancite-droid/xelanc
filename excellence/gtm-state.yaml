@@ -83,6 +83,13 @@ zones_ombre_b2b_linkedin_2026-10-31:   # regard indépendant demandé par Rachid
   - "cycle B2B de 2 à 6 mois : peu de cash avant février ; l'objectif 100 k$ en mars reste porté par d'autres lignes"
   - "dispersion : Meta 20 villes, LinkedIn, Google, SEO, landing pages, Black Friday, Advisory, bootcamps, avec une équipe de vente d'une personne"
 
+decisions_b2b_2026-10-31:   # Rachid
+  facturation: "hors Maroc : Excellence (Xelanc) facture et encaisse en devises ; programmes sur mesure : facturation Financité"
+  offres_banques: ["accès bibliothèque (places), la banque monte son projet", "partenariat : nous montons le programme, facturé via Financité ; même logique pour les entreprises"]
+  posture: "les banques sont notre clientèle : sensibiliser, être présent, envoyer des signaux pendant 3-4 mois, puis 2-3 banques par mois à ≈ 50 accès ; équipe dédiée et approche structurée"
+  b2b: "rouvert (fin de la pause du 08/10)"
+  lecture_gtm: "2-3 banques × 50 accès = 100-150 accès par mois (pas 400-500 par mois : 400-500 = stock cumulé après ≈ 3 mois de signatures) ; 150 accès × 249 € ≈ 37 k€ facturés par mois [H]"
+
 audits:
   - {date: 2026-10-27, quoi: "agent SEO", fichier: excellence/diagnostic-seo-2026-10-27.md, verdict: "travail de fond solide (98 URL, 20 fiches carrières, 20 notions, 7 guides IA, technique propre) ; manquent les 2 pages de porte, la conversion dans le corps, le Maroc (FCFA partout), la mesure GA4 ; porte entreprise sous-couverte (5 fiches contre 12 banque)"}
 

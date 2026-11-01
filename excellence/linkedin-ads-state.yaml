@@ -130,3 +130,28 @@ agences_par_banque:
     groupes_marocains_UEMOA: "ABI/Banque Atlantique 16,3 %, Attijariwafa 8,9 %, BOA 8,6 % = 33,8 % des guichets UEMOA ≈ 1 090 agences [M part × E]"
     top10_ordre_attaque: ["1 Bank of Africa (groupe) 97", "2 Attijariwafa bank 85", "3 Banque Populaire / ABI 81", "4 Société Générale (Afrique, avant cessions) 73", "5 Ecobank 65", "6 CIH Bank 63", "7 Coris 61", "8 Crédit Agricole du Maroc 58", "9 Oragroup 54", "10 NSIA 50"]
     questions_rachid: ["groupes déjà rencontrés au siège", "personnes réellement formées par agence", "agences de 2-3 banques connues en RDC/Cameroun/Guinée", "introduction BOA Maroc vers les filiales"]
+
+# --- Accès LinkedIn configuré le 2026-11-01 (via Supermetrics, source LIA) ---
+acces_linkedin_2026-11-01:
+  connexion: "Supermetrics, équipe « Team xelancmarketing » (login xelancmarketing@gmail.com) — lecture + manage_campaign"
+  compte_de_travail: "382016523 « Individual Account » (EUR) — désigné par Rachid, les autres comptes sont anciens et abandonnés"
+  comptes_abandonnes: ["502223556 FINANCITE INSTITUTE", "502815296 ESPACE LANCITE", "509288991", "545860224", "545880198", "558600765 (Booster)"]
+  etat_du_compte_382016523:
+    groupes_de_campagnes: ["Xelanc Notoriete (1245452773, créé 2026-10-31)", "xelanc (1242429393, créé 2026-10-28)", "Default Campaign Group"]
+    diffusion_90_jours: "aucune donnée (0 dépense, 0 impression, 0 clic)"
+    conversions_definies: "aucune"
+    insight_tag: "aucune donnée de domaine remontée"
+    audiences_enregistrees: "aucune"
+    images_enregistrees: "aucune"
+    historique_modifications: "vide"
+    facturation: "pas de BILLING_HOLD sur ce compte (les groupes sont RUNNABLE)"
+  limites_connecteur:
+    - "reach_estimate (prévision d'audience) NON supporté pour LinkedIn par Supermetrics → les tailles d'audience se lisent à la main dans Campaign Manager, ou via Adspirer"
+    - "recommendations non supporté ; pas de ciblage par pays dans targeting_search (les pays se règlent dans manage_campaign via locations)"
+    - "campaign_and_resource_get renvoie les groupes de campagnes, pas les campagnes elles-mêmes"
+    - "images seulement pour les créas ; Message Ads / InMail non confirmés"
+  ids_de_ciblage_utiles:
+    industrie_banking: "urn:li:industry:41"
+    industrie_investment_banking: "urn:li:industry:45"
+    seniorite_director: "urn:li:seniority:6"
+    fonction_finance: "urn:li:function:10"

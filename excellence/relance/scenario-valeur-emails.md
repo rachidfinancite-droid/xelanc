@@ -35,7 +35,9 @@ Chaque email ouvre par le plus grand bénéfice, le métier, puis montre un bén
 ## Phase 1 · La proposition de valeur (6 emails, un tous les deux jours)
 
 ### E1 · J0 · Six parcours métiers certifiants, un seul abonnement
+**Surtitre** : La première plateforme francophone de parcours métiers certifiants
 **Objet** : 6 parcours métiers certifiants, dans un seul abonnement
+**Version HTML** : `html/e1-parcours-certifiants.html` (envoyée en test à Rachid le 04/11)
 **Aperçu** : Séparément, ils valent 884 €. Avec l'annuel : 299 €.
 
 Bonjour {{ contact.PRENOM }},

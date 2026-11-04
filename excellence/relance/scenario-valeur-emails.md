@@ -19,7 +19,7 @@ Deux idées portent tout le reste : **XELANC ne vend pas des cours, il mène à 
 
 | # | Bénéfice | Ce qu'on montre | Preuve |
 |---|---|---|---|
-| 1 | **Un métier, pas des cours** | Chaque parcours mène à un poste : chargé d'affaires PME, analyste risque crédit, banquier conseil, contrôleur de gestion, directeur financier, analyste fusions-acquisitions… | 35 fiches métiers sur /carrieres/, 6 certificats métiers |
+| 1 | **6 parcours métiers certifiants dans un seul abonnement** | Chaque parcours : 5 compétences validées par quiz, examen final de 60 min, certificat vérifiable, 6 à 8 semaines. Vendus un par un 139 à 159 €, soit 884 € les six ; tous inclus dans l'annuel à 299 € | Pages /certificats/ et /membership/, relevées le 04/11 |
 | 2 | **Votre IA, qui travaille avec vous** | On dialogue avec elle comme avec un collègue expert : question, dossier, calcul, note. Elle s'appuie sur les contenus de la plateforme ⚠ | xelia.xelanc.org ⚠ |
 | 3 | **Un outil de travail pour chaque jour** | Calculateurs, modèles Excel, fiches, glossaire : on s'en sert au bureau dès le lendemain. 36 000 ressources ⚠ | /outils/, /ressources/ |
 | 4 | **Apprendre en faisant le vrai travail** | Un dossier réel mené du début à la fin, et une méthode pour vérifier l'IA à chaque étape | Dossier Atlas, protocole en 3 contrôles |
@@ -34,24 +34,27 @@ Chaque email ouvre par le plus grand bénéfice, le métier, puis montre un bén
 
 ## Phase 1 · La proposition de valeur (6 emails, un tous les deux jours)
 
-### E1 · J0 · Votre prochain métier
-**Objet** : {{ contact.PRENOM }}, quel métier de la finance visez-vous ?
-**Aperçu** : XELANC ne vend pas des cours. Il vous mène à un métier.
+### E1 · J0 · Six parcours métiers certifiants, un seul abonnement
+**Objet** : 6 parcours métiers certifiants, dans un seul abonnement
+**Aperçu** : Séparément, ils valent 884 €. Avec l'annuel : 299 €.
 
 Bonjour {{ contact.PRENOM }},
 
-On ne se forme pas pour collectionner des cours. On se forme pour un poste : chargé d'affaires, analyste risque, contrôleur de gestion, directeur financier…
+XELANC ne vous vend pas des cours. Il vous mène à un métier.
 
-C'est ainsi qu'est construit XELANC. Vous choisissez le métier que vous visez, et la plateforme vous y mène : les compétences du poste, les outils du poste, les dossiers du poste, puis le certificat qui le prouve.
+Chaque parcours suit l'ordre du métier : 5 compétences, chacune validée par un quiz, puis un examen final de 60 minutes et un certificat vérifiable. Comptez 6 à 8 semaines par parcours, à votre rythme.
 
-Regardez les métiers que nous préparons :
-- [Chargé d'affaires PME](https://xelanc.org/carrieres/charge-affaires-pme/)
-- [Analyste risque crédit](https://xelanc.org/carrieres/analyste-risque-credit/)
-- [Contrôleur de gestion](https://xelanc.org/carrieres/controleur-de-gestion/)
-- [Directeur financier](https://xelanc.org/carrieres/directeur-financier/)
-- [Tous les métiers](https://xelanc.org/carrieres/)
+Voici les six parcours métiers certifiants :
+- [**Analyste financier risque**](https://xelanc.org/certificats/analyste-financier-risque/) : transformer des comptes en décision de crédit, défendable en comité.
+- [**Chargé d'affaires entreprise**](https://xelanc.org/certificats/charge-affaires-entreprise/) : prospecter, comprendre le client et financer sa croissance.
+- [**Banquier conseil**](https://xelanc.org/certificats/banquier-conseil/) : conseiller le dirigeant et développer son portefeuille dans la durée.
+- [**Financier d'entreprise**](https://xelanc.org/certificats/financier-entreprise/) : le bras droit financier du dirigeant, du diagnostic à la levée de dette.
+- [**Analyste financier corporate**](https://xelanc.org/certificats/analyste-financier-corporate/) : expliquer la performance, construire les prévisions, éclairer les décisions.
+- [**Investment banker**](https://xelanc.org/certificats/investment-banker/) : évaluation, fusions-acquisitions et LBO.
 
-[Bouton] **Je choisis mon métier et je m'abonne**
+Achetés un par un, ces six parcours coûtent 884 €. Avec l'abonnement annuel, vous les avez tous, pour 299 € : vous commencez par le métier que vous visez, et vous continuez avec les autres.
+
+[Bouton] **Je choisis mon parcours et je m'abonne**
 
 Rachid El Maataoui
 Financité Institute · XELANC
@@ -65,7 +68,7 @@ Bonjour {{ contact.PRENOM }},
 Avec votre abonnement XELANC, vous n'êtes jamais seul devant un dossier. Vous dialoguez avec votre IA :
 - vous lui posez une question de finance, elle vous répond en français, avec vos normes (SYSCOHADA, CGNC) ;
 - vous lui soumettez un cas, elle vous guide pas à pas ;
-- elle s'appuie sur les ressources de la plateforme ⚠.
+- elle répond sur chaque leçon de la plateforme : 1 question par jour en mensuel, 5 en annuel, sans limite en Premium.
 
 Exemple, posé cette semaine : *« Comment retraiter un crédit-bail dans l'analyse d'une PME en SYSCOHADA ? »*
 [capture de la réponse ⚠]

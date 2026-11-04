@@ -13,131 +13,146 @@ Variables Brevo : `{{ contact.PRENOM }}`. Expéditeur : Rachid El Maataoui (text
 
 ---
 
-## Les bénéfices retenus, du plus fort au plus faible
+## Les bénéfices retenus (révisés par Rachid le 04/11)
 
-| # | Bénéfice | Pourquoi il porte | Preuve |
+Deux idées portent tout le reste : **XELANC ne vend pas des cours, il mène à un métier**, et **la plateforme est un outil de travail augmenté par votre IA**.
+
+| # | Bénéfice | Ce qu'on montre | Preuve |
 |---|---|---|---|
-| 1 | **Un tuteur IA qui répond à vos questions de finance, à toute heure, en français** | Personne ne l'a dans nos marchés. C'est concret et ça se montre en une capture | xelia.xelanc.org ⚠ |
-| 2 | **Toute la bibliothèque du métier dans un seul abonnement** | La richesse : 36 000 ressources ⚠, modèles Excel, fiches métiers, glossaire, guides IA | Site |
-| 3 | **Apprendre sur un vrai dossier, du début à la fin** | Le fil rouge Atlas : une demande de crédit menée de la liasse fiscale à la note de comité. Aucun concurrent ne le fait | Benchmark du 23/10 |
-| 4 | **Utiliser l'IA sans se tromper devant un comité** | Un protocole de vérification en 3 contrôles, dans chaque capsule. La peur n°1 des banquiers : l'IA qui invente | Benchmark du 23/10 |
-| 5 | **Vos normes : SYSCOHADA, CGNC, PCG** | Les autres plateformes sont en US GAAP ou IFRS génériques, et en anglais | Benchmark du 23/10 |
-| 6 | **Un certificat vérifiable, à publier sur LinkedIn** | La reconnaissance professionnelle est ce que nos marchés achètent | Pages /certificats/ |
-| 7 | **Des capsules de 3 à 5 minutes, sur téléphone** | Lève l'objection du temps. 97 % des achats se font sur téléphone | Historique Meta |
-| 8 | **Le prix de tout ça : moins de 25 € par mois** | Ancrage : un séminaire de 2 jours sur l'IA en finance coûte 1 590 € HT chez Cegos | Benchmark du 23/10 |
+| 1 | **Un métier, pas des cours** | Chaque parcours mène à un poste : chargé d'affaires PME, analyste risque crédit, banquier conseil, contrôleur de gestion, directeur financier, analyste fusions-acquisitions… | 35 fiches métiers sur /carrieres/, 6 certificats métiers |
+| 2 | **Votre IA, qui travaille avec vous** | On dialogue avec elle comme avec un collègue expert : question, dossier, calcul, note. Elle s'appuie sur les contenus de la plateforme ⚠ | xelia.xelanc.org ⚠ |
+| 3 | **Un outil de travail pour chaque jour** | Calculateurs, modèles Excel, fiches, glossaire : on s'en sert au bureau dès le lendemain. 36 000 ressources ⚠ | /outils/, /ressources/ |
+| 4 | **Apprendre en faisant le vrai travail** | Un dossier réel mené du début à la fin, et une méthode pour vérifier l'IA à chaque étape | Dossier Atlas, protocole en 3 contrôles |
+| 5 | **La reconnaissance** | Un certificat vérifiable, avec son badge LinkedIn | /certificats/ |
+| 6 | **Fait pour vous** | En français, aux normes SYSCOHADA, CGNC et PCG, avec des cas africains, en capsules de 3 à 5 minutes sur téléphone | Benchmark du 23/10 |
+| 7 | **Tout dans un seul abonnement** | Moins de 25 € par mois, contre 1 590 € HT pour un séminaire de 2 jours | /membership/ |
+| 8 | **Une plateforme qui grandit** | De nouveaux contenus chaque semaine (fait le pont avec la phase 3) | Calendrier des sorties ⚠ |
+
+Chaque email ouvre par le plus grand bénéfice, le métier, puis montre un bénéfice précis.
 
 ---
 
 ## Phase 1 · La proposition de valeur (6 emails, un tous les deux jours)
 
-### E1 · J0 · Le tuteur IA
-**Objet** : {{ contact.PRENOM }}, posez votre question à notre IA
-**Aperçu** : Elle répond en français, aux normes SYSCOHADA et CGNC.
+### E1 · J0 · Votre prochain métier
+**Objet** : {{ contact.PRENOM }}, quel métier de la finance visez-vous ?
+**Aperçu** : XELANC ne vend pas des cours. Il vous mène à un métier.
 
 Bonjour {{ contact.PRENOM }},
 
-Une question de finance vous bloque ? Un ratio à interpréter, un retraitement, une garantie à évaluer ?
+On ne se forme pas pour collectionner des cours. On se forme pour un poste : chargé d'affaires, analyste risque, contrôleur de gestion, directeur financier…
 
-Avec votre abonnement XELANC, vous la posez à notre tuteur IA, à toute heure, depuis votre téléphone. Il répond en français, avec vos normes : SYSCOHADA, CGNC ou PCG.
+C'est ainsi qu'est construit XELANC. Vous choisissez le métier que vous visez, et la plateforme vous y mène : les compétences du poste, les outils du poste, les dossiers du poste, puis le certificat qui le prouve.
 
-Exemple, posé hier : *« Comment retraiter un crédit-bail dans l'analyse d'une PME en SYSCOHADA ? »*
-[capture de la réponse ⚠]
+Regardez les métiers que nous préparons :
+- [Chargé d'affaires PME](https://xelanc.org/carrieres/charge-affaires-pme/)
+- [Analyste risque crédit](https://xelanc.org/carrieres/analyste-risque-credit/)
+- [Contrôleur de gestion](https://xelanc.org/carrieres/controleur-de-gestion/)
+- [Directeur financier](https://xelanc.org/carrieres/directeur-financier/)
+- [Tous les métiers](https://xelanc.org/carrieres/)
 
-C'est l'outil que nos abonnés ouvrent chaque jour, comme un collègue expert toujours disponible.
-
-[Bouton] **Je m'abonne et je pose ma question**
+[Bouton] **Je choisis mon métier et je m'abonne**
 
 Rachid El Maataoui
 Financité Institute · XELANC
 
-### E2 · J+2 · Toute la bibliothèque
-**Objet** : 36 000 ressources de finance, dans un seul abonnement ⚠
-**Aperçu** : Modèles Excel, fiches métiers, guides IA, dossiers réels.
+### E2 · J+2 · Votre IA
+**Objet** : Dialoguez avec votre IA de finance
+**Aperçu** : Comme un collègue expert, disponible à toute heure.
 
 Bonjour {{ contact.PRENOM }},
 
-Ce que vous obtenez avec un abonnement XELANC, concrètement :
+Avec votre abonnement XELANC, vous n'êtes jamais seul devant un dossier. Vous dialoguez avec votre IA :
+- vous lui posez une question de finance, elle vous répond en français, avec vos normes (SYSCOHADA, CGNC) ;
+- vous lui soumettez un cas, elle vous guide pas à pas ;
+- elle s'appuie sur les ressources de la plateforme ⚠.
 
-- les cours de votre métier, en capsules courtes ;
-- des modèles Excel prêts à l'emploi ;
-- des fiches métiers et un glossaire de la finance ;
-- des guides pour travailler avec l'IA ;
-- des dossiers réels d'entreprises et de banques.
+Exemple, posé cette semaine : *« Comment retraiter un crédit-bail dans l'analyse d'une PME en SYSCOHADA ? »*
+[capture de la réponse ⚠]
 
-En tout, 36 000 ressources ⚠. Tout est inclus, pas de module à acheter en plus.
+La plateforme n'est pas une bibliothèque qu'on lit. C'est un outil qui travaille avec vous.
 
-[Bouton] **Je découvre la bibliothèque**
+[Bouton] **Je m'abonne et je parle à mon IA**
 
 Rachid
 
-### E3 · J+4 · Le vrai dossier
-**Objet** : Un vrai dossier de crédit, de la liasse à la note de comité
-**Aperçu** : On n'apprend pas la finance par morceaux.
+### E3 · J+4 · Un outil pour chaque jour de travail
+**Objet** : Ce que vous ouvrirez demain matin au bureau
+**Aperçu** : Calculateurs, modèles Excel, fiches : prêts à l'emploi.
 
 Bonjour {{ contact.PRENOM }},
 
-Dans la plupart des formations, on voit un ratio ici, un tableau là. Puis, devant un vrai dossier, on ne sait pas par où commencer.
+XELANC se sert au travail, pas seulement en formation. Quelques exemples, à ouvrir tout de suite :
+- [Calculer un DSCR](https://xelanc.org/outils/calcul-dscr/)
+- [Calculer un BFR et un fonds de roulement](https://xelanc.org/outils/calcul-bfr-fonds-de-roulement/)
+- [Un plan de trésorerie (Excel)](https://xelanc.org/ressources/modeles-excel/plan-de-tresorerie-excel/)
+- [La notation crédit d'une PME (Excel)](https://xelanc.org/ressources/modeles-excel/notation-credit-pme-excel/)
+- [Le glossaire de la finance](https://xelanc.org/ressources/glossaire/)
 
-Chez XELANC, vous suivez un même dossier du début à la fin : Atlas, une PME qui demande un crédit. Vous partez de sa liasse fiscale, vous faites les retraitements, l'analyse, l'évaluation du risque, et vous rédigez la note pour le comité.
+Avec l'abonnement, vous avez toute la boîte à outils de votre métier : 36 000 ressources ⚠, et votre IA pour vous en servir.
 
-À la fin, vous avez fait le travail, pas seulement regardé quelqu'un le faire.
-
-[Bouton] **Je commence le dossier Atlas**
+[Bouton] **Je m'abonne et j'ouvre ma boîte à outils**
 
 Rachid
 
-### E4 · J+6 · L'IA sans se tromper
-**Objet** : L'IA invente parfois. Voici comment ne pas se faire piéger
-**Aperçu** : 3 contrôles, dans chaque capsule.
+### E4 · J+6 · Apprendre en faisant le vrai travail
+**Objet** : Un vrai dossier, du début à la fin
+**Aperçu** : Et une méthode pour ne jamais se faire piéger par l'IA.
 
 Bonjour {{ contact.PRENOM }},
 
-L'IA va vite. Mais elle se trompe parfois avec assurance, et devant un comité de crédit, une erreur coûte cher.
+Devant un vrai dossier, beaucoup ne savent pas par où commencer. Chez XELANC, vous apprenez en faisant le travail du métier.
 
-C'est pourquoi chaque capsule XELANC applique la même méthode : 3 contrôles pour vérifier ce que l'IA vous donne, avant de l'utiliser.
+Vous suivez un même dossier du début à la fin : Atlas, une PME qui demande un crédit. De sa liasse fiscale aux retraitements, de l'analyse au risque, jusqu'à la note pour le comité.
 
-Vous gagnez la vitesse de l'IA, sans perdre la rigueur du métier. C'est ce que les banques attendent maintenant de leurs analystes.
+À chaque étape, vous utilisez l'IA, et vous la vérifiez avec 3 contrôles. Vous gagnez sa vitesse sans perdre la rigueur du métier.
 
-[Bouton] **J'apprends à utiliser l'IA correctement**
+[Bouton] **Je m'abonne et je commence le dossier**
 
 Rachid
 
-### E5 · J+8 · Le certificat
-**Objet** : {{ contact.PRENOM }}, votre certificat sur LinkedIn
-**Aperçu** : Vérifiable en ligne par n'importe quel recruteur.
+### E5 · J+8 · La reconnaissance
+**Objet** : {{ contact.PRENOM }}, votre métier sur LinkedIn
+**Aperçu** : Un certificat vérifiable par n'importe quel recruteur.
 
 Bonjour {{ contact.PRENOM }},
 
-Ce que vous apprenez doit se voir.
+Ce que vous savez faire doit se voir.
 
-Avec l'abonnement annuel, vous passez vos évaluations et vous obtenez un certificat XELANC, par Financité Institute :
-- Analyste financier risque, Chargé d'affaires entreprise, Banquier conseil, Financier d'entreprise, Analyste financier corporate ou Investment banker ;
+Au bout de votre parcours, vous obtenez le certificat de votre métier, par Financité Institute :
+- [Analyste financier risque](https://xelanc.org/certificats/analyste-financier-risque/), [Chargé d'affaires entreprise](https://xelanc.org/certificats/charge-affaires-entreprise/), [Banquier conseil](https://xelanc.org/certificats/banquier-conseil/), [Financier d'entreprise](https://xelanc.org/certificats/financier-entreprise/), [Analyste financier corporate](https://xelanc.org/certificats/analyste-financier-corporate/) ou [Investment banker](https://xelanc.org/certificats/investment-banker/) ;
 - vérifiable en ligne par un recruteur ou votre direction ;
 - avec son badge, à publier sur votre profil LinkedIn.
 
 [visuel d'un vrai certificat ⚠]
 
-Ce n'est pas un diplôme d'État. C'est la preuve, vérifiable, que vous savez faire.
+Ce n'est pas un diplôme d'État. C'est la preuve, vérifiable, que vous savez faire le métier.
 
-[Bouton] **Je choisis mon certificat**
+[Bouton] **Je m'abonne et je vise mon certificat**
 
 Rachid
 
-### E6 · J+10 · Le prix de tout ça
-**Objet** : Tout cela pour moins de 25 € par mois
-**Aperçu** : Le prix d'un séminaire de 2 jours, c'est 1 590 €.
+### E6 · J+10 · Tout, dans un seul abonnement
+**Objet** : Votre métier, votre IA, vos outils : moins de 25 € par mois
+**Aperçu** : Un séminaire de 2 jours coûte 1 590 €.
 
 Bonjour {{ contact.PRENOM }},
 
-Un séminaire de deux jours sur l'IA en finance coûte environ 1 590 € HT en France.
+Récapitulons ce que vous donne l'abonnement annuel XELANC :
+- le parcours vers votre métier, et son certificat ;
+- votre IA, pour dialoguer et travailler ;
+- toute la boîte à outils : calculateurs, modèles Excel, fiches, glossaire ;
+- de vrais dossiers, et une méthode pour vérifier l'IA ;
+- en français, à vos normes, en capsules de 3 à 5 minutes sur téléphone ;
+- et de nouveaux contenus chaque semaine.
 
-L'abonnement annuel XELANC, c'est 299 € pour l'année : moins de 25 € par mois. Pour ce prix, le tuteur IA, toute la bibliothèque, le dossier Atlas, la méthode de vérification et vos certificats. En capsules de 3 à 5 minutes, sur votre téléphone, à votre rythme.
+Le tout pour 299 € par an, soit moins de 25 € par mois. Un séminaire de deux jours sur l'IA en finance coûte environ 1 590 € HT.
 
 Vous payez par Mobile Money ou par carte. Vos accès s'ouvrent tout de suite.
 
 [Bouton] **Je m'abonne pour 299 €**
 
-Si vous avez une question avant de vous décider, répondez simplement à cet email, ou écrivez à Loubna sur WhatsApp : [lien].
+Une question avant de vous décider ? Répondez à cet email, ou écrivez à Loubna sur WhatsApp : [lien].
 
 Rachid
 
@@ -149,7 +164,7 @@ Hors de la fenêtre de 24 h, il faut un **modèle Meta validé**. Proposition de
 
 > Bonjour {{1}}, c'est Loubna, de XELANC (Financité Institute). Je vous ai envoyé par email une présentation de [{{2}}]. Si vous voulez, je vous montre en 2 minutes comment ça marche sur votre téléphone. Je vous envoie le lien ?
 
-- `{{2}}` : « notre tuteur IA » (après E1), « le dossier Atlas » (après E3), « votre certificat » (après E5).
+- `{{2}}` : « les métiers que nous préparons » (après E1), « votre IA » (après E2), « le dossier Atlas » (après E4), « votre certificat » (après E5).
 - Envoyer seulement si l'email n'a pas été ouvert, ou s'il a été cliqué sans paiement.
 
 ---

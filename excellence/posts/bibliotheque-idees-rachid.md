@@ -28,6 +28,7 @@ Règles :
 | C. Coulisses du conseil | Ce que Rachid a vu en 30 ans de missions auprès des dirigeants et des groupes | 1 |
 | D. Posture, leadership et carrière | Peur, confort, ambition, montée en compétence | 2 |
 | E. Finance et IA | Ce que l'IA change dans les métiers de la finance | 1 |
+| F. Stratégie, acquisitions et décisions | Leçons de stratégie et de M&A tirées des interventions de Rachid et de l'histoire des entreprises | 1 |
 
 ---
 
@@ -583,3 +584,66 @@ Et les autres indispensables.
   - le parallèle « formateurs en finance / formateurs en IA » ;
   - la chute « obsolètes / indispensables ».
 - Option de fin, si Rachid veut citer un cours : « C'est ce que j'ai construit dans le cours Analyse financière à l'IA. »
+
+---
+
+## F. Stratégie, acquisitions et décisions
+
+### F1. Manager, c'est prévoir : le timing des acquisitions (Vivendi)
+
+- **Statut** : brouillon
+- **Matière de Rachid** :
+  - dans ses interventions sur les stratégies d'acquisition, il soutient que le timing de l'achat est l'un des grands facteurs de succès ;
+  - il cite l'exemple du « groupe UND » (nom à confirmer) et celui de Vivendi, qui lui reste en mémoire ;
+  - au début des années 2000, en pleine bulle Internet, Vivendi a multiplié les acquisitions. Quand la bulle s'est dégonflée, la dette est devenue difficile à rembourser ;
+  - avant l'effondrement, lors d'une assemblée générale, un petit porteur s'adresse à l'ex-patron de Vivendi : « Jean-Marie, je sais que tu me reconnais, j'étais ton professeur d'économie. Je t'ai toujours dit : manager, c'est prévoir. Et toi, tu n'as rien vu. » ;
+  - en 2026, manager, c'est toujours prévoir, et beaucoup de dirigeants ne voient rien venir ;
+  - il recommande un livre sur « la myopie des dirigeants ».
+- **Faits vérifiés** (08/11/2026) :
+  - environ 100 Md€ d'acquisitions sous Jean-Marie Messier, le plus souvent payées en actions (Les Echos, 07/2002), avec une dette très lourde (Le Temps) ;
+  - pertes records en 2002 ; démission de Messier en juillet 2002 (Wikipédia, SEC).
+- **À confirmer par Rachid** :
+  - le « groupe UND » ;
+  - la source de l'anecdote de l'assemblée générale (non retrouvée dans la presse) ;
+  - le titre exact et l'auteur du livre (aucun livre intitulé « La myopie des dirigeants » trouvé).
+- **Public** : dirigeants, administrateurs, M&A, DAF.
+- **Objectif** : portée et partages (histoire connue, anecdote forte, leçon actuelle).
+- **Cours lié (option)** : Évaluation d'entreprise, ou un cours sur les stratégies d'acquisition s'il existe.
+
+#### Brouillon v1
+
+**Carte visuelle** :
+> **« Manager, c'est prévoir.**
+> **Et toi, tu n'as rien vu. »**
+
+**Texte** :
+
+Quand j'interviens sur les stratégies d'acquisition, je défends toujours la même idée.
+L'un des grands facteurs de succès d'une acquisition, c'est le timing de l'achat.
+
+Un exemple m'est resté gravé.
+Vivendi, au début des années 2000.
+En pleine bulle Internet, le groupe achète à tour de bras.
+Près de 100 milliards d'euros d'acquisitions.
+Au plus haut des prix.
+
+Puis la bulle éclate.
+Les actifs se dégonflent.
+La dette, elle, reste.
+2002 : des pertes records.
+
+Avant la chute, lors d'une assemblée générale, un petit porteur prend la parole.
+Il s'adresse au patron :
+« Jean-Marie, je sais que tu me reconnais. J'étais ton professeur d'économie.
+Je t'ai toujours dit : manager, c'est prévoir.
+Et toi, tu n'as rien vu. »
+
+En 2026, manager, c'est toujours prévoir.
+Et beaucoup de dirigeants ne voient toujours rien venir.
+
+Un livre en parle très bien : [titre et auteur à confirmer]. À lire.
+
+**Notes** :
+- Récit de Rachid ; chiffres Vivendi vérifiés.
+- Le « groupe UND » est retiré du texte en attendant confirmation.
+- Si Rachid n'a pas été témoin direct de l'assemblée générale, écrire « On raconte qu'un petit porteur… » pour rester exact.

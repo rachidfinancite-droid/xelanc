@@ -21,7 +21,7 @@ Règles :
 
 | Fiche | Sujet | Statut | Cite Excellence |
 |---|---|---|---|
-| A1 | La peur des banquiers | v8 (texte de Rachid), fin à confirmer | Non (décision Rachid 08/11 : sans renvoi à Xelanc ni au cours) |
+| A1 | La peur des banquiers | v9 (texte de Rachid, fin positive), à valider | Non (décision Rachid 08/11 : sans renvoi à Xelanc ni au cours) |
 | C1 | La veille de la cession : 80 contre 45 | Brouillon v1 | Option : Évaluation d'entreprise |
 | D1 | Entreprendre sans créer d'entreprise | Brouillon v1 | Non |
 | D2 | Les limites des dirigeants : Porsche | Brouillon v1 | Non |
@@ -47,7 +47,7 @@ Règles :
 
 ### A1. La peur bleue des banquiers
 
-- **Statut** : v8, texte de Rachid mis au propre, fin à confirmer (08/11).
+- **Statut** : v9, conclusion positive (08/11), à valider.
 - **Matière de Rachid** :
   - en 30 ans d'accompagnement de dirigeants, une chose l'a frappé : beaucoup ont une peur bleue des banquiers ;
   - plusieurs lui ont demandé de les accompagner uniquement pour cette raison ;
@@ -62,6 +62,61 @@ Règles :
   - ce que Rachid lui a répondu ;
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
+
+#### Version v9 : conclusion positive, qui ménage les banquiers (08/11)
+
+Consignes de Rachid pour la fin :
+- rester positif ;
+- montrer le rôle du banquier : il fait aussi du business, veut accompagner, veut de bons dossiers, ne veut ni contentieux ni recouvrement ;
+- ce n'est pas sa faute si on le comprend mal ;
+- mais certains banquiers (pas tous, ne pas généraliser) doivent casser cette image.
+
+**Carte visuelle** :
+> **Ils n'avaient pas peur parce qu'ils étaient faibles.**
+> **Ils avaient peur parce qu'ils ne comprenaient pas.**
+
+**Texte** :
+
+On m'a souvent appelé pour accompagner des dirigeants face à leur banque.
+Dans des levées de fonds, des restructurations, et même des négociations.
+
+Pendant longtemps, j'ai observé une chose.
+Le client que j'accompagnais aurait pu le faire seul, avec ses équipes.
+Il avait des directeurs financiers compétents.
+Il pouvait s'en sortir sans moi.
+
+J'ai fini par comprendre.
+Pour beaucoup d'entreprises, ce n'était pas la compétence qui manquait.
+C'était autre chose.
+Une chose que personne n'osait pointer.
+
+La peur du banquier.
+
+Beaucoup d'entreprises ont peur des banquiers.
+Peur de leur pouvoir.
+Ce pouvoir qu'ils ont quand on a besoin d'eux.
+Quand on dépend d'eux.
+Quand on leur cache quelque chose.
+Quand on ne sait pas comment ils pensent, ni comment ils vont réagir.
+
+Ces dirigeants n'avaient pas peur parce qu'ils étaient faibles.
+Ils avaient peur parce qu'ils ne comprenaient pas.
+Et c'est compréhensible.
+On ne négocie jamais bien avec quelqu'un qu'on ne comprend pas.
+
+Pour être honnête, la peur ne vient pas du banquier.
+Elle vient de ce qu'on ne comprend pas de lui.
+
+Car le banquier, lui aussi, fait du business.
+Il veut accompagner ses clients.
+Il veut les meilleurs dossiers.
+Il ne veut ni contentieux, ni recouvrement.
+
+Quand ces conditions sont réunies, le banquier devient un allié.
+Parfois même.. un ange.
+
+Ce n'est pas sa faute si on le comprend mal.
+Mais certains banquiers, pas tous, gagneraient à casser cette image.
 
 #### Version v8 : texte dicté par Rachid, mis au propre (08/11)
 

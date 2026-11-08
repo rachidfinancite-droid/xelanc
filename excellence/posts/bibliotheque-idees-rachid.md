@@ -17,6 +17,17 @@ Règles :
 - varier les dénouements (pas toujours « je l'ai sauvé ») ;
 - mesurer les visites de la page du cours cité la semaine du post (GA4).
 
+## Tableau de bord des posts (mis à jour le 08/11)
+
+| Fiche | Sujet | Statut | Cite Excellence |
+|---|---|---|---|
+| A1 | La peur des banquiers | Brouillon v6, en affinage | **Oui** (décision Rachid 08/11) : cours Levée de dette bancaire |
+| C1 | La veille de la cession : 80 contre 45 | Brouillon v1 | Option : Évaluation d'entreprise |
+| D1 | Entreprendre sans créer d'entreprise | Brouillon v1 | Non |
+| D2 | Les limites des dirigeants : Porsche | Brouillon v1 | Non |
+| E1 | L'IA et le capital humain | Brouillon v3 | Non |
+| F1 | Manager, c'est prévoir : Vivendi | Brouillon v1, 3 points à confirmer | Option |
+
 ---
 
 ## Catégories

@@ -36,7 +36,7 @@ Règles :
 
 ### A1. La peur bleue des banquiers
 
-- **Statut** : en pause (Rachid y reviendra). Retenir la direction narrative v5 : l'énigme « pourquoi m'appellent-ils ? », puis la révélation « c'était la peur ».
+- **Statut** : brouillon v6 en cours d'affinage (reprise du 08/11).
 - **Matière de Rachid** :
   - en 30 ans d'accompagnement de dirigeants, une chose l'a frappé : beaucoup ont une peur bleue des banquiers ;
   - plusieurs lui ont demandé de les accompagner uniquement pour cette raison ;
@@ -51,6 +51,55 @@ Règles :
   - ce que Rachid lui a répondu ;
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
+
+#### Brouillon v6 : récit de Rachid (v4) écrit en narratif (v5), en hauteur
+
+**Carte visuelle** :
+> **Ils n'avaient pas peur parce qu'ils étaient faibles.**
+> **Ils avaient peur parce qu'ils ne comprenaient pas.**
+
+**Texte** :
+
+On m'a souvent appelé pour accompagner des dirigeants face à leurs banques.
+Des levées de fonds. Des restructurations.
+
+Et pendant longtemps, une question m'a intrigué.
+Pourquoi moi ?
+
+Ils avaient des équipes solides.
+Des directeurs financiers compétents.
+Ils pouvaient s'en sortir seuls.
+
+J'ai fini par comprendre.
+Ce n'était pas la compétence qui leur manquait.
+C'était autre chose. Que personne n'osait dire.
+
+La peur.
+La peur du banquier.
+
+De son pouvoir, surtout.
+Ce pouvoir qu'il a quand on a besoin de lui.
+Quand on dépend de lui.
+Quand on lui cache quelque chose.
+Quand on ne sait pas comment il pense.. ni comment il va réagir.
+
+Ces dirigeants n'avaient pas peur parce qu'ils étaient faibles.
+Ils avaient peur parce qu'ils ne comprenaient pas.
+
+Et on ne négocie jamais bien avec quelqu'un qu'on ne comprend pas.
+
+Je ne peux plus accompagner tout le monde.
+Alors j'ai tout transmis dans un cours : Levée de dette bancaire.
+
+Comprendre son banquier, c'est déjà ne plus en avoir peur.
+
+**Notes** :
+- Arc et mots de Rachid (v4).
+- Ajouts à valider : « Que personne n'osait dire », « on ne négocie jamais bien avec quelqu'un qu'on ne comprend pas », la chute.
+- « C'était mon absence de peur » (v5) est retiré, pour rester en hauteur sans se mettre en avant.
+- Chutes alternatives :
+  - « La peur ne vient pas du banquier. Elle vient de ce qu'on ne comprend pas de lui. » ;
+  - « Comprenez votre banquier. La peur changera de camp. » (v4).
 
 #### Brouillon v5, direction narrative (référence pour la reprise)
 

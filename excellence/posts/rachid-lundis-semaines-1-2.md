@@ -1,73 +1,79 @@
-# Rachid : posts du lundi, semaines 1 et 2
+# Rachid : posts du lundi, semaines 1 et 2 (version 2)
 
-Format « hors du commun » :
-- une vérité universelle, en lignes courtes ;
-- une carte visuelle ;
-- une dernière ligne qui ramène au métier ;
-- une question pour finir.
+La version 1 a été rejetée par Rachid : trop générique, pas son style.
 
-Pas de mention de XELANC et pas de lien.
+Le style de Rachid, tiré de ses posts réels :
+- phrases courtes, avec des suspensions « .. » ;
+- des images fortes (« épicerie » contre « haute couture », « soldat du front », « monstres qui dorment ») ;
+- une conviction assumée, le regard de l'initié de la banque ;
+- une douleur nommée sans détour.
 
----
-
-## Lundi 1 : « On ne vous paie pas pour vos heures »
-
-**Carte visuelle** (fond clair, gros titre, signature RAEL ou photo de Rachid) :
-> **On ne vous paie pas pour vos heures.**
-> On vous paie pour les problèmes que vous enlevez.
-> Le jour où vous comprenez ça,
-> vous arrêtez de compter vos heures…
-> …et vous commencez à compter vos problèmes résolus.
-
-**Texte du post :**
-
-On ne vous paie pas pour vos heures.
-On vous paie pour les problèmes que vous enlevez.
-
-Celui qui reste tard ne progresse pas forcément.
-Celui qui enlève un problème à son patron, si.
-
-J'ai vu des analystes travailler 12 heures par jour pendant 10 ans… au même poste.
-Et d'autres passer devant en 3 ans.
-Ils ne travaillaient pas plus.
-Ils réglaient ce que les autres laissaient sur la table.
-
-En banque, c'est le dossier que personne ne sait structurer.
-Le client que personne n'ose rappeler.
-Le risque que personne n'a vu.
-
-Et vous, quel problème avez-vous enlevé à quelqu'un cette semaine ?
+Ces textes sont des **brouillons à valider**. Les passages entre crochets doivent être remplacés par un souvenir réel de Rachid.
 
 ---
 
-## Lundi 2 : « On ne refuse pas votre idée »
+## Lundi 1 : le financier promu, puis laissé seul
+
+**Carte visuelle :** fond sombre, une phrase :
+> **On a promu votre compétence d'hier..**
+> **et oublié de construire celle de demain.**
+
+**Texte :**
+
+Un lundi, on vous a nommé DAF.
+On vous a donné un bureau, un titre.. et les clés de la trésorerie.
+Personne ne vous a donné le reste.
+
+Le reste, c'est la réunion avec le banquier où vous sentez qu'il connaît mieux que vous les faiblesses de votre propre entreprise.
+C'est le budget que vous défendez avec des hypothèses que vous n'avez pas construites.
+C'est le dirigeant qui vous demande « combien vaut la société ? »..
+et le silence qui suit.
+
+Je rencontre ces femmes et ces hommes toutes les semaines.
+Brillants. Promus parce qu'ils étaient les meilleurs dans leur poste d'avant.
+Et laissés seuls dans le nouveau.
+
+[Souvenir réel : un DAF, une scène, une phrase qu'il vous a dite.]
+
+Ce n'est pas eux le problème.
+On a promu leur compétence d'hier.. et oublié de construire celle de demain.
+
+Le plus dur, ce n'est pas d'apprendre.
+C'est d'oser dire qu'on n'a jamais appris.
+
+---
+
+## Lundi 2 : le chargé d'affaires, coupable désigné
 
 **Carte visuelle :**
-> **On ne refuse pas votre idée.**
-> On refuse le doute que vous laissez autour.
-> Retirez le doute,
-> l'idée passe toute seule.
+> **On lui a fixé des objectifs.**
+> **Personne ne lui a donné des armes.**
 
-**Texte du post :**
+**Texte :**
 
-On ne refuse presque jamais une idée.
-On refuse le doute qu'elle laisse.
+Quand un crédit tourne mal, on cherche toujours un nom.
+Et ce nom, c'est presque toujours celui du chargé d'affaires.
 
-Un projet mal défendu meurt.
-Un projet moyen, bien défendu, passe.
+C'est lui qui a fait entrer le client.
+C'est lui qui a monté le dossier.
+C'est lui qui l'a défendu en comité.
 
-J'ai assisté à des centaines de comités de crédit.
-Les dossiers refusés n'étaient pas toujours les plus mauvais.
-C'étaient ceux où une question restait sans réponse.
-Une seule.
-Le comité ne cherche pas la perfection.
-Il cherche la question qu'on n'a pas osé se poser.
+Mais posez la question autrement.
+Qui lui a appris à lire un bilan comme un risque, et pas comme un tableau ?
+Qui lui a appris à dire non au client qu'on lui demandait d'apporter ?
+Qui l'a préparé à un comité qui cherche la faille ?
 
-Avant de présenter quoi que ce soit, je me pose toujours la même question :
-« Quelle est la question qui me fait peur ? »
-Et j'y réponds avant qu'on me la pose.
+Souvent.. personne.
+On lui a fixé des objectifs. Personne ne lui a donné des armes.
 
-Quelle est la question que vous redoutez le plus en réunion ?
+[Souvenir réel : une banque, un portefeuille dégradé, ce que vous avez constaté en arrivant.]
+
+C'est le soldat du front.
+On l'envoie au combat avec un manuel de procédures..
+puis on s'étonne de la qualité du portefeuille.
+
+Un chargé d'affaires mal formé ne coûte pas le prix d'une formation.
+Il coûte un portefeuille.
 
 ---
 
@@ -75,7 +81,7 @@ Quelle est la question que vous redoutez le plus en réunion ?
 
 - **Heure :** lundi entre 8 h et 9 h (heure de Casablanca).
 - **Image :** la carte visuelle seule, sans lien.
-- **Dans la première heure :** Rachid répond à chaque commentaire par une question de relance. Adam et Loubna commentent dans les 30 minutes, avec un vrai apport.
+- **Dans la première heure :** Rachid répond à chaque commentaire. Adam et Loubna commentent dans les 30 minutes, avec un vrai apport.
 - **À relever 7 jours après :**
   - impressions ;
   - part de vues hors réseau ;

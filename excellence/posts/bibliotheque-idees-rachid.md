@@ -43,6 +43,41 @@ Les catégories évolueront avec les idées.
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
 
+#### Brouillon v4, récit de Rachid, version courte (à valider)
+
+**Carte visuelle** :
+> **Ils n'avaient pas peur parce qu'ils étaient faibles.**
+> **Ils avaient peur parce qu'ils ne comprenaient pas.**
+
+**Texte** :
+
+On m'a souvent appelé pour accompagner des dirigeants face à leurs banques.
+Levées de fonds. Restructurations.
+
+Et souvent, je ne comprenais pas pourquoi.
+Ils avaient des équipes.
+Ils avaient les compétences.
+Ils pouvaient s'en sortir sans moi.
+
+J'ai fini par comprendre.
+Leur vrai mobile, c'était la peur.
+La peur du banquier.
+
+De son pouvoir.
+Quand on a besoin de lui.
+Quand on dépend de lui.
+Quand on lui cache quelque chose.
+Quand on ne sait pas comment il pense.
+
+Ils n'avaient pas peur parce qu'ils étaient faibles.
+Ils avaient peur parce qu'ils ne comprenaient pas.
+
+Je ne peux plus accompagner tout le monde.
+Alors j'ai tout mis dans un cours : Levée de dette bancaire.
+
+Comprenez votre banquier.
+La peur changera de camp.
+
 #### Brouillon v3, version courte et percutante (à valider)
 
 **Carte visuelle** :

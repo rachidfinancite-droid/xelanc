@@ -43,6 +43,36 @@ Les catégories évolueront avec les idées.
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
 
+#### Brouillon v3, version courte et percutante (à valider)
+
+**Carte visuelle** :
+> **Beaucoup de dirigeants ont peur de leur banquier.**
+
+**Texte** :
+
+30 ans à accompagner des dirigeants.
+Une chose rarement avouée :
+beaucoup ont peur de leur banquier.
+
+Pas par incompétence.
+Par peur.
+
+D'où vient-elle ?
+Du pouvoir qu'on lui donne.
+
+Vous avez besoin de lui : il a le pouvoir.
+Vous dépendez de lui : il a le pouvoir.
+Vous lui cachez quelque chose : il a le pouvoir.
+Vous ne savez pas comment il pense : il a tout le pouvoir.
+
+On ne craint que ce qu'on ne comprend pas.
+
+J'ai mené ces levées de dette pendant des années.
+Quand je n'ai plus pu toutes les mener, j'ai tout mis dans un cours : Levée de dette bancaire.
+
+Comprenez votre banquier.
+La peur changera de camp.
+
 #### Brouillon v2 (structure dictée par Rachid, 08/11)
 
 **Carte visuelle** :

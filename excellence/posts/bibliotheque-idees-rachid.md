@@ -27,7 +27,7 @@ Les catégories évolueront avec les idées.
 
 ### A1. La peur bleue des banquiers
 
-- **Statut** : idée
+- **Statut** : brouillon
 - **Matière de Rachid** :
   - en 30 ans d'accompagnement de dirigeants, une chose l'a frappé : beaucoup ont une peur bleue des banquiers ;
   - plusieurs lui ont demandé de les accompagner uniquement pour cette raison ;
@@ -42,3 +42,45 @@ Les catégories évolueront avec les idées.
   - ce que Rachid lui a répondu ;
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
+
+#### Brouillon v1 (à valider par Rachid)
+
+**Carte visuelle** :
+> **Beaucoup de dirigeants ont une peur bleue de leur banquier.**
+> **Personne ne l'avoue.**
+
+**Texte** :
+
+En 30 ans à accompagner des dirigeants, j'ai découvert une chose que personne n'avoue..
+
+Beaucoup ont peur de leur banquier.
+Pas un peu. Une peur bleue.
+
+Des femmes et des hommes qui ont bâti des entreprises, tenu dans les crises, négocié avec des clients redoutables..
+et qui perdent leurs moyens dans le bureau d'un chargé d'affaires.
+
+Plusieurs m'ont appelé pour une seule raison.
+Pas parce qu'ils manquaient de compétence.
+Parce qu'ils avaient peur.
+Peur de la confrontation. Peur de la négociation.
+Et, au fond, pas confiance.
+
+Même de grands groupes m'ont demandé un conseil indépendant.
+Quelqu'un qui se tienne entre eux et leurs banques.
+
+Cette peur a une raison.
+Le banquier sait lire votre entreprise..
+vous ne savez pas toujours comment il la lit.
+
+Et celui qui ne connaît pas la grille de lecture de l'autre négocie à l'aveugle.
+
+La peur ne vient pas du banquier.
+Elle vient de ce qu'on ne comprend pas de lui.
+
+Si vous vous êtes reconnu, vous n'êtes pas seul..
+vous êtes même très nombreux.
+
+**Notes** :
+- Tout le fond vient de Rachid, sauf l'explication « il sait lire votre entreprise, vous ne savez pas comment il la lit », proposée en lecture de la peur. À garder ou à remplacer par la sienne.
+- Pas de question finale : sur un sujet intime, demander de se dévoiler en commentaire freine. La dernière ligne rassure le lecteur.
+- Pas de mention de XELANC ni de lien.

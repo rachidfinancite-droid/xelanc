@@ -26,7 +26,7 @@ Règles :
 | A. Dirigeants et banquiers : ce qui se joue vraiment | Peurs, rapports de force, confiance, négociation entre dirigeants et banques | 1 |
 | B. La banque vue de l'intérieur | Comités, chargés d'affaires, risque, culture bancaire | 0 |
 | C. Coulisses du conseil | Ce que Rachid a vu en 30 ans de missions auprès des dirigeants et des groupes | 1 |
-| D. Posture, leadership et carrière | Peur, confort, ambition, montée en compétence | 1 |
+| D. Posture, leadership et carrière | Peur, confort, ambition, montée en compétence | 2 |
 | E. Finance et IA | Ce que l'IA change dans les métiers de la finance | 1 |
 
 ---
@@ -368,6 +368,78 @@ Ce n'est qu'un avis.
 **Notes** :
 - Tout vient de Rachid.
 - Seul ajout : « Une innovation qui va plus vite que soi », pour traduire « l'innovation » parmi les difficultés. À corriger si Rachid voulait dire autre chose.
+
+### D2. Les limites des dirigeants, même au sommet : le cas Porsche
+
+- **Statut** : brouillon
+- **Matière de Rachid** :
+  - il n'a jamais pris les dirigeants pour des « extraterrestres du management » et ne leur a jamais manqué de respect ;
+  - mais beaucoup de dirigeants sont très limités, même ceux qui sont propulsés au plus haut niveau ;
+  - cette réflexion lui revient en voyant ce qui arrive à Porsche.
+- **Faits Porsche** (sources consultées le 08/11/2026) :
+  - marge opérationnelle de 14,1 % en 2024, tombée à 1,1 % en 2025, avec environ 3,9 Md€ de charges exceptionnelles (Le Revenu) ;
+  - 2,7 Md€ de coûts sur les neuf premiers mois de 2025, liés en grande partie à l'abandon de la stratégie d'électrification (Reuters, 27/10/2026) ;
+  - actifs en Chine dépréciés d'environ 1 Md€ (Le Soir, 29/10/2026) ; retrait progressif de Chine (Reuters) ;
+  - ventes en baisse de 16 % sur neuf mois (octobre 2026) ;
+  - plan 2035 : 9 000 suppressions de postes, 40 % de postes d'encadrement en moins, point mort sous 200 000 voitures par an contre 279 449 livrées en 2025 (Le Revenu) ;
+  - nouveau directeur général, Michael Leiters, depuis le 1er janvier 2026 ; son prédécesseur, Oliver Blume, dirigeait en même temps Volkswagen ;
+  - premiers effets du redressement : résultat opérationnel de 1,74 Md€ sur neuf mois de 2026, contre 40 M€ un an plus tôt (Reuters, 27/10/2026).
+- **Douleur visée** : les équipes et les actionnaires qui paient les erreurs de jugement du sommet ; les dirigeants qui croient que le titre donne la vision.
+- **Public** : dirigeants, administrateurs, cadres dirigeants.
+- **Objectif** : portée et débat (actualité + prise de position).
+- **Cours lié** : aucun.
+
+#### Brouillon v1
+
+**Carte visuelle** :
+> **Plus on monte,**
+> **plus une erreur de jugement coûte cher..**
+> **et plus elle se paie par les autres.**
+
+**Texte** :
+
+Je n'ai jamais pris les dirigeants pour des extraterrestres du management.
+Et je ne leur ai jamais manqué de respect.
+
+Mais trente ans à leurs côtés m'ont appris une chose :
+beaucoup sont limités.
+Même ceux qui sont propulsés au plus haut niveau.
+
+Cette réflexion me revient en regardant Porsche.
+
+Porsche. Une marque que le monde entier envie.
+14 % de marge opérationnelle en 2024.
+1 % en 2025.
+
+Entre les deux, des décisions.
+Tout miser sur l'électrique, puis faire marche arrière : des milliards d'euros de coûts.
+Compter sur la Chine, puis s'en retirer : un milliard d'actifs dépréciés.
+Un même patron à la tête de Porsche et de Volkswagen.
+
+Aujourd'hui, la facture.
+9 000 postes supprimés d'ici 2035.
+40 % de postes d'encadrement en moins.
+Une entreprise qui doit vendre moins de voitures.. pour redevenir rentable.
+
+Depuis janvier, un nouveau patron a changé de cap.
+Les premiers chiffres remontent.
+Preuve que tout se joue au sommet.
+
+Ce ne sont ni les ingénieurs ni les ouvriers qui ont fait ces choix.
+Ce sont des choix de direction.
+
+Le titre ne donne pas la vision.
+La taille ne protège pas de l'erreur.
+Et plus on monte, plus une erreur de jugement coûte cher..
+et plus elle se paie par les autres.
+
+**Notes** :
+- Posture et thèse de Rachid ; faits Porsche vérifiés dans la presse (sources ci-dessus).
+- Ajouts à valider :
+  - « Preuve que tout se joue au sommet » ;
+  - « Ce ne sont ni les ingénieurs ni les ouvriers » ;
+  - la chute.
+- Prudence : le post attribue ces difficultés à des choix de direction. C'est une opinion, appuyée sur des faits publics, sans nommer ni attaquer de personne.
 
 ---
 

@@ -310,7 +310,7 @@ c'est l'acheteur qui la fixe.
 
 ## E. Finance et IA
 
-### E1. J'ai eu peur que l'IA me remplace
+### E1. L'IA et le capital humain : la demande explose, les compétences manquent
 
 - **Statut** : brouillon
 - **Matière de Rachid** :
@@ -325,6 +325,41 @@ c'est l'acheteur qui la fixe.
 - **Objectif** : portée et débat (sujet d'actualité, aveu personnel).
 - **Cours lié (option)** : Analyse financière à l'IA, ou l'offre Équipes.
 - **À clarifier** : « ce n'est pas la faveur des entreprises » (lu ici comme « pas dans le sens que l'on craignait »).
+
+#### Brouillon v2 (consignes de Rachid : rester en hauteur)
+
+Consignes :
+- ne pas parler de peur ni de fébrilité ;
+- la formation est l'une de ses activités, pas « son métier » ;
+- pas de détails techniques (DCF, etc.) : le message seul, vu d'en haut.
+
+**Carte visuelle** :
+> **Former à la finance, beaucoup savent le faire.**
+> **Former à la finance avec l'IA.. c'est une autre affaire.**
+
+**Texte** :
+
+Comme tous les dirigeants, je me suis posé la question.
+Que va faire l'IA à la formation et au développement du capital humain ?
+
+Deux ans plus tard, un premier constat s'impose.
+
+L'IA change beaucoup de choses.
+Mais elle ne réduit pas le besoin.
+Elle le déplace. Et elle le multiplie.
+
+Les entreprises ne cherchent plus seulement la finance.
+Elles cherchent la finance avec l'IA.
+
+Une demande forte. Immédiate.
+Et en face, je vois très peu de compétences capables d'y répondre.
+
+Former à la finance, beaucoup savent le faire.
+Former à l'IA, aussi.
+Former à la finance avec l'IA.. c'est une autre affaire.
+
+Le vrai risque n'est pas que l'IA remplace la formation.
+C'est que les entreprises ne trouvent personne pour former à ce qu'elle exige.
 
 #### Brouillon v1
 

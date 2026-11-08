@@ -326,6 +326,49 @@ c'est l'acheteur qui la fixe.
 - **Cours lié (option)** : Analyse financière à l'IA, ou l'offre Équipes.
 - **À clarifier** : « ce n'est pas la faveur des entreprises » (lu ici comme « pas dans le sens que l'on craignait »).
 
+#### Brouillon v3 : témoignage personnel, en hauteur (à valider)
+
+Consigne : garder la forme d'un témoignage personnel, au plus près des mots de Rachid, en améliorant seulement la rédaction.
+
+**Carte visuelle** :
+> **L'IA ne remplace pas la formation.**
+> **Elle élève l'exigence envers ceux qui la donnent.**
+
+**Texte** :
+
+Comme dans tous les métiers, je me suis interrogé sur l'impact de l'IA sur mes activités.
+En particulier sur la formation et le développement du capital humain, que j'accompagne depuis des années auprès des banques et des entreprises.
+
+La question méritait d'être posée : l'IA allait-elle remplacer ce que nous faisons ?
+
+Deux ans plus tard, un premier constat est là.
+Oui, l'IA va changer beaucoup de choses.
+Mais pas dans le sens que l'on imaginait.
+
+Elle est en train de créer une demande forte.
+Pas seulement de compétences en finance.
+De compétences en finance avec l'IA.
+
+Des directions financières qui veulent que leurs équipes sachent s'en servir.
+Des banques qui veulent que leurs analystes sachent la challenger.
+
+Et en face, peu de formateurs capables de l'assumer.
+Je n'en vois pas beaucoup, en tout cas.
+
+Parce que cette compétence ne s'improvise pas.
+Il faut avoir pratiqué la finance de l'intérieur, longtemps..
+et avoir mis les mains dans l'IA, sérieusement.
+
+L'IA ne remplace pas la formation.
+Elle élève l'exigence envers ceux qui la donnent.
+
+**Notes** :
+- Témoignage et constat de Rachid.
+- Ajouts à valider :
+  - les deux exemples « directions financières / banques » ;
+  - « avoir pratiqué la finance de l'intérieur.. mis les mains dans l'IA » ;
+  - la chute « élève l'exigence ».
+
 #### Brouillon v2 (consignes de Rachid : rester en hauteur)
 
 Consignes :

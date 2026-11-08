@@ -27,7 +27,7 @@ Règles :
 | B. La banque vue de l'intérieur | Comités, chargés d'affaires, risque, culture bancaire | 0 |
 | C. Coulisses du conseil | Ce que Rachid a vu en 30 ans de missions auprès des dirigeants et des groupes | 1 |
 | D. Posture, leadership et carrière | Peur, confort, ambition, montée en compétence | 0 |
-| E. Finance et IA | Ce que l'IA change dans les métiers de la finance | 0 |
+| E. Finance et IA | Ce que l'IA change dans les métiers de la finance | 1 |
 
 ---
 
@@ -305,3 +305,68 @@ c'est l'acheteur qui la fixe.
 - Tout le récit vient de Rachid.
 - Deux ajouts de rédaction à valider : « ses murs et ses machines » (traduction concrète de « actifs immobilisés ») et « Ses clients, ses équipes, son savoir-faire.. il les prenait pour rien » (conséquence de cette base défensive).
 - Option de fin, si Rachid veut citer le cours : « C'est pour eux que j'ai écrit le cours Évaluation d'entreprise. »
+
+---
+
+## E. Finance et IA
+
+### E1. J'ai eu peur que l'IA me remplace
+
+- **Statut** : brouillon
+- **Matière de Rachid** :
+  - comme dans tous les métiers, il s'est demandé quel serait l'impact de l'IA sur ses activités, la formation et le développement du capital humain ;
+  - il a craint que l'IA le remplace ;
+  - deux ans après, un premier constat : l'IA va changer beaucoup de choses, mais elle est en train de créer une forte demande. Pas seulement de compétences en finance, mais de compétences en finance avec l'IA ;
+  - peu de formateurs peuvent y répondre. Rachid en voit peu.
+- **Douleur visée** :
+  - pour les financiers : la peur d'être remplacés ;
+  - pour les dirigeants et les DRH : ne pas trouver qui peut former leurs équipes à la finance avec l'IA.
+- **Public** : DRH et responsables formation, dirigeants de banques et d'entreprises, financiers.
+- **Objectif** : portée et débat (sujet d'actualité, aveu personnel).
+- **Cours lié (option)** : Analyse financière à l'IA, ou l'offre Équipes.
+- **À clarifier** : « ce n'est pas la faveur des entreprises » (lu ici comme « pas dans le sens que l'on craignait »).
+
+#### Brouillon v1
+
+**Carte visuelle** :
+> **L'IA n'a pas remplacé les formateurs.**
+> **Elle a rendu les autres indispensables.**
+
+**Texte** :
+
+Il y a deux ans, j'ai eu peur.
+Comme beaucoup.
+
+Je me suis demandé si l'IA allait remplacer mon métier.
+Former. Transmettre. Faire grandir les équipes.
+Une machine qui explique un DCF en trente secondes.. à quoi sert encore un formateur ?
+
+Deux ans plus tard, le constat est là.
+Oui, l'IA change tout.
+Mais pas comme je le craignais.
+
+Elle n'a pas fait disparaître le besoin.
+Elle l'a fait exploser.
+
+Les banques et les entreprises ne cherchent plus seulement des financiers.
+Elles cherchent des financiers qui savent travailler avec l'IA.
+La faire produire.. et surtout la contredire.
+
+Et là, le vide est immense.
+
+Les formateurs en finance ne pratiquent pas l'IA.
+Les formateurs en IA ne connaissent pas la finance.
+Ceux qui maîtrisent les deux.. je n'en vois pas beaucoup.
+
+L'IA n'a pas remplacé les formateurs.
+Elle en a rendu certains obsolètes.
+Et les autres indispensables.
+
+**Notes** :
+- Récit et constat de Rachid.
+- Ajouts de rédaction à valider :
+  - « un DCF en trente secondes » ;
+  - « La faire produire.. et surtout la contredire » (reprend son post d'octobre sur le banquier qui doit challenger l'IA) ;
+  - le parallèle « formateurs en finance / formateurs en IA » ;
+  - la chute « obsolètes / indispensables ».
+- Option de fin, si Rachid veut citer un cours : « C'est ce que j'ai construit dans le cours Analyse financière à l'IA. »

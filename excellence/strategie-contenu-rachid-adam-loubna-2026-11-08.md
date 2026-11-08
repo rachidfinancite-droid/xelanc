@@ -60,6 +60,31 @@ Les horaires sont des hypothèses : l'historique est trop court pour calculer le
 2. « L'IA rédige déjà la note de crédit. La question qu'aucun comité ne pose encore : qui, chez vous, sait la contredire ? »
 3. « J'ai vu des centaines de dossiers de crédit refusés. Neuf fois sur dix, la raison n'était pas dans les chiffres. »
 
+**Ses posts « hors du commun » (captures LinkedIn de Rachid, 08/11) [M]**
+
+| Post | Âge | Impressions | Réactions | Commentaires | Ce qui le distingue |
+|---|---|---|---|---|---|
+| « Le travail ne fatigue pas… » (carte citation RAEL) + « La zone de confort porte très mal son nom » | 11 mois | 4 659 | 39 | 1 (+3 republications) | Vérité universelle, très courte, carte visuelle forte |
+| « Faire sortir les monstres qui dorment dans une équipe… » (visuel Neil Armstrong) | 9 mois | 4 060 (48 % hors réseau, 2 522 membres touchés) | n.d. | n.d. | Leadership et management, image intrigante. **0 abonné gagné, 15 visites du profil** |
+| « Très content pour notre client Grande Banque qui nous confie le reskilling de ses Chargés d'Affaires PME » | 11 mois-1 an | 3 794 | 21 | 1 | Annonce d'une mission réelle, photo réelle du programme, 3 blocs de compétences |
+
+Ces posts ne figuraient pas dans Metricool, qui ne remonte que 8 posts. Les chiffres sont relevés sur les captures.
+
+Ce qu'on retient :
+1. **L'universel attire les vues.** Travail, confort, leadership : ces sujets touchent au-delà de la finance, avec près de la moitié des vues hors réseau.
+2. **Les vues ne suffisent pas.** Le post Neil Armstrong n'a apporté aucun abonné, et les trois posts ont presque zéro commentaire. Sans question à la fin, sans lien visible avec le métier et sans titre de profil qui dit pourquoi le suivre, ces vues ne profitent pas à XELANC.
+3. **Une annonce de mission bancaire marche.** Le post « reskilling Grande Banque » (3 794 vues) parle d'une offre et réussit pourtant. C'est le bon modèle pour les posts qui citent XELANC ou l'offre Équipes : un fait réel, une photo réelle, le contenu du programme.
+4. **Le visuel compte.** Les trois ont une image forte (carte citation, photo réelle, visuel intrigant), alors que les posts récents, autour de 400 à 900 vues, sont surtout du texte.
+
+**Modèle du lundi (« hors du commun »)** :
+- une vérité universelle sur le travail, l'ambition ou le leadership, en 4 à 8 lignes courtes, avec une carte visuelle ;
+- une dernière ligne qui la ramène au métier : « En banque, c'est le chargé d'affaires qui… » ;
+- une question simple pour finir.
+
+**Posts qui citent XELANC** : alterner le passage de cours (agent Captage) et l'annonce de mission réelle sur le modèle « Grande Banque ».
+
+**Profil** : titre à revoir pour dire ce qu'on gagne à suivre Rachid, et mentionner XELANC. Ajouter un bouton « Suivre » et la page XELANC dans « Sélection ».
+
 **Lien avec XELANC** : mentionner @XELANC dans un post sur trois. En premier commentaire : la page /equipes/ pour les décideurs, l'univers concerné pour les autres.
 
 **Objectif 90 jours [H]** :

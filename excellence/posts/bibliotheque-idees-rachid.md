@@ -9,6 +9,14 @@ Les catégories évolueront avec les idées.
 - **Portée silencieuse** : sujet intime, que les gens lisent sans réagir pour ne pas se dévoiler. On mesure les impressions, la part de vues hors réseau, les visites de profil et les abonnés gagnés, pas les likes.
 - **Engagement** : sujet sur lequel les gens veulent prendre position. On mesure les commentaires et les partages.
 
+**Décision du 08/11 : le récit vécu est le format principal des 2 posts hebdomadaires qui citent un cours.**
+Structure : une scène vraie, des chiffres, un retournement, la leçon. Puis une seule ligne factuelle sur le cours, sans invitation (exemple : C1 → Évaluation d'entreprise).
+Règles :
+- anonymiser (pas de secteur, de ville ni de date qui permettent de reconnaître le client ou le fonds) ;
+- faire du dirigeant ou du lecteur le héros, pas Rachid ;
+- varier les dénouements (pas toujours « je l'ai sauvé ») ;
+- mesurer les visites de la page du cours cité la semaine du post (GA4).
+
 ---
 
 ## Catégories

@@ -21,7 +21,7 @@ Règles :
 
 | Fiche | Sujet | Statut | Cite Excellence |
 |---|---|---|---|
-| A1 | La peur des banquiers | Brouillon v6, en affinage | **Oui** (décision Rachid 08/11) : cours Levée de dette bancaire |
+| A1 | La peur des banquiers | Brouillon v7, sans renvoi | Non (décision Rachid 08/11 : sans renvoi à Xelanc ni au cours) |
 | C1 | La veille de la cession : 80 contre 45 | Brouillon v1 | Option : Évaluation d'entreprise |
 | D1 | Entreprendre sans créer d'entreprise | Brouillon v1 | Non |
 | D2 | Les limites des dirigeants : Porsche | Brouillon v1 | Non |
@@ -47,7 +47,7 @@ Règles :
 
 ### A1. La peur bleue des banquiers
 
-- **Statut** : brouillon v6 en cours d'affinage (reprise du 08/11).
+- **Statut** : brouillon v7, sans renvoi à Xelanc (08/11).
 - **Matière de Rachid** :
   - en 30 ans d'accompagnement de dirigeants, une chose l'a frappé : beaucoup ont une peur bleue des banquiers ;
   - plusieurs lui ont demandé de les accompagner uniquement pour cette raison ;
@@ -62,6 +62,45 @@ Règles :
   - ce que Rachid lui a répondu ;
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
+
+#### Brouillon v7 : sans renvoi à Xelanc ni au cours (décision Rachid 08/11)
+
+**Carte visuelle** :
+> **Ils n'avaient pas peur parce qu'ils étaient faibles.**
+> **Ils avaient peur parce qu'ils ne comprenaient pas.**
+
+**Texte** :
+
+On m'a souvent appelé pour accompagner des dirigeants face à leurs banques.
+Des levées de fonds. Des restructurations.
+
+Et pendant longtemps, une question m'a intrigué.
+Pourquoi moi ?
+
+Ils avaient des équipes solides.
+Des directeurs financiers compétents.
+Ils pouvaient s'en sortir seuls.
+
+J'ai fini par comprendre.
+Ce n'était pas la compétence qui leur manquait.
+C'était autre chose. Que personne n'osait dire.
+
+La peur.
+La peur du banquier.
+
+De son pouvoir, surtout.
+Ce pouvoir qu'il a quand on a besoin de lui.
+Quand on dépend de lui.
+Quand on lui cache quelque chose.
+Quand on ne sait pas comment il pense.. ni comment il va réagir.
+
+Ces dirigeants n'avaient pas peur parce qu'ils étaient faibles.
+Ils avaient peur parce qu'ils ne comprenaient pas.
+
+Et on ne négocie jamais bien avec quelqu'un qu'on ne comprend pas.
+
+La peur ne vient pas du banquier.
+Elle vient de ce qu'on ne comprend pas de lui.
 
 #### Brouillon v6 : récit de Rachid (v4) écrit en narratif (v5), en hauteur
 

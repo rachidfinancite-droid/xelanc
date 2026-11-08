@@ -1,8 +1,8 @@
 # État du chef d'orchestre — Veille & Benchmark
 section: "Veille & Benchmark"
 cree_le: 2026-11-08
-methode: .claude/skills/veille-benchmark/SKILL.md
-cibles: .claude/skills/veille-benchmark/references/cibles.md
+consignes: 00-VEILLE-BENCHMARK-CONSIGNES/
+cibles: 00-VEILLE-BENCHMARK-CONSIGNES/01-liste-des-cibles.md
 
 agents:
   quotidien:

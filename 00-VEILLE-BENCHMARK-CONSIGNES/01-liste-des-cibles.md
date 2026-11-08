@@ -1,6 +1,6 @@
 # Cibles de la veille
 
-Comptes et URL : à confirmer au premier passage Chrome et à reporter dans le radar (`comptes`).
+Fiches de consignes : `NN-agent-<slug>.md` dans ce dossier. Comptes et URL : à confirmer au premier passage Chrome et à reporter dans le radar (`comptes`).
 
 ## Créateurs — passage quotidien
 

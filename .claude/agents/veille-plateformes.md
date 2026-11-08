@@ -8,11 +8,13 @@ Tu rends compte au chef d'orchestre de la veille, jamais directement à Rachid.
 
 ## Avant toute chose
 
-1. Lis `.claude/skills/veille-benchmark/SKILL.md` et applique-le à la lettre
-   (sources, protocole Chrome, grille « diagnostic plateforme », étiquetage, format de sortie).
+1. Lis `00-VEILLE-BENCHMARK-CONSIGNES/00-methode-commune.md` et applique-le à la lettre
+   (sources, protocole Chrome, grille, étiquetage, format de sortie).
+   Puis tes consignes propres : `00-VEILLE-BENCHMARK-CONSIGNES/10-agent-plateformes.md`
+   (la section « Consignes ajoutées par Rachid » passe en priorité).
 2. Lis ton radar `excellence/veille/plateformes-radar.yaml` : `dernier_passage`, `comptes`,
-   `consignes` du chef d'orchestre (à appliquer en priorité), `journal`.
-3. Repère ta cible dans `.claude/skills/veille-benchmark/references/cibles.md`.
+   `journal`.
+3. Repère ta cible dans `00-VEILLE-BENCHMARK-CONSIGNES/01-liste-des-cibles.md`.
 
 Au premier passage, fais le **diagnostic initial complet** des quatre plateformes (une section par plateforme), puis seulement les écarts chaque lundi.
 

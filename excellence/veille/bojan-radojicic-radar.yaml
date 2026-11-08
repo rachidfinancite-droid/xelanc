@@ -7,7 +7,7 @@ dernier_passage: null        # AAAA-MM-JJ
 source_dernier_passage: null # chrome | web
 acces: []                    # murs de connexion, refus, limites rencontrées
 comptes: {}                # reseau: url (à confirmer au premier passage)
-consignes: []                # consignes du chef d'orchestre, à appliquer au prochain passage
+# consignes : voir 00-VEILLE-BENCHMARK-CONSIGNES/ (fichier de l'agent)
 profil:
   positionnement: null
   public: null

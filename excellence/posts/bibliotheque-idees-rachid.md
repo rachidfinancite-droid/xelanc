@@ -17,7 +17,7 @@ Les catégories évolueront avec les idées.
 |---|---|---|
 | A. Dirigeants et banquiers : ce qui se joue vraiment | Peurs, rapports de force, confiance, négociation entre dirigeants et banques | 1 |
 | B. La banque vue de l'intérieur | Comités, chargés d'affaires, risque, culture bancaire | 0 |
-| C. Coulisses du conseil | Ce que Rachid a vu en 30 ans de missions auprès des dirigeants et des groupes | 0 |
+| C. Coulisses du conseil | Ce que Rachid a vu en 30 ans de missions auprès des dirigeants et des groupes | 1 |
 | D. Posture, leadership et carrière | Peur, confort, ambition, montée en compétence | 0 |
 | E. Finance et IA | Ce que l'IA change dans les métiers de la finance | 0 |
 
@@ -27,7 +27,7 @@ Les catégories évolueront avec les idées.
 
 ### A1. La peur bleue des banquiers
 
-- **Statut** : brouillon
+- **Statut** : en pause (Rachid y reviendra). Retenir la direction narrative v5 : l'énigme « pourquoi m'appellent-ils ? », puis la révélation « c'était la peur ».
 - **Matière de Rachid** :
   - en 30 ans d'accompagnement de dirigeants, une chose l'a frappé : beaucoup ont une peur bleue des banquiers ;
   - plusieurs lui ont demandé de les accompagner uniquement pour cette raison ;
@@ -42,6 +42,33 @@ Les catégories évolueront avec les idées.
   - ce que Rachid lui a répondu ;
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
+
+#### Brouillon v5, direction narrative (référence pour la reprise)
+
+Pendant des années, une question m'a suivi.
+Pourquoi m'appellent-ils ?
+
+Des dirigeants solides. Des équipes compétentes. Des directeurs financiers brillants.
+Ils n'avaient pas besoin de moi pour lever des fonds ou restructurer une dette.
+Et pourtant, ils m'appelaient.
+
+Un jour, j'ai compris.
+Ce n'était pas mon expertise qu'ils venaient chercher.
+C'était mon absence de peur.
+
+Eux avaient peur. Du banquier.
+De celui qui dit oui ou non quand on a besoin de lui.
+De celui dont on dépend.
+De celui à qui on n'a pas tout dit.
+De celui dont on ne comprend pas la logique.
+
+Un dirigeant affronte un marché, un concurrent, une crise.
+Mais face à quelqu'un qu'il ne comprend pas.. il recule.
+
+J'ai fini par tout mettre dans un cours, Levée de dette bancaire.
+Pour qu'ils n'aient plus besoin de moi pour s'asseoir face à leur banquier.
+
+Note : « C'était mon absence de peur » est un ajout de rédaction, à garder seulement si Rachid s'y reconnaît.
 
 #### Brouillon v4, récit de Rachid, version courte (à valider)
 
@@ -205,3 +232,68 @@ vous êtes même très nombreux.
 - Tout le fond vient de Rachid, sauf l'explication « il sait lire votre entreprise, vous ne savez pas comment il la lit », proposée en lecture de la peur. À garder ou à remplacer par la sienne.
 - Pas de question finale : sur un sujet intime, demander de se dévoiler en commentaire freine. La dernière ligne rassure le lecteur.
 - Pas de mention de XELANC ni de lien.
+
+---
+
+## C. Coulisses du conseil
+
+### C1. La veille de la cession : 80 millions contre 45
+
+- **Statut** : brouillon
+- **Matière de Rachid** :
+  - la veille de la signature de la cession de son entreprise, un dirigeant que Rachid ne connaissait pas vient lui demander un avis avant de trancher ;
+  - Rachid lui demande son EBITDA, son chiffre d'affaires et son résultat, applique les multiples et donne une fourchette autour de 80 millions ;
+  - le dirigeant s'apprêtait à vendre à 45 le lendemain ;
+  - il est hors de lui : 80, c'est exactement le chiffre avec lequel la négociation avait commencé, et il vend à la moitié ;
+  - Rachid lui explique : un fonds d'investissement fait sa première marge à l'achat et cherche toujours à acheter bas. 45, c'était exactement la valeur de ses actifs immobilisés : le fonds achetait sur une base défensive ;
+  - l'échange a duré 15 minutes. Le dirigeant a appelé le patron du fonds et annulé la transaction.
+- **Douleur visée** : le dirigeant qui vend l'œuvre de sa vie sans connaître sa valeur, face à un acheteur qui, lui, la connaît.
+- **Public** : dirigeants et actionnaires de PME et d'ETI, DAF ; en second, conseillers et banquiers d'affaires.
+- **Objectif** : portée et partages. Histoire forte, chiffrée, avec un retournement.
+- **Cours lié (option)** : Évaluation d'entreprise.
+- **À confirmer** : la devise des montants (dirhams, euros ?).
+
+#### Brouillon v1
+
+**Carte visuelle** :
+> **Il allait vendre à 45.**
+> **Son entreprise en valait 80.**
+
+**Texte** :
+
+La veille de signer la vente de son entreprise, un dirigeant que je ne connaissais pas est venu me voir.
+Il voulait un avis. Avant de trancher.
+
+Je lui ai posé trois questions.
+Son chiffre d'affaires. Son EBITDA. Son résultat.
+J'ai appliqué les multiples.
+Et je lui ai donné une fourchette.
+
+Autour de 80 millions.
+
+Il est sorti de ses gonds.
+« 80 ? C'est exactement le chiffre avec lequel on a ouvert la négociation.
+Et demain, je signe à 45. »
+
+La moitié.
+
+Je lui ai expliqué.
+Un fonds d'investissement fait sa première marge à l'achat.
+Il achètera toujours bas.
+
+Et 45, ce n'était pas la valeur de son entreprise.
+C'était la valeur de ses actifs immobilisés.
+Le fonds payait ses murs et ses machines.
+Ses clients, ses équipes, son savoir-faire.. il les prenait pour rien.
+
+L'échange a duré 15 minutes.
+Il a appelé le patron du fonds.
+Et il a annulé la vente.
+
+Quand vous ne connaissez pas la valeur de votre entreprise,
+c'est l'acheteur qui la fixe.
+
+**Notes** :
+- Tout le récit vient de Rachid.
+- Deux ajouts de rédaction à valider : « ses murs et ses machines » (traduction concrète de « actifs immobilisés ») et « Ses clients, ses équipes, son savoir-faire.. il les prenait pour rien » (conséquence de cette base défensive).
+- Option de fin, si Rachid veut citer le cours : « C'est pour eux que j'ai écrit le cours Évaluation d'entreprise. »

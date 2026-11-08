@@ -43,6 +43,62 @@ Les catégories évolueront avec les idées.
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
 
+#### Brouillon v2 (structure dictée par Rachid, 08/11)
+
+**Carte visuelle** :
+> **Beaucoup de dirigeants ont peur de leur banquier.**
+> **C'est rarement avoué.**
+
+**Texte** :
+
+En 30 ans à accompagner des dirigeants, j'ai découvert une chose rarement avouée..
+
+Beaucoup de dirigeants ont peur de leur banquier.
+
+Des femmes et des hommes qui ont bâti des entreprises, traversé des crises, négocié avec des clients redoutables..
+et qui perdent leurs moyens face à leur chargé d'affaires.
+
+Plusieurs m'ont demandé de les accompagner pour cette seule raison.
+Pas par manque de compétence.
+Par peur de la confrontation, de la négociation.. et par manque de confiance.
+
+D'où vient cette peur ?
+
+Du pouvoir du banquier.
+Et ce pouvoir, c'est souvent nous qui le lui donnons.
+
+Il a du pouvoir quand on a besoin de lui.
+Quand la trésorerie est tendue, quand le projet attend son accord, c'est lui qui fixe le rythme.
+
+Il a du pouvoir quand on dépend de lui.
+Une seule banque, un seul interlocuteur, aucune alternative : la négociation est finie avant de commencer.
+
+Il a du pouvoir quand on n'est pas transparent avec lui.
+Le dirigeant qui cache une difficulté ne négocie plus. Il se défend.
+Et le banquier le sent.
+
+Et surtout, il a du pouvoir parce qu'on n'a jamais été formé à lui parler.
+Personne n'a appris au dirigeant ce qui se passe dans la tête d'un banquier.
+Ce qu'il cherche vraiment : le cash qui remboursera la dette, pas le chiffre d'affaires.
+Ce qui le rassure. Ce qui le fait reculer.
+Pourquoi il dit oui à un dossier moyen bien préparé, et non à un bon dossier mal présenté.
+
+On a peur de ce qu'on ne comprend pas.
+Le jour où l'on comprend comment le banquier lit l'entreprise, la peur change de camp.. ou disparaît.
+
+Pendant des années, j'ai mené ces missions de levée de dette aux côtés des dirigeants.
+Le jour où je n'ai plus pu toutes les assurer, j'ai tout transcrit dans un cours, Levée de dette bancaire : ce qui se passe dans la tête du banquier, et comment s'y préparer.
+
+Si vous vous êtes reconnu, vous n'êtes pas seul..
+vous êtes même très nombreux.
+
+**Notes** :
+- Structure et fond de Rachid : l'ouverture, les quatre sources du pouvoir (besoin, dépendance, manque de transparence, absence de formation), le cours mentionné comme un fait, sans invitation à l'acheter.
+- Exemples ajoutés à partir de ses cours (le cash qui rembourse la dette, le dossier moyen bien préparé) : à confirmer.
+- Intitulé exact du cours à confirmer.
+- Option : ajouter « sur XELANC » après le nom du cours, en simple information, pour faire connaître la page sans rien vendre.
+- Pas de lien, pas de « allez voir ».
+
 #### Brouillon v1 (à valider par Rachid)
 
 **Carte visuelle** :

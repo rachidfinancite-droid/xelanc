@@ -1,0 +1,41 @@
+# État du chef d'orchestre — Veille & Benchmark
+section: "Veille & Benchmark"
+cree_le: 2026-11-08
+methode: .claude/skills/veille-benchmark/SKILL.md
+cibles: .claude/skills/veille-benchmark/references/cibles.md
+
+agents:
+  quotidien:
+    - veille-nicolas-boucher
+    - veille-bojan-radojicic
+    - veille-josh-aharonoff
+    - veille-christian-wattig
+    - veille-glenn-hopper
+    - veille-leila-gharani
+    - veille-rachana-ranade
+    - veille-cfi
+  hebdomadaire_lundi:
+    - veille-plateformes   # diagnostic initial complet au 1er passage, puis écarts
+
+restitution:
+  point_quotidien: "10 lignes max : 3 mouvements qui comptent + 1 action"
+  bilan_hebdomadaire: "lundi : tableau comparatif, tendances, contenus à reprendre, menaces"
+
+execution:
+  # Chrome (Claude in Chrome) n'est disponible que depuis l'ordinateur de Rachid :
+  # les passages programmés doivent tourner depuis l'app Claude desktop (tâche programmée locale),
+  # Chrome ouvert et extension connectée. Les passages cloud n'ont que le web public.
+  chrome_connecte: false
+  heure_passage_quotidien: "07:40 (heure de Rachid)"
+  prompt_tache_quotidienne: >
+    Veille & Benchmark : passage quotidien. Lis excellence/veille/veille-state.yaml et le skill
+    veille-benchmark. Lance en parallèle les agents veille-* du jour (le lundi, ajoute veille-plateformes),
+    sur Chrome. Recoupe leurs remontées, écris la synthèse dans excellence/veille/rapports/,
+    mets à jour veille-state.yaml et rends-moi le point quotidien (le bilan hebdomadaire le lundi).
+
+derniers_passages: {}   # agent: date
+syntheses: []           # {date, type, fichier, 3_mouvements, action}
+decisions: []           # décisions de Rachid sur la veille
+questions_ouvertes:
+  - "Adresse email dédiée pour s'abonner aux newsletters des concurrents ?"
+  - "Valider les 5 créateurs proposés (Aharonoff, Wattig, Hopper, Gharani, Ranade)."

@@ -1,0 +1,22 @@
+# Radar de veille — Domestika, Udemy, Coursera, Coursiv
+cible: "Domestika, Udemy, Coursera, Coursiv"
+slug: plateformes
+type: plateformes
+rythme: hebdomadaire après diagnostic initial
+dernier_passage: null        # AAAA-MM-JJ
+source_dernier_passage: null # chrome | web
+acces: []                    # murs de connexion, refus, limites rencontrées
+comptes: {}                # reseau: url (à confirmer au premier passage)
+consignes: []                # consignes du chef d'orchestre, à appliquer au prochain passage
+profil:
+  positionnement: null
+  public: null
+  langues: []
+  abonnes: {}              # reseau: {valeur, date, source}
+  rythme_publication: null
+  formats_dominants: []
+offres: []                   # {nom, prix, format, date_vue, source}
+publicites: []               # {plateforme, nb_actives, angle, destination, date_vue}
+meilleurs_posts: []          # {date, reseau, sujet, format, reactions, pourquoi_ca_marche}
+lecons_pour_xelanc: []
+journal: []                  # {date, source, resume, rapport}

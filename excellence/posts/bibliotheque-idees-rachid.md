@@ -21,7 +21,7 @@ Règles :
 
 | Fiche | Sujet | Statut | Cite Excellence |
 |---|---|---|---|
-| A1 | La peur des banquiers | Version consolidée prête | Non (décision Rachid 08/11 : sans renvoi à Xelanc ni au cours) |
+| A1 | La peur des banquiers | v10 (texte de Rachid) resserrée, à choisir | Non (décision Rachid 08/11 : sans renvoi à Xelanc ni au cours) |
 | C1 | La veille de la cession : 80 contre 45 | Brouillon v1 | Option : Évaluation d'entreprise |
 | D1 | Entreprendre sans créer d'entreprise | Brouillon v1 | Non |
 | D2 | Les limites des dirigeants : Porsche | Brouillon v1 | Non |
@@ -47,7 +47,7 @@ Règles :
 
 ### A1. La peur bleue des banquiers
 
-- **Statut** : version consolidée prête (08/11).
+- **Statut** : deux versions en lice (consolidée v9 et v10 de Rachid), choix à faire (08/11).
 - **Matière de Rachid** :
   - en 30 ans d'accompagnement de dirigeants, une chose l'a frappé : beaucoup ont une peur bleue des banquiers ;
   - plusieurs lui ont demandé de les accompagner uniquement pour cette raison ;
@@ -62,6 +62,51 @@ Règles :
   - ce que Rachid lui a répondu ;
   - ce qui a changé ensuite, à la table de la banque.
 - **Suites possibles** : d'où vient cette peur (asymétrie d'information, dépendance au crédit, langage) ; ce que le banquier ne dit pas au dirigeant.
+
+#### Version v10 : texte apporté par Rachid (08/11), et version resserrée proposée
+
+Le texte long de Rachid (≈ 380 mots) est conservé tel quel dans la conversation du 08/11. Proposition resserrée (≈ 230 mots), qui garde ses meilleures lignes :
+
+**Carte visuelle** :
+> **La peur commence souvent**
+> **là où la compréhension s'arrête.**
+
+**Texte** :
+
+J'ai rencontré des dirigeants qui négociaient des millions avec leurs clients..
+et perdaient leurs moyens face à leur banquier.
+
+Pas des incompétents.
+Des entrepreneurs expérimentés. Des entreprises bien gérées. Des directeurs financiers capables.
+
+Pendant des années, je les ai accompagnés dans leurs levées de fonds, leurs restructurations, leurs négociations bancaires.
+Et une question revenait : pourquoi avaient-ils besoin de moi ?
+
+J'ai fini par comprendre.
+Ce n'était pas un problème de compétence.
+C'était un problème de rapport au pouvoir.
+
+Quand on dépend de sa banque, on ne voit plus un partenaire.
+On voit celui qui peut dire non.
+Exiger des garanties.
+Remettre en cause un projet.
+
+Et quand on ne comprend pas comment il raisonne, ce qu'il cherche, ce qu'il redoute, la négociation est perdue d'avance.
+
+La peur commence souvent là où la compréhension s'arrête.
+
+Pourtant, le banquier aussi fait du business.
+Il a des objectifs, des risques à maîtriser, des décisions à défendre.
+Il préfère financer une entreprise qui réussit que gérer un dossier qui se dégrade.
+
+Comprendre son banquier ne garantit pas un oui.
+Mais on ne subit plus chaque non.
+
+Alors le banquier peut devenir un allié.
+À une condition : que certains sortent aussi de cette posture d'autorité qu'ils entretiennent, parfois sans le savoir.
+
+Dirigeants : avez-vous déjà eu peur de votre banquier ?
+Banquiers : savez-vous le pouvoir que vos clients vous prêtent ?
 
 #### Version consolidée (finale, 08/11)
 

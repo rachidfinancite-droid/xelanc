@@ -26,7 +26,7 @@ Règles :
 | A. Dirigeants et banquiers : ce qui se joue vraiment | Peurs, rapports de force, confiance, négociation entre dirigeants et banques | 1 |
 | B. La banque vue de l'intérieur | Comités, chargés d'affaires, risque, culture bancaire | 0 |
 | C. Coulisses du conseil | Ce que Rachid a vu en 30 ans de missions auprès des dirigeants et des groupes | 1 |
-| D. Posture, leadership et carrière | Peur, confort, ambition, montée en compétence | 0 |
+| D. Posture, leadership et carrière | Peur, confort, ambition, montée en compétence | 1 |
 | E. Finance et IA | Ce que l'IA change dans les métiers de la finance | 1 |
 
 ---
@@ -305,6 +305,69 @@ c'est l'acheteur qui la fixe.
 - Tout le récit vient de Rachid.
 - Deux ajouts de rédaction à valider : « ses murs et ses machines » (traduction concrète de « actifs immobilisés ») et « Ses clients, ses équipes, son savoir-faire.. il les prenait pour rien » (conséquence de cette base défensive).
 - Option de fin, si Rachid veut citer le cours : « C'est pour eux que j'ai écrit le cours Évaluation d'entreprise. »
+
+---
+
+## D. Posture, leadership et carrière
+
+### D1. Entreprendre sans créer d'entreprise
+
+- **Statut** : brouillon
+- **Matière de Rachid** :
+  - beaucoup d'ambitieux lui demandent son avis sur l'entrepreneuriat. Ils sont déçus, ou le prennent mal, quand il leur conseille de ne pas créer d'entreprise ;
+  - l'entreprise est pour eux un rêve, qui peut devenir un très mauvais rêve ;
+  - entreprendre est devenu difficile : instabilité économique, cherté de la vie, inflation, fragilité des business models, innovation, manque de vision, lourdeur de l'imposition, accès difficile au financement ;
+  - le sacrifice n'est jamais comptabilisé : son temps, sa famille, sa santé ;
+  - son conseil : entreprendre sans créer d'entreprise. Entreprendre en soi, développer ses compétences au maximum, chercher la meilleure rémunération, chez quelqu'un qui paie l'impôt à votre place. C'est, pour lui, la meilleure « loi de l'entrepreneuriat » aujourd'hui ;
+  - « ça reste un avis ».
+- **Douleur visée** : le cadre ambitieux tenté de tout quitter pour créer son entreprise, et qui sous-estime le prix à payer.
+- **Public** : cadres et jeunes professionnels ambitieux ; les dirigeants s'y reconnaîtront (le sacrifice).
+- **Objectif** : engagement et débat. Avis à contre-courant, qui fera réagir. Répondre aux commentaires avec calme.
+- **Cours lié** : aucun (post de posture).
+
+#### Brouillon v1 : témoignage personnel
+
+**Carte visuelle** :
+> **Entreprenez.**
+> **Mais ne créez pas forcément d'entreprise.**
+
+**Texte** :
+
+Beaucoup d'ambitieux me demandent mon avis sur l'entrepreneuriat.
+Et beaucoup sont déçus de ma réponse.
+
+Je leur dis souvent : ne créez pas d'entreprise.
+
+Pour eux, c'est un rêve.
+Pour beaucoup, ça peut devenir un très mauvais rêve.
+
+Entreprendre est devenu difficile.
+L'instabilité économique.
+La cherté de la vie, l'inflation.
+Des business models fragiles.
+Une innovation qui va plus vite que soi.
+Le manque de vision.
+Une fiscalité lourde.
+Un financement difficile à obtenir.
+
+Et le prix que personne ne comptabilise :
+son temps, sa famille, sa santé.
+
+Alors je leur dis autre chose.
+Entreprenez.. mais sans créer d'entreprise.
+
+Entreprenez en vous.
+Développez vos compétences au maximum.
+Cherchez la meilleure rémunération.
+Trouvez celui qui vous paie le mieux.. et qui paie l'impôt à votre place.
+
+C'est peut-être la meilleure entreprise qui soit aujourd'hui.
+
+Ce n'est qu'un avis.
+
+**Notes** :
+- Tout vient de Rachid.
+- Seul ajout : « Une innovation qui va plus vite que soi », pour traduire « l'innovation » parmi les difficultés. À corriger si Rachid voulait dire autre chose.
 
 ---
 

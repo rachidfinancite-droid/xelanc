@@ -113,3 +113,32 @@ Ton objectif de 100 000 $ par mois représente 1,2 M$ par an. La part corporate 
 - Sénégal, RGE 2016 : https://lequotidien.sn/entreprise-recensement-general-97-des-unites-dans-linformel/ , https://www.ansd.sn/Indicateur/resultats-du-recensement-general-des-entreprises-rge
 - Afrique francophone, baromètre CPCCAF 2024 : https://cpccaf.org/wp-content/uploads/2025/02/CPCCAF_Barometre-2024_synthese.pdf
 - Estimations antérieures de l'agent GTM : `excellence/potentiel-bu-entreprises-2026-10-31.md`
+
+---
+
+## 8. Mise à jour du 13/11 : la machine de Rachid, 1 000 entreprises approchées par jour
+
+**Principe (décision de Rachid)** : 1 000 entreprises approchées par jour, soit ≈ 30 000 par mois, tous pays confondus. Le canal d'approche : email, LinkedIn et publicité. L'offre : ouvrir un compte gratuit et essayer la plateforme. Une équipe suit chaque compte ouvert et conduit la conversion. Les arrivées se font par vagues.
+
+### Le calcul, par vague mensuelle de 30 000 entreprises
+
+| Étape | Prudent | Central | Haut |
+|---|---|---|---|
+| Comptes d'essai ouverts (% des entreprises approchées) [H] | 0,5 % → 150 | 1,5 % → 450 | 3 % → 900 |
+| Essais transformés en clients payants, avec suivi humain [H] | 10 % → **15** | 15 % → **67** | 25 % → **225** |
+| Revenu annuel ajouté par vague (≈ $1 800 par client) | ≈ $27 000 | ≈ $121 000 | ≈ $405 000 |
+| **Cumul après 12 vagues** | ≈ 180 clients, ≈ $0,3 M par an | ≈ 800 clients, **≈ $1,45 M par an** | ≈ 2 700 clients, ≈ $4,9 M par an |
+
+Si l'abonnement est payé à l'année d'avance, **le revenu signé est encaissé tout de suite**.
+
+**Repère** : « 1 à 3 % des entreprises approchées deviennent clientes » est un taux de **liste chaude**. Sur une approche à froid, le taux réaliste se situe entre 0,05 et 0,5 % [E]. C'est pour cela que le central retient 1,5 % d'essais × 15 % de conversion ≈ 0,2 % de clients. Le premier mois donnera le vrai chiffre.
+
+### Les trois conditions pour que la machine tourne
+
+1. **Les données** : 30 000 DAF et dirigeants nouveaux chaque mois, avec un email valide. Pour l'Afrique francophone, les grandes bases (Apollo, Lusha) sont faibles. Il faut combiner annuaires (Kompass, Charika au Maroc, chambres de commerce), LinkedIn Sales Navigator et achat de fichiers. Le nombre d'entreprises cibles en Afrique francophone et au Maghreb (23 000 à 44 000, section 2) s'épuise en 1 à 2 mois : **la deuxième approche du même DAF devient la norme**, ce qui va dans le sens de l'effet de vague.
+2. **La délivrabilité** : 1 000 emails à froid par jour ne partent pas de xelanc.org ni du domaine Financité principal. Il faut des domaines d'envoi dédiés, 20 à 30 boîtes chauffées pendant 2 à 4 semaines, et 30 à 50 envois par boîte et par jour. Sinon, c'est la boîte de réception des spams, et le domaine principal est grillé.
+3. **La capacité de suivi** : au central, 450 essais par mois, soit ≈ 22 par jour ouvré. Chaque essai doit être rappelé sous 24 h : **≈ 3 personnes à plein temps** sur le suivi.
+
+### La première vague sert de mesure
+
+Sur les 5 000 premières entreprises, on mesure le taux d'ouverture des emails, le taux d'essai et le taux de conversion à 30 jours. Puis on recalcule ce tableau avec les vrais chiffres.

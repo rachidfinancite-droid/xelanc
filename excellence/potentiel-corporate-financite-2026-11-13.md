@@ -142,3 +142,36 @@ Si l'abonnement est payé à l'année d'avance, **le revenu signé est encaissé
 ### La première vague sert de mesure
 
 Sur les 5 000 premières entreprises, on mesure le taux d'ouverture des emails, le taux d'essai et le taux de conversion à 30 jours. Puis on recalcule ce tableau avec les vrais chiffres.
+
+---
+
+## 9. Décisions de Rachid du 13/11 et recalcul
+
+**Décisions** :
+- **Canal** : LinkedIn en priorité (InMail sponsorisé, campagnes LinkedIn, présence organique forte), Google en complément. **Pas d'emailing à froid.** Meta à peine, voire pas du tout.
+- **Prix entreprise** : **450 par place et par an** (contre 299 pour le particulier), devise à confirmer (€ comme l'offre particulier ?).
+- **Univers** : Rachid estime qu'il y a beaucoup plus d'entreprises que les 23 000 – 44 000 de la section 2.
+
+**Sur l'univers** : les 23 000 – 44 000 ne comptent que les entreprises **avec une équipe finance de 3 personnes ou plus**. Le total des entreprises est bien plus grand : 380 230 sociétés au Maroc, 1,2 à 1,4 M d'unités en Côte d'Ivoire, 444 302 au Cameroun [M]. Avec LinkedIn comme canal, **la vraie limite devient le nombre de DAF, RAF, financiers et dirigeants présents sur LinkedIn dans chaque pays**. Ce chiffre se lit gratuitement dans la prévision d'audience de Campaign Manager (compte LinkedIn Ads 382016523, agent LinkedIn).
+
+**Recalcul, 30 000 InMails par mois, client moyen 6 places × 450 = 2 700 par an** [H] :
+
+| Étape | Prudent | Central | Haut |
+|---|---|---|---|
+| Coût de 30 000 envois (0,34 – 0,88 € l'envoi, revue neutre du 31/10) | ≈ 26 000 | ≈ 18 000 | ≈ 10 000 |
+| Clics vers la plateforme | 0,5 % → 150 | 1,5 % → 450 | 3 % → 900 |
+| Comptes d'essai ouverts | 15 % → 22 | 20 % → 90 | 25 % → 225 |
+| Clients payants, avec suivi humain | 10 % → **2** | 15 % → **13** | 25 % → **56** |
+| Revenu annuel ajouté par mois | ≈ 5 400 | ≈ 35 000 | ≈ 151 000 |
+| Coût d'acquisition d'un client | ≈ 13 000 | **≈ 1 400** | ≈ 180 |
+
+**Lecture** : au central, un client coûte ≈ 1 400 et rapporte 2 700 la 1re année. La machine est rentable dès l'année 1 et le devient davantage chaque année si les clients renouvellent. Au prudent, elle perd de l'argent : **le premier mois de test tranche**.
+
+**Ce qui augmente le rendement de l'InMail** :
+1. un message signé Rachid, sans prix, qui part de la douleur du DAF ;
+2. une audience retenue sur la taille d'entreprise (51 salariés et plus) et la fonction finance, niveau manager et plus ;
+3. le reciblage des visiteurs de la page entreprise par des publicités LinkedIn classiques ;
+4. la prospection personnelle sur LinkedIn par l'équipe commerciale (Sales Navigator), en parallèle ;
+5. le profil de Rachid (11 491 abonnés) actif chaque semaine : l'InMail d'une personne qu'on a déjà lue convertit mieux.
+
+**Contraintes LinkedIn à vérifier** : la règle d'un InMail sponsorisé par membre tous les 45 jours, le bouton « Pas intéressé » qui réduit la diffusion depuis 06/2026, et la taille réelle des audiences hors Maroc et Tunisie (revue neutre du 31/10 : 100 000 envois en 30 jours improbables hors Maroc et Tunisie).

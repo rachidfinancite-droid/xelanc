@@ -14,6 +14,60 @@ Le Nigeria est le plus grand marché d'**apprenants** de la finance en Afrique s
 
 ---
 
+## 1 bis. Mise à jour du 13/11 : le modèle retenu pour le Nigeria est le cours à l'unité à petit prix
+
+**Décision de Rachid** : au Nigeria, pas de parcours ni d'abonnement. On vend **uniquement des cours à l'unité, à petit prix**. Cette section remplace les sections 6, 7 et 9 sur les points où elles parlaient de parcours et d'un prix à $99–129 par an.
+
+### Ce que ça change, en mieux
+
+| Obstacle (sections 4 à 6) | Avec des cours à petit prix |
+|---|---|
+| 299 € = 50 à 150 % d'un mois de salaire | Un cours à $9–19 (≈ ₦12 000 à 25 000) représente 2 à 4 % d'un mois de salaire : c'est un **achat d'impulsion** |
+| Cartes en naira plafonnées à $500 par mois | Un cours à $15 passe sous tous les plafonds |
+| Concurrence de CFI et de Coursera sur l'abonnement | On n'est plus sur ce terrain. Le vrai comparatif devient **Udemy** |
+| Adapter un parcours entier : 4 à 8 semaines | **Un cours à la fois** : traduction et doublage en une semaine par cours, c'est réaliste. Ton estimation tient à cette échelle |
+| Pas de marque | Le risque d'un achat à $15 est faible : la confiance compte moins |
+
+### Ce que ça change, en plus dur : l'équation du volume
+
+Un cours à ≈ **$15** rapporte ≈ **$14 net** après frais de paiement (≈ 5 %) [E].
+
+| Objectif | Ventes nécessaires |
+|---|---|
+| 1 000 € par mois | ≈ 80 ventes par mois, ≈ 3 par jour |
+| 5 000 € par mois | ≈ 410 ventes par mois, ≈ 14 par jour |
+| 18 000 € par mois (cible Xelanc) | ≈ **1 500 ventes par mois, ≈ 50 par jour** |
+
+**Coût d'acquisition** : pour gagner de l'argent, une vente doit coûter **moins de ≈ $7** en publicité [H, la moitié du prix]. Avec des clics Meta à $0,10, il faut que **1,5 % des visiteurs achètent**. À $0,30 le clic, il en faut 4,5 %. Les coûts de clic au Nigeria sont à mesurer : aucun chiffre fiable trouvé.
+
+**Les deux leviers qui font la rentabilité** :
+1. **Plusieurs cours par acheteur.** Proposer un 2e cours à −50 % juste après l'achat, ou des packs de 3 cours. Viser **≥ 1,3 cours par acheteur**.
+2. **Un catalogue large.** Au Nigeria, chaque cours est une porte d'entrée par la publicité et par Google. 10 cours traduits valent mieux qu'un parcours parfait.
+
+### Deux canaux de vente à comparer
+
+| | Ton site (xelanc.org, version anglaise) | **Udemy** |
+|---|---|---|
+| Paiement et prix local | À organiser (carte en dollars au départ) | **Déjà réglés** par Udemy |
+| Part du prix que tu touches | ≈ 95 % | **37 %** si Udemy trouve l'acheteur, **97 %** avec ton propre coupon ou lien [M] |
+| Audience | À créer avec la pub | Celle d'Udemy, déjà là |
+| Données des acheteurs | À toi | À Udemy |
+| Statut | — | Udemy fusionne avec Coursera (accord du 17/12/2025) [M] |
+
+**Recommandation** : **les deux**. Udemy pour trouver les acheteurs sans régler le paiement. Ton site pour la pub, où tu gardes la marge et les contacts. Tu as déjà un cours Udemy en préparation et un simulateur Udemy.
+
+### Le test, version cours à l'unité (6 semaines)
+
+1. **5 cours universels**, sans SYSCOHADA : Excel pour la finance, analyse des ratios avec l'IA, modélisation et DCF, analyse de crédit, trésorerie. Traduction, doublage et 1 exemple nigérian par cours.
+2. **Prix** : $12–15 sur ton site. Sur Udemy, selon leurs règles de prix.
+3. **Pub** : Meta et LinkedIn, Lagos et Abuja, 25–34 ans, finance et banque, **$1 000 plafonnés**.
+4. **Seuils à 6 semaines** :
+   - **Aller** : ≥ 300 ventes, coût par vente ≤ 50 % du prix, ≥ 1,3 cours par acheteur → on traduit 10 cours de plus.
+   - **Ajuster** : coût par vente entre 50 et 100 % du prix → on change de canal (plus d'Udemy) ou d'angle.
+   - **Arrêter la pub** : coût par vente au-delà du prix → on garde seulement Udemy en vente passive.
+
+---
+
 ## 2. Combien de personnes apprennent ?
 
 | Population | Nombre | Source |

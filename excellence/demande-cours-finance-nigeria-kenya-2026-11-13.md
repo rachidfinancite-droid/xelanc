@@ -65,3 +65,25 @@ En option, avec un partenaire nigérian : **Nigeria Tax Act 2025 for Accountants
 - Udemy, meilleures ventes : https://classcentral.com/report/udemy-top-Courses , https://influencermarketinghub.com/top-udemy-courses/
 - Réforme fiscale nigériane : https://www.pwc.com/ng/en/about-us/tax-academy/navigating-nigeria-tax-reform.html , https://www.forvismazars.com/ng/en/services/tax/training-services/2025-tax-reform-executive-training-series , https://crccreditbureau.com/courses/essentials-of-nigeria-tax-act-nta-2025-updates-challenges-and-opportunities/
 - Valorisation et PME : https://www.mondaq.com/nigeria/corporate-governance/1765518/bridging-the-gap-financing-and-scaling-small-and-medium-enterprises-through-nigerias-capital-market , https://www.ifc.org/content/dam/ifc/doc/2025/nigeria-country-private-sector-diagnostic-summary-en.pdf
+
+---
+
+## Décision de Rachid · 13/11/2026
+
+**Nigeria et Kenya en même temps, 5 cours lancés en parallèle, $12 le cours.**
+
+### Ce que ça implique
+- **Revenu net** ≈ $11,40 par cours, après ≈ 5 % de frais de paiement [E].
+- **Plafond de coût par vente** : ≈ **$6 de pub** (la moitié du prix) pour gagner de l'argent dès la 1re vente.
+- **Pas de concurrence avec l'offre francophone** : le cours à l'unité y est à 13,90 €, un prix proche.
+- **10 combinaisons à mesurer** (5 cours × 2 pays). Avec $1 000, cela fait $100 par combinaison, trop peu pour trancher. Recommandation : **7 jours à budget égal, puis on déplace l'argent vers les 3 ou 4 combinaisons qui vendent le moins cher**.
+
+### Leviers recommandés
+1. **Pack des 5 cours à $39** (−35 %), proposé juste après le 1er achat → objectif **≥ 1,3 cours par acheteur**.
+2. **Kenya : M-Pesa.** Une part importante des acheteurs ne paiera pas par carte. À vérifier : Paystack Kenya ou un intermédiaire, et si une société locale est exigée.
+3. **Udemy en parallèle** pour les mêmes 5 cours : vente passive, paiement local géré par Udemy.
+
+### Seuils par pays, à 6 semaines
+- **Aller** : coût par vente ≤ $6 et ≥ 150 ventes dans le pays → 10 cours de plus.
+- **Ajuster** : coût par vente entre $6 et $12 → pack, angle, canal.
+- **Arrêter la pub** : coût par vente > $12 → Udemy seul.

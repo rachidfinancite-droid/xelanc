@@ -122,3 +122,35 @@ Un outil fréquent ne doit pas attendre que le client pense à lui. **C'est l'ou
 | Crédit, Levée de fonds, Valorisation, Création de valeur | 12 chiffres clés ou états financiers, ponctuellement |
 
 **Le point trésorerie du lundi et les relances clients** passent **plus tard**, en option, pour les clients qui acceptent de partager davantage de données.
+
+---
+
+## 7. Ajout du 14/11 : « L'IA de la semaine pour la finance »
+
+**Idée de Rachid** : chaque semaine, donner les nouveautés de l'IA, comment elles s'appliquent au client et ce qu'il peut en faire. C'est la brique **appropriation de l'IA**. Elle est fréquente et ne demande **aucune donnée**.
+
+**Le format hebdomadaire** (email ou WhatsApp, et dans l'application) :
+
+| Bloc | Contenu |
+|---|---|
+| **1. Ce qui est sorti** | 3 nouveautés au maximum, expliquées en 2 lignes chacune, sans jargon |
+| **2. Ce que ça change pour vous** | L'application concrète à la finance : clôture, trésorerie, analyse, reporting, relation bancaire |
+| **3. À tester cette semaine** | **Un cas d'usage avec le prompt prêt à copier**, et le résultat attendu |
+| **4. La précaution** | Ce qu'il ne faut pas faire : données confidentielles, erreurs fréquentes de l'IA, vérifications |
+| **5. La vidéo de 3 minutes de Rachid** | Ta démonstration et ton avis |
+
+**Deux versions selon l'accès** :
+- **Équipe** : « l'astuce IA de la semaine », très pratique (Excel, rapprochements, analyse, rédaction).
+- **DAF et Dirigeant** : « ce que ça change pour votre direction finance » : outils, organisation, gains de temps, risques, gouvernance de l'IA.
+
+**L'effet cumulé** : chaque cas d'usage rejoint une **bibliothèque « IA et finance »** qui grossit chaque semaine. Au bout d'un an, elle compte 50 cas testés, classés par métier.
+
+**La production, environ 2 h par semaine** :
+1. Les agents de veille déjà en place (radars CFI, Glenn Hopper, Nicolas Boucher, etc.) repèrent les nouveautés.
+2. Claude rédige le premier jet et le prompt.
+3. Rachid valide, teste le prompt et enregistre la vidéo de 3 minutes.
+4. Envoi le lundi matin.
+
+**Bonus** : le même contenu alimente **ta publication LinkedIn** de la semaine. C'est de l'acquisition et de la fidélisation avec un seul effort.
+
+**Ce qu'on mesure** : le taux d'ouverture, les clics sur « tester le prompt », et les questions posées ensuite au copilote.

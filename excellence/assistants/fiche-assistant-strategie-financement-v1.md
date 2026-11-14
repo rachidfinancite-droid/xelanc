@@ -9,6 +9,16 @@
 **Lien avec la fiche Banque et crédit** : les indicateurs, le score de bancabilité et la note de présentation à la banque restent valables (`fiche-assistant-banque-credit-v1.md`). Ils deviennent **le moteur d'analyse** de cet assistant, qui y ajoute la stratégie, le montage et les financeurs.
 **Statut** : à corriger par Rachid, points marqués **[R ?]**.
 
+> **Décisions de Rachid du 14/11, qui priment sur cette fiche** :
+> 1. **Pas de fusion.** Deux assistants distincts :
+>    - **Crédit**, pour la dette bancaire ;
+>    - **Levée de fonds**, pour le capital et les fonds propres.
+>
+>    Les sections de cette fiche consacrées à la dette passent dans l'assistant Crédit, celles consacrées au capital dans l'assistant Levée de fonds. La saisie guidée et le format du livrable (« ce que vous pouvez faire, ce qu'il faut éviter, votre stratégie, les financeurs à approcher ») valent pour les deux.
+> 2. **Les règles de montage sont dans les cours de Rachid.** Les assistants doivent apprendre sa méthode dans ses cours, de A à Z. Voir `base-de-connaissance-assistants.md`.
+> 3. **Une liste de financeurs et des options disponibles par pays** sera constituée.
+> 4. **La mise en relation est payante.**
+
 ---
 
 ## 1. La promesse

@@ -160,3 +160,30 @@ h1 {
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .bar .p { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 42px; white-space: nowrap; }
 .bar .p small { font-family: Inter, sans-serif; font-size: 21px; font-weight: 500; color: var(--muted); display: block; margin-top: 4px; }
+
+/* v2 : proposition de valeur */
+.sign { line-height: 1.3; font-size: 27px; }
+.jobs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; }
+.job { border: 1.5px solid rgba(255, 255, 255, .18); background: rgba(255, 255, 255, .05); border-radius: 14px; padding: 13px 18px; font-size: 23px; font-weight: 600; white-space: nowrap; display: flex; align-items: center; gap: 12px; }
+.job::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--grad); flex: none; }
+.job small { display: block; font-size: 18px; font-weight: 400; color: var(--muted); margin-top: 2px; }
+.incl { font-size: 22px; color: #c9d2ea; text-align: center; margin-top: 22px; }
+.eyebrow { font-family: Montserrat, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 4px; color: var(--g1); margin-top: 30px; }
+.compact .card { margin-top: 54px; padding: 52px 48px 36px; }
+.compact .price .big { font-size: 92px; }
+.compact .rule { margin: 26px 0 24px; }
+.compact .cta { margin-top: 26px; font-size: 34px; padding: 23px 30px; }
+.compact .monthly { margin-top: 24px; padding: 18px 40px; }
+.compact h1 { font-size: 60px; line-height: 1.1; margin-top: 12px; letter-spacing: -1.2px; }
+.compact .sub { font-size: 27px; margin-top: 18px; }
+body.compact { padding-top: 60px; padding-bottom: 52px; }
+.compact .eyebrow { margin-top: 24px; }
+.compact .card { margin-top: 50px; padding: 48px 48px 32px; }
+.compact .job { padding: 11px 16px; }
+.compact .incl { margin-top: 18px; }
+.compact .cta { margin-top: 22px; }
+.tight .job { font-size: 20px; padding: 12px 14px; gap: 10px; }
+.tight .job small { font-size: 16px; }
+.tight .bar .p { font-size: 38px; }
+.tight .bar .p small { font-size: 19px; }
+.tight .cta.inline { font-size: 29px; padding: 24px 30px; }

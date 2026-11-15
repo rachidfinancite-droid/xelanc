@@ -7,7 +7,7 @@ const src = __dirname;
 const out = path.join(__dirname, '..');
 const jobs = [
   ['v1-maitre.html', 'v1-maitre.png'],
-  ['v2-certificat.html', 'v2-certificat.png'],
+  ['v2-valeur.html', 'v2-valeur.png'],
   ['v3-panier.html', 'v3-panier.png', 'Carte bancaire ou virement.'],
   ['v3-panier.html', 'v3-panier-mobile-money.png', 'Mobile Money (Orange, MTN, Moov, Wave), carte ou virement.'],
   ['v4-echeance.html', 'v4-echeance.png'],

@@ -16,6 +16,8 @@ const jobs = [
   ['v1-maitre.html', 'v1-selection-ivoire.png', null, 'bg b-ivoire framed'],
   ['v1-maitre.html', 'v1-gris-grand-logo.png', null, 'bg b-gris framed biglogo'],
   ['v1-maitre.html', 'v1-blanc-grand-logo.png', null, 'bg b-blanc framed biglogo'],
+  ['v1-box.html', 'v1-box-gris.png', null, 'bg b-gris framed box'],
+  ['v1-box.html', 'v1-box-blanc.png', null, 'bg b-blanc framed box'],
 ];
 
 (async () => {
@@ -29,6 +31,19 @@ const jobs = [
     fs.writeFileSync(tmp, html);
     await page.goto('file://' + tmp, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
+    // Ajuste chaque ligne .fit à la largeur commune du bloc (--W), et le bloc de chiffres par zoom.
+    await page.evaluate(() => {
+      const W = parseFloat(getComputedStyle(document.body).getPropertyValue('--W'));
+      if (!W) return;
+      document.querySelectorAll('.fit').forEach(el => {
+        const target = el.classList.contains('bx-tag') ? W * 0.634 : W;
+        for (let i = 0; i < 4; i++) {
+          const w = el.getBoundingClientRect().width;
+          el.style.fontSize = parseFloat(getComputedStyle(el).fontSize) * target / w + 'px';
+        }
+      });
+      document.querySelectorAll('.fitzoom').forEach(el => { el.style.zoom = W / el.getBoundingClientRect().width; });
+    });
     const overflow = await page.evaluate(() => document.body.scrollHeight > 1350 || document.body.scrollWidth > 1080);
     await page.screenshot({ path: path.join(out, png) });
     fs.unlinkSync(tmp);

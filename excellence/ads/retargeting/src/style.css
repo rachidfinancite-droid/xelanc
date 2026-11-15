@@ -320,3 +320,29 @@ body.biglogo { padding-top: 54px; }
 .center.compact.k.biglogo .card { margin-top: 46px; }
 body.b-gris, body.b-blanc { --frame: #0d1b3e; }
 .biglogo .brand .tag { text-align: left; text-align-last: auto; letter-spacing: 4.2px; font-size: 9.5px; left: 141px; top: 89px; }
+
+/* bloc d'en-tête aligné : logo, titre et chiffres à la même largeur */
+body.box { --W: 560px; padding-top: 58px; }
+.bx { width: var(--W); margin: 0 auto; text-align: left; }
+.bx-logo { position: relative; width: var(--W); height: calc(var(--W) * .2824); }
+.bx-logo img { width: 100%; display: block; content: var(--logo-trim, url(logo-trim.png)); }
+.bx-tag { position: absolute; left: calc(var(--W) * .3657); top: calc(var(--W) * .2); font-weight: 600; font-size: 12px; letter-spacing: .42em; margin-right: -.42em; white-space: nowrap; opacity: .85; }
+.fit { display: block; width: max-content; white-space: nowrap; font-family: Montserrat, sans-serif; }
+.bx-tag.fit { font-family: Inter, sans-serif; }
+.bx-l1 { font-weight: 800; font-size: 44px; letter-spacing: -.02em; line-height: 1.1; margin-top: 30px; }
+.bx-l2 { font-weight: 900; font-size: 50px; letter-spacing: .01em; line-height: 1.12; background: var(--grad-out); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.box .keys { margin: 16px 0 0; justify-content: start; width: max-content; }
+.center.compact.k.box .card { margin-top: 46px; }
+body.b-gris, body.b-blanc, body.b-ivoire { --logo-trim: url(logo-navy-trim.png); }
+body.box { --W: 530px; padding-top: 50px; padding-bottom: 46px; }
+.box .bx-l1 { margin-top: 22px; }
+.box .keys { margin-top: 10px; }
+.center.compact.k.box .card { margin-top: 38px; padding-top: 34px; padding-bottom: 24px; }
+.center.compact.k.box .rule { margin: 12px 0; }
+.center.compact.k.box .cta { margin-top: 16px; padding: 20px 30px; }
+.center.compact.k.box .monthly { margin-top: 14px; padding: 12px 40px; }
+.center.compact.k.box .sign { margin-top: 12px; font-size: 24px; }
+.center.compact.k.box .fine { margin-top: 6px; }
+body.box { --W: 560px; }
+.center.compact.k.box .card { margin-top: 44px; }
+.center.compact.k.box .monthly { margin-top: 18px; }

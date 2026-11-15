@@ -191,3 +191,17 @@ body.compact { padding-top: 60px; padding-bottom: 52px; }
 .compact .card { margin-top: 44px; padding-top: 44px; }
 .compact .rule { margin: 20px 0 20px; }
 .compact .monthly { margin-top: 20px; padding: 14px 40px; }
+
+/* v3 : mise en page centrée */
+.center { text-align: center; }
+.center .logo { margin: 0 auto; }
+.center .pill { left: 50%; transform: translateX(-50%); white-space: nowrap; }
+.center h1 { font-size: 62px; margin-top: 34px; }
+.lines { margin-top: 26px; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 40px; line-height: 1.38; color: #e6ebfa; }
+.lines b { font-weight: 800; }
+.center .price { text-align: center; }
+.center .offer { justify-content: center; }
+.metiers { font-size: 23px; line-height: 1.55; color: #dfe5f6; font-weight: 500; }
+.metiers em { font-style: normal; color: var(--g1); padding: 0 6px; }
+.center .monthly { text-align: left; }
+.center.compact .card { margin-top: 62px; }

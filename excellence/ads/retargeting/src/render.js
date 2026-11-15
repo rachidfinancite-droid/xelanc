@@ -22,6 +22,8 @@ const jobs = [
   ['v1-inscription.html', 'v1-inscription-blanc.png', null, 'bg b-blanc framed box'],
   ['v1-tout.html', 'v1-tout-gris.png', null, 'bg b-gris framed box tout'],
   ['v1-tout.html', 'v1-tout-blanc.png', null, 'bg b-blanc framed box tout'],
+  ['v1-tout-150.html', 'v1-tout-150-gris.png', null, 'bg b-gris framed box tout'],
+  ['v1-tout-150.html', 'v1-tout-150-blanc.png', null, 'bg b-blanc framed box tout'],
 ];
 
 (async () => {

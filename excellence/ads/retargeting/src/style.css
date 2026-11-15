@@ -389,3 +389,8 @@ body.b-blanc { --tile-bg: #f3f6fc; --tick: #1f6fff; }
 .center.compact.k.box.tout .card { margin-top: 62px; padding-top: 46px; }
 .center.compact.k.box.tout .price .big { font-size: 68px; }
 .center.compact.k.box.tout .offer { margin-top: 10px; }
+
+/* avantages chiffrés */
+.tiles.nums .tile { padding: 12px 20px 12px 14px; gap: 14px; font-size: 25px; }
+.tiles.nums .tile b { flex: none; width: 92px; text-align: right; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 62px; line-height: 1; letter-spacing: -2px; background: var(--grad-out, var(--grad)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: 3px; }
+.tiles.nums .tile small { font-size: 18px; }

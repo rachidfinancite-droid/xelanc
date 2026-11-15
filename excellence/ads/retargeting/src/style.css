@@ -187,3 +187,7 @@ body.compact { padding-top: 60px; padding-bottom: 52px; }
 .tight .bar .p { font-size: 38px; }
 .tight .bar .p small { font-size: 19px; }
 .tight .cta.inline { font-size: 29px; padding: 24px 30px; }
+.compact .sign { margin-top: 24px; }
+.compact .card { margin-top: 44px; padding-top: 44px; }
+.compact .rule { margin: 20px 0 20px; }
+.compact .monthly { margin-top: 20px; padding: 14px 40px; }

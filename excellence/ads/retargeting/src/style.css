@@ -303,3 +303,7 @@ body.b-bleu-vif {
   --glow: rgba(0, 10, 80, .35); --edge: #ffffff;
   --strip-bg: rgba(8, 20, 110, .35); --strip-line: rgba(255,255,255,.4); --strip-muted: #c9d5ff;
 }
+
+/* encadrement fin */
+body.framed::before { content: ''; position: fixed; inset: 26px; border: 1.5px solid var(--frame, rgba(255,255,255,.5)); border-radius: 4px; pointer-events: none; }
+body.b-ivoire { --frame: #b9801a; }

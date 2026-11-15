@@ -14,6 +14,8 @@ const jobs = [
   ...['or', 'emeraude', 'violet', 'corail', 'argent'].map(t => ['v1-maitre.html', `v1-maitre-${t}.png`, null, `t-${t}`]),
   ...['blanc', 'gris', 'anthracite', 'ivoire', 'bleu-vif'].map(t => ['v1-maitre.html', `v1-fond-${t}.png`, null, `bg b-${t}`]),
   ['v1-maitre.html', 'v1-selection-ivoire.png', null, 'bg b-ivoire framed'],
+  ['v1-maitre.html', 'v1-gris-grand-logo.png', null, 'bg b-gris framed biglogo'],
+  ['v1-maitre.html', 'v1-blanc-grand-logo.png', null, 'bg b-blanc framed biglogo'],
 ];
 
 (async () => {

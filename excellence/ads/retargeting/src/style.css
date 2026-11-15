@@ -218,3 +218,18 @@ body.compact { padding-top: 60px; padding-bottom: 52px; }
 .center.compact.k .monthly { margin-top: 18px; }
 .center.compact.k .sign { margin-top: 18px; font-size: 25px; }
 .center.compact.k .fine { margin-top: 8px; }
+
+/* variantes de couleurs */
+.card { box-shadow: 0 0 70px var(--glow, rgba(91, 108, 255, .45)), 0 0 0 3px var(--edge, #6f9dff); }
+body.t-or { --g1: #f8dc8c; --g2: #dc9a2a; --glow: rgba(226, 165, 50, .38); --edge: #e9b85a;
+  background: radial-gradient(900px 620px at 50% 62%, rgba(40, 74, 160, .45), transparent 70%), linear-gradient(180deg, #0a1730 0%, #081226 55%, #0b1a44 100%); }
+body.t-emeraude { --g1: #7df0c4; --g2: #17b890; --glow: rgba(30, 190, 150, .36); --edge: #3fd6aa; --muted: #a5c2bd;
+  background: radial-gradient(900px 620px at 50% 62%, rgba(14, 110, 100, .50), transparent 70%), linear-gradient(180deg, #051c20 0%, #04151a 55%, #06282a 100%); }
+body.t-violet { --g1: #d9a6ff; --g2: #8f5bff; --glow: rgba(150, 90, 255, .42); --edge: #b184ff; --muted: #b9afd6;
+  background: radial-gradient(900px 620px at 50% 62%, rgba(96, 50, 180, .50), transparent 70%), linear-gradient(180deg, #140b2c 0%, #0e0822 55%, #1b0f40 100%); }
+body.t-corail { --g1: #ffb057; --g2: #ff4f6e; --glow: rgba(255, 110, 70, .38); --edge: #ff8a5c; --muted: #c2b3ad;
+  background: radial-gradient(900px 620px at 50% 62%, rgba(120, 44, 30, .45), transparent 70%), linear-gradient(180deg, #0c0a0b 0%, #080707 55%, #1a0d0b 100%); }
+body.t-argent { --g1: #ffffff; --g2: #aebbd6; --glow: rgba(190, 205, 235, .30); --edge: #c9d3e8;
+  background: radial-gradient(900px 620px at 50% 62%, rgba(52, 84, 150, .50), transparent 70%), linear-gradient(180deg, #0c1c3c 0%, #0a1730 55%, #12264f 100%); }
+body.t-corail .price s, body.t-or .price s { text-decoration-color: #fff; }
+body { --grad: linear-gradient(90deg, var(--g1), var(--g2)); }

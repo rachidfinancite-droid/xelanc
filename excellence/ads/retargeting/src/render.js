@@ -11,14 +11,16 @@ const jobs = [
   ['v3-panier.html', 'v3-panier.png', 'Carte bancaire ou virement.'],
   ['v3-panier.html', 'v3-panier-mobile-money.png', 'Mobile Money (Orange, MTN, Moov, Wave), carte ou virement.'],
   ['v4-echeance.html', 'v4-echeance.png'],
+  ...['or', 'emeraude', 'violet', 'corail', 'argent'].map(t => ['v1-maitre.html', `v1-maitre-${t}.png`, null, t]),
 ];
 
 (async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
-  for (const [file, png, payment] of jobs) {
+  for (const [file, png, payment, theme] of jobs) {
     let html = fs.readFileSync(path.join(src, file), 'utf8');
     if (payment) html = html.replace('PAYMENT_LINE', payment);
+    if (theme) html = html.replace('<body class="', `<body class="t-${theme} `);
     const tmp = path.join(src, '_tmp.html');
     fs.writeFileSync(tmp, html);
     await page.goto('file://' + tmp, { waitUntil: 'networkidle' });

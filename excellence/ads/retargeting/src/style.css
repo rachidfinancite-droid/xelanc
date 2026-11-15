@@ -205,3 +205,16 @@ body.compact { padding-top: 60px; padding-bottom: 52px; }
 .metiers em { font-style: normal; color: var(--g1); padding: 0 6px; }
 .center .monthly { text-align: left; }
 .center.compact .card { margin-top: 62px; }
+
+/* chiffres clés 6 / 12 / 1 */
+.keys { margin: 22px auto 0; display: grid; grid-template-columns: auto auto; justify-content: center; align-items: center; column-gap: 26px; row-gap: 2px; text-align: left; }
+.keys .n { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 84px; line-height: .98; letter-spacing: -3px; text-align: right; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: 4px; }
+.keys .t { font-family: Montserrat, sans-serif; font-weight: 700; font-size: 42px; color: #fff; }
+.center.compact.k h1 { margin-top: 26px; font-size: 58px; }
+.center.compact.k .card { margin-top: 52px; padding-top: 40px; padding-bottom: 28px; }
+.center.compact.k .price .big { font-size: 84px; }
+.center.compact.k .incl { margin-top: 12px; }
+.center.compact.k .rule { margin: 16px 0; }
+.center.compact.k .monthly { margin-top: 18px; }
+.center.compact.k .sign { margin-top: 18px; font-size: 25px; }
+.center.compact.k .fine { margin-top: 8px; }

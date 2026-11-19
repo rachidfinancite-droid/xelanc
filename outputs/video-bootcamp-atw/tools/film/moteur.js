@@ -45,7 +45,7 @@
       });
       // durée : entrée des unités sur la grille, puis temps de lecture
       const mots = fr.textContent.trim().split(/\s+/).length;
-      const v = VOIX[k + 1];
+      const v = VOIX[String(k + 1)];
       let at = 0.5;
       units.forEach((u, i) => { u.at = at; at += (i === units.length - 1 ? 0 : (u.fx === 'slam' ? 0.5 : 0.5)); });
       const entree = at + 0.5;
@@ -113,6 +113,13 @@
       s.fr.style.transform = `translate(${sx}px,${sy}px)`;
       s.fr.style.opacity = Math.min(1, d / 0.25);
     }
+    // sous-titres de la voix
+    const st = document.getElementById('soustitre'); let txt = '';
+    for (const s of plan) if (s.voix && t >= s.t0 && t < s.t1) {
+      const r = t - s.t0 - (s.voix.debut || 0);
+      for (const [a, b, x] of s.voix.subs || []) if (r >= a && r < b + (b === s.voix.subs[s.voix.subs.length - 1][1] ? 1.2 : 0)) txt = x;
+    }
+    st.innerHTML = txt ? '<span>' + txt.replace(/\n/g, '<br>') + '</span>' : '';
     // fondu au noir final
     const fin = window.FILM.duree;
     document.getElementById('noir').style.opacity = Math.min(Math.max((t - (fin - 1.9)) / 1.9, 0), 1);

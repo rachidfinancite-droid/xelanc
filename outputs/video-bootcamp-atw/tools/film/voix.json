@@ -1,0 +1,85 @@
+{
+ "14": {
+  "fichier": "bloc1-coherences.wav",
+  "duree": 14.1,
+  "debut": 1.5,
+  "subs": [
+   [
+    0.0,
+    4.3,
+    "Ce que nous finançons, ce ne sont pas vraiment les entreprises."
+   ],
+   [
+    4.3,
+    7.4,
+    "Ce que nous finançons, ce sont des cohérences."
+   ],
+   [
+    7.4,
+    14.1,
+    "Des cohérences entre un secteur, un modèle qui fonctionne\net une exécution crédible."
+   ]
+  ]
+ },
+ "21": {
+  "fichier": "bloc2-business-plan.wav",
+  "duree": 6.2,
+  "debut": 1.5,
+  "subs": [
+   [
+    0.0,
+    1.05,
+    "Les banquiers méritent"
+   ],
+   [
+    1.05,
+    6.2,
+    "de recevoir un business plan\nà la hauteur des engagements qu'on leur demande."
+   ]
+  ]
+ },
+ "28": {
+  "fichier": "bloc3-erreur-evitee.wav",
+  "duree": 8.7,
+  "debut": 1.5,
+  "subs": [
+   [
+    0.0,
+    1.35,
+    "Parce que vous savez,"
+   ],
+   [
+    1.35,
+    3.9,
+    "les dirigeants oublient beaucoup de choses,"
+   ],
+   [
+    3.9,
+    8.7,
+    "mais ils n'oublient jamais le banquier\nqui leur a évité une erreur."
+   ]
+  ]
+ },
+ "34": {
+  "fichier": "origination-confrere.wav",
+  "duree": 11.6,
+  "debut": 1.5,
+  "subs": [
+   [
+    0.0,
+    3.7,
+    "Et rappelez-vous ce qui se joue de l'autre côté du silence."
+   ],
+   [
+    3.7,
+    9.4,
+    "L'entreprise que vous n'osez pas appeler aujourd'hui,\nun confrère l'appellera peut-être demain."
+   ],
+   [
+    9.4,
+    11.6,
+    "Le potentiel ne vous attend pas."
+   ]
+  ]
+ }
+}

@@ -12,10 +12,10 @@ ACCROCHE = {
 VO_OBJ = {'01': "Tout commence par la compréhension.", '02': "Puis vient le moment de trancher.", '03': "Et enfin, la relation."}
 
 VALID = {
-    '01': dict(n=4, detail="3 examens de compétence<br>et 1 cas de synthèse",
-               exams=["Lecture 360° et business model", "Analyse financière orientée risque", "Lecture juridique et fiscale"]),
-    '02': dict(n=2, detail="1 quiz de certification<br>et 1 cas de synthèse", exams=["Analyse financière de crédit"]),
-    '03': dict(n=3, detail="1 examen de compétence<br>et 2 cas de synthèse", exams=["Traitement des objections"]),
+    '01': dict(n=4, exams=[("Lecture 360°<br>et business model", "73", "76"), ("Analyse financière<br>orientée risque", "81", "83"),
+                           ("Lecture juridique<br>et fiscale", "84", "97")]),
+    '02': dict(n=2, exams=[("Analyse financière<br>de crédit", "98", "100")]),
+    '03': dict(n=3, exams=[("Traitement<br>des objections", "90", "87")]),
 }
 
 RESULT = {
@@ -57,13 +57,19 @@ STYLE = """<style>
 .cs i{display:block;font-style:normal;font-size:26px;line-height:1.35;color:#c9d6e6;margin-top:12px}
 .cs3{display:flex;gap:46px;margin-top:16px}.cs3 div{font-size:20px;color:#9db6d6}
 .cs3 strong{display:block;font-family:var(--serif);font-size:52px;font-weight:600;color:#fff;line-height:1}
+.vx{background:#fff;border-radius:22px;box-shadow:0 12px 28px rgba(15,39,68,.16);padding:34px 36px;display:flex;flex-direction:column}
+.vx span{font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#6f8198}.vx b{font-family:var(--serif);font-size:44px;font-weight:600;color:#0f2744;line-height:1.1;margin-top:12px;min-height:98px}
+.vr{border-top:2px solid #e3e5e8;margin-top:22px;padding-top:18px}.vr strong{font-family:var(--serif);font-size:72px;font-weight:600;color:#0f2744;line-height:1}.vr em{font-style:normal;font-size:28px;color:#6f8198;margin-left:6px}.vr i{display:block;font-style:normal;font-size:24px;color:#3f5168;margin-top:6px}
+.vs{background:#0f2744;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.25);padding:40px 46px;display:flex;align-items:center;gap:50px}
+.vs span{font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#c8a96a}.vs b{display:block;font-family:var(--serif);font-size:70px;font-weight:600;color:#fff;line-height:1;margin-top:10px}.vs i{display:block;font-style:normal;font-size:27px;line-height:1.35;color:#c9d6e6;margin-top:14px}
+.vsn{flex:none;text-align:right}.vsn strong{font-family:var(--serif);font-size:110px;font-weight:600;color:#fff;line-height:1}.vsn em{font-style:normal;font-size:34px;color:#9db6d6;margin-left:6px}.vsn i{display:block;font-style:normal;font-size:24px;color:#c8a96a;margin-top:8px}
 .rs{border-top:2px solid #c8a96a;padding-top:28px}
 .rs b{display:block;font-family:var(--serif);font-size:110px;font-weight:500;color:#fff;line-height:1;white-space:nowrap}
 .rs span{display:block;font-size:30px;line-height:1.35;color:#c9d6e6;margin-top:20px}
 </style>"""
 
 
-def make(blocs, banner, nb, start):
+def make(blocs, banner, nb, start, clean_banner):
     n = [start]
 
     def nxt():
@@ -106,39 +112,47 @@ def make(blocs, banner, nb, start):
                         "La phrase s'écrit mot à mot, le mot en italique doré arrive en dernier. Les compétences du bloc s'alignent en bas.",
                         b['obj_src']))
 
-        # 3. Une compétence par écran : la bannière en plein écran, nos textes posés dedans
+        # 3. Une compétence par écran : la bannière en plein écran (sans son texte incrusté),
+        #    le titre complet en un seul bloc, puis l'objectif en sous-titre.
         for c in b['cours']:
-            img = banner(c['id'])
-            left = (f'<img src="{img}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">'
-                    '<div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,16,34,.95) 0%,rgba(6,16,34,.75) 20%,rgba(6,16,34,0) 42%)"></div>'
-                    f'<div style="position:absolute;left:105px;top:70px" class="kick">Compétence {c["num"]}</div>'
-                    '<div style="position:absolute;left:105px;top:845px;width:1700px">'
-                    f'<div style="font-size:31px;line-height:1.35;color:#e6edf6">{nb(ECRAN_DESC[c["id"]])}</div>'
-                    '<div style="display:flex;align-items:baseline;gap:22px;margin-top:22px">'
-                    '<span style="width:56px;height:3px;background:#c8a96a;display:inline-block;transform:translateY(-10px)"></span>'
-                    f'<span style="font-family:var(--serif);font-style:italic;font-size:44px;color:#fff">{nb(c["objectif"])}</span></div></div>')
+            img = clean_banner(c['id'])
+            veil = ('<div style="position:absolute;inset:0;background:linear-gradient(90deg,#0b1a33 0%,#0b1a33 66%,rgba(11,26,51,.6) 74%,rgba(11,26,51,0) 86%)"></div>'
+                    if c['id'] in ('c6', 'c7', 'c8') else
+                    '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,51,.6) 0%,rgba(11,26,51,0) 60%)"></div>')
+            left = (f'<img src="{img}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{veil}'
+                    '<div style="position:absolute;left:120px;top:50%;transform:translateY(-50%);width:900px">'
+                    f'<div class="kick">Compétence {c["num"]}</div>'
+                    f'<div style="font-family:var(--serif);font-size:74px;font-weight:600;line-height:1.06;color:#fff;margin-top:26px">{nb(c["ecran_titre"])}</div>'
+                    '<div style="width:110px;height:3px;background:#c8a96a;margin:42px 0 36px"></div>'
+                    f'<div style="font-family:var(--serif);font-style:italic;font-size:48px;line-height:1.2;color:#e9eef5">{nb(c["objectif"])}</div></div>')
             out.append(page(left, nxt(), f'Bloc {k} · compétence {c["num"]}', c['titre'].split(' :')[0],
                             "À écrire au montage, sans reprendre le texte de l'écran.",
-                            "La bannière entre en plein écran avec un lent zoom avant. Le descriptif monte en bas, puis l'objectif s'écrit en italique.",
-                            'Bannière et descriptif : plateforme banking.xelanc.com'))
+                            "La bannière entre en plein écran avec un lent zoom avant. Le titre monte en un seul bloc, le filet doré se trace, puis l'objectif s'écrit en italique.",
+                            'Bannière : plateforme banking.xelanc.com'))
 
-        # 4. La validation : combien d'épreuves, lesquelles
+        # 4. La validation, sur fond gris : les examens côte à côte, puis le ou les cas de synthèse à part
         v = VALID[k]
-        exams = ''.join(f'<div class="ex"><span>Examen</span>{nb(e)}</div>' for e in v['exams'])
+        ne = len(v['exams'])
+        cw = 520 if ne == 3 else 620
+        exams = ''.join(
+            f'<div class="vx" style="width:{cw}px"><span>Examen {i + 1}</span><b>{e[0]}</b>'
+            f'<div class="vr"><strong>{e[1]}</strong><em>/100</em><i>{e[2]}&nbsp;% de certifiés</i></div></div>'
+            for i, e in enumerate(v['exams']))
+        nc = len(b['cas'])
+        sw = 1680 if nc == 1 else 820
         cases = ''.join(
-            f'<div class="cs"><span>{nb(cs["type"])}</span><b>{nb(cs["nom"])}</b><i>{nb(cs["quoi"])}</i>'
-            f'<div class="cs3"><div><strong>{cs["comp"]}</strong>compétences</div><div><strong>{cs["moy"]}</strong>sur 100</div>'
-            f'<div><strong>{cs["cert"]}&nbsp;%</strong>certifiés</div></div></div>' for cs in b['cas'])
+            f'<div class="vs" style="width:{sw}px"><div style="flex:1;min-width:0"><span>{nb(cs["type"])}</span><b>{nb(cs["nom"])}</b>'
+            f'<i>{nb(cs["quoi_court"])}</i></div>'
+            f'<div class="vsn"><strong>{cs["moy"]}</strong><em>/100</em><i>{cs["cert"]}&nbsp;% de certifiés</i></div></div>' for cs in b['cas'])
         pl = 's' if v['n'] > 1 else ''
-        left = ('<div style="position:absolute;inset:0;background:linear-gradient(135deg,#060f20 0%,#0f2744 100%)"></div>'
-                '<div style="position:absolute;left:130px;top:120px;width:560px"><div class="kick">La validation</div>'
-                f'<div style="font-family:var(--serif);font-size:360px;font-weight:500;color:#fff;line-height:.9;margin-top:20px">{v["n"]}</div>'
-                f'<div style="font-family:var(--serif);font-size:58px;color:#fff;line-height:1.05">épreuve{pl}<br>de validation</div>'
-                f'<div style="font-size:28px;color:#9db6d6;margin-top:26px;line-height:1.35">{v["detail"]}</div></div>'
-                f'<div style="position:absolute;left:780px;top:130px;width:1030px;display:flex;flex-direction:column;gap:24px">{exams}{cases}</div>')
+        left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 28% 18%,#f7f7f6 0%,#ececeb 45%,#dedfe0 100%)"></div>'
+                '<div style="position:absolute;left:120px;top:80px"><div class="sur">La validation · bloc ' + k + '</div>'
+                f'<div style="font-family:var(--serif);font-size:72px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:12px">{v["n"]} épreuve{pl} de validation</div></div>'
+                f'<div style="position:absolute;left:120px;top:250px;display:flex;gap:60px">{exams}</div>'
+                f'<div style="position:absolute;left:120px;top:{730 if nc == 1 else 720}px;display:flex;gap:40px">{cases}</div>')
         out.append(page(left, nxt(), f'Bloc {k} · validation', 'Prouver, pas déclarer',
                         "« Chaque compétence passe une épreuve. Et le bloc se ferme sur un dossier réel, sans mode d'emploi. »",
-                        "Le chiffre géant compte jusqu'au nombre d'épreuves. Puis les examens, puis le cas de synthèse comme un titre de film.",
+                        "Les cartes des examens arrivent l'une après l'autre, leur note défile en bas. Puis le bloc du cas de synthèse se pose, avec sa note.",
                         "Rapports à l'Académie, 22/10/2026"))
 
         # 5. Résultats : les chiffres qui vendent

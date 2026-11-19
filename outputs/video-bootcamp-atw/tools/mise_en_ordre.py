@@ -38,7 +38,7 @@ CARTE = [
 ]
 SOMBRE = """<style>
 /* Tous les écrans en sombre : navy, cyan, gris, blanc. */
-.fr.bg,.fr .bg{background:radial-gradient(ellipse at 70% 30%,#173158 0%,#0b1a33 60%,#060f20 100%)}
+.fr.bg:not(.clair),.fr .bg{background:radial-gradient(ellipse at 70% 30%,#173158 0%,#0b1a33 60%,#060f20 100%)}
 .fr .sur{color:#9db6d6}.fr .ttl{color:#fff}.fr .src{color:#9db6d6}
 .fr .disc{background:rgba(255,255,255,.07);box-shadow:none;border:1.5px solid rgba(95,208,234,.55)}
 .fr .ico{stroke:#5fd0ea}
@@ -50,6 +50,8 @@ SOMBRE = """<style>
 def assombrir(html):
     def frame(m):
         x = m.group(0)
+        if 'class="fr bg clair"' in x:
+            return x
         for a, b in CARTE:
             x = x.replace(a, b)
         return x

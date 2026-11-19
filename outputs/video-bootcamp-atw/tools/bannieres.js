@@ -33,7 +33,7 @@ p{font-size:38px;line-height:1.3;color:#e8eef7}
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1600, height: 900 } });
   for (const c of COURS) {
-    const tmp = path.join(root, 'assets', '_banniere_tmp.html');
+    const tmp = path.join(require('os').tmpdir(), '_banniere_tmp.html');
     require('fs').writeFileSync(tmp, page(c));
     await p.goto('file://' + tmp, { waitUntil: 'load' });
     await p.evaluate(() => document.fonts.ready);

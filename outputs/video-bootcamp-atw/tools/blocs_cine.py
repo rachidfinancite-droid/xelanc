@@ -5,9 +5,9 @@ ACCROCHE = {
     '01': ("Avant de financer,<br><em>comprendre.</em>",
            "Lire le secteur, le business model, les chiffres et le cadre juridique : une entreprise se comprend avant de se financer."),
     '02': ("De l'analyse<br>à la <em>décision.</em>",
-           "Un avis argumenté, chiffré, défendable en comité : c'est là que se joue la qualité d'un engagement."),
+           "Un avis argumenté et chiffré, défendable en comité, jusqu'au business plan du client : c'est là que se joue la qualité d'un engagement."),
     '03': ("Gagner le client,<br><em>le garder.</em>",
-           "Challenger un projet, aller chercher l'entreprise au bon moment, devenir son partenaire de référence."),
+           "Aller chercher l'entreprise au bon moment, puis devenir son partenaire de référence, dans la durée."),
 }
 VO_OBJ = {'01': "Tout commence par la compréhension.", '02': "Puis vient le moment de trancher.", '03': "Et enfin, la relation."}
 
@@ -34,13 +34,13 @@ EPREUVES = {
              pb="« Cette entreprise peut-elle rembourser ? » Des mises en situation chiffrées, du DCR aux équilibres du bilan, jusqu'à la décision en comité.", note="98", cert="100"),
         dict(synthese=True, type="Cas de synthèse", img="achapost", nom="Groupe ACHAPOST", ctx="Grossiste-répartiteur pharmaceutique",
              pb="Le BFR explose à 138,6 MDH, la trésorerie tombe à −139,6 MDH. Pas un crédit de croissance : une restructuration. La bonne réponse : « oui, sous conditions ».", note="68,5", cert="88"),
-    ],
-    '03': [
         dict(synthese=True, type="Cas de synthèse · business plan", img="terralis", nom="TERRALIS SA", ctx="Conserverie · 120 MMAD de CA",
              pb="L'outil est saturé, le dirigeant hésite entre quatre options de croissance. Ce qu'il veut faire, la banque peut-elle le financer ?", note="78", cert="100"),
-        dict(synthese=False, type="Examen · module 3.2", img="objections", nom="Traitement des objections", ctx="",
+    ],
+    '03': [
+        dict(synthese=False, type="Examen · prospection", img="objections", nom="Traitement des objections", ctx="",
              pb="Vingt objections réelles de dirigeants, à transformer en suite d'entretien.", note="90", cert="87"),
-        dict(synthese=True, type="Cas de synthèse · évaluation finale", img="azura", nom="AZURA Peintures SA", ctx="Fabricant de peintures · 251 MMAD de CA",
+        dict(synthese=True, type="Cas de synthèse · banquier conseil", img="azura", nom="AZURA Peintures SA", ctx="Fabricant de peintures · 251 MMAD de CA",
              pb="Le client demande 8 MMAD de découvert, son vrai besoin dépasse 40 MMAD. Requalifier, refuser de façon constructive, proposer une offre globale.", note="81", cert="100"),
     ],
 }
@@ -52,12 +52,12 @@ RESULT = {
             ("84/100", "meilleure moyenne : juridique et fiscal")]),
     '02': ("Le cœur du métier, maîtrisé.",
            [("98/100", "moyenne au quiz de certification"),
-            ("100 %", "de certifiés au quiz"),
-            ("88 %", "franchissent ACHAPOST, le palier le plus exigeant")]),
-    '03': ("Les épreuves les plus dures, les mieux réussies.",
-           [("100 %", "de certifiés sur TERRALIS et sur AZURA"),
-            ("81/100", "AZURA : la meilleure moyenne des cas de synthèse"),
-            ("28 / 28", "apprenants évalués sur AZURA, tous certifiés")]),
+            ("88 %", "franchissent ACHAPOST, le palier le plus exigeant"),
+            ("100 %", "de certifiés sur TERRALIS, le business plan")]),
+    '03': ("Le cas le plus complet, le mieux réussi.",
+           [("81/100", "AZURA : la meilleure moyenne des cas de synthèse"),
+            ("28 / 28", "apprenants évalués sur AZURA, tous certifiés"),
+            ("87 %", "de certifiés au traitement des objections")]),
 }
 
 ECRAN_DESC = {

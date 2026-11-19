@@ -59,9 +59,14 @@ for e in plan['events']:
     env = np.ones(hi - lo) * 0.30
     env[:a - lo] = np.linspace(1, 0.30, a - lo); env[len(env) - (hi - b):] = np.linspace(0.30, 1, hi - b)
     gain[lo:hi] = np.minimum(gain[lo:hi], env)
-# fondu final de la musique sur 2,5 s
-fin = int((plan['duree'] - 2.5 - t0) * SR)
-if 0 < fin < n: gain[fin:] *= np.linspace(1, 0, n - fin)
+# fin : la musique monte sur le maillon ultime pour lancer le logo, continue sous l'outro, puis s'éteint en douceur
+D = plan['duree']
+m0 = int((D - 7 - t0) * SR); m1 = int((D - t0) * SR)
+if 0 <= m0 < m1 <= n:
+    gain[m0:m1] *= np.linspace(1, 1.45, m1 - m0); gain[m1:] *= 1.45
+    rs = souffle(3.0, 0.07); poser(rs, D - 3.0)          # montée douce, sans impact
+f0 = n - int(3.0 * SR)
+if f0 > 0: gain[f0:] *= np.linspace(1, 0, n - f0) ** 1.5
 pg = np.where(gain < 0.99, 0.35, 1.0)   # percussions aussi en retrait sous la voix
 mix = mus * gain + perc * 0.62 * pg + voixpiste
 mix = np.clip(mix, -1, 1)

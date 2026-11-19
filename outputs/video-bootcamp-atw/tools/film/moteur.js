@@ -29,6 +29,8 @@
       function cueillir(e, prof) {
         const cs = getComputedStyle(e);
         if (e.tagName === 'svg') { units.push({ el: e, fx: 'draw' }); return; }
+        // une ligne de tableau (libellé, barre, chiffre) arrive d'un seul bloc, sans coup de percussion
+        if (/\bog-(fun|sec|st2)\b/.test(e.className)) { units.push({ el: e, fx: 'roll', muet: true }); return; }
         const sous = [...e.children].filter(c => c.tagName !== 'STYLE' && c.offsetHeight > 0);
         const liste = (cs.display.includes('flex') || cs.display.includes('grid')) && sous.length >= 2 && e.textContent.trim().length > 0;
         if (liste) { sous.forEach(c => units.push({ el: c })); return; }
@@ -78,9 +80,10 @@
       const entree = at + 0.5;
       let duree = Math.max(Math.min(Math.max(entree + 1.2 + mots / 9, 4), 8.5), entree + 2);
       if (v) duree = Math.max(duree, (v.debut || entree) + v.duree + 1.0);
+      if (k === frames.length - 1) duree += 3;   // le maillon ultime tient pendant la montée de la musique
       duree = snap(duree);
       const t0 = t, t1 = t + duree;
-      units.forEach(u => { u.t = t0 + u.at; events.push({ t: u.t, type: u.fx }); });
+      units.forEach(u => { u.t = t0 + u.at; if (!u.muet) events.push({ t: u.t, type: u.fx }); });
       if (v) events.push({ t: t0 + (v.debut || entree), type: 'voix', fichier: v.fichier, duree: v.duree });
       plan.push({ k: k + 1, tc, fr, bg, units, t0, t1, voix: v });
       t = t1;
@@ -125,7 +128,7 @@
       let shake = 0;
       for (const u of s.units) {
         const p = (t - u.t) / (u.fx === 'slam' ? 0.18 : u.fx === 'roll' ? 0.2 : 0.4);
-        const sortie = Math.min(Math.max((t - (s.t1 - 0.22)) / 0.18, 0), 1);
+        const sortie = s === plan[plan.length - 1] ? 0 : Math.min(Math.max((t - (s.t1 - 0.22)) / 0.18, 0), 1);
         if (u.fx === 'draw') {
           const sortieD = Math.min(Math.max((t - (s.t1 - 0.22)) / 0.18, 0), 1);
           u.el.style.opacity = t < u.t ? 0 : 1 - sortieD;
@@ -169,6 +172,6 @@
     st.innerHTML = txt ? '<span>' + txt.replace(/\n/g, '<br>') + '</span>' : '';
     // fondu au noir final
     const fin = window.FILM.duree;
-    document.getElementById('noir').style.opacity = Math.min(Math.max((t - (fin - 1.9)) / 1.9, 0), 1);
+    document.getElementById('noir').style.opacity = 0;  // l'outro prend le relais en fondu enchaîné
   };
 })();

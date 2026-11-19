@@ -182,7 +182,7 @@ def make(start, nb, img):
             '<div style="position:absolute;left:120px;top:70px"><div class="sur">Des opportunités concrètes · sources publiques</div>'
             '<div style="font-family:var(--serif);font-size:72px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:12px">Un événement précis, une réponse adaptée</div></div>'
             f'<div style="position:absolute;left:120px;top:280px;height:620px;display:flex;gap:32px">{cards}</div>')
-    out.append(page(left, nxt(), 'Action terrain · dossiers', 'Des deals, pas des exercices',
+    if False: out.append(page(left, nxt(), 'Action terrain · dossiers', 'Des deals, pas des exercices',
                     "« Derrière chaque fiche, un vrai projet : des dizaines, parfois des centaines de millions de dirhams. »",
                     "Quatre dossiers représentatifs, même forme que les cartes d'épreuves ; le montant défile en cyan.",
                     "Revue des travaux d'origination, p. 20 et 21"))
@@ -197,24 +197,23 @@ def make(start, nb, img):
             '<div style="font-family:var(--serif);font-size:50px;font-weight:500;color:#5fd0ea;margin-top:24px">19 – 20 novembre</div>'
             '<div style="font-size:24px;letter-spacing:.24em;color:#d9e2ee;margin-top:14px">2026</div></div>'
             '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:1100px">'
-            '<div style="font-family:var(--serif);font-size:96px;font-weight:500;line-height:1.04;color:#fff">Du dossier<br><em style="color:#5fd0ea">au pitch qui convainc.</em></div>'
-            f'<div style="margin-top:46px;display:flex;flex-direction:column;gap:22px">{rows}</div></div>')
+            '<div style="font-family:var(--serif);font-size:104px;font-weight:500;line-height:1.04;color:#fff;white-space:nowrap">Du dossier<br><em style="color:#5fd0ea">au pitch qui convainc.</em></div></div>')
     out.append(page(left, nxt(), 'Action terrain · bootcamp', 'Deux jours pour être prêt',
                     "« Deux jours pour transformer chaque dossier en un pitch défendable : pourquoi elle, pourquoi maintenant, pourquoi nous. »",
-                    "À gauche, « Bootcamp d'origination » et les dates. À droite, le titre, puis les quatre temps forts qui tombent l'un sous l'autre.",
+                    "À gauche, « Bootcamp d'origination » et les dates. À droite, « Du dossier au pitch qui convainc », seul.",
                     "Programme du bootcamp d'origination"))
 
     # 9. Le dernier maillon
     left = (NUIT + FILET +
             '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
-            '<div style="font-family:var(--serif);font-size:96px;font-weight:600;line-height:1.02;color:#fff">Le dernier<br>maillon</div>'
+            '<div style="font-family:var(--serif);font-size:96px;font-weight:600;line-height:1.02;color:#fff">Le maillon<br>ultime</div>'
             '<div style="font-family:var(--serif);font-size:50px;font-weight:500;color:#5fd0ea;margin-top:24px">Janvier 2027</div></div>'
             '<div style="position:absolute;left:720px;top:50%;transform:translateY(-55%);width:1100px">'
             '<div style="font-family:var(--serif);font-size:110px;font-weight:600;line-height:1.02;color:#fff">Soutenance<br><em style="color:#5fd0ea">et certification</em></div>'
             '<div style="font-size:36px;line-height:1.4;color:#c9d6e6;margin-top:40px">Chaque participant défend ses prospects devant un jury, comme en comité. Puis vient la prise de contact, accompagnée par le manager.</div></div>')
-    out.append(page(left, nxt(), 'Action terrain · dernier maillon', 'La soutenance',
-                    "« Dernier maillon du parcours : la soutenance devant le jury, et la certification. »",
-                    "À gauche, « Le dernier maillon » et la date. À droite, « Soutenance et certification », puis le sous-titre.",
+    out.append(page(left, nxt(), 'Action terrain · maillon ultime', 'La soutenance',
+                    "« Le maillon ultime : la soutenance devant le jury, et la certification. »",
+                    "À gauche, « Le maillon ultime » et la date. À droite, « Soutenance et certification », puis le sous-titre.",
                     "Revue des travaux d'origination, p. 33"))
 
     # 10 à 14. L'expérience d'upskilling en chiffres : une ouverture, puis un écran par famille de chiffres.

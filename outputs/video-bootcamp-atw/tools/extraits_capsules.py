@@ -51,15 +51,17 @@ for nom, cap, parts, subs in CLIPS:
                 return acc + (t - a)
             acc += b - a
         return acc
+    fin_voix = sum(b - a for a, b in parts)          # dernier mot prononcé (temps de sortie)
+    parts = parts[:-1] + [(parts[-1][0], parts[-1][1] + 2.5)]   # 2,5 s d'image après la dernière phrase
     total = sum(b - a for a, b in parts)
-    ass = HEAD + ''.join(f'Dialogue: 0,{ts(rel(a))},{ts(min(rel(b), total) - 0.02)},S,,0,0,0,,{t.replace(chr(10), chr(92) + "N")}\n' for a, b, t in subs)
+    ass = HEAD + ''.join(f'Dialogue: 0,{ts(rel(a))},{ts((fin_voix + 1.6) if i == len(subs) - 1 else rel(b) - 0.02)},S,,0,0,0,,{t.replace(chr(10), chr(92) + "N")}\n' for i, (a, b, t) in enumerate(subs))
     af = os.path.join(OUT, nom + '.ass'); open(af, 'w').write(ass)
     src = os.path.join(D, 'v', cap + '.mp4')
     n = len(parts)
     fc = ''.join(f'[0:v]trim={a}:{b},setpts=PTS-STARTPTS[v{i}];[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS[a{i}];' for i, (a, b) in enumerate(parts))
     fc += ''.join(f'[v{i}][a{i}]' for i in range(n)) + f'concat=n={n}:v=1:a=1[vc][ac];'
-    o = round(total - 0.25, 2)
-    fc += f"[vc]fade=t=in:d=0.15,fade=t=out:st={o}:d=0.25,ass={af}:fontsdir={os.path.join(D, 'fonts')}[vo];[ac]afade=t=in:d=0.08,afade=t=out:st={o}:d=0.25[ao]"
+    o = round(total - 0.5, 2); oa = round(fin_voix + 0.35, 2)
+    fc += f"[vc]fade=t=in:d=0.15,fade=t=out:st={o}:d=0.5,ass={af}:fontsdir={os.path.join(D, 'fonts')}[vo];[ac]afade=t=in:d=0.08,afade=t=out:st={oa}:d=0.6[ao]"
     subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', src, '-filter_complex', fc, '-map', '[vo]', '-map', '[ao]',
                     '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', '-r', '30', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
                     os.path.join(OUT, nom + '.mp4')], check=True)

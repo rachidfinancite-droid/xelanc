@@ -18,6 +18,33 @@ VALID = {
     '03': dict(n=3, exams=[("Traitement<br>des objections", "90", "87")]),
 }
 
+EPREUVES = {
+    '01': [
+        dict(synthese=False, type="Examen · module 1.1", nom="Lecture 360°", ctx="",
+             pb="Situer un client dans son secteur, décoder son business model et le relier à sa dynamique financière.", note="73", cert="76"),
+        dict(synthese=False, type="Examen · module 1.2", nom="Blé d'Or", ctx="Cas réel d'instruction",
+             pb="Cadrer l'objectif, qualifier l'information, décomposer les agrégats, et conclure sur une instruction défendable.", note="81", cert="83"),
+        dict(synthese=False, type="Examen · module 1.3", nom="Groupe Maghreb Industries", ctx="Cas juridique et fiscal",
+             pb="Traduire les signaux juridiques et fiscaux en risque bancaire : garanties, covenants, pricing, décision.", note="84", cert="97"),
+        dict(synthese=True, type="Cas de synthèse", nom="La Table de l'Atlas", ctx="Restaurant · Marrakech",
+             pb="Un crédit de 4,5 MMAD sur 7 ans pour ouvrir un second établissement. Un dossier volontairement piégé : instruire et trancher.", note="76,5", cert="90"),
+    ],
+    '02': [
+        dict(synthese=False, type="Quiz de certification", nom="Analyse financière de crédit", ctx="",
+             pb="« Cette entreprise peut-elle rembourser ? » Des mises en situation chiffrées, du DCR aux équilibres du bilan, jusqu'à la décision en comité.", note="98", cert="100"),
+        dict(synthese=True, type="Cas de synthèse", nom="Groupe ACHAPOST", ctx="Grossiste-répartiteur pharmaceutique",
+             pb="Le BFR explose à 138,6 MDH, la trésorerie tombe à −139,6 MDH. Pas un crédit de croissance : une restructuration. La bonne réponse : « oui, sous conditions ».", note="68,5", cert="88"),
+    ],
+    '03': [
+        dict(synthese=True, type="Cas de synthèse · business plan", nom="TERRALIS SA", ctx="Conserverie · 120 MMAD de CA",
+             pb="L'outil est saturé, le dirigeant hésite entre quatre options de croissance. Ce qu'il veut faire, la banque peut-elle le financer ?", note="78", cert="100"),
+        dict(synthese=False, type="Examen · module 3.2", nom="Traitement des objections", ctx="",
+             pb="Vingt objections réelles de dirigeants, à transformer en suite d'entretien.", note="90", cert="87"),
+        dict(synthese=True, type="Cas de synthèse · évaluation finale", nom="AZURA Peintures SA", ctx="Fabricant de peintures · 251 MMAD de CA",
+             pb="Le client demande 8 MMAD de découvert, son vrai besoin dépasse 40 MMAD. Requalifier, refuser de façon constructive, proposer une offre globale.", note="81", cert="100"),
+    ],
+}
+
 RESULT = {
     '01': ("Une promotion qui monte en puissance.",
            [("97 %", "de certifiés au troisième examen, contre 76 % au premier"),
@@ -63,6 +90,13 @@ STYLE = """<style>
 .vs{background:#0f2744;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.25);padding:40px 46px;display:flex;align-items:center;gap:50px}
 .vs span{font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#c8a96a}.vs b{display:block;font-family:var(--serif);font-size:70px;font-weight:600;color:#fff;line-height:1;margin-top:10px}.vs i{display:block;font-style:normal;font-size:27px;line-height:1.35;color:#c9d6e6;margin-top:14px}
 .vsn{flex:none;text-align:right}.vsn strong{font-family:var(--serif);font-size:110px;font-weight:600;color:#fff;line-height:1}.vsn em{font-style:normal;font-size:34px;color:#9db6d6;margin-left:6px}.vsn i{display:block;font-style:normal;font-size:24px;color:#c8a96a;margin-top:8px}
+.vc{background:#fff;border-radius:22px;box-shadow:0 12px 28px rgba(15,39,68,.16);padding:38px 34px;display:flex;flex-direction:column;height:100%}
+.vc span{font-size:19px;letter-spacing:.2em;text-transform:uppercase;color:#a8324a}
+.vc b{display:block;font-family:var(--serif);font-size:48px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:16px}
+.vc em{display:block;font-style:normal;font-size:22px;color:#6f8198;margin-top:10px}
+.vc p{font-size:25px;line-height:1.42;color:#3f5168;margin:24px 0 0}
+.vn{margin-top:auto;border-top:2px solid #e3e5e8;padding-top:20px}.vn strong{font-family:var(--serif);font-size:84px;font-weight:600;color:#0f2744;line-height:1}.vn small{font-size:28px;color:#6f8198;margin-left:6px}.vn i{display:block;font-style:normal;font-size:23px;color:#3f5168;margin-top:8px}
+.vcs{background:#0f2744}.vcs span{color:#c8a96a}.vcs b{color:#fff}.vcs em{color:#9db6d6}.vcs p{color:#d6dfeb}.vcs .vn{border-top-color:rgba(255,255,255,.15)}.vcs .vn strong{color:#fff}.vcs .vn small{color:#9db6d6}.vcs .vn i{color:#c8a96a}
 .rs{border-top:2px solid #c8a96a;padding-top:28px}
 .rs b{display:block;font-family:var(--serif);font-size:110px;font-weight:500;color:#fff;line-height:1;white-space:nowrap}
 .rs span{display:block;font-size:30px;line-height:1.35;color:#c9d6e6;margin-top:20px}
@@ -130,30 +164,30 @@ def make(blocs, banner, nb, start, clean_banner):
                             "La bannière entre en plein écran avec un lent zoom avant. Le titre monte en un seul bloc, le filet doré se trace, puis l'objectif s'écrit en italique.",
                             'Bannière : plateforme banking.xelanc.com'))
 
-        # 4. La validation, sur fond gris : les examens côte à côte, puis le ou les cas de synthèse à part
-        v = VALID[k]
-        ne = len(v['exams'])
-        cw = 520 if ne == 3 else 620
-        exams = ''.join(
-            f'<div class="vx" style="width:{cw}px"><span>Examen {i + 1}</span><b>{e[0]}</b>'
-            f'<div class="vr"><strong>{e[1]}</strong><em>/100</em><i>{e[2]}&nbsp;% de certifiés</i></div></div>'
-            for i, e in enumerate(v['exams']))
-        nc = len(b['cas'])
-        sw = 1680 if nc == 1 else 820
-        cases = ''.join(
-            f'<div class="vs" style="width:{sw}px"><div style="flex:1;min-width:0"><span>{nb(cs["type"])}</span><b>{nb(cs["nom"])}</b>'
-            f'<i>{nb(cs["quoi_court"])}</i></div>'
-            f'<div class="vsn"><strong>{cs["moy"]}</strong><em>/100</em><i>{cs["cert"]}&nbsp;% de certifiés</i></div></div>' for cs in b['cas'])
-        pl = 's' if v['n'] > 1 else ''
+        # 4. La validation, sur fond gris : toutes les épreuves du bloc sur une même ligne.
+        #    Chaque carte : le type d'épreuve, le nom du dossier, son contexte, la problématique, puis la note.
+        ep = EPREUVES[k]
+        ne = len(ep)
+        gap = 30
+        cw = int((1680 - gap * (ne - 1)) / ne)
+        cards = ''
+        for e in ep:
+            syn = e['synthese']
+            cards += (f'<div class="vc{" vcs" if syn else ""}" style="width:{cw}px">'
+                      f'<span>{nb(e["type"])}</span><b>{nb(e["nom"])}</b>'
+                      + (f'<em>{nb(e["ctx"])}</em>' if e.get('ctx') else '') +
+                      f'<p>{nb(e["pb"])}</p>'
+                      f'<div class="vn"><strong>{e["note"]}</strong><small>/100</small><i>{e["cert"]}&nbsp;% de certifiés</i></div></div>')
+        nsyn = sum(1 for e in ep if e['synthese'])
+        sous = f'{ne - nsyn} examen{"s" if ne - nsyn > 1 else ""} et {nsyn} cas de synthèse'
         left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 28% 18%,#f7f7f6 0%,#ececeb 45%,#dedfe0 100%)"></div>'
-                '<div style="position:absolute;left:120px;top:80px"><div class="sur">La validation · bloc ' + k + '</div>'
-                f'<div style="font-family:var(--serif);font-size:72px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:12px">{v["n"]} épreuve{pl} de validation</div></div>'
-                f'<div style="position:absolute;left:120px;top:250px;display:flex;gap:60px">{exams}</div>'
-                f'<div style="position:absolute;left:120px;top:{730 if nc == 1 else 720}px;display:flex;gap:40px">{cases}</div>')
+                f'<div style="position:absolute;left:120px;top:70px"><div class="sur">La validation · bloc {k} · {sous}</div>'
+                f'<div style="font-family:var(--serif);font-size:72px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:12px">{ne} épreuve{"s" if ne > 1 else ""} de validation</div></div>'
+                f'<div style="position:absolute;left:120px;top:250px;height:740px;display:flex;gap:{gap}px">{cards}</div>')
         out.append(page(left, nxt(), f'Bloc {k} · validation', 'Prouver, pas déclarer',
-                        "« Chaque compétence passe une épreuve. Et le bloc se ferme sur un dossier réel, sans mode d'emploi. »",
-                        "Les cartes des examens arrivent l'une après l'autre, leur note défile en bas. Puis le bloc du cas de synthèse se pose, avec sa note.",
-                        "Rapports à l'Académie, 22/10/2026"))
+                        "« Chaque compétence passe une épreuve, sur un dossier réel. Et le bloc se ferme sur un cas de synthèse. »",
+                        "Les cartes arrivent de gauche à droite, une par une. Dans chaque carte : le nom du dossier, la problématique, puis la note qui défile.",
+                        "Rapports d'évaluation 04a à 04i"))
 
         # 5. Résultats : les chiffres qui vendent
         titre, stats = RESULT[k]

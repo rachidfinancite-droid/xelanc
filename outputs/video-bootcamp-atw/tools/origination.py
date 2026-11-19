@@ -37,6 +37,11 @@ STYLE = """<style>
 .og-v{display:flex;align-items:baseline;gap:30px;border-top:1px solid rgba(200,169,106,.45);padding-top:18px}
 .og-v small{width:300px;flex:none;white-space:nowrap;font-size:21px;letter-spacing:.12em;text-transform:uppercase;color:#c8a96a;font-weight:600}
 .og-v b{font-family:var(--serif);font-size:48px;font-weight:600;color:#fff}
+.kvg{position:absolute;left:880px;right:110px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column}
+.kv{display:grid;grid-template-columns:420px 1fr;align-items:center;column-gap:36px;border-top:2px solid rgba(200,169,106,.75);padding:24px 0}
+.kv b{font-family:var(--serif);font-size:124px;font-weight:500;color:#5fd0ea;line-height:1;font-variant-numeric:lining-nums;white-space:nowrap}
+.kv span{font-size:38px;line-height:1.25;color:#fff;font-weight:500}
+.fr .kt,.fr .kt *{text-wrap:nowrap;white-space:nowrap}
 .kk{font-size:24px;letter-spacing:.26em;text-transform:uppercase;color:#c8a96a;font-weight:600}
 .kng{position:absolute;left:700px;right:110px;top:50%;transform:translateY(-50%);display:grid;grid-template-columns:1fr 1fr;column-gap:70px;row-gap:64px}
 .kn{border-top:2px solid #c8a96a;padding-top:24px}
@@ -218,17 +223,17 @@ def make(start, nb, img):
         return 'data:image/jpeg;base64,' + base64.b64encode(open(os.path.join(A, rel), 'rb').read()).decode()
     BAS = '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,40,.82) 0%,rgba(8,20,40,.45) 30%,rgba(8,20,40,.80) 60%,rgba(8,20,40,.94) 100%)"></div>'
     VOILE = '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,40,.94) 0%,rgba(8,20,40,.86) 30%,rgba(8,20,40,.72) 60%,rgba(8,20,40,.66) 100%)"></div>'
-    FIL4 = '<div style="position:absolute;left:600px;top:150px;bottom:150px;width:2px;background:rgba(200,169,106,.8)"></div>'
-    def colonne(kick, titre):
-        return ('<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:440px">'
+    FIL4 = '<div style="position:absolute;left:800px;top:150px;bottom:150px;width:2px;background:rgba(200,169,106,.8)"></div>'
+    def colonne(kick, titre, extra=''):
+        return ('<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:580px">'
                 f'<div class="kk">{kick}</div>'
-                f'<div style="font-family:var(--serif);font-size:60px;font-weight:600;color:#fff;line-height:1.08;margin-top:22px;white-space:nowrap">{titre}</div></div>')
+                f'<div class="kt" style="font-family:var(--serif);font-size:90px;font-weight:600;color:#fff;line-height:1.04;margin-top:26px">{titre}</div>{extra}</div>')
     def chiffres(bg, kick, titre, cells, tc, role, vo, src):
-        tiles = ''.join(f'<div class="kn"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in cells)
+        tiles = ''.join(f'<div class="kv"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in cells)
         left = (f'<div style="position:absolute;inset:0;background:url({bg}) center/cover"></div>' + VOILE + FIL4 +
-                colonne(kick, titre) + f'<div class="kng">{tiles}</div>')
+                colonne(kick, titre) + f'<div class="kvg">{tiles}</div>')
         out.append(page(left, nxt(), tc, role, vo,
-                        "À gauche, le titre. À droite, les quatre chiffres tombent l'un après l'autre et défilent jusqu'à leur valeur.", src))
+                        "À gauche, le titre en grand. À droite, les quatre chiffres tombent l'un sous l'autre et défilent jusqu'à leur valeur.", src))
 
     # Ouverture
     left = (f'<div style="position:absolute;inset:0;background:url({photo("bannieres/clean/c4.jpg")}) center/cover"></div>' + SCRIM + FILET +
@@ -242,7 +247,7 @@ def make(start, nb, img):
                     "À gauche, « Promotion 2026 · GRE · CCE ». À droite, le titre, ligne par ligne.",
                     "Bannière de la compétence 2.1"))
 
-    chiffres(photo('bannieres/clean/c1.jpg'), 'Le parcours', 'Sept mois,<br><em style="color:#c8a96a">du premier cours<br>au terrain</em>',
+    chiffres(photo('bannieres/clean/c1.jpg'), 'Le parcours', 'Sept mois,<br><em style="color:#c8a96a">du premier<br>cours au terrain</em>',
              [('30', 'participants, GRE et CCE'), ('9', 'cours en ligne : 8 compétences, 3 blocs'),
               ('7', 'mois de parcours, d\'avril à novembre'), ('2', 'jours de bootcamp d\'origination')],
              'En chiffres · le parcours', 'Le parcours',
@@ -254,15 +259,18 @@ def make(start, nb, img):
     rows = ''.join(f'<div class="pk"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in
                    [('215', 'capsules vidéo réparties dans les 9 cours'), ('6\u202f450', 'capsules terminées : 100 % du programme suivi'),
                     ('800', 'heures de formation en ligne'), ('27 h', 'par participant en moyenne')])
+    mock = ('<div style="margin-top:44px;width:560px;border-radius:10px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.55);background:#fff">'
+            '<div style="height:36px;background:#e9ecf1;display:flex;align-items:center;gap:7px;padding:0 14px">'
+            '<i style="width:10px;height:10px;border-radius:50%;background:#ff5f57"></i><i style="width:10px;height:10px;border-radius:50%;background:#febc2e"></i><i style="width:10px;height:10px;border-radius:50%;background:#28c840"></i>'
+            '<div style="margin-left:12px;flex:1;height:24px;border-radius:12px;background:#fff;display:flex;align-items:center;padding-left:14px;font-size:16px;color:#33475f">🔒&nbsp; banking.xelanc.com</div></div>'
+            f'<div style="height:300px;background:url({shot}) top left/cover"></div></div>'
+            '<div style="margin-top:22px;font-size:26px;letter-spacing:.18em;color:#5fd0ea;font-weight:600">BANKING.XELANC.COM</div>')
+    tiles = ''.join(f'<div class="kv"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in
+                    [('215', 'capsules vidéo réparties dans les 9 cours'), ('6\u202f450', 'capsules terminées : 100 % du programme suivi'),
+                     ('800', 'heures de formation en ligne'), ('27 h', 'par participant en moyenne')])
     left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,#1b3a66 0%,#0b1a33 60%,#060f20 100%)"></div>' + FIL4 +
-            colonne('La plateforme', 'Une école<br><em style="color:#c8a96a">ouverte<br>en continu</em>') +
-            '<div style="position:absolute;left:110px;top:800px;font-size:22px;letter-spacing:.2em;color:#5fd0ea;font-weight:600">BANKING.XELANC.COM</div>'
-            '<div style="position:absolute;left:700px;top:50%;transform:translateY(-50%);width:640px;border-radius:12px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.55);background:#fff">'
-            '<div style="height:44px;background:#e9ecf1;display:flex;align-items:center;gap:8px;padding:0 16px">'
-            '<i style="width:12px;height:12px;border-radius:50%;background:#ff5f57"></i><i style="width:12px;height:12px;border-radius:50%;background:#febc2e"></i><i style="width:12px;height:12px;border-radius:50%;background:#28c840"></i>'
-            '<div style="margin-left:16px;flex:1;height:28px;border-radius:14px;background:#fff;display:flex;align-items:center;padding-left:16px;font-size:18px;color:#33475f">🔒&nbsp; banking.xelanc.com</div></div>'
-            f'<div style="height:560px;background:url({shot}) top left/cover"></div></div>'
-            f'<div style="position:absolute;left:1420px;top:50%;transform:translateY(-50%);width:400px;display:flex;flex-direction:column;gap:22px">{rows}</div>')
+            colonne('La plateforme', 'Une école<br><em style="color:#c8a96a">ouverte<br>en continu</em>', mock) +
+            f'<div class="kvg">{tiles}</div>')
     out.append(page(left, nxt(), 'En chiffres · la plateforme', 'La plateforme',
                     "« Une plateforme dédiée, ouverte à toute heure : deux cent quinze capsules, et huit cents heures de formation. »",
                     "La page d'accueil de la plateforme glisse depuis la gauche ; l'adresse s'affiche. À droite, les quatre chiffres tombent l'un sous l'autre.",

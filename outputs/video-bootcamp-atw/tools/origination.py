@@ -37,6 +37,14 @@ STYLE = """<style>
 .og-v{display:flex;align-items:baseline;gap:30px;border-top:1px solid rgba(200,169,106,.45);padding-top:18px}
 .og-v small{width:300px;flex:none;white-space:nowrap;font-size:21px;letter-spacing:.12em;text-transform:uppercase;color:#c8a96a;font-weight:600}
 .og-v b{font-family:var(--serif);font-size:48px;font-weight:600;color:#fff}
+.kk{font-size:24px;letter-spacing:.26em;text-transform:uppercase;color:#c8a96a;font-weight:600}
+.kng{position:absolute;left:120px;right:120px;bottom:110px;display:grid;grid-template-columns:repeat(4,1fr);column-gap:44px}
+.kn{border-top:2px solid #c8a96a;padding-top:24px}
+.kn b{display:block;font-family:var(--serif);font-size:128px;font-weight:500;color:#5fd0ea;line-height:.95;font-variant-numeric:lining-nums;white-space:nowrap}
+.kn span{display:block;font-size:30px;line-height:1.3;color:#fff;margin-top:16px;font-weight:500}
+.pk{border-top:2px solid #c8a96a;padding-top:16px}
+.pk b{display:block;font-family:var(--serif);font-size:80px;font-weight:500;color:#5fd0ea;line-height:1;font-variant-numeric:lining-nums}
+.pk span{display:block;font-size:26px;line-height:1.3;color:#fff;margin-top:8px}
 .kfg{position:absolute;left:120px;top:300px;width:1680px;display:grid;grid-template-columns:230px repeat(4,1fr);column-gap:36px;row-gap:0}
 .kf-l{border-top:1px solid rgba(200,169,106,.5);padding-top:30px;font-size:21px;letter-spacing:.2em;text-transform:uppercase;color:#c8a96a;font-weight:600}
 .kf{border-top:1px solid rgba(255,255,255,.16);padding:22px 0 26px}
@@ -203,26 +211,72 @@ def make(start, nb, img):
                     "À gauche, « Le dernier maillon » et la date. À droite, « Soutenance et certification », puis le sous-titre.",
                     "Revue des travaux d'origination, p. 33"))
 
-    # 10. Key facts : le parcours en chiffres (plateforme Thinkific, export du 15/11/2026 et API)
-    rows = [
-        ('Le parcours', [('30', 'participants, GRE et CCE'), ('3', 'blocs, 8 compétences, 9 cours en ligne'),
-                         ('7', 'mois de parcours, d\'avril à novembre'), ('2', 'jours de bootcamp d\'origination')]),
-        ('La plateforme', [('215', 'capsules réparties dans les 9 cours'), ('5\u202f929', 'capsules terminées sur 6\u202f450, soit 92\u202f%'),
-                           ('800', 'heures de formation en ligne, 27 h par participant'), ('44 h', 'le record d\'un participant sur la plateforme')]),
-        ('La preuve', [('96\u202f%', 'des cours terminés : 259 sur 270'), ('22', 'participants sur 30 ont terminé les 9 cours'),
-                       ('9', 'épreuves de validation'), ('6', 'études de cas sur des entreprises réelles')]),
-        ('Le terrain', [('424', 'entreprises repérées et notées'), ('145', 'fiches prospect rédigées'),
-                        ('72', 'prospects validés pour la soutenance'), ('30\u202f/\u202f30', 'participants ont remis leurs travaux')]),
-    ]
-    grid = ''
-    for lab, cells in rows:
-        grid += f'<div class="kf-l">{lab}</div>' + ''.join(f'<div class="kf"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in cells)
-    left = (NUIT +
-            '<div style="position:absolute;left:120px;top:84px"><div style="font-size:22px;letter-spacing:.26em;color:#c8a96a;font-weight:600">PROMOTION 2026 · KEY FACTS</div>'
-            '<div style="font-family:var(--serif);font-size:76px;font-weight:600;color:#fff;line-height:1.05;margin-top:14px">Le parcours, <em style="color:#c8a96a">en chiffres</em></div></div>'
-            f'<div class="kfg">{grid}</div>')
-    out.append(page(left, nxt(), 'Key facts', 'La preuve par les chiffres',
-                    "« Trente banquiers, huit cents heures de formation, 92 % des capsules terminées. Et au bout, soixante-douze prospects prêts à être défendus. »",
-                    "Les quatre lignes s'allument l'une après l'autre ; les chiffres défilent jusqu'à leur valeur.",
-                    "Plateforme Thinkific (export du 15/11/2026), rapports d'évaluation, revue des travaux d'origination"))
+    # 10 à 14. L'expérience d'upskilling en chiffres : une ouverture, puis un écran par famille de chiffres.
+    import base64, os
+    A = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'assets')
+    def photo(rel):
+        return 'data:image/jpeg;base64,' + base64.b64encode(open(os.path.join(A, rel), 'rb').read()).decode()
+    BAS = '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,40,.82) 0%,rgba(8,20,40,.45) 30%,rgba(8,20,40,.80) 60%,rgba(8,20,40,.94) 100%)"></div>'
+    def chiffres(bg, kick, titre, cells, tc, role, vo, src):
+        tiles = ''.join(f'<div class="kn"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in cells)
+        left = (f'<div style="position:absolute;inset:0;background:url({bg}) center/cover"></div>' + BAS +
+                f'<div style="position:absolute;left:120px;top:96px;width:1700px"><div class="kk">{kick}</div>'
+                f'<div style="font-family:var(--serif);font-size:80px;font-weight:600;color:#fff;line-height:1.05;margin-top:14px">{titre}</div></div>'
+                f'<div class="kng">{tiles}</div>')
+        out.append(page(left, nxt(), tc, role, vo,
+                        "Le titre s'installe, puis les quatre chiffres tombent l'un après l'autre, de gauche à droite, et défilent jusqu'à leur valeur.", src))
+
+    # Ouverture
+    left = (f'<div style="position:absolute;inset:0;background:url({photo("bannieres/clean/c4.jpg")}) center/cover"></div>' + SCRIM + FILET +
+            '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
+            '<div style="font-family:var(--serif);font-size:84px;font-weight:600;line-height:1.02;color:#fff">Promotion<br>2026</div>'
+            '<div style="font-family:var(--serif);font-size:46px;font-weight:500;color:#c8a96a;margin-top:24px">GRE · CCE</div></div>'
+            '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:1100px">'
+            '<div style="font-family:var(--serif);font-size:120px;font-weight:600;line-height:1.0;color:#fff">L\'expérience<br>d\'upskilling,<br><em style="color:#c8a96a">en chiffres</em></div></div>')
+    out.append(page(left, nxt(), 'En chiffres · ouverture', 'L\'expérience en chiffres',
+                    "« Sept mois de parcours. Voici ce qu'ils ont produit. »",
+                    "À gauche, « Promotion 2026 · GRE · CCE ». À droite, le titre, ligne par ligne.",
+                    "Bannière de la compétence 2.1"))
+
+    chiffres(photo('bannieres/clean/c1.jpg'), 'Le parcours', 'Sept mois, <em style="color:#c8a96a">du premier cours au terrain</em>',
+             [('30', 'participants, GRE et CCE'), ('9', 'cours en ligne, 8 compétences, 3 blocs'),
+              ('7', 'mois de parcours, d\'avril à novembre'), ('2', 'jours de bootcamp d\'origination')],
+             'En chiffres · le parcours', 'Le parcours',
+             "« Trente banquiers, neuf cours, sept mois, et deux jours de bootcamp pour finir. »",
+             "Programme du parcours, plateforme Thinkific")
+
+    # La plateforme : la vraie page d'accueil dans un cadre de navigateur, et les chiffres à droite
+    shot = photo('plateforme.jpg')
+    rows = ''.join(f'<div class="pk"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in
+                   [('215', 'capsules vidéo réparties dans les 9 cours'), ('6\u202f450', 'capsules terminées : 100 % du programme suivi'),
+                    ('800', 'heures de formation en ligne'), ('27 h', 'par participant en moyenne')])
+    left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,#1b3a66 0%,#0b1a33 60%,#060f20 100%)"></div>'
+            '<div style="position:absolute;left:120px;top:96px"><div class="kk">La plateforme</div>'
+            '<div style="font-family:var(--serif);font-size:84px;font-weight:600;color:#fff;line-height:1.05;margin-top:14px">Une école <em style="color:#c8a96a">ouverte en continu</em></div></div>'
+            '<div style="position:absolute;left:120px;top:330px;width:1040px;border-radius:14px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.55);background:#fff">'
+            '<div style="height:52px;background:#e9ecf1;display:flex;align-items:center;gap:10px;padding:0 20px">'
+            '<i style="width:14px;height:14px;border-radius:50%;background:#ff5f57"></i><i style="width:14px;height:14px;border-radius:50%;background:#febc2e"></i><i style="width:14px;height:14px;border-radius:50%;background:#28c840"></i>'
+            '<div style="margin-left:24px;flex:1;height:32px;border-radius:16px;background:#fff;display:flex;align-items:center;padding-left:20px;font-size:21px;color:#33475f">🔒&nbsp; banking.xelanc.com</div></div>'
+            f'<div style="height:620px;background:url({shot}) top center/cover"></div></div>'
+            '<div style="position:absolute;left:120px;top:1020px;font-size:24px;letter-spacing:.22em;color:#5fd0ea;font-weight:600">BANKING.XELANC.COM</div>'
+            f'<div style="position:absolute;left:1240px;top:330px;width:560px;display:flex;flex-direction:column;gap:20px">{rows}</div>')
+    out.append(page(left, nxt(), 'En chiffres · la plateforme', 'La plateforme',
+                    "« Une plateforme dédiée, ouverte à toute heure : deux cent quinze capsules, et huit cents heures de formation. »",
+                    "La page d'accueil de la plateforme glisse depuis la gauche ; l'adresse s'affiche. À droite, les quatre chiffres tombent l'un sous l'autre.",
+                    "banking.xelanc.com, plateforme Thinkific"))
+
+    chiffres(photo('cas/terralis.jpg'), 'La preuve', 'Personne n\'est <em style="color:#c8a96a">resté en route</em>',
+             [('100\u202f%', 'des cours terminés : 270 sur 270'), ('30\u202f/\u202f30', 'participants ont terminé les 9 cours'),
+              ('9', 'épreuves de validation'), ('6', 'études de cas sur des entreprises réelles')],
+             'En chiffres · la preuve', 'La preuve',
+             "« Cent pour cent des cours terminés. Neuf épreuves, six études de cas réelles. »",
+             "Plateforme Thinkific, rapports d'évaluation 04a à 04i")
+
+    chiffres(photo('cas/maghreb.jpg'), 'Le terrain', 'Des compétences <em style="color:#c8a96a">mises au travail</em>',
+             [('424', 'entreprises repérées et notées'), ('145', 'fiches prospect rédigées'),
+              ('72', 'prospects validés pour la soutenance'), ('30\u202f/\u202f30', 'participants ont remis leurs travaux')],
+             'En chiffres · le terrain', 'Le terrain',
+             "« Quatre cent vingt-quatre entreprises repérées. Soixante-douze prospects prêts à être défendus. »",
+             "Revue des travaux d'origination")
+
     return STYLE + ''.join(out), n[0]

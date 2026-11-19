@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Planches chapitre 1</title>
+<style>
+@font-face{font-family:Corm;src:url(assets/fonts/cormorant-garamond-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Corm;src:url(assets/fonts/cormorant-garamond-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Corm;src:url(assets/fonts/cormorant-garamond-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Corm;src:url(assets/fonts/cormorant-garamond-latin-500-italic.woff2);font-weight:500;font-style:italic}
+@font-face{font-family:Corm;src:url(assets/fonts/cormorant-garamond-latin-600-italic.woff2);font-weight:600;font-style:italic}
+:root{--cream:#EFE7D8;--cream2:#E6DCC8;--ink:#1A1A1A;--navy:#1E2A3B;--gold:#B89554;--sienna:#8B4A2A;--mute:#7B7468}
+@page{size:1600px 900px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#d9d4ca;font-family:Inter,sans-serif;color:var(--ink)}
+.page{width:1600px;height:900px;background:#F7F3EA;display:flex;gap:44px;padding:56px 60px;page-break-after:always;position:relative;overflow:hidden}
+.left{flex:none;width:1000px}
+.frame-wrap{width:1000px;height:562.5px;overflow:hidden;border-radius:6px;box-shadow:0 10px 30px rgba(30,42,59,.18);position:relative}
+.frame{width:1920px;height:1080px;transform:scale(.5208333);transform-origin:0 0;position:absolute;inset:0;overflow:hidden}
+.right{flex:1;display:flex;flex-direction:column}
+.num{font-family:Corm;font-size:64px;font-weight:600;color:var(--gold);line-height:1}
+.tc{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+.role{font-family:Corm;font-size:34px;font-weight:600;color:var(--navy);margin-top:18px;line-height:1.1}
+.lab{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sienna);margin-top:24px}
+.txt{font-size:16px;line-height:1.5;color:#3a3a3a;margin-top:6px}
+.vo{font-family:Corm;font-style:italic;font-size:21px;line-height:1.4;color:var(--ink);margin-top:6px;border-left:3px solid var(--gold);padding-left:14px}
+.under{position:absolute;left:60px;bottom:40px;width:1000px;display:flex;gap:28px;font-size:14px;color:#55504a}
+.under b{color:var(--navy)}
+.foot{position:absolute;right:60px;bottom:30px;font-size:12px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+
+/* ---- styles des images de la vidéo ---- */
+.f-cream{background:var(--cream)}
+.f-navy{background:var(--navy);color:var(--cream)}
+.serif{font-family:Corm;font-variant-numeric:lining-nums}
+.num,.stp b,.vo,.role{font-variant-numeric:lining-nums}
+.grain::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.18),transparent 60%),radial-gradient(ellipse at 80% 90%,rgba(0,0,0,.10),transparent 55%);pointer-events:none}
+.kick{font-size:26px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.chip{position:absolute;top:56px;left:80px;font-size:22px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+</style>
+</head>
+<body>
+
+<!-- ================= COUVERTURE : LA STORY ================= -->
+<section class="page" style="flex-direction:column;gap:0">
+  <div style="font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--sienna);font-weight:700">Vidéo du programme GRE · CCE · Planches</div>
+  <div class="serif" style="font-size:76px;font-weight:600;color:var(--navy);line-height:1;margin-top:14px">Chapitre 1 · Le programme</div>
+  <div class="serif" style="font-size:34px;font-style:italic;color:var(--ink);margin-top:10px">Pourquoi il existe. 2 min 15, 9 planches.</div>
+
+  <div style="display:flex;gap:40px;margin-top:44px">
+    <div style="flex:1.35">
+      <div class="lab" style="margin-top:0">Comment la story est construite</div>
+      <div class="txt" style="font-size:17px">On ne commence pas par le programme : on commence par <b>le moment de vérité du métier</b>, un dirigeant face à un banquier. On crée une tension, on la résout par une conviction, et le programme arrive comme la réponse. Les chiffres viennent ensuite, comme des preuves.</div>
+      <div style="display:flex;gap:6px;margin-top:22px">
+        <div class="arc" style="background:var(--sienna)">1 · 2<br><b>Tension</b><br>le moment de vérité, la question</div>
+        <div class="arc" style="background:var(--navy)">3<br><b>Conviction</b><br>la phrase-pivot</div>
+        <div class="arc" style="background:#2f3d52">4 · 5<br><b>Le pourquoi</b><br>l'enjeu banque, pour qui</div>
+        <div class="arc" style="background:#475670">6 · 7<br><b>Le chemin</b><br>le parcours, la méthode</div>
+        <div class="arc" style="background:var(--gold)">8 · 9<br><b>L'élan</b><br>l'exigence, la promesse</div>
+      </div>
+      <style>.arc{flex:1;color:#fff;padding:16px 14px;border-radius:6px;font-size:14px;line-height:1.45}.arc b{font-family:Corm;font-size:22px;font-weight:600}</style>
+      <div class="lab">La source</div>
+      <div class="txt">« Synthèse du programme CCE, Direction Générale », envoyée à Attijari Academy le 16/10/2026. Chaque chiffre et chaque phrase-clé en sont tirés, rien n'est inventé.</div>
+    </div>
+    <div style="flex:1">
+      <div class="lab" style="margin-top:0">Direction artistique</div>
+      <div class="txt">Même univers que tes pilotes YouTube : documentaire, posé, éditorial.</div>
+      <div style="display:flex;gap:10px;margin-top:14px">
+        <div class="sw" style="background:#EFE7D8;color:#1A1A1A">Crème<br>#EFE7D8</div>
+        <div class="sw" style="background:#1E2A3B">Bleu nuit<br>#1E2A3B</div>
+        <div class="sw" style="background:#B89554">Or<br>#B89554</div>
+        <div class="sw" style="background:#8B4A2A">Sienne<br>#8B4A2A</div>
+        <div class="sw" style="background:#1A1A1A">Encre<br>#1A1A1A</div>
+      </div>
+      <style>.sw{flex:1;height:84px;border-radius:6px;color:#fff;font-size:12px;padding:10px;line-height:1.4;border:1px solid rgba(0,0,0,.08)}</style>
+      <div style="display:flex;gap:30px;margin-top:20px;align-items:baseline">
+        <div><span class="serif" style="font-size:44px;font-weight:600;color:var(--navy)">Aa</span><div class="txt" style="margin:0;font-size:13px">Titres : Cormorant Garamond</div></div>
+        <div><span style="font-size:38px;font-weight:600;color:var(--navy)">Aa</span><div class="txt" style="margin:0;font-size:13px">Chiffres et libellés : Inter</div></div>
+      </div>
+      <div class="lab">Son</div>
+      <div class="txt"><b>Voix off</b> française posée (voix IA, ou ta voix si tu enregistres). <b>Musique</b> : piano et cordes, qui monte doucement jusqu'à la planche 9. Silence d'une seconde avant la planche 3.</div>
+      <div class="lab">Rythme</div>
+      <div class="txt">Un plan toutes les 8 à 15 secondes. Mouvements lents (zoom de 3 à 5 %), textes qui s'écrivent mot à mot, aucun effet tape-à-l'œil.</div>
+    </div>
+  </div>
+  <div class="foot">Planches · chapitre 1 · à valider avant production</div>
+</section>
+
+<!-- ================= PLANCHE 1 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-cream grain">
+      <svg width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;inset:0">
+        <rect width="1920" height="1080" fill="#EFE7D8"/>
+        <rect x="0" y="0" width="1920" height="700" fill="#E6DCC8"/>
+        <!-- fenêtre et lumière -->
+        <rect x="1260" y="120" width="420" height="520" fill="#F6EEDC"/>
+        <polygon points="1260,640 1680,640 1500,1080 900,1080" fill="#F3E7CC" opacity=".7"/>
+        <line x1="1470" y1="120" x2="1470" y2="640" stroke="#E6DCC8" stroke-width="10"/>
+        <line x1="1260" y1="380" x2="1680" y2="380" stroke="#E6DCC8" stroke-width="10"/>
+        <!-- bureau -->
+        <rect x="560" y="640" width="820" height="40" fill="#8B4A2A"/>
+        <rect x="600" y="680" width="22" height="300" fill="#6d3a21"/><rect x="1318" y="680" width="22" height="300" fill="#6d3a21"/>
+        <!-- banquier (droite) -->
+        <circle cx="1150" cy="430" r="62" fill="#1E2A3B"/>
+        <path d="M1050 640 Q1060 500 1150 500 Q1240 500 1250 640 Z" fill="#1E2A3B"/>
+        <!-- dirigeant (gauche) -->
+        <circle cx="780" cy="440" r="60" fill="#1A1A1A"/>
+        <path d="M680 640 Q690 510 780 510 Q870 510 880 640 Z" fill="#1A1A1A"/>
+        <!-- dossier -->
+        <rect x="900" y="610" width="150" height="30" fill="#B89554"/>
+      </svg>
+      <div style="position:absolute;left:80px;bottom:80px" class="serif"><span style="font-size:78px;font-style:italic;color:#1E2A3B;font-weight:600">Tout se joue là.</span></div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">01</div><div class="tc">0:00 – 0:15 · Accroche</div>
+    <div class="role">Le moment de vérité</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« Une entreprise marocaine pousse la porte d'une agence. Elle a un projet, un besoin, une urgence. En face, un banquier. Tout se joue là : soit il comprend son métier, soit il comprend seulement son dossier. »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">Illustration éditoriale (style de tes pilotes) : un dirigeant et un banquier de part et d'autre d'un bureau, lumière de fin de journée par la fenêtre. Le croquis ci-contre montre la composition ; l'image finale sera une vraie illustration générée.</div>
+    <div class="lab">Mouvement</div>
+    <div class="txt">Zoom très lent vers le bureau. « Tout se joue là. » s'écrit à la fin de la phrase.</div>
+  </div>
+  <div class="foot">Planche 1 / 9</div>
+</section>
+
+<!-- ================= PLANCHE 2 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-cream grain" style="display:flex;align-items:center;justify-content:center;text-align:center;padding:0 200px">
+      <div>
+        <div class="serif" style="font-size:96px;line-height:1.12;font-weight:500;color:#1A1A1A">Peut-on conseiller, financer,<br>engager la banque…</div>
+        <div class="serif" style="font-size:96px;line-height:1.12;font-style:italic;font-weight:600;color:#8B4A2A;margin-top:18px">sur ce que l'on ne comprend pas ?</div>
+      </div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">02</div><div class="tc">0:15 – 0:25 · La question</div>
+    <div class="role">La question qui dérange</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« Alors, une question simple : peut-on conseiller, financer, engager la banque sur ce que l'on ne comprend pas vraiment ? »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">Carte typographique sur fond crème. La première ligne en encre, la chute en italique sienne.</div>
+    <div class="lab">Mouvement</div>
+    <div class="txt">Les mots apparaissent en suivant la voix. Puis une seconde de silence, musique coupée.</div>
+  </div>
+  <div class="foot">Planche 2 / 9</div>
+</section>
+
+<!-- ================= PLANCHE 3 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-navy" style="display:flex;flex-direction:column;justify-content:center;padding:0 170px">
+      <div class="kick">Notre conviction</div>
+      <div class="serif" style="font-size:88px;line-height:1.15;font-weight:500;margin-top:40px;color:#EFE7D8">On ne conseille, ne finance<br>et n'engage correctement que ce<br>que l'on <span style="color:#B89554;font-style:italic;font-weight:600;border-bottom:4px solid #B89554">comprend réellement.</span></div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">03</div><div class="tc">0:25 – 0:40 · La conviction</div>
+    <div class="role">La phrase-pivot</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« Notre réponse tient en une phrase. On ne conseille, on ne finance et on n'engage correctement que ce que l'on comprend réellement. C'est de là qu'est né ce programme. »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">Bascule sur fond bleu nuit, le seul plan sombre de la première minute, pour marquer le pivot. « Comprend réellement » en or et souligné.</div>
+    <div class="lab">Mouvement</div>
+    <div class="txt">La musique reprend sur cette planche. Le soulignement se trace en dernier.</div>
+  </div>
+  <div class="foot">Planche 3 / 9 · Phrase tirée de la synthèse DG, p. 3</div>
+</section>
+
+<!-- ================= PLANCHE 4 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-cream grain">
+      <div class="chip">Le pourquoi · une double opportunité</div>
+      <svg width="1920" height="1080" style="position:absolute;inset:0">
+        <line x1="960" y1="260" x2="960" y2="820" stroke="#1E2A3B" stroke-width="10"/>
+        <rect x="860" y="820" width="200" height="22" fill="#1E2A3B"/>
+        <line x1="440" y1="330" x2="1480" y2="300" stroke="#1E2A3B" stroke-width="8"/>
+        <circle cx="960" cy="315" r="20" fill="#B89554"/>
+        <line x1="440" y1="330" x2="440" y2="480" stroke="#1E2A3B" stroke-width="3"/>
+        <line x1="1480" y1="300" x2="1480" y2="450" stroke="#1E2A3B" stroke-width="3"/>
+        <path d="M290 480 Q440 560 590 480 Z" fill="#8B4A2A"/>
+        <path d="M1330 450 Q1480 530 1630 450 Z" fill="#1E2A3B"/>
+      </svg>
+      <div style="position:absolute;left:180px;top:600px;width:520px;text-align:center">
+        <div class="serif" style="font-size:58px;font-weight:600;color:#8B4A2A">Compétitivité commerciale</div>
+        <div style="font-size:28px;color:#3a3a3a;margin-top:14px;line-height:1.4">Des clients mieux conseillés,<br>des relations gagnées et gardées.</div>
+      </div>
+      <div style="position:absolute;right:180px;top:570px;width:520px;text-align:center">
+        <div class="serif" style="font-size:58px;font-weight:600;color:#1E2A3B">Maîtrise des risques</div>
+        <div style="font-size:28px;color:#3a3a3a;margin-top:14px;line-height:1.4">Des dossiers mieux instruits,<br>des engagements sécurisés.</div>
+      </div>
+      <div style="position:absolute;left:0;right:0;bottom:120px;text-align:center"><span style="background:#1E2A3B;color:#EFE7D8;padding:16px 34px;font-size:26px;letter-spacing:.2em;text-transform:uppercase;font-weight:600">Upskilling des GRE et des CCE</span></div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">04</div><div class="tc">0:40 – 1:00 · L'enjeu</div>
+    <div class="role">Pourquoi la banque investit</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« Pour la banque, l'enjeu est double. D'un côté, la compétitivité commerciale : des clients mieux conseillés, des relations gagnées et gardées. De l'autre, la maîtrise des risques : des dossiers mieux instruits, des engagements sécurisés. Deux ambitions, un même levier : les femmes et les hommes du réseau entreprises. »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">Une balance éditoriale. Chaque plateau s'allume quand la voix le nomme. La balance s'équilibre sur « un même levier », puis le bandeau « Upskilling » apparaît.</div>
+  </div>
+  <div class="foot">Planche 4 / 9 · Synthèse DG, p. 5</div>
+</section>
+
+<!-- ================= PLANCHE 5 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-cream grain">
+      <div class="chip">Pour qui</div>
+      <div style="position:absolute;left:150px;top:230px">
+        <div class="serif" style="font-size:300px;font-weight:600;color:#1E2A3B;line-height:.9">30</div>
+        <div style="font-size:30px;color:#3a3a3a;margin-top:60px;line-height:1.4">gestionnaires de relations entreprises<br>et chargés de clientèle entreprises<br><b style="color:#8B4A2A">d'Attijariwafa bank</b></div>
+      </div>
+      <div id="people" style="position:absolute;right:150px;top:240px;width:760px;display:grid;grid-template-columns:repeat(6,1fr);gap:26px 20px"></div>
+      <div class="serif" style="position:absolute;right:150px;bottom:110px;font-size:62px;font-style:italic;font-weight:600;color:#1A1A1A">Deux métiers. Un socle.</div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">05</div><div class="tc">1:00 – 1:12 · Pour qui</div>
+    <div class="role">Trente visages, un socle commun</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« Trente gestionnaires de relations entreprises et chargés de clientèle entreprises d'Attijariwafa bank. Deux métiers, un socle commun : de la lecture de l'entreprise jusqu'à l'entrée en relation d'affaires. »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">Le « 30 » compte de 0 à 30 pendant que 30 silhouettes se placent une à une : en bleu nuit les GRE, en sienne les CCE (la répartition exacte est à me donner, sinon tout en bleu nuit).</div>
+  </div>
+  <div class="foot">Planche 5 / 9 · Synthèse DG, p. 2</div>
+</section>
+
+<!-- ================= PLANCHE 6 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-cream grain">
+      <div class="chip">Le chemin · janvier → novembre 2026</div>
+      <div style="position:absolute;left:120px;right:120px;top:300px;height:6px;background:#1E2A3B"></div>
+      <div style="position:absolute;left:120px;right:120px;top:250px;display:flex;justify-content:space-between;font-size:22px;letter-spacing:.12em;color:#7B7468">
+        <span>JANV</span><span>FÉV</span><span>MARS</span><span>AVR</span><span>MAI</span><span>JUIN</span><span>JUIL</span><span>AOÛT</span><span>SEPT</span><span>OCT</span><span>NOV</span>
+      </div>
+      <div style="position:absolute;left:120px;right:120px;top:380px;display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr 0.9fr;gap:24px">
+        <div class="stp" style="background:#E6DCC8"><small>Janvier</small><b>Cadrer</b><span>Document de référence et référentiel</span></div>
+        <div class="stp" style="background:#8B4A2A;color:#fff"><small>Bloc 1</small><b>Comprendre</b><span>L'entreprise et son écosystème</span></div>
+        <div class="stp" style="background:#475670;color:#fff"><small>Bloc 2</small><b>Décider</b><span>Structurer et sécuriser l'engagement</span></div>
+        <div class="stp" style="background:#1E2A3B;color:#fff"><small>Bloc 3</small><b>Piloter</b><span>Développer et accompagner la relation</span></div>
+        <div class="stp" style="background:#B89554;color:#fff"><small>20 – 21 nov.</small><b>Bootcamp</b><span>L'origination</span></div>
+      </div>
+      <style>.stp{padding:34px 30px;border-radius:8px;min-height:250px}.stp small{display:block;font-size:20px;letter-spacing:.14em;text-transform:uppercase;opacity:.8}.stp b{display:block;font-family:Corm;font-size:56px;font-weight:600;margin-top:12px}.stp span{display:block;font-size:24px;line-height:1.35;margin-top:12px}</style>
+      <div style="position:absolute;left:120px;right:120px;bottom:100px;display:flex;gap:80px;font-size:28px;color:#3a3a3a">
+        <span><b class="serif" style="font-size:72px;color:#1E2A3B">9</b> mois</span><span><b class="serif" style="font-size:72px;color:#1E2A3B">4</b> domaines de compétences</span><span><b class="serif" style="font-size:72px;color:#1E2A3B">8</b> cours en ligne</span><span><b class="serif" style="font-size:72px;color:#1E2A3B">1</b> bootcamp</span>
+      </div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">06</div><div class="tc">1:12 – 1:35 · Le chemin</div>
+    <div class="role">Le parcours, en une image</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« Le parcours a été lancé en janvier 2026. Neuf mois d'accompagnement, trois paliers : comprendre l'entreprise, décider l'engagement, piloter la relation. Quatre domaines de compétences, huit cours en ligne, des workshops avec des praticiens, des immersions en centre d'affaires. Et pour finir, un bootcamp d'origination. »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">La frise se dessine de gauche à droite et chaque bloc s'allume quand la voix le nomme. Les quatre chiffres montent en bas. Cette planche sert aussi de sommaire : le chapitre 2 reprendra chaque bloc.</div>
+  </div>
+  <div class="foot">Planche 6 / 9 · Synthèse DG, p. 3 et 6</div>
+</section>
+
+<!-- ================= PLANCHE 7 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-navy" style="padding:150px 170px">
+      <div class="kick">La méthode</div>
+      <div class="serif" style="font-size:86px;line-height:1.3;margin-top:40px;font-weight:500">
+        <div>Le <span style="color:#B89554;font-style:italic">numérique</span> prépare.</div>
+        <div>Le <span style="color:#B89554;font-style:italic">présentiel</span> met en situation.</div>
+        <div>Le <span style="color:#B89554;font-style:italic">terrain</span> ancre.</div>
+        <div>Le <span style="color:#B89554;font-style:italic">bootcamp</span> certifie.</div>
+      </div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">07</div><div class="tc">1:35 – 1:48 · La méthode</div>
+    <div class="role">Quatre temps, quatre battements</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« La mécanique est claire. Le numérique prépare. Le présentiel met en situation. Le terrain ancre. Le bootcamp certifie. »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">Une ligne par temps, calée sur un temps fort de la musique. Le rythme s'accélère légèrement ici.</div>
+  </div>
+  <div class="foot">Planche 7 / 9 · Synthèse DG, p. 4</div>
+</section>
+
+<!-- ================= PLANCHE 8 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-cream grain">
+      <div class="chip">L'exigence</div>
+      <div style="position:absolute;left:150px;top:300px">
+        <div class="serif" style="font-size:96px;font-weight:500;color:#1A1A1A;line-height:1.1">Une compétence<br>ne se déclare pas.</div>
+        <div class="serif" style="font-size:110px;font-weight:600;font-style:italic;color:#8B4A2A;margin-top:24px">Elle se prouve.</div>
+      </div>
+      <div style="position:absolute;right:190px;top:330px;width:380px;height:380px;border:10px solid #8B4A2A;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-12deg);color:#8B4A2A">
+        <div style="font-size:26px;letter-spacing:.3em;font-weight:700">SEUIL</div>
+        <div class="serif" style="font-size:130px;font-weight:700;line-height:1">70</div>
+        <div style="font-size:30px;letter-spacing:.2em;font-weight:700">/ 100</div>
+      </div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">08</div><div class="tc">1:48 – 2:00 · L'exigence</div>
+    <div class="role">Ce qui donne sa valeur au certificat</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« Et une règle, du premier au dernier jour : une compétence ne se déclare pas, elle se prouve. Une épreuve par compétence, un seuil de 70 sur 100, une correction calibrée. »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">La phrase, puis un tampon « 70/100 » qui frappe sur « elle se prouve », avec un petit son sec.</div>
+  </div>
+  <div class="foot">Planche 8 / 9 · Synthèse DG, p. 8</div>
+</section>
+
+<!-- ================= PLANCHE 9 ================= -->
+<section class="page">
+  <div class="left">
+    <div class="frame-wrap"><div class="frame f-navy" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+      <div class="kick">Programme certifiant GRE · CCE · Promotion 2026</div>
+      <div class="serif" style="font-size:190px;font-weight:600;letter-spacing:.02em;margin-top:30px;line-height:1">Ready to perform</div>
+      <div class="serif" style="font-size:46px;font-style:italic;color:#B89554;margin-top:30px">Des banquiers d'entreprise qui comprennent, décident et conseillent.</div>
+      <div style="display:flex;gap:60px;align-items:center;margin-top:90px;background:#EFE7D8;padding:26px 50px;border-radius:8px">
+        <img src="assets/logo-attijari-academy.png" style="height:96px"><img src="assets/logo-financite.png" style="height:70px">
+      </div>
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="num">09</div><div class="tc">2:00 – 2:15 · La promesse</div>
+    <div class="role">Le titre, et l'élan vers la suite</div>
+    <div class="lab">Voix off</div>
+    <div class="vo">« Ready to perform. Former des banquiers d'entreprise qui comprennent, décident et conseillent. Voici leur parcours. »</div>
+    <div class="lab">À l'écran</div>
+    <div class="txt">« Ready to perform », la signature du programme, arrive en grand sur la musique au sommet, puis les deux logos. Fondu vers le chapitre 2 : « Bloc 1 · Comprendre ».</div>
+  </div>
+  <div class="foot">Planche 9 / 9 · Signature tirée de la couverture de la synthèse DG</div>
+</section>
+
+<script>
+const p = document.getElementById('people');
+for (let i = 0; i < 30; i++) {
+  const c = '#1E2A3B';
+  p.insertAdjacentHTML('beforeend', `<svg width="100" height="110" viewBox="0 0 100 110"><circle cx="50" cy="28" r="22" fill="${c}"/><path d="M12 108 Q16 58 50 58 Q84 58 88 108 Z" fill="${c}"/></svg>`);
+}
+</script>
+</body>
+</html>

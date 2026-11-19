@@ -53,16 +53,17 @@ for e in plan['events']:
     w = wave.open(tv); v = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768; w.close(); os.remove(tv)
     i = int((e['t'] - t0) * SR)
     if i >= n or i + len(v) <= 0: continue
-    a = max(i, 0); b = min(n, i + len(v)); voixpiste[a:b] += v[a - i:b - i] * 1.6
-    r = int(0.4 * SR)  # musique à 68 % sous la voix, en rampe
+    a = max(i, 0); b = min(n, i + len(v)); voixpiste[a:b] += v[a - i:b - i] * 1.35
+    r = int(0.5 * SR)  # musique à 30 % sous la voix, en rampe : la voix domine
     lo = max(0, a - r); hi = min(n, b + r)
-    env = np.ones(hi - lo) * 0.68
-    env[:a - lo] = np.linspace(1, 0.68, a - lo); env[len(env) - (hi - b):] = np.linspace(0.68, 1, hi - b)
+    env = np.ones(hi - lo) * 0.30
+    env[:a - lo] = np.linspace(1, 0.30, a - lo); env[len(env) - (hi - b):] = np.linspace(0.30, 1, hi - b)
     gain[lo:hi] = np.minimum(gain[lo:hi], env)
 # fondu final de la musique sur 2,5 s
 fin = int((plan['duree'] - 2.5 - t0) * SR)
 if 0 < fin < n: gain[fin:] *= np.linspace(1, 0, n - fin)
-mix = mus * gain + perc * 0.62 + voixpiste
+pg = np.where(gain < 0.99, 0.35, 1.0)   # percussions aussi en retrait sous la voix
+mix = mus * gain + perc * 0.62 * pg + voixpiste
 mix = np.clip(mix, -1, 1)
 raw = out + '.raw.wav'
 w = wave.open(raw, 'w'); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((mix * 32767).astype(np.int16).tobytes()); w.close()

@@ -95,7 +95,7 @@ STYLE = """<style>
 .vc{background:#fff;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.16);display:flex;flex-direction:column;height:100%;overflow:hidden}
 .vim{height:270px;flex:none;background-size:cover;background-position:center;position:relative}
 .vph{background:linear-gradient(135deg,#1c3f63,#0b1a33)}
-.vtag{position:absolute;left:22px;top:22px;font-style:normal;font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:#0b1a33;background:#5fd0ea;border-radius:999px;padding:8px 16px;font-weight:600}
+.vtag{position:absolute;right:22px;top:22px;font-style:normal;font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:#0b1a33;background:#5fd0ea;border-radius:999px;padding:8px 16px;font-weight:600}
 .vtag-x{background:#fff;color:#0f2744}
 .vbody{padding:28px 32px 30px;display:flex;flex-direction:column;flex:1}
 .vbody>span{font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:#139fc4;font-weight:600;min-height:24px}

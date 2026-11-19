@@ -1,7 +1,7 @@
 {
  "14": {
   "fichier": "bloc1-coherences.wav",
-  "duree": 14.1,
+  "duree": 14.9,
   "debut": 1.5,
   "subs": [
    [
@@ -16,31 +16,31 @@
    ],
    [
     7.4,
-    14.1,
+    14.9,
     "Des cohérences entre un secteur, un modèle qui fonctionne\net une exécution crédible."
    ]
   ]
  },
  "21": {
   "fichier": "bloc2-business-plan.wav",
-  "duree": 6.2,
+  "duree": 6.07,
   "debut": 1.5,
   "subs": [
    [
     0.0,
-    1.05,
+    0.85,
     "Les banquiers méritent"
    ],
    [
-    1.05,
-    6.2,
+    0.85,
+    6.07,
     "de recevoir un business plan\nà la hauteur des engagements qu'on leur demande."
    ]
   ]
  },
  "28": {
   "fichier": "bloc3-erreur-evitee.wav",
-  "duree": 8.7,
+  "duree": 9.25,
   "debut": 1.5,
   "subs": [
    [
@@ -55,14 +55,14 @@
    ],
    [
     3.9,
-    8.7,
+    9.25,
     "mais ils n'oublient jamais le banquier\nqui leur a évité une erreur."
    ]
   ]
  },
  "34": {
   "fichier": "origination-confrere.wav",
-  "duree": 11.6,
+  "duree": 11.95,
   "debut": 1.5,
   "subs": [
    [
@@ -77,7 +77,7 @@
    ],
    [
     9.4,
-    11.6,
+    11.95,
     "Le potentiel ne vous attend pas."
    ]
   ]

@@ -25,17 +25,43 @@
       // unités animées : enfants directs, ou petits-enfants quand un enfant est une liste (grille, colonne)
       const kids = [...fr.children].filter(e => e.tagName !== 'STYLE');
       const bg = [], units = [];
-      kids.forEach(e => {
+      const bloc = c => ['DIV', 'P', 'SECTION', 'UL', 'LI'].includes(c.tagName) || getComputedStyle(c).display === 'block';
+      function cueillir(e, prof) {
         const cs = getComputedStyle(e);
-        const plein = e.offsetWidth >= 1900 && e.offsetHeight >= 1060;
-        if (plein && !e.textContent.trim()) { bg.push(e); return; }
-        if (e.tagName === 'svg') { units.push({ el: e, fx: 'rise' }); return; }
-        const sous = [...e.children].filter(c => c.tagName !== 'STYLE');
+        if (e.tagName === 'svg') { units.push({ el: e, fx: 'draw' }); return; }
+        const sous = [...e.children].filter(c => c.tagName !== 'STYLE' && c.offsetHeight > 0);
         const liste = (cs.display.includes('flex') || cs.display.includes('grid')) && sous.length >= 2 && e.textContent.trim().length > 0;
-        if (liste) sous.forEach(c => units.push({ el: c }));
-        else units.push({ el: e });
+        if (liste) { sous.forEach(c => units.push({ el: c })); return; }
+        // bloc conteneur (colonne de texte) : on descend d'un niveau pour animer ligne à ligne
+        if (prof < 2 && sous.length >= 2 && sous.length <= 7 && sous.every(bloc) && !e.className.match(/\b(vc|kv|kn|og-|pk|rs|ctx|bk|pt|st)\b/)) {
+          sous.forEach(c => cueillir(c, prof + 1)); return;
+        }
+        units.push({ el: e });
+      }
+      kids.forEach(e => {
+        const plein = e.offsetWidth >= 1900 && e.offsetHeight >= 1060;
+        if (plein && !e.textContent.trim() && e.tagName !== 'svg') { bg.push(e); return; }
+        cueillir(e, 0);
       });
-      units.forEach(u => { u.base = u.el.style.transform || ''; });
+      units.forEach(u => {
+        if (u.fx !== 'draw') return;
+        u.parts = [...u.el.querySelectorAll('path,circle,line,polyline,text')];
+        u.parts.forEach(q => {
+          if (['path', 'circle', 'line', 'polyline'].includes(q.tagName) && q.getTotalLength) {
+            const L = q.getTotalLength(); q.dataset.len = L; q.style.strokeDasharray = L + ' ' + L;
+          }
+        });
+        const anneau = [...u.el.querySelectorAll('circle')].find(c => +c.getAttribute('r') >= 200);
+        if (anneau) {
+          const ns = 'http://www.w3.org/2000/svg';
+          const halo = document.createElementNS(ns, 'circle'); halo.setAttribute('r', 26); halo.setAttribute('fill', '#5fd0ea'); halo.setAttribute('opacity', '.25');
+          const dot = document.createElementNS(ns, 'circle'); dot.setAttribute('r', 11); dot.setAttribute('fill', '#5fd0ea');
+          u.el.appendChild(halo); u.el.appendChild(dot);
+          u.orbite = { cx: +anneau.getAttribute('cx'), cy: +anneau.getAttribute('cy'), r: +anneau.getAttribute('r'), dot, halo };
+        }
+        u.draw = Math.min(4, 0.5 + u.parts.length * 0.25);
+      });
+      units.forEach(u => { const ct = getComputedStyle(u.el).transform; u.base = u.el.style.transform || (ct && ct !== 'none' ? ct : ''); });
       bg.forEach(b => { b.dataset.base = b.style.transform || ''; });
       units.forEach(u => {
         if (u.fx) return;
@@ -46,10 +72,11 @@
       // durée : entrée des unités sur la grille, puis temps de lecture
       const mots = fr.textContent.trim().split(/\s+/).length;
       const v = VOIX[String(k + 1)];
+      const pas = units.length > 9 ? 0.35 : 0.5;
       let at = 0.5;
-      units.forEach((u, i) => { u.at = at; at += (i === units.length - 1 ? 0 : (u.fx === 'slam' ? 0.5 : 0.5)); });
+      units.forEach((u, i) => { u.at = at; at += (i === units.length - 1 ? 0 : (u.fx === 'draw' ? 1.0 : pas)); });
       const entree = at + 0.5;
-      let duree = Math.min(Math.max(entree + 1.2 + mots / 9, 4), 8.5);
+      let duree = Math.max(Math.min(Math.max(entree + 1.2 + mots / 9, 4), 8.5), entree + 2);
       if (v) duree = Math.max(duree, (v.debut || entree) + v.duree + 1.0);
       duree = snap(duree);
       const t0 = t, t1 = t + duree;
@@ -99,6 +126,26 @@
       for (const u of s.units) {
         const p = (t - u.t) / (u.fx === 'slam' ? 0.18 : u.fx === 'roll' ? 0.2 : 0.4);
         const sortie = Math.min(Math.max((t - (s.t1 - 0.22)) / 0.18, 0), 1);
+        if (u.fx === 'draw') {
+          const sortieD = Math.min(Math.max((t - (s.t1 - 0.22)) / 0.18, 0), 1);
+          u.el.style.opacity = t < u.t ? 0 : 1 - sortieD;
+          const pd = Math.min(Math.max((t - u.t) / u.draw, 0), 1), n = u.parts.length;
+          u.parts.forEach((q, i) => {
+            const pi = Math.min(Math.max(pd * n - i, 0), 1);
+            if (q.dataset.len) q.style.strokeDashoffset = q.dataset.len * (1 - ease(pi));
+            if (q.tagName === 'text' || (q.tagName === 'circle' && +q.getAttribute('r') < 40)) {
+              q.style.opacity = ease(pi); q.style.transformBox = 'fill-box'; q.style.transformOrigin = 'center';
+              q.style.transform = `scale(${0.6 + 0.4 * ease(pi)})`;
+            }
+          });
+          if (u.orbite) {   // le cycle vit : un point lumineux en fait le tour, en continu
+            const o = u.orbite, a = -Math.PI / 2 + (t - u.t) * 0.9, vis = pd >= 1 ? 1 : 0;
+            const x = o.cx + o.r * Math.cos(a), y = o.cy + o.r * Math.sin(a);
+            o.dot.setAttribute('cx', x); o.dot.setAttribute('cy', y); o.halo.setAttribute('cx', x); o.halo.setAttribute('cy', y);
+            o.halo.setAttribute('r', 22 + 6 * Math.sin((t - u.t) * 5)); o.dot.style.opacity = vis; o.halo.style.opacity = vis * 0.3;
+          }
+          continue;
+        }
         if (u.fx === 'roll') {
           roll(u.el, p, sortie, u.base);
           const r = t - u.t - 0.2;  // rebond amorti

@@ -42,7 +42,7 @@ STYLE = """<style>
 .kv b{font-family:var(--serif);font-size:124px;font-weight:500;color:#5fd0ea;line-height:1;font-variant-numeric:lining-nums;white-space:nowrap}
 .kv span{font-size:38px;line-height:1.25;color:#fff;font-weight:500}
 .fr .kt,.fr .kt *{text-wrap:nowrap;white-space:nowrap}
-.ktop{position:absolute;left:110px;top:70px;font-size:44px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#139fc4;font-weight:700;padding:14px 30px 12px;border-radius:6px}
+.ktop{position:absolute;left:110px;top:300px;font-size:44px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#139fc4;font-weight:700;padding:14px 30px 12px;border-radius:6px}
 .kk{font-size:24px;letter-spacing:.26em;text-transform:uppercase;color:#5fd0ea;font-weight:600}
 .kng{position:absolute;left:700px;right:110px;top:50%;transform:translateY(-50%);display:grid;grid-template-columns:1fr 1fr;column-gap:70px;row-gap:64px}
 .kn{border-top:2px solid #5fd0ea;padding-top:24px}

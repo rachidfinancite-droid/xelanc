@@ -37,6 +37,11 @@ STYLE = """<style>
 .og-v{display:flex;align-items:baseline;gap:30px;border-top:1px solid rgba(200,169,106,.45);padding-top:18px}
 .og-v small{width:300px;flex:none;white-space:nowrap;font-size:21px;letter-spacing:.12em;text-transform:uppercase;color:#c8a96a;font-weight:600}
 .og-v b{font-family:var(--serif);font-size:48px;font-weight:600;color:#fff}
+.kfg{position:absolute;left:120px;top:300px;width:1680px;display:grid;grid-template-columns:230px repeat(4,1fr);column-gap:36px;row-gap:0}
+.kf-l{border-top:1px solid rgba(200,169,106,.5);padding-top:30px;font-size:21px;letter-spacing:.2em;text-transform:uppercase;color:#c8a96a;font-weight:600}
+.kf{border-top:1px solid rgba(255,255,255,.16);padding:22px 0 26px}
+.kf b{display:block;font-family:var(--serif);font-size:78px;font-weight:500;color:#5fd0ea;line-height:1;font-variant-numeric:lining-nums}
+.kf span{display:block;font-size:23px;line-height:1.3;color:#d9e2ee;margin-top:10px}
 .og-tl{flex:1;border-top:4px solid #c8a96a;padding-top:26px}
 .og-tl small{display:block;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:#c8a96a;font-weight:600}
 .og-tl b{display:block;font-family:var(--serif);font-size:44px;font-weight:600;color:#fff;line-height:1.08;margin-top:12px}
@@ -197,4 +202,27 @@ def make(start, nb, img):
                     "« Dernier maillon du parcours : la soutenance devant le jury, et la certification. »",
                     "À gauche, « Le dernier maillon » et la date. À droite, « Soutenance et certification », puis le sous-titre.",
                     "Revue des travaux d'origination, p. 33"))
+
+    # 10. Key facts : le parcours en chiffres (plateforme Thinkific, export du 15/11/2026 et API)
+    rows = [
+        ('Le parcours', [('30', 'participants, GRE et CCE'), ('3', 'blocs, 8 compétences, 9 cours en ligne'),
+                         ('7', 'mois de parcours, d\'avril à novembre'), ('2', 'jours de bootcamp d\'origination')]),
+        ('La plateforme', [('215', 'capsules : 162 leçons vidéo, 53 modules interactifs'), ('5\u202f929', 'capsules terminées par la promotion'),
+                           ('4\u202f415', 'vidéos regardées jusqu\'au bout'), ('800', 'heures de formation en ligne, 27 h par participant')]),
+        ('La preuve', [('96\u202f%', 'des cours terminés : 259 sur 270'), ('22', 'participants sur 30 ont terminé les 9 cours'),
+                       ('9', 'épreuves de validation'), ('6', 'études de cas sur des entreprises réelles')]),
+        ('Le terrain', [('424', 'entreprises repérées et notées'), ('145', 'fiches prospect rédigées'),
+                        ('72', 'prospects validés pour la soutenance'), ('30\u202f/\u202f30', 'participants ont remis leurs travaux')]),
+    ]
+    grid = ''
+    for lab, cells in rows:
+        grid += f'<div class="kf-l">{lab}</div>' + ''.join(f'<div class="kf"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in cells)
+    left = (NUIT +
+            '<div style="position:absolute;left:120px;top:84px"><div style="font-size:22px;letter-spacing:.26em;color:#c8a96a;font-weight:600">PROMOTION 2026 · KEY FACTS</div>'
+            '<div style="font-family:var(--serif);font-size:76px;font-weight:600;color:#fff;line-height:1.05;margin-top:14px">Le parcours, <em style="color:#c8a96a">en chiffres</em></div></div>'
+            f'<div class="kfg">{grid}</div>')
+    out.append(page(left, nxt(), 'Key facts', 'La preuve par les chiffres',
+                    "« Trente banquiers, huit cents heures de formation, plus de cinq mille capsules terminées. Et au bout, soixante-douze prospects prêts à être défendus. »",
+                    "Les quatre lignes s'allument l'une après l'autre ; les chiffres défilent jusqu'à leur valeur.",
+                    "Plateforme Thinkific (export du 15/11/2026), rapports d'évaluation, revue des travaux d'origination"))
     return STYLE + ''.join(out), n[0]

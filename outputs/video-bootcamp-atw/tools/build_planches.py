@@ -89,7 +89,7 @@ from blocs_cine import make
 
 s = open(A('planches-artifact.src.html')).read()
 s = s.replace('LOGO_AA', data_uri(A('assets', 'logo-attijari-academy.png')))
-s = s.replace('LOGO_FIN', data_uri(A('assets', 'logo-financite.png')))
+s = s.replace('LOGO_FIN', data_uri(A('assets', 'logo-financite-clair.png')))
 s = s.replace(' / 9 ·', ' ·').replace(' / 9<', '<')
 def clean_banner(cid):
     p = A('assets', 'bannieres', 'clean', cid + '.jpg')
@@ -103,6 +103,9 @@ html_blocs, last = make(BLOCS, banner, nb, 6, clean_banner, case_img)
 from origination import make as make_orig
 html_orig, last = make_orig(last, nb, case_img)
 html_blocs += html_orig
-s = s.replace('BLOCS', html_blocs)
+s = s.replace('\nBLOCS\n', '\n' + html_blocs + '\n')
+from mise_en_ordre import reordonner, assombrir
+s, last = reordonner(s)
+s = assombrir(s)
 open(A('planches-artifact.html'), 'w').write(s)
 print('ok', len(s) // 1024, 'Ko', 'écrans:', last)

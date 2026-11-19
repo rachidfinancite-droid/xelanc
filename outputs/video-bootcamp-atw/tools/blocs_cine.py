@@ -74,14 +74,14 @@ ECRAN_DESC = {
 SCRIM = '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,40,.86) 0%,rgba(8,20,40,.68) 34%,rgba(8,20,40,.32) 60%,rgba(8,20,40,0) 82%)"></div>'
 
 STYLE = """<style>
-.kick{font-size:24px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#c8a96a}
-.acc{font-family:var(--serif);font-size:110px;font-weight:500;line-height:1.02;color:#fff}.acc em{color:#c8a96a}
-.cp{flex:1;border-top:2px solid rgba(200,169,106,.6);padding-top:16px;font-size:26px;line-height:1.3;color:#dbe3ee}
-.cp span{display:block;font-family:var(--serif);font-size:34px;color:#c8a96a}
-.ex{border-left:3px solid #c8a96a;padding:6px 0 6px 26px;font-family:var(--serif);font-size:44px;color:#fff;line-height:1.1}
+.kick{font-size:24px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#5fd0ea}
+.acc{font-family:var(--serif);font-size:110px;font-weight:500;line-height:1.02;color:#fff}.acc em{color:#5fd0ea}
+.cp{flex:1;border-top:2px solid rgba(95,208,234,.6);padding-top:16px;font-size:26px;line-height:1.3;color:#dbe3ee}
+.cp span{display:block;font-family:var(--serif);font-size:34px;color:#5fd0ea}
+.ex{border-left:3px solid #5fd0ea;padding:6px 0 6px 26px;font-family:var(--serif);font-size:44px;color:#fff;line-height:1.1}
 .ex span{display:block;font-family:var(--sans);font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#9db6d6;margin-bottom:6px}
-.cs{border-left:3px solid #e8798c;padding:6px 0 6px 26px}
-.cs span{display:block;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#e8798c}
+.cs{border-left:3px solid #5fd0ea;padding:6px 0 6px 26px}
+.cs span{display:block;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#5fd0ea}
 .cs b{display:block;font-family:var(--serif);font-size:72px;font-weight:600;color:#fff;line-height:1;margin-top:8px}
 .cs i{display:block;font-style:normal;font-size:26px;line-height:1.35;color:#c9d6e6;margin-top:12px}
 .cs3{display:flex;gap:46px;margin-top:16px}.cs3 div{font-size:20px;color:#9db6d6}
@@ -90,12 +90,12 @@ STYLE = """<style>
 .vx span{font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#6f8198}.vx b{font-family:var(--serif);font-size:44px;font-weight:600;color:#0f2744;line-height:1.1;margin-top:12px;min-height:98px}
 .vr{border-top:2px solid #e3e5e8;margin-top:22px;padding-top:18px}.vr strong{font-family:var(--serif);font-size:72px;font-weight:600;color:#0f2744;line-height:1}.vr em{font-style:normal;font-size:28px;color:#6f8198;margin-left:6px}.vr i{display:block;font-style:normal;font-size:24px;color:#3f5168;margin-top:6px}
 .vs{background:#0f2744;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.25);padding:40px 46px;display:flex;align-items:center;gap:50px}
-.vs span{font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#c8a96a}.vs b{display:block;font-family:var(--serif);font-size:70px;font-weight:600;color:#fff;line-height:1;margin-top:10px}.vs i{display:block;font-style:normal;font-size:27px;line-height:1.35;color:#c9d6e6;margin-top:14px}
-.vsn{flex:none;text-align:right}.vsn strong{font-family:var(--serif);font-size:110px;font-weight:600;color:#fff;line-height:1}.vsn em{font-style:normal;font-size:34px;color:#9db6d6;margin-left:6px}.vsn i{display:block;font-style:normal;font-size:24px;color:#c8a96a;margin-top:8px}
+.vs span{font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#5fd0ea}.vs b{display:block;font-family:var(--serif);font-size:70px;font-weight:600;color:#fff;line-height:1;margin-top:10px}.vs i{display:block;font-style:normal;font-size:27px;line-height:1.35;color:#c9d6e6;margin-top:14px}
+.vsn{flex:none;text-align:right}.vsn strong{font-family:var(--serif);font-size:110px;font-weight:600;color:#fff;line-height:1}.vsn em{font-style:normal;font-size:34px;color:#9db6d6;margin-left:6px}.vsn i{display:block;font-style:normal;font-size:24px;color:#5fd0ea;margin-top:8px}
 .vc{background:#fff;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.16);display:flex;flex-direction:column;height:100%;overflow:hidden}
 .vim{height:270px;flex:none;background-size:cover;background-position:center;position:relative}
 .vph{background:linear-gradient(135deg,#1c3f63,#0b1a33)}
-.vtag{position:absolute;left:22px;top:22px;font-style:normal;font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:#0b1a33;background:#c8a96a;border-radius:999px;padding:8px 16px;font-weight:600}
+.vtag{position:absolute;left:22px;top:22px;font-style:normal;font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:#0b1a33;background:#5fd0ea;border-radius:999px;padding:8px 16px;font-weight:600}
 .vtag-x{background:#fff;color:#0f2744}
 .vbody{padding:28px 32px 30px;display:flex;flex-direction:column;flex:1}
 .vbody>span{font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:#139fc4;font-weight:600;min-height:24px}
@@ -106,7 +106,7 @@ STYLE = """<style>
 .vn{margin-top:auto;border-top:2px solid #e3e5e8;padding-top:14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .vn strong{font-family:var(--serif);font-size:112px;font-weight:600;color:#139fc4;line-height:.95}.vn small{font-size:30px;color:#6f8198}
 .vn i{flex-basis:100%;font-style:normal;font-size:24px;color:#0f2744;font-weight:500;margin-top:4px}
-.rs{border-top:2px solid #c8a96a;padding-top:28px}
+.rs{border-top:2px solid #5fd0ea;padding-top:28px}
 .rs b{display:block;font-family:var(--serif);font-size:110px;font-weight:500;color:#fff;line-height:1;white-space:nowrap}
 .rs span{display:block;font-size:30px;line-height:1.35;color:#c9d6e6;margin-top:20px}
 </style>"""
@@ -137,10 +137,10 @@ def make(blocs, banner, nb, start, clean_banner, case_img=lambda n: None):
         #    Premier tiers : « Bloc 1 » et la période. Deux tiers suivants : le titre complet du bloc.
         left = (f'<div style="position:absolute;inset:0;background:url({first}) center/cover"></div>'
                 + SCRIM +
-                '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(200,169,106,.8)"></div>'
+                '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(95,208,234,.8)"></div>'
                 '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
                 f'<div style="font-family:var(--serif);font-size:120px;font-weight:600;line-height:1;color:#fff">Bloc {int(k)}</div>'
-                f'<div style="font-family:var(--serif);font-size:56px;font-weight:500;line-height:1.15;color:#c8a96a;margin-top:22px">{b["periode"].replace(" 2026", "")}</div>'
+                f'<div style="font-family:var(--serif);font-size:56px;font-weight:500;line-height:1.15;color:#5fd0ea;margin-top:22px">{b["periode"].replace(" 2026", "")}</div>'
                 '<div style="font-size:24px;letter-spacing:.24em;color:#d9e2ee;margin-top:14px">2026</div></div>'
                 '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:760px;text-shadow:0 2px 20px rgba(0,0,0,.35)">'
                 f'<div style="font-family:var(--serif);font-size:150px;font-weight:600;line-height:.98;color:#fff">{b["nom"]}</div>'
@@ -151,10 +151,10 @@ def make(blocs, banner, nb, start, clean_banner, case_img=lambda n: None):
 
         # 2. L'objectif, même construction en tiers.
         left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,#173158 0%,#0b1a33 60%,#060f20 100%)"></div>'
-                '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(200,169,106,.8)"></div>'
+                '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(95,208,234,.8)"></div>'
                 '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
                 '<div style="font-family:var(--serif);font-size:96px;font-weight:600;line-height:1.02;color:#fff">Objectif<br>du bloc</div>'
-                f'<div style="font-size:24px;letter-spacing:.24em;color:#c8a96a;margin-top:26px;text-transform:uppercase">Bloc {int(k)} · {b["nom"]}</div></div>'
+                f'<div style="font-size:24px;letter-spacing:.24em;color:#5fd0ea;margin-top:26px;text-transform:uppercase">Bloc {int(k)} · {b["nom"]}</div></div>'
                 f'<div class="acc" style="position:absolute;left:720px;top:50%;transform:translateY(-58%);width:1100px">{acc}'
                 f'<div style="font-family:var(--sans);font-size:36px;line-height:1.4;color:#c9d6e6;margin-top:40px;font-weight:400">{nb(sous)}</div></div>')
         out.append(page(left, nxt(), f'Bloc {k} · objectif', "L'objectif du bloc", f'« {VO_OBJ[k]} »',
@@ -170,7 +170,7 @@ def make(blocs, banner, nb, start, clean_banner, case_img=lambda n: None):
                     '<div style="position:absolute;left:120px;top:50%;transform:translateY(-50%);width:900px;text-shadow:0 2px 18px rgba(0,0,0,.45)">'
                     f'<div class="kick">Compétence {c["num"]}</div>'
                     f'<div style="font-family:var(--serif);font-size:74px;font-weight:600;line-height:1.06;color:#fff;margin-top:26px">{nb(c["ecran_titre"])}</div>'
-                    '<div style="width:110px;height:3px;background:#c8a96a;margin:42px 0 36px"></div>'
+                    '<div style="width:110px;height:3px;background:#5fd0ea;margin:42px 0 36px"></div>'
                     f'<div style="font-family:var(--serif);font-style:italic;font-size:48px;line-height:1.2;color:#e9eef5">{nb(c["objectif"])}</div></div>')
             out.append(page(left, nxt(), f'Bloc {k} · compétence {c["num"]}', c['titre'].split(' :')[0],
                             "À écrire au montage, sans reprendre le texte de l'écran.",

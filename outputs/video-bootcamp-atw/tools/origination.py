@@ -5,7 +5,7 @@ La méthode du pitch (jour 1), Accompagnement des tables rondes (jour 1)."""
 SCRIM = '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,40,.86) 0%,rgba(8,20,40,.68) 34%,rgba(8,20,40,.32) 60%,rgba(8,20,40,0) 82%)"></div>'
 GRIS = '<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 28% 18%,#f7f7f6 0%,#ececeb 45%,#dedfe0 100%)"></div>'
 NUIT = '<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,#173158 0%,#0b1a33 60%,#060f20 100%)"></div>'
-FILET = '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(200,169,106,.8)"></div>'
+FILET = '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(95,208,234,.8)"></div>'
 
 STYLE = """<style>
 .og-step{flex:1;background:#fff;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.16);padding:40px 38px;display:flex;flex-direction:column}
@@ -19,10 +19,10 @@ STYLE = """<style>
 .og-fun .l{width:520px;font-size:30px;color:#3f5168}
 .og-fun .b{height:58px;border-radius:12px;background:#0f2744}
 .og-fun .v{font-family:var(--serif);font-size:64px;font-weight:600;color:#139fc4;min-width:150px}
-.og-st{border-top:2px solid #c8a96a;padding-top:24px}
+.og-st{border-top:2px solid #5fd0ea;padding-top:24px}
 .og-st b{display:block;font-family:var(--serif);font-size:96px;font-weight:500;color:#fff;line-height:1;white-space:nowrap}
 .og-st span{display:block;font-size:28px;line-height:1.35;color:#c9d6e6;margin-top:16px}
-.og-st2{border-top:2px solid #c8a96a;padding-top:22px}.og-st2 span{display:block;font-size:34px;line-height:1.3;color:#fff;font-weight:500}.og-st2 b{display:block;font-family:var(--serif);font-size:92px;font-weight:500;color:#5fd0ea;line-height:1;margin-top:10px}
+.og-st2{border-top:2px solid #5fd0ea;padding-top:22px}.og-st2 span{display:block;font-size:34px;line-height:1.3;color:#fff;font-weight:500}.og-st2 b{display:block;font-family:var(--serif);font-size:92px;font-weight:500;color:#5fd0ea;line-height:1;margin-top:10px}
 .og-sec{display:grid;grid-template-columns:380px 1fr 60px;align-items:center;gap:20px;margin-bottom:24px;font-size:31px;color:#d6dfeb}
 .og-sec .t{height:22px;background:rgba(255,255,255,.12);border-radius:11px;overflow:hidden}.og-sec .t i{display:block;height:100%;background:#5fd0ea;border-radius:11px}
 .og-sec b{font-family:var(--serif);font-size:36px;color:#fff;text-align:right}
@@ -34,30 +34,30 @@ STYLE = """<style>
 .og-deal .m{margin-top:auto;border-top:2px solid #e3e5e8;padding-top:14px}
 .og-deal .m strong{font-family:var(--serif);font-size:84px;font-weight:600;color:#139fc4;line-height:.95}
 .og-deal .m small{display:block;font-size:22px;color:#0f2744;font-weight:500;margin-top:6px}
-.og-v{display:flex;align-items:baseline;gap:30px;border-top:1px solid rgba(200,169,106,.45);padding-top:18px}
-.og-v small{width:300px;flex:none;white-space:nowrap;font-size:21px;letter-spacing:.12em;text-transform:uppercase;color:#c8a96a;font-weight:600}
+.og-v{display:flex;align-items:baseline;gap:30px;border-top:1px solid rgba(95,208,234,.45);padding-top:18px}
+.og-v small{width:300px;flex:none;white-space:nowrap;font-size:21px;letter-spacing:.12em;text-transform:uppercase;color:#5fd0ea;font-weight:600}
 .og-v b{font-family:var(--serif);font-size:48px;font-weight:600;color:#fff}
 .kvg{position:absolute;left:880px;right:110px;top:56%;transform:translateY(-50%);display:flex;flex-direction:column}
-.kv{display:grid;grid-template-columns:420px 1fr;align-items:center;column-gap:36px;border-top:2px solid rgba(200,169,106,.75);padding:24px 0}
+.kv{display:grid;grid-template-columns:420px 1fr;align-items:center;column-gap:36px;border-top:2px solid rgba(95,208,234,.75);padding:24px 0}
 .kv b{font-family:var(--serif);font-size:124px;font-weight:500;color:#5fd0ea;line-height:1;font-variant-numeric:lining-nums;white-space:nowrap}
 .kv span{font-size:38px;line-height:1.25;color:#fff;font-weight:500}
 .fr .kt,.fr .kt *{text-wrap:nowrap;white-space:nowrap}
-.ktop{position:absolute;left:110px;top:70px;font-size:46px;letter-spacing:.22em;text-transform:uppercase;color:#c8a96a;font-weight:700;padding-bottom:18px;border-bottom:3px solid #c8a96a}
-.kk{font-size:24px;letter-spacing:.26em;text-transform:uppercase;color:#c8a96a;font-weight:600}
+.ktop{position:absolute;left:110px;top:70px;font-size:44px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#139fc4;font-weight:700;padding:14px 30px 12px;border-radius:6px}
+.kk{font-size:24px;letter-spacing:.26em;text-transform:uppercase;color:#5fd0ea;font-weight:600}
 .kng{position:absolute;left:700px;right:110px;top:50%;transform:translateY(-50%);display:grid;grid-template-columns:1fr 1fr;column-gap:70px;row-gap:64px}
-.kn{border-top:2px solid #c8a96a;padding-top:24px}
+.kn{border-top:2px solid #5fd0ea;padding-top:24px}
 .kn b{display:block;font-family:var(--serif);font-size:150px;font-weight:500;color:#5fd0ea;line-height:.95;font-variant-numeric:lining-nums;white-space:nowrap}
 .kn span{display:block;font-size:32px;line-height:1.3;color:#fff;margin-top:16px;font-weight:500}
-.pk{border-top:2px solid #c8a96a;padding-top:16px}
+.pk{border-top:2px solid #5fd0ea;padding-top:16px}
 .pk b{display:block;font-family:var(--serif);font-size:80px;font-weight:500;color:#5fd0ea;line-height:1;font-variant-numeric:lining-nums}
 .pk span{display:block;font-size:26px;line-height:1.3;color:#fff;margin-top:8px}
 .kfg{position:absolute;left:120px;top:300px;width:1680px;display:grid;grid-template-columns:230px repeat(4,1fr);column-gap:36px;row-gap:0}
-.kf-l{border-top:1px solid rgba(200,169,106,.5);padding-top:30px;font-size:21px;letter-spacing:.2em;text-transform:uppercase;color:#c8a96a;font-weight:600}
+.kf-l{border-top:1px solid rgba(95,208,234,.5);padding-top:30px;font-size:21px;letter-spacing:.2em;text-transform:uppercase;color:#5fd0ea;font-weight:600}
 .kf{border-top:1px solid rgba(255,255,255,.16);padding:22px 0 26px}
 .kf b{display:block;font-family:var(--serif);font-size:78px;font-weight:500;color:#5fd0ea;line-height:1;font-variant-numeric:lining-nums}
 .kf span{display:block;font-size:23px;line-height:1.3;color:#d9e2ee;margin-top:10px}
-.og-tl{flex:1;border-top:4px solid #c8a96a;padding-top:26px}
-.og-tl small{display:block;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:#c8a96a;font-weight:600}
+.og-tl{flex:1;border-top:4px solid #5fd0ea;padding-top:26px}
+.og-tl small{display:block;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:#5fd0ea;font-weight:600}
 .og-tl b{display:block;font-family:var(--serif);font-size:44px;font-weight:600;color:#fff;line-height:1.08;margin-top:12px}
 .og-tl p{font-size:24px;line-height:1.4;color:#c9d6e6;margin:14px 0 0}
 </style>"""
@@ -84,7 +84,7 @@ def make(start, nb, img):
     left = (f'<div style="position:absolute;inset:0;background:url({bg}) center/cover"></div>' + SCRIM + FILET +
             '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
             '<div style="font-family:var(--serif);font-size:110px;font-weight:600;line-height:1;color:#fff">Action<br>terrain</div>'
-            '<div style="font-family:var(--serif);font-size:50px;font-weight:500;line-height:1.15;color:#c8a96a;margin-top:24px">Octobre – novembre</div>'
+            '<div style="font-family:var(--serif);font-size:50px;font-weight:500;line-height:1.15;color:#5fd0ea;margin-top:24px">Octobre – novembre</div>'
             '<div style="font-size:24px;letter-spacing:.24em;color:#d9e2ee;margin-top:14px">2026</div></div>'
             '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:760px;text-shadow:0 2px 20px rgba(0,0,0,.35)">'
             '<div style="font-family:var(--serif);font-size:150px;font-weight:600;line-height:.98;color:#fff">L\'origination</div>'
@@ -97,9 +97,9 @@ def make(start, nb, img):
     left = (NUIT + FILET +
             '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
             '<div style="font-family:var(--serif);font-size:96px;font-weight:600;line-height:1.02;color:#fff">Objectif<br>du terrain</div>'
-            '<div style="font-size:24px;letter-spacing:.24em;color:#c8a96a;margin-top:26px;text-transform:uppercase">Mise en application</div></div>'
+            '<div style="font-size:24px;letter-spacing:.24em;color:#5fd0ea;margin-top:26px;text-transform:uppercase">Mise en application</div></div>'
             '<div style="position:absolute;left:720px;top:50%;transform:translateY(-58%);width:1100px">'
-            '<div style="font-family:var(--serif);font-size:88px;font-weight:500;line-height:1.06;color:#fff">Aller chercher<br>de nouvelles relations,<br><em style="color:#c8a96a">et concrétiser<br>l\'entrée en relation.</em></div>'
+            '<div style="font-family:var(--serif);font-size:88px;font-weight:500;line-height:1.06;color:#fff">Aller chercher<br>de nouvelles relations,<br><em style="color:#5fd0ea">et concrétiser<br>l\'entrée en relation.</em></div>'
             '<div style="font-size:36px;line-height:1.4;color:#c9d6e6;margin-top:40px">En appliquant les bonnes pratiques : repérer, qualifier, préparer l\'entrée en relation.</div></div>')
     out.append(page(left, nxt(), 'Action terrain · objectif', 'La confirmation de tout le parcours',
                     "« Tout ce qui a été appris prend ici son sens : face à une vraie entreprise, qui n'est pas encore cliente. »",
@@ -110,11 +110,11 @@ def make(start, nb, img):
     left = (GRIS +
             '<div style="position:absolute;left:120px;top:90px"><div class="sur">Le profil visé</div></div>'
             '<div style="position:absolute;left:120px;top:300px;width:1680px">'
-            '<div style="font-family:var(--serif);font-size:96px;font-weight:500;color:#9aa8ba;line-height:1.05;text-decoration:line-through;text-decoration-color:#a8324a;text-decoration-thickness:6px">Un gestionnaire administratif</div>'
+            '<div style="font-family:var(--serif);font-size:96px;font-weight:500;color:#9aa8ba;line-height:1.05;text-decoration:line-through;text-decoration-color:#9db6d6;text-decoration-thickness:6px">Un gestionnaire administratif</div>'
             '<div style="font-family:var(--serif);font-size:100px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:40px">Un banquier qui va chercher ses clients,<br><em style="color:#139fc4">sait les convaincre et les accompagner.</em></div></div>'
             '<div style="position:absolute;left:120px;top:850px;display:flex;gap:50px;font-family:var(--serif);font-size:48px;font-weight:600;color:#0f2744">'
-            '<span>Prospecter</span><span style="color:#c8a96a">·</span><span>Qualifier</span><span style="color:#c8a96a">·</span>'
-            '<span>Convaincre</span><span style="color:#c8a96a">·</span><span>Accompagner</span></div>')
+            '<span>Prospecter</span><span style="color:#5fd0ea">·</span><span>Qualifier</span><span style="color:#5fd0ea">·</span>'
+            '<span>Convaincre</span><span style="color:#5fd0ea">·</span><span>Accompagner</span></div>')
     out.append(page(left, nxt(), 'Action terrain · profil', 'Le CCE et le GRE complets',
                     "« Le métier ne se joue pas seulement derrière un bureau. Il se joue chez le client. »",
                     "La première ligne s'affiche, puis se fait barrer en rouge. La seconde arrive en grand, la fin en cyan.",
@@ -194,10 +194,10 @@ def make(start, nb, img):
     left = (NUIT + FILET +
             '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
             '<div style="font-family:var(--serif);font-size:78px;font-weight:600;line-height:1.04;color:#fff">Bootcamp<br>d\'origination</div>'
-            '<div style="font-family:var(--serif);font-size:50px;font-weight:500;color:#c8a96a;margin-top:24px">19 – 20 novembre</div>'
+            '<div style="font-family:var(--serif);font-size:50px;font-weight:500;color:#5fd0ea;margin-top:24px">19 – 20 novembre</div>'
             '<div style="font-size:24px;letter-spacing:.24em;color:#d9e2ee;margin-top:14px">2026</div></div>'
             '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:1100px">'
-            '<div style="font-family:var(--serif);font-size:96px;font-weight:500;line-height:1.04;color:#fff">Du dossier<br><em style="color:#c8a96a">au pitch qui convainc.</em></div>'
+            '<div style="font-family:var(--serif);font-size:96px;font-weight:500;line-height:1.04;color:#fff">Du dossier<br><em style="color:#5fd0ea">au pitch qui convainc.</em></div>'
             f'<div style="margin-top:46px;display:flex;flex-direction:column;gap:22px">{rows}</div></div>')
     out.append(page(left, nxt(), 'Action terrain · bootcamp', 'Deux jours pour être prêt',
                     "« Deux jours pour transformer chaque dossier en un pitch défendable : pourquoi elle, pourquoi maintenant, pourquoi nous. »",
@@ -208,9 +208,9 @@ def make(start, nb, img):
     left = (NUIT + FILET +
             '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
             '<div style="font-family:var(--serif);font-size:96px;font-weight:600;line-height:1.02;color:#fff">Le dernier<br>maillon</div>'
-            '<div style="font-family:var(--serif);font-size:50px;font-weight:500;color:#c8a96a;margin-top:24px">Janvier 2027</div></div>'
+            '<div style="font-family:var(--serif);font-size:50px;font-weight:500;color:#5fd0ea;margin-top:24px">Janvier 2027</div></div>'
             '<div style="position:absolute;left:720px;top:50%;transform:translateY(-55%);width:1100px">'
-            '<div style="font-family:var(--serif);font-size:110px;font-weight:600;line-height:1.02;color:#fff">Soutenance<br><em style="color:#c8a96a">et certification</em></div>'
+            '<div style="font-family:var(--serif);font-size:110px;font-weight:600;line-height:1.02;color:#fff">Soutenance<br><em style="color:#5fd0ea">et certification</em></div>'
             '<div style="font-size:36px;line-height:1.4;color:#c9d6e6;margin-top:40px">Chaque participant défend ses prospects devant un jury, comme en comité. Puis vient la prise de contact, accompagnée par le manager.</div></div>')
     out.append(page(left, nxt(), 'Action terrain · dernier maillon', 'La soutenance',
                     "« Dernier maillon du parcours : la soutenance devant le jury, et la certification. »",
@@ -224,14 +224,14 @@ def make(start, nb, img):
         return 'data:image/jpeg;base64,' + base64.b64encode(open(os.path.join(A, rel), 'rb').read()).decode()
     BAS = '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,40,.82) 0%,rgba(8,20,40,.45) 30%,rgba(8,20,40,.80) 60%,rgba(8,20,40,.94) 100%)"></div>'
     VOILE = '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,40,.94) 0%,rgba(8,20,40,.86) 30%,rgba(8,20,40,.72) 60%,rgba(8,20,40,.66) 100%)"></div>'
-    FIL4 = '<div style="position:absolute;left:800px;top:220px;bottom:130px;width:2px;background:rgba(200,169,106,.8)"></div>'
+    FIL4 = '<div style="position:absolute;left:800px;top:220px;bottom:130px;width:2px;background:rgba(95,208,234,.8)"></div>'
     def colonne(kick, titre, extra=''):
         return (f'<div class="ktop">{kick}</div>'
                 '<div style="position:absolute;left:110px;top:54%;transform:translateY(-50%);width:580px">'
                 f'<div class="kt" style="font-family:var(--serif);font-size:90px;font-weight:600;color:#fff;line-height:1.04">{titre}</div>{extra}</div>')
-    def chiffres(bg, kick, titre, cells, tc, role, vo, src):
+    def chiffres(bg, kick, titre, cells, tc, role, vo, src, voile=None):
         tiles = ''.join(f'<div class="kv"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in cells)
-        left = (f'<div style="position:absolute;inset:0;background:url({bg}) center/cover"></div>' + VOILE + FIL4 +
+        left = (f'<div style="position:absolute;inset:0;background:url({bg}) center/cover"></div>' + (voile or VOILE) + FIL4 +
                 colonne(kick, titre) + f'<div class="kvg">{tiles}</div>')
         out.append(page(left, nxt(), tc, role, vo,
                         "À gauche, le titre en grand. À droite, les quatre chiffres tombent l'un sous l'autre et défilent jusqu'à leur valeur.", src))
@@ -240,15 +240,15 @@ def make(start, nb, img):
     left = (f'<div style="position:absolute;inset:0;background:url({photo("bannieres/clean/c4.jpg")}) center/cover"></div>' + SCRIM + FILET +
             '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
             '<div style="font-family:var(--serif);font-size:84px;font-weight:600;line-height:1.02;color:#fff">Promotion<br>2026</div>'
-            '<div style="font-family:var(--serif);font-size:46px;font-weight:500;color:#c8a96a;margin-top:24px">GRE · CCE</div></div>'
+            '<div style="font-family:var(--serif);font-size:46px;font-weight:500;color:#5fd0ea;margin-top:24px">GRE · CCE</div></div>'
             '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:1100px">'
-            '<div style="font-family:var(--serif);font-size:120px;font-weight:600;line-height:1.0;color:#fff">L\'expérience<br>d\'upskilling,<br><em style="color:#c8a96a">en chiffres</em></div></div>')
+            '<div style="font-family:var(--serif);font-size:120px;font-weight:600;line-height:1.0;color:#fff">L\'expérience<br>d\'upskilling,<br><em style="color:#5fd0ea">en chiffres</em></div></div>')
     out.append(page(left, nxt(), 'En chiffres · ouverture', 'L\'expérience en chiffres',
                     "« Sept mois de parcours. Voici ce qu'ils ont produit. »",
                     "À gauche, « Promotion 2026 · GRE · CCE ». À droite, le titre, ligne par ligne.",
                     "Bannière de la compétence 2.1"))
 
-    chiffres(photo('bannieres/clean/c1.jpg'), 'Le parcours', 'Sept mois,<br><em style="color:#c8a96a">du premier<br>cours au terrain</em>',
+    chiffres(photo('bannieres/clean/c1.jpg'), 'Le parcours', 'Sept mois,<br><em style="color:#5fd0ea">du premier<br>cours au terrain</em>',
              [('30', 'participants, GRE et CCE'), ('9', 'cours en ligne : 8 compétences, 3 blocs'),
               ('7', 'mois de parcours, d\'avril à novembre'), ('2', 'jours de bootcamp d\'origination')],
              'En chiffres · le parcours', 'Le parcours',
@@ -273,25 +273,38 @@ def make(start, nb, img):
                     "banking.xelanc.com"))
 
     # La plateforme, ses chiffres : même mise en page que les autres écrans
-    chiffres(photo('bannieres/clean/c2.jpg'), 'La plateforme', 'Une école<br><em style="color:#c8a96a">ouverte<br>en continu</em>',
+    chiffres(shot.replace('url(', 'url(') , 'La plateforme', 'Une école<br><em style="color:#5fd0ea">ouverte<br>en continu</em>',
              [('215', 'capsules vidéo réparties dans les 9 cours'), ('6\u202f450', 'capsules terminées : 100 % du programme suivi'),
               ('800', 'heures de formation en ligne'), ('27 h', 'par participant en moyenne')],
              'En chiffres · la plateforme', 'La plateforme en chiffres',
              "« Deux cent quinze capsules, huit cents heures de formation, et cent pour cent du programme suivi. »",
-             "Plateforme Thinkific")
+             "Plateforme Thinkific",
+             voile='<div style="position:absolute;inset:0;background:url(' + shot + ') 100% 55%/230% auto"></div><div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,15,32,.85) 0%,rgba(6,15,32,.55) 40%,rgba(6,15,32,.30) 100%)"></div>')
 
-    chiffres(photo('cas/terralis.jpg'), 'La preuve', 'Personne<br>n\'est <em style="color:#c8a96a">resté<br>en route</em>',
+    chiffres(photo('cas/terralis.jpg'), 'La preuve', 'Personne<br>n\'est <em style="color:#5fd0ea">resté<br>en route</em>',
              [('100\u202f%', 'des cours terminés : 270 sur 270'), ('30\u202f/\u202f30', 'participants ont terminé les 9 cours'),
               ('9', 'épreuves de validation'), ('6', 'études de cas sur des entreprises réelles')],
              'En chiffres · la preuve', 'La preuve',
              "« Cent pour cent des cours terminés. Neuf épreuves, six études de cas réelles. »",
              "Plateforme Thinkific, rapports d'évaluation 04a à 04i")
 
-    chiffres(photo('cas/maghreb.jpg'), 'Le terrain', 'Des<br>compétences<br><em style="color:#c8a96a">mises au travail</em>',
+    chiffres(photo('cas/maghreb.jpg'), 'Le terrain', 'Des<br>compétences<br><em style="color:#5fd0ea">mises au travail</em>',
              [('424', 'entreprises repérées et notées'), ('145', 'fiches prospect rédigées'),
               ('72', 'prospects validés pour la soutenance'), ('30\u202f/\u202f30', 'participants ont remis leurs travaux')],
              'En chiffres · le terrain', 'Le terrain',
              "« Quatre cent vingt-quatre entreprises repérées. Soixante-douze prospects prêts à être défendus. »",
              "Revue des travaux d'origination")
+
+    # Entrée dans le programme, juste avant les trois blocs
+    left = (f'<div style="position:absolute;inset:0;background:url({photo("bannieres/clean/c5.jpg")}) center/cover"></div>' + SCRIM + FILET +
+            '<div class="ktop">Le programme</div>'
+            '<div style="position:absolute;left:110px;top:54%;transform:translateY(-50%);width:470px">'
+            '<div style="font-family:var(--serif);font-size:84px;font-weight:600;line-height:1.04;color:#fff">Entrons<br>dans le<br>programme</div></div>'
+            '<div style="position:absolute;left:720px;top:54%;transform:translateY(-50%);width:1100px">'
+            '<div style="font-family:var(--serif);font-size:104px;font-weight:500;line-height:1.04;color:#fff">Trois blocs,<br><em style="color:#5fd0ea">huit compétences,</em><br>une action terrain.</div></div>')
+    out.append(page(left, nxt(), 'Entrée dans le programme', 'Entrons dans le programme',
+                    "« Voici comment ces chiffres ont été construits, bloc par bloc. »",
+                    "À gauche, « Entrons dans le programme ». À droite, les trois lignes tombent l'une après l'autre.",
+                    "Bannière de la compétence 2.2"))
 
     return STYLE + ''.join(out), n[0]

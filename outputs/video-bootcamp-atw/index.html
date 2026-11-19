@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Récap bootcamp GRE CCE</title>
+<style>
+:root{
+  --bg:#F6F4EF; --ink:#0F1E3D; --ink2:#46526B; --mute:#8A93A6;
+  --blue:#2F6DB5; --blue-l:#DCE7F5; --orange:#D9622B; --orange-l:#F8E3D7;
+  --line:#E2DED5; --card:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--bg);font-family:Inter,sans-serif;color:var(--ink)}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--bg)}
+.scene{position:absolute;inset:0;padding:120px 150px;opacity:0}
+.a{will-change:transform,opacity}
+.kicker{font-size:26px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--orange)}
+.h1{font-family:"Inter Display",Inter;font-size:92px;font-weight:700;line-height:1.04;letter-spacing:-.02em}
+.h2{font-family:"Inter Display",Inter;font-size:68px;font-weight:700;line-height:1.08;letter-spacing:-.015em}
+.lead{font-size:36px;line-height:1.4;color:var(--ink2);font-weight:400}
+.small{font-size:24px;color:var(--mute)}
+.num{font-family:"Inter Display",Inter;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.row{display:flex;gap:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:40px}
+.bar-track{height:22px;background:var(--line);border-radius:11px;overflow:hidden}
+.bar{height:100%;width:0;background:var(--blue);border-radius:11px}
+.pill{display:inline-block;padding:12px 26px;border-radius:999px;background:var(--blue-l);color:var(--blue);font-weight:600;font-size:26px}
+.foot{position:absolute;left:150px;right:150px;bottom:56px;display:flex;justify-content:space-between;align-items:center;font-size:20px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
+.bloc-tag{position:absolute;top:60px;right:150px;font-size:22px;font-weight:700;letter-spacing:.18em;color:var(--blue);text-transform:uppercase}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--orange);display:inline-block}
+.progress{position:absolute;left:0;bottom:0;height:6px;background:var(--orange);width:0}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<!-- 0 · OUVERTURE -->
+<section class="scene" data-start="0" data-dur="17" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
+  <div class="row" style="gap:120px;align-items:flex-end">
+    <div class="a" data-in="0.6" data-anim="up"><div class="num" style="font-size:210px;color:var(--ink)" data-count="30" data-in="0.6">0</div><div class="lead">chargés d'affaires</div></div>
+    <div class="a" data-in="3" data-anim="up"><div class="num" style="font-size:210px;color:var(--blue)" data-count="424" data-in="3">0</div><div class="lead">entreprises repérées</div></div>
+    <div class="a" data-in="5.6" data-anim="up"><div class="num" style="font-size:210px;color:var(--orange)" data-count="72" data-in="5.6">0</div><div class="lead">prospects retenus</div></div>
+  </div>
+  <div class="a h2" data-in="9.5" data-anim="up" style="margin-top:90px">Retour sur un parcours.</div>
+</section>
+
+<!-- 1 · TITRE -->
+<section class="scene" data-start="17" data-dur="12" style="display:flex;flex-direction:column;justify-content:center">
+  <div class="a kicker" data-in="0.3" data-anim="up">Programme certifiant · Promotion 2026</div>
+  <div class="a h1" data-in="0.8" data-anim="up" style="font-size:150px;margin-top:24px">GRE · CCE</div>
+  <div class="a lead" data-in="1.6" data-anim="up" style="margin-top:24px;max-width:1300px">Gestionnaires de relations entreprises et chargés de clientèle entreprises d'Attijariwafa bank</div>
+  <div class="a row" data-in="3" data-anim="fade" style="margin-top:80px;align-items:center;gap:70px">
+    <img src="assets/logo-attijari-academy.png" style="height:120px">
+    <div style="width:2px;height:90px;background:var(--line)"></div>
+    <img src="assets/logo-financite.png" style="height:84px">
+  </div>
+</section>
+
+<!-- 2 · LE PARCOURS EN 3 BLOCS -->
+<section class="scene" data-start="29" data-dur="16">
+  <div class="a kicker" data-in="0.2" data-anim="up">Le parcours</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Du savoir au terrain, en trois blocs</div>
+  <div class="row" style="margin-top:90px;gap:36px;align-items:stretch">
+    <div class="a card" data-in="2" data-anim="up" style="flex:1"><div class="num" style="font-size:96px;color:var(--blue)">1</div><div style="font-size:42px;font-weight:700;margin-top:10px">Se former</div><div class="lead" style="font-size:28px;margin-top:14px">Cours en ligne, workshops, évaluations</div></div>
+    <div class="a card" data-in="3.4" data-anim="up" style="flex:1"><div class="num" style="font-size:96px;color:var(--blue)">2</div><div style="font-size:42px;font-weight:700;margin-top:10px">Originer</div><div class="lead" style="font-size:28px;margin-top:14px">Repérer, faire valider, documenter ses cibles</div></div>
+    <div class="a card" data-in="4.8" data-anim="up" style="flex:1"><div class="num" style="font-size:96px;color:var(--blue)">3</div><div style="font-size:42px;font-weight:700;margin-top:10px">Pitcher</div><div class="lead" style="font-size:28px;margin-top:14px">Le bootcamp des 19 et 20 novembre</div></div>
+    <div class="a card" data-in="6.4" data-anim="up" style="flex:.8;background:var(--ink);border-color:var(--ink);color:#fff"><div class="num" style="font-size:96px;color:var(--orange)">→</div><div style="font-size:42px;font-weight:700;margin-top:10px">Le jury</div><div style="font-size:28px;margin-top:14px;color:#C9D1E0;line-height:1.4">Puis le terrain</div></div>
+  </div>
+</section>
+
+<!-- 3 · BLOC 1 · SE FORMER -->
+<section class="scene" data-start="45" data-dur="30">
+  <div class="bloc-tag">Bloc 1 · Se former</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Bloc 1</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Comprendre, décider, conseiller</div>
+  <div class="a lead" data-in="1.4" data-anim="up" style="margin-top:20px;max-width:1400px">Former des banquiers d'entreprise qui transforment leurs connaissances en gestes professionnels.</div>
+  <div class="row" style="margin-top:70px;gap:30px">
+    <div class="a card" data-in="3.5" data-anim="up" style="flex:1"><div class="num" style="font-size:40px;color:var(--orange)">01</div><div style="font-size:36px;font-weight:700;margin-top:16px;line-height:1.2">Lire l'entreprise</div></div>
+    <div class="a card" data-in="5" data-anim="up" style="flex:1"><div class="num" style="font-size:40px;color:var(--orange)">02</div><div style="font-size:36px;font-weight:700;margin-top:16px;line-height:1.2">Décider en matière de crédit</div></div>
+    <div class="a card" data-in="6.5" data-anim="up" style="flex:1"><div class="num" style="font-size:40px;color:var(--orange)">03</div><div style="font-size:36px;font-weight:700;margin-top:16px;line-height:1.2">Structurer les financements</div></div>
+    <div class="a card" data-in="8" data-anim="up" style="flex:1"><div class="num" style="font-size:40px;color:var(--orange)">04</div><div style="font-size:36px;font-weight:700;margin-top:16px;line-height:1.2">Développer la relation dans la durée</div></div>
+  </div>
+  <div class="row" style="margin-top:60px;gap:24px">
+    <span class="a pill" data-in="13" data-anim="up">Cours en ligne</span>
+    <span class="a pill" data-in="14" data-anim="up">Workshops sur dossiers réels</span>
+    <span class="a pill" data-in="15" data-anim="up">Évaluations exigeantes</span>
+  </div>
+  <div class="a lead" data-in="20" data-anim="up" style="margin-top:60px;font-size:34px;color:var(--ink)">Puis un exercice grandeur nature : <b>l'origination</b>.</div>
+</section>
+
+<!-- 4 · BLOC 2 · ÉTAPE 1 REPÉRER -->
+<section class="scene" data-start="75" data-dur="32">
+  <div class="bloc-tag">Bloc 2 · Originer</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Étape 1 · Repérer</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">10 à 15 entreprises du territoire,<br>notées sur 20</div>
+  <div style="display:flex;gap:110px;margin-top:70px;align-items:center">
+    <div style="flex:1.25">
+      <div class="grid-row a" data-in="3" data-anim="left"><span>Déclencheur</span><span class="num">/5</span></div>
+      <div class="grid-row a" data-in="4" data-anim="left"><span>Potentiel</span><span class="num">/4</span></div>
+      <div class="grid-row a" data-in="5" data-anim="left"><span>Accessibilité</span><span class="num">/4</span></div>
+      <div class="grid-row a" data-in="6" data-anim="left"><span>Adéquation à l'offre</span><span class="num">/4</span></div>
+      <div class="grid-row a" data-in="7" data-anim="left"><span>Risque</span><span class="num">/3</span></div>
+      <div class="a small" data-in="8.5" data-anim="fade" style="margin-top:26px;font-size:26px">Seuil conseillé : 13/20 · Informations publiques uniquement · Aucun contact avec l'entreprise</div>
+    </div>
+    <div class="a" data-in="11" data-anim="scale" style="flex:1;text-align:center">
+      <div class="num" style="font-size:250px;color:var(--blue);line-height:1" data-count="424" data-in="11" data-cdur="3">0</div>
+      <div class="lead" style="font-size:38px;margin-top:10px">entreprises repérées et notées</div>
+    </div>
+  </div>
+  <style>.grid-row{display:flex;justify-content:space-between;align-items:center;font-size:40px;font-weight:600;padding:20px 0;border-bottom:2px solid var(--line)}.grid-row .num{color:var(--orange);font-size:44px}</style>
+</section>
+
+<!-- 5 · ÉTAPE 2 FAIRE VALIDER -->
+<section class="scene" data-start="107" data-dur="20">
+  <div class="bloc-tag">Bloc 2 · Originer</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Étape 2 · Faire valider</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Le manager dans la boucle,<br>dès le départ</div>
+  <div style="display:flex;align-items:center;gap:80px;margin-top:90px">
+    <div class="a" data-in="2.5" data-anim="up" style="text-align:center">
+      <div id="dots7" style="display:flex;gap:18px"></div>
+      <div class="lead" style="margin-top:22px">7 meilleures cibles présentées</div>
+    </div>
+    <div class="a num" data-in="4" data-anim="fade" style="font-size:90px;color:var(--mute)">→</div>
+    <div class="a" data-in="5" data-anim="up" style="text-align:center">
+      <div id="dots5" style="display:flex;gap:18px"></div>
+      <div class="lead" style="margin-top:22px">5 retenues par le manager</div>
+    </div>
+  </div>
+  <div class="a" data-in="8.5" data-anim="up" style="margin-top:90px;display:flex;align-items:baseline;gap:30px">
+    <span class="num" style="font-size:150px;color:var(--blue)" data-count="210" data-in="8.5">0</span><span class="lead" style="font-size:40px">cibles présentées aux managers</span>
+  </div>
+</section>
+
+<!-- 6 · ÉTAPE 3 DOCUMENTER -->
+<section class="scene" data-start="127" data-dur="30">
+  <div class="bloc-tag">Bloc 2 · Originer</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Étape 3 · Documenter</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Une fiche prospect par cible</div>
+  <div style="display:flex;gap:90px;margin-top:60px">
+    <div class="card a" data-in="2" data-anim="up" style="flex:1;padding:36px 44px">
+      <div class="fiche a" data-in="3" data-anim="left">Business model</div>
+      <div class="fiche a" data-in="3.7" data-anim="left">Déclencheur daté et sourcé</div>
+      <div class="fiche a" data-in="4.4" data-anim="left">Hypothèse de besoin</div>
+      <div class="fiche a" data-in="5.1" data-anim="left">Angle d'approche</div>
+      <div class="fiche a" data-in="5.8" data-anim="left">Porte d'entrée</div>
+      <div class="fiche a" data-in="6.5" data-anim="left">Trois objections et leurs réponses</div>
+      <div class="fiche a" data-in="7.2" data-anim="left" style="border:none">Réponse globale de la banque</div>
+    </div>
+    <div style="flex:1.1">
+      <div class="a" data-in="9.5" data-anim="up" style="display:flex;align-items:baseline;gap:24px"><span class="num" style="font-size:150px;color:var(--blue)" data-count="145" data-in="9.5">0</span><span class="lead" style="font-size:38px">fiches prospect</span></div>
+      <div class="a small" data-in="13" data-anim="fade" style="margin:26px 0 22px;font-size:26px;text-transform:uppercase;letter-spacing:.12em">Présent dans les fiches</div>
+      <div class="a meter" data-in="14" data-anim="fade"><div class="mlab"><span>Angle d'approche</span><b>100 %</b></div><div class="bar-track"><div class="bar" data-w="100" data-in="14"></div></div></div>
+      <div class="a meter" data-in="15" data-anim="fade"><div class="mlab"><span>Porte d'entrée</span><b>100 %</b></div><div class="bar-track"><div class="bar" data-w="100" data-in="15"></div></div></div>
+      <div class="a meter" data-in="16" data-anim="fade"><div class="mlab"><span>Réponse globale de la banque</span><b>100 %</b></div><div class="bar-track"><div class="bar" data-w="100" data-in="16"></div></div></div>
+      <div class="a meter" data-in="17" data-anim="fade"><div class="mlab"><span>Objections avec réponse</span><b>98 %</b></div><div class="bar-track"><div class="bar" data-w="98" data-in="17"></div></div></div>
+      <div class="a meter" data-in="18" data-anim="fade"><div class="mlab"><span>Déclencheur sourcé</span><b>93 %</b></div><div class="bar-track"><div class="bar" data-w="93" data-in="18"></div></div></div>
+      <div class="a lead" data-in="21" data-anim="up" style="margin-top:34px;font-size:34px;color:var(--ink)"><b>L'approche commerciale est acquise.</b></div>
+    </div>
+  </div>
+  <style>.fiche{font-size:32px;font-weight:600;padding:17px 0;border-bottom:2px solid var(--line)}.meter{margin-bottom:22px}.mlab{display:flex;justify-content:space-between;font-size:28px;margin-bottom:10px;color:var(--ink2)}.mlab b{color:var(--ink)}</style>
+</section>
+
+<!-- 7 · LE PORTEFEUILLE : ENTONNOIR -->
+<section class="scene" data-start="157" data-dur="24">
+  <div class="bloc-tag">Bloc 2 · Originer</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Le portefeuille construit</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">De 424 entreprises à 72 prospects</div>
+  <div style="margin-top:60px">
+    <div class="fun a" data-in="2"  data-anim="fade"><span class="fl">Entreprises repérées et notées</span><div class="fb"><div class="bar" data-w="100" data-in="2"></div></div><span class="fn num">424</span></div>
+    <div class="fun a" data-in="3.4" data-anim="fade"><span class="fl">Cibles présentées aux managers</span><div class="fb"><div class="bar" data-w="49.5" data-in="3.4"></div></div><span class="fn num">210</span></div>
+    <div class="fun a" data-in="4.8" data-anim="fade"><span class="fl">Cibles étudiées</span><div class="fb"><div class="bar" data-w="38" data-in="4.8"></div></div><span class="fn num">161</span></div>
+    <div class="fun a" data-in="6.2" data-anim="fade"><span class="fl">Fiches prospect rédigées</span><div class="fb"><div class="bar" data-w="34.2" data-in="6.2"></div></div><span class="fn num">145</span></div>
+    <div class="fun a" data-in="7.6" data-anim="fade"><span class="fl" style="color:var(--ink);font-weight:700">Prospects retenus pour la soutenance</span><div class="fb"><div class="bar" style="background:var(--orange)" data-w="17" data-in="7.6"></div></div><span class="fn num" style="color:var(--orange)">72</span></div>
+  </div>
+  <div class="a lead" data-in="11" data-anim="up" style="margin-top:50px;font-size:36px;color:var(--ink)"><b>30 participants sur 30</b> ont remis leurs travaux. Une vraie sélection : 5,9 entreprises repérées pour un prospect retenu.</div>
+  <style>.fun{display:flex;align-items:center;gap:36px;margin-bottom:28px}.fl{width:620px;font-size:32px;color:var(--ink2)}.fb{flex:1;height:52px;background:transparent}.fb .bar{height:52px;border-radius:10px}.fn{width:150px;text-align:right;font-size:56px;color:var(--blue)}</style>
+</section>
+
+<!-- 8 · LE PORTEFEUILLE : PROFIL -->
+<section class="scene" data-start="181" data-dur="26">
+  <div class="bloc-tag">Bloc 2 · Originer</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Un vivier réel</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Ancré dans l'économie productive</div>
+  <div style="display:flex;gap:90px;margin-top:60px">
+    <div style="flex:1.1">
+      <div class="a small" data-in="1.8" data-anim="fade" style="font-size:26px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:24px">161 cibles · 16 secteurs · 8 régions</div>
+      <div class="sec a" data-in="2.4" data-anim="fade"><span>BTP et génie civil</span><div class="bar-track"><div class="bar" data-w="100" data-in="2.4"></div></div><b>27</b></div>
+      <div class="sec a" data-in="3"   data-anim="fade"><span>Agroalimentaire</span><div class="bar-track"><div class="bar" data-w="74" data-in="3"></div></div><b>20</b></div>
+      <div class="sec a" data-in="3.6" data-anim="fade"><span>Plasturgie, emballage</span><div class="bar-track"><div class="bar" data-w="63" data-in="3.6"></div></div><b>17</b></div>
+      <div class="sec a" data-in="4.2" data-anim="fade"><span>Distribution, négoce</span><div class="bar-track"><div class="bar" data-w="56" data-in="4.2"></div></div><b>15</b></div>
+      <div class="sec a" data-in="4.8" data-anim="fade"><span>Métallurgie, matériaux</span><div class="bar-track"><div class="bar" data-w="52" data-in="4.8"></div></div><b>14</b></div>
+      <div class="sec a" data-in="5.4" data-anim="fade"><span>Chimie, pharmacie, santé</span><div class="bar-track"><div class="bar" data-w="41" data-in="5.4"></div></div><b>11</b></div>
+    </div>
+    <div style="flex:.9;display:flex;flex-direction:column;gap:24px">
+      <div class="a card" data-in="8" data-anim="up" style="display:flex;align-items:center;gap:30px;padding:22px 36px"><span class="num" style="font-size:84px;color:var(--blue);width:230px;white-space:nowrap" data-count="91" data-suffix=" %" data-in="8">0</span><span style="font-size:30px;line-height:1.3">de PME non clientes, qui décident de leur banque au Maroc</span></div>
+      <div class="a card" data-in="10.5" data-anim="up" style="display:flex;align-items:center;gap:30px;padding:22px 36px"><span class="num" style="font-size:84px;color:var(--blue);width:230px;white-space:nowrap" data-count="43" data-suffix=" %" data-in="10.5">0</span><span style="font-size:30px;line-height:1.3">tournées vers l'international</span></div>
+      <div class="a card" data-in="13" data-anim="up" style="display:flex;align-items:center;gap:30px;padding:22px 36px;background:var(--ink);border-color:var(--ink);color:#fff"><span class="num" style="font-size:84px;color:var(--orange);width:230px;white-space:nowrap" data-count="88" data-suffix=" %" data-in="13">0</span><span style="font-size:30px;line-height:1.3">des prospects retenus reposent sur un événement propre à l'entreprise</span></div>
+    </div>
+  </div>
+  <style>.sec{display:grid;grid-template-columns:400px 1fr 60px;align-items:center;gap:22px;margin-bottom:26px;font-size:28px;color:var(--ink2)}.sec b{color:var(--ink);font-size:32px;text-align:right}</style>
+</section>
+
+<!-- 9 · LES OPPORTUNITÉS -->
+<section class="scene" data-start="207" data-dur="22">
+  <div class="bloc-tag">Bloc 2 · Originer</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Des opportunités concrètes</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Un événement précis, une réponse adaptée</div>
+  <div style="display:flex;gap:30px;margin-top:70px">
+    <div class="a card opp" data-in="2.5" data-anim="up"><div class="num" style="color:var(--blue)">850 MDH</div><div class="ot">Un complexe hôtelier en construction</div><div class="ob">Crédit à moyen terme, crédit relais, cautions, crédit documentaire</div></div>
+    <div class="a card opp" data-in="4.5" data-anim="up"><div class="num" style="color:var(--blue)">220 MDH</div><div class="ot">L'extension d'une usine agroalimentaire</div><div class="ob">Crédit d'investissement, lignes de fonctionnement, crédits documentaires</div></div>
+    <div class="a card opp" data-in="6.5" data-anim="up"><div class="num" style="color:var(--blue)">200 MDH</div><div class="ot">Une usine de câbles inaugurée, 165 emplois</div><div class="ob">Refinancement, crédit-bail, crédit documentaire, affacturage</div></div>
+  </div>
+  <div class="row" style="margin-top:50px;gap:24px;flex-wrap:wrap">
+    <span class="a pill" data-in="10" data-anim="up" style="background:var(--orange-l);color:var(--orange)">Investissements</span>
+    <span class="a pill" data-in="10.6" data-anim="up" style="background:var(--orange-l);color:var(--orange)">Marchés publics</span>
+    <span class="a pill" data-in="11.2" data-anim="up" style="background:var(--orange-l);color:var(--orange)">Nouveaux actionnaires</span>
+    <span class="a pill" data-in="11.8" data-anim="up" style="background:var(--orange-l);color:var(--orange)">Contrats à l'export</span>
+  </div>
+  <style>.opp{flex:1;padding:44px}.opp .num{font-size:80px}.ot{font-size:32px;font-weight:700;margin-top:18px;line-height:1.25}.ob{font-size:24px;color:var(--ink2);margin-top:18px;line-height:1.45}</style>
+</section>
+
+<!-- 10 · BLOC 3 · PRINCIPES -->
+<section class="scene" data-start="229" data-dur="20">
+  <div class="bloc-tag">Bloc 3 · Pitcher</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Bloc 3 · Bootcamp · 19 et 20 novembre</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Du dossier au pitch qui convainc</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:70px">
+    <div class="a card pr" data-in="2.5" data-anim="up"><span class="num">1</span><div><b>Le secteur avant la banque</b><p>Comprendre le secteur avant de pitcher l'entreprise.</p></div></div>
+    <div class="a card pr" data-in="4" data-anim="up"><span class="num">2</span><div><b>Le pourquoi avant le quoi</b><p>Pourquoi elle, pourquoi maintenant, pourquoi nous.</p></div></div>
+    <div class="a card pr" data-in="5.5" data-anim="up"><span class="num">3</span><div><b>Apprendre entre pairs</b><p>Travailler par secteur, enrichir les dossiers.</p></div></div>
+    <div class="a card pr" data-in="7" data-anim="up"><span class="num">4</span><div><b>L'épreuve du réel</b><p>Confronter ses approches aux métiers de la banque.</p></div></div>
+  </div>
+  <style>.pr{display:flex;gap:34px;align-items:flex-start;padding:38px 44px}.pr .num{font-size:80px;color:var(--orange);line-height:.9}.pr b{font-size:38px;display:block}.pr p{font-size:28px;color:var(--ink2);margin-top:10px}</style>
+</section>
+
+<!-- 11 · BLOC 3 · DEUX JOURNÉES -->
+<section class="scene" data-start="249" data-dur="24">
+  <div class="bloc-tag">Bloc 3 · Pitcher</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">Deux journées, quatre temps forts</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Revoir, classer, affiner, pitcher</div>
+  <div style="position:relative;margin-top:90px">
+    <div class="a" data-in="1.8" data-anim="grow" style="position:absolute;left:0;right:0;top:30px;height:4px;background:var(--line);transform-origin:left"></div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative">
+      <div class="a tl" data-in="2.5" data-anim="up"><span class="dot"></span><div class="tlk">Jour 1 · Matin</div><b>Revue et classification</b><p>Chaque portefeuille revu et classé par secteur</p></div>
+      <div class="a tl" data-in="4.5" data-anim="up"><span class="dot"></span><div class="tlk">Jour 1 · Après-midi</div><b>Tables rondes sectorielles</b><p>Huit angles d'affinement, méthode du pitch, premières simulations</p></div>
+      <div class="a tl" data-in="6.5" data-anim="up"><span class="dot"></span><div class="tlk">Jour 2 · Matin</div><b>Échange avec les métiers</b><p>Regards croisés, panel de questions, pitchs devant les métiers</p></div>
+      <div class="a tl" data-in="8.5" data-anim="up"><span class="dot"></span><div class="tlk">Jour 2 · Après-midi</div><b>Clôture et finalisation</b><p>Recommandations et feuille de route individuelle</p></div>
+    </div>
+  </div>
+  <style>.tl .dot{width:28px;height:28px;margin-top:18px;border:6px solid var(--bg);box-sizing:content-box}.tlk{font-size:24px;font-weight:700;color:var(--orange);letter-spacing:.1em;text-transform:uppercase;margin-top:30px}.tl b{display:block;font-size:36px;margin-top:14px;line-height:1.2}.tl p{font-size:26px;color:var(--ink2);margin-top:14px;line-height:1.4}</style>
+</section>
+
+<!-- 12 · BLOC 3 · LE PITCH -->
+<section class="scene" data-start="273" data-dur="22">
+  <div class="bloc-tag">Bloc 3 · Pitcher</div>
+  <div class="a kicker" data-in="0.2" data-anim="up">La méthode</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Un pitch en sept temps</div>
+  <div style="display:flex;gap:16px;margin-top:70px">
+    <div class="a st" data-in="2"   data-anim="up"><span>1</span>L'accroche</div>
+    <div class="a st" data-in="2.8" data-anim="up"><span>2</span>L'entreprise et son secteur</div>
+    <div class="a st" data-in="3.6" data-anim="up"><span>3</span>Le déclencheur</div>
+    <div class="a st" data-in="4.4" data-anim="up"><span>4</span>Les besoins</div>
+    <div class="a st" data-in="5.2" data-anim="up"><span>5</span>La proposition</div>
+    <div class="a st" data-in="6"   data-anim="up"><span>6</span>L'approche</div>
+    <div class="a st" data-in="6.8" data-anim="up"><span>7</span>Ce que la banque y gagne</div>
+  </div>
+  <div class="a" data-in="10" data-anim="up" style="margin-top:80px;text-align:center">
+    <div class="num" style="font-size:60px;line-height:1.2;white-space:nowrap">Pourquoi elle.<span style="color:var(--blue)"> Pourquoi maintenant.</span><span style="color:var(--orange)"> Pourquoi nous.</span></div>
+    <div class="lead" style="margin-top:22px">Trois réponses, un pitch.</div>
+  </div>
+  <style>.st{flex:1;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 22px;font-size:27px;font-weight:600;line-height:1.25;min-height:200px}.st span{display:block;font-family:"Inter Display";font-weight:800;font-size:54px;color:var(--blue);margin-bottom:14px}</style>
+</section>
+
+<!-- 13 · RÉSULTATS -->
+<section class="scene" data-start="295" data-dur="22">
+  <div class="a kicker" data-in="0.2" data-anim="up">Les résultats</div>
+  <div class="a h2" data-in="0.6" data-anim="up" style="margin-top:18px">Une promotion prête pour le jury</div>
+  <div id="results" style="display:grid;gap:30px;margin-top:70px"></div>
+</section>
+
+<!-- 14 · LA SUITE -->
+<section class="scene" data-start="317" data-dur="16" style="display:flex;flex-direction:column;justify-content:center">
+  <div class="a kicker" data-in="0.2" data-anim="up">La suite</div>
+  <div class="a" data-in="1" data-anim="up" style="display:flex;align-items:center;gap:40px;margin-top:40px;font-size:52px;font-weight:700">
+    <span>Le portefeuille</span><span style="color:var(--mute)">→</span><span>Le pitch</span><span style="color:var(--mute)">→</span><span style="color:var(--blue)">Le jury</span><span style="color:var(--mute)">→</span><span style="color:var(--orange)">La relation</span>
+  </div>
+  <div class="a lead" data-in="3" data-anim="up" style="margin-top:40px;max-width:1450px">Soutenance devant le jury, puis prise de contact avec chaque prospect, accompagnée par le manager.</div>
+  <div class="a h2" data-in="6" data-anim="up" style="margin-top:80px">Merci à toute la promotion.</div>
+  <div class="a row" data-in="8" data-anim="fade" style="margin-top:70px;align-items:center;gap:70px">
+    <img src="assets/logo-attijari-academy.png" style="height:110px">
+    <div style="width:2px;height:80px;background:var(--line)"></div>
+    <img src="assets/logo-financite.png" style="height:76px">
+  </div>
+</section>
+
+<div class="progress" id="prog"></div>
+</div>
+
+<script>
+// ===== RÉSULTATS : à compléter demain après la clôture (laisser null pour masquer une tuile) =====
+const RESULTATS = [
+  {n:"30/30", t:"participants ont remis leurs travaux"},
+  {n:"72", t:"prospects retenus, 2 ou 3 par participant"},
+  {n:"16", t:"secteurs couverts, sur 8 régions"},
+  {n:null, t:"pitchs éprouvés devant les métiers de la banque"},   // ex. "3"
+  {n:"30", t:"feuilles de route individuelles"},
+  {n:null, t:""}                                                     // citation ou autre résultat du jour 2
+];
+// ==============================================================================================
+
+const res = document.getElementById('results');
+let k = 0;
+const nRes = RESULTATS.filter(r => r.n).length;
+res.style.gridTemplateColumns = `repeat(${nRes <= 4 ? 2 : 3}, 1fr)`;
+RESULTATS.filter(r => r.n).forEach(r => {
+  const d = document.createElement('div');
+  d.className = 'a card'; d.dataset.anim = 'up'; d.dataset.in = (2 + k * 1.6).toFixed(1);
+  d.style.padding = '44px';
+  d.innerHTML = `<div class="num" style="font-size:110px;color:${k % 2 ? 'var(--orange)' : 'var(--blue)'}">${r.n}</div><div style="font-size:32px;line-height:1.3;margin-top:12px;color:var(--ink2)">${r.t}</div>`;
+  res.appendChild(d); k++;
+});
+
+for (const [id, n, col] of [['dots7', 7, null], ['dots5', 5, 'var(--orange)']]) {
+  const el = document.getElementById(id);
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement('span');
+    s.style.cssText = `width:70px;height:70px;border-radius:50%;background:${col || (i < 5 ? 'var(--blue)' : 'var(--line)')};display:inline-block`;
+    el.appendChild(s);
+  }
+}
+
+const scenes = [...document.querySelectorAll('.scene')];
+const TOTAL = Math.max(...scenes.map(s => +s.dataset.start + +s.dataset.dur));
+window.TOTAL = TOTAL;
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = x => 1 - Math.pow(1 - x, 3);
+const fr = n => n.toLocaleString('fr-FR');
+
+window.render = function (t) {
+  for (const s of scenes) {
+    const st = +s.dataset.start, du = +s.dataset.dur, L = t - st;
+    const FADE = 0.6;
+    let o = 0;
+    if (L > -0.01 && L < du) o = Math.min(clamp(L / FADE), clamp((du - L) / FADE));
+    if (st === 0 && L < FADE) o = 1;
+    s.style.opacity = o;
+    s.style.display = o > 0 ? '' : 'none';
+    if (!o) continue;
+    for (const e of s.querySelectorAll('[data-anim]')) {
+      const p = ease(clamp((L - +e.dataset.in) / 0.8));
+      const a = e.dataset.anim;
+      e.style.opacity = p;
+      if (a === 'up') e.style.transform = `translateY(${(1 - p) * 40}px)`;
+      else if (a === 'left') e.style.transform = `translateX(${(1 - p) * -40}px)`;
+      else if (a === 'scale') e.style.transform = `scale(${0.9 + 0.1 * p})`;
+      else if (a === 'grow') { e.style.opacity = 1; e.style.transform = `scaleX(${p})`; }
+    }
+    for (const e of s.querySelectorAll('[data-count]')) {
+      const d = +(e.dataset.cdur || 2);
+      const p = ease(clamp((L - +e.dataset.in) / d));
+      e.textContent = fr(Math.round(+e.dataset.count * p)) + (e.dataset.suffix || '');
+    }
+    for (const e of s.querySelectorAll('.bar[data-w]')) {
+      const p = ease(clamp((L - +e.dataset.in - 0.2) / 1.4));
+      e.style.width = (+e.dataset.w * p) + '%';
+    }
+  }
+  document.getElementById('prog').style.width = (100 * t / TOTAL) + '%';
+};
+window.render(0);
+
+// Aperçu dans le navigateur : lecture en temps réel (désactivée pendant le rendu)
+if (!location.search.includes('render')) {
+  const t0 = performance.now();
+  (function loop() { window.render(((performance.now() - t0) / 1000) % TOTAL); requestAnimationFrame(loop); })();
+}
+</script>
+</body>
+</html>

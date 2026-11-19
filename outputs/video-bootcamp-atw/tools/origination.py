@@ -37,11 +37,12 @@ STYLE = """<style>
 .og-v{display:flex;align-items:baseline;gap:30px;border-top:1px solid rgba(200,169,106,.45);padding-top:18px}
 .og-v small{width:300px;flex:none;white-space:nowrap;font-size:21px;letter-spacing:.12em;text-transform:uppercase;color:#c8a96a;font-weight:600}
 .og-v b{font-family:var(--serif);font-size:48px;font-weight:600;color:#fff}
-.kvg{position:absolute;left:880px;right:110px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column}
+.kvg{position:absolute;left:880px;right:110px;top:56%;transform:translateY(-50%);display:flex;flex-direction:column}
 .kv{display:grid;grid-template-columns:420px 1fr;align-items:center;column-gap:36px;border-top:2px solid rgba(200,169,106,.75);padding:24px 0}
 .kv b{font-family:var(--serif);font-size:124px;font-weight:500;color:#5fd0ea;line-height:1;font-variant-numeric:lining-nums;white-space:nowrap}
 .kv span{font-size:38px;line-height:1.25;color:#fff;font-weight:500}
 .fr .kt,.fr .kt *{text-wrap:nowrap;white-space:nowrap}
+.ktop{position:absolute;left:110px;top:70px;font-size:46px;letter-spacing:.22em;text-transform:uppercase;color:#c8a96a;font-weight:700;padding-bottom:18px;border-bottom:3px solid #c8a96a}
 .kk{font-size:24px;letter-spacing:.26em;text-transform:uppercase;color:#c8a96a;font-weight:600}
 .kng{position:absolute;left:700px;right:110px;top:50%;transform:translateY(-50%);display:grid;grid-template-columns:1fr 1fr;column-gap:70px;row-gap:64px}
 .kn{border-top:2px solid #c8a96a;padding-top:24px}
@@ -223,11 +224,11 @@ def make(start, nb, img):
         return 'data:image/jpeg;base64,' + base64.b64encode(open(os.path.join(A, rel), 'rb').read()).decode()
     BAS = '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,40,.82) 0%,rgba(8,20,40,.45) 30%,rgba(8,20,40,.80) 60%,rgba(8,20,40,.94) 100%)"></div>'
     VOILE = '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,40,.94) 0%,rgba(8,20,40,.86) 30%,rgba(8,20,40,.72) 60%,rgba(8,20,40,.66) 100%)"></div>'
-    FIL4 = '<div style="position:absolute;left:800px;top:150px;bottom:150px;width:2px;background:rgba(200,169,106,.8)"></div>'
+    FIL4 = '<div style="position:absolute;left:800px;top:220px;bottom:130px;width:2px;background:rgba(200,169,106,.8)"></div>'
     def colonne(kick, titre, extra=''):
-        return ('<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:580px">'
-                f'<div class="kk">{kick}</div>'
-                f'<div class="kt" style="font-family:var(--serif);font-size:90px;font-weight:600;color:#fff;line-height:1.04;margin-top:26px">{titre}</div>{extra}</div>')
+        return (f'<div class="ktop">{kick}</div>'
+                '<div style="position:absolute;left:110px;top:54%;transform:translateY(-50%);width:580px">'
+                f'<div class="kt" style="font-family:var(--serif);font-size:90px;font-weight:600;color:#fff;line-height:1.04">{titre}</div>{extra}</div>')
     def chiffres(bg, kick, titre, cells, tc, role, vo, src):
         tiles = ''.join(f'<div class="kv"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in cells)
         left = (f'<div style="position:absolute;inset:0;background:url({bg}) center/cover"></div>' + VOILE + FIL4 +

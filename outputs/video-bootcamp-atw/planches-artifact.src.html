@@ -3,21 +3,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&display=swap">
 <style>
-/* Planches : à gauche l'écran vidéo réel (1920×1080, réduit), à droite la fiche de production. Charte XELANC. */
+/* Planches : à gauche l'écran vidéo réel (1920×1080, réduit), à droite la fiche. Fond gris premium, navy réservé au texte. */
 :root{
-  --navy:#0f2744;--navy2:#1c3f63;--deep:#06152a;--ink:#0b1f38;
-  --g1:#3f5168;--g2:#6f8198;--g3:#9aa8ba;
-  --steel:#2f6d9e;--pale:#dbe7f6;--rule:#9db6d6;--card-line:#c7d3e2;
-  --red:#a8324a;--sheet:#e9edf2;--paper:#ffffff;
+  --navy:#0f2744;--ink:#0b1f38;--g1:#3f5168;--g2:#6f8198;--g3:#9aa8ba;
+  --steel:#2f6d9e;--line:#cfd3d8;--red:#a8324a;
+  --sheet:#e7e8ea;--paper:#ffffff;
   --serif:"Newsreader",Georgia,serif;--sans:"DM Sans",Inter,Arial,sans-serif;
   color-scheme:light;
 }
 body{background:var(--sheet);color:var(--ink);font-family:var(--sans);overflow-x:hidden;padding-block:16px;padding-left:16px;padding-right:16px;margin:0}
 *{box-sizing:border-box}
-.page{width:1600px;margin:0 auto 22px;background:var(--paper);border:1px solid var(--card-line);border-radius:14px;display:flex;gap:40px;padding:40px;position:relative}
+.page{width:1600px;margin:0 auto 22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;display:flex;gap:40px;padding:40px;position:relative}
 .cover{flex-direction:column;gap:0}
 .left{flex:none;width:1040px}
-.fw{width:1040px;height:585px;position:relative;overflow:hidden;border-radius:8px;box-shadow:0 8px 14px rgba(15,39,68,.2)}
+.fw{width:1040px;height:585px;position:relative;overflow:hidden;border-radius:8px;box-shadow:0 8px 18px rgba(20,24,30,.18)}
 .fr{position:absolute;inset:0;width:1920px;height:1080px;transform:scale(.541667);transform-origin:0 0;overflow:hidden}
 .right{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
 .n{font-family:var(--serif);font-size:54px;font-weight:600;color:var(--navy);line-height:1}
@@ -25,53 +24,34 @@ body{background:var(--sheet);color:var(--ink);font-family:var(--sans);overflow-x
 .role{font-family:var(--serif);font-size:28px;font-weight:500;color:var(--navy);line-height:1.1;margin-top:6px}
 .lab{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-top:14px}
 .t{font-size:14.5px;line-height:1.5;color:var(--g1)}
-.vo{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.42;color:var(--ink);border-left:3px solid var(--rule);padding-left:12px}
+.vo{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.42;color:var(--ink);border-left:3px solid var(--g3);padding-left:12px}
 .foot{position:absolute;right:40px;bottom:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--g3)}
 
-/* ===== écrans vidéo (coordonnées 1920×1080) ===== */
-.bg-light{background:linear-gradient(180deg,#eef1f5 0%,#e5e9ef 55%,#d9dfe7 100%)}
-.bg-navy{background:var(--navy)}
-.bg-garde{background:linear-gradient(135deg,#06152a 0%,#0f2744 100%)}
-.sur{font-family:var(--sans);font-size:21px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#6f8198}
-.ttl{font-family:var(--serif);font-size:66px;font-weight:600;line-height:1.06;color:var(--navy);margin-top:14px}
-.band{position:absolute;left:110px;top:96px;width:1150px}
-.card{background:#fff;border:1px solid var(--card-line);border-radius:22px;box-shadow:0 8px 14px rgba(15,39,68,.2);padding:24px}
-.col{position:absolute;right:110px;width:380px}
-.col p{font-size:28px;line-height:1.35;color:var(--g1);margin:0}
-.big{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--navy);line-height:1.1}
-.src{position:absolute;left:110px;top:930px;font-size:20px;color:var(--g2)}
-.disc{width:84px;height:84px;border-radius:50%;background:var(--pale);display:flex;align-items:center;justify-content:center;flex:none}
-.disc svg{width:44px;height:44px;fill:none;stroke:#0f2744;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+/* ===== écrans vidéo (1920×1080) : gris premium ===== */
+.bg{background:radial-gradient(ellipse at 28% 18%,#f7f7f6 0%,#ececeb 45%,#dedfe0 100%)}
+.sur{font-size:22px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#6f8198}
+.ttl{font-family:var(--serif);font-size:70px;font-weight:600;line-height:1.06;color:var(--navy);margin-top:14px}
+.band{position:absolute;left:110px;top:96px;width:1300px}
+.src{position:absolute;left:110px;top:960px;font-size:20px;color:#6f8198}
+.disc{border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 6px 14px rgba(15,39,68,.14)}
+.ico{fill:none;stroke:#0f2744;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
 </style>
 
 <!-- ============ COUVERTURE ============ -->
 <section class="page cover">
-  <div class="tc">Vidéo du programme GRE · CCE · Première partie · version 3</div>
-  <div style="font-family:var(--serif);font-size:58px;font-weight:600;color:var(--navy);line-height:1.05;margin-top:10px">Le programme&nbsp;: pourquoi, et comment nous l'avons mené</div>
-  <div style="font-family:var(--serif);font-style:italic;font-size:24px;color:var(--g1);margin-top:8px">7 écrans, environ 2 min 30, construits sur ta trame</div>
-  <div style="display:flex;gap:40px;margin-top:28px">
+  <div class="tc">Vidéo du programme GRE · CCE · Première partie · version 4</div>
+  <div style="font-family:var(--serif);font-size:56px;font-weight:600;color:var(--navy);line-height:1.05;margin-top:10px">Le programme, sa doctrine, ses blocs et ses cours</div>
+  <div style="font-family:var(--serif);font-style:italic;font-size:24px;color:var(--g1);margin-top:8px">9 écrans sur fond gris premium. On s'arrête après le bloc 3.</div>
+  <div style="display:flex;gap:40px;margin-top:26px">
     <div style="flex:1.3;min-width:0">
-      <div class="lab" style="margin-top:0">La trame</div>
-      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:8px">
-        <div class="arcb" style="background:#06152a">1<b>Garde</b>parcours certifiant, logos</div>
-        <div class="arcb" style="background:#0f2744">2<b>Raison d'être</b>upskilling, capital humain</div>
-        <div class="arcb" style="background:#1c3f63">3<b>Apports</b>banque et participants</div>
-        <div class="arcb" style="background:#2f6d9e">4<b>Objectifs</b>comprendre, décider, piloter</div>
-        <div class="arcb" style="background:#1c3f63">5<b>Modalités</b>de l'onboarding à la certification</div>
-        <div class="arcb" style="background:#0f2744">6<b>Déroulé</b>avril → novembre</div>
-        <div class="arcb" style="background:#06152a">7<b>Certification</b>et on s'arrête</div>
-      </div>
-      <style>.arcb{color:#fff;border-radius:8px;padding:10px;font-size:12px;line-height:1.35}.arcb b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin:2px 0}</style>
-      <div class="lab">Partie suivante</div>
-      <div class="t">Le contenu bloc par bloc&nbsp;: les cours, les meilleurs extraits et les résultats (Thinkific, rapports à l'Académie).</div>
+      <div class="lab" style="margin-top:0">L'ordre</div>
+      <div class="t" style="font-size:16px;line-height:1.8">1 Garde · 2 Raison d'être et contexte · 3 Apports · 4 Les 7 modalités · 5 La doctrine · 6 Les 3 blocs · 7 Bloc 1 et ses cours · 8 Bloc 2 et ses cours · 9 Bloc 3 et ses cours</div>
+      <div class="lab">Ce que j'ai changé</div>
+      <div class="t">Le bleu est retiré, tout est sur un gris clair premium. Le titre de la garde est très grand, les logos sont en haut, sans fond blanc. Moins de boîtes et plus de schémas : un escalier pour les modalités, un cycle de la relation pour la doctrine, trois cercles enchaînés pour les blocs. Les textes sont plus grands.</div>
     </div>
     <div style="flex:1;min-width:0">
-      <div class="lab" style="margin-top:0">Source</div>
-      <div class="t">Synthèse du programme pour la Direction Générale (16/10/2026) et programme du bootcamp d'origination. La page est citée sous chaque écran.</div>
-      <div class="lab">Style</div>
-      <div class="t">Charte XELANC&nbsp;: navy et gris, Newsreader et DM Sans, l'écran montre ce que la voix ne dit pas.</div>
-      <div class="lab">À confirmer</div>
-      <div class="t">Dates du bootcamp&nbsp;: la synthèse DG dit 20-21 novembre, le programme du bootcamp dit jeudi 19 et vendredi 20. J'ai mis 19-20.</div>
+      <div class="lab" style="margin-top:0">Ce qu'il me manque</div>
+      <div class="t">1. <b>Les 8 bannières des cours</b> sur la plateforme. Elles ne sont pas publiques et l'API Thinkific me répond « non autorisé ». Envoie-les en images (une capture suffit). En attendant, un cadre gris marque leur place.<br>2. <b>La doctrine de chaque cours</b> : j'ai écrit une proposition d'une ligne par cours, à corriger.<br>3. J'ai déplacé les 3 blocs après la doctrine, comme tu l'as dit à la fin, pour ne pas les montrer deux fois.</div>
     </div>
   </div>
   <div class="foot">Planches · à valider avant production</div>
@@ -79,184 +59,181 @@ body{background:var(--sheet);color:var(--ink);font-family:var(--sans);overflow-x
 
 <!-- ============ 1 · GARDE ============ -->
 <section class="page">
-  <div class="left"><div class="fw"><div class="fr bg-garde">
-    <svg width="1920" height="1080" style="position:absolute;inset:0" fill="none" stroke="#9db6d6" stroke-opacity=".4" stroke-width="2">
-      <path d="M1080 820 H1820"/><path d="M1120 820 V420 L1450 280 L1780 420 V820"/>
-      <path d="M1150 440 H1750"/><path d="M1150 470 H1750"/>
-      <path d="M1190 500 V790 M1270 500 V790 M1350 500 V790 M1430 500 V790 M1510 500 V790 M1590 500 V790 M1670 500 V790 M1730 500 V790"/>
-      <path d="M1160 790 H1760"/><path d="M1400 820 V690 Q1450 650 1500 690 V820"/>
-      <path d="M1000 740 C1150 700 1250 590 1380 550 S1640 380 1860 300" stroke="#5fd0ea" stroke-opacity=".6" stroke-width="3"/>
-      <circle cx="1860" cy="300" r="8" fill="#5fd0ea" stroke="none" fill-opacity=".8"/>
-    </svg>
-    <div style="position:absolute;left:110px;top:200px;width:1000px">
-      <div class="sur" style="color:#9db6d6">Parcours métier certifiant · Promotion 2026</div>
-      <div style="font-family:var(--serif);font-size:74px;font-weight:600;line-height:1.06;color:#fff;margin-top:22px">Gestionnaires de relations entreprises</div>
-      <div style="font-family:var(--serif);font-size:74px;font-weight:500;font-style:italic;line-height:1.06;color:#9db6d6;margin-top:10px">et chargés de clientèle entreprises</div>
+  <div class="left"><div class="fw"><div class="fr bg">
+    <div style="position:absolute;left:110px;top:90px;display:flex;align-items:center;gap:56px">
+      <img src="LOGO_AA" alt="Attijari Academy" style="height:118px">
+      <div style="width:2px;height:80px;background:#c3c7cc"></div>
+      <img src="LOGO_FIN" alt="Financité Institute" style="height:78px">
     </div>
-    <div style="position:absolute;left:110px;top:800px;display:flex;align-items:center;gap:40px;background:#fff;border-radius:22px;padding:24px 40px">
-      <img src="LOGO_AA" alt="Attijari Academy" style="height:96px">
-      <div style="width:2px;height:70px;background:#c7d3e2"></div>
-      <img src="LOGO_FIN" alt="Financité Institute" style="height:66px">
+    <div style="position:absolute;left:110px;top:330px;width:1700px">
+      <div style="font-family:var(--serif);font-size:168px;font-weight:600;line-height:.98;color:#0f2744;letter-spacing:-.01em">Parcours métier<br>certifiant</div>
+      <div style="width:140px;height:4px;background:#a8324a;margin-top:44px"></div>
+      <div style="font-size:40px;color:#3f5168;margin-top:34px;line-height:1.35">Gestionnaires de relations entreprises<br>Chargés de clientèle entreprises</div>
     </div>
+    <div style="position:absolute;right:110px;bottom:96px;font-size:24px;letter-spacing:.22em;color:#6f8198">PROMOTION 2026</div>
   </div></div></div>
   <div class="right">
     <div class="n">01</div><div class="tc">0:00 – 0:06 · Garde</div>
-    <div class="role">Le parcours, et ceux qui le portent</div>
+    <div class="role">Le parcours, en grand</div>
     <div class="lab">Voix off</div><div class="t">Aucune. Jingle seul.</div>
-    <div class="lab">À l'écran</div><div class="t">Fond navy profond, façade d'un centre d'affaires au trait à droite. Le titre en deux lignes. En bas, les vrais logos d'Attijari Academy et de Financité Institute sur une carte blanche.</div>
+    <div class="lab">À l'écran</div><div class="t">Les logos d'Attijari Academy et de Financité Institute en haut, sans fond. « Parcours métier certifiant » en très grand, un filet rouge, puis les deux métiers.</div>
+    <div class="lab">Mouvement</div><div class="t">Les logos en fondu, le titre qui monte ligne par ligne, le filet qui se trace.</div>
   </div>
-  <div class="foot">Écran 1 / 7 · Synthèse DG, p. 1</div>
+  <div class="foot">Écran 1 / 9</div>
 </section>
 
 <!-- ============ 2 · RAISON D'ÊTRE ============ -->
 <section class="page">
-  <div class="left"><div class="fw"><div class="fr bg-navy">
-    <div style="position:absolute;left:110px;top:150px" class="sur"><span style="color:#9db6d6">La raison d'être</span></div>
-    <div style="position:absolute;left:110px;top:360px;width:1500px;font-family:var(--serif);font-size:82px;font-weight:500;line-height:1.14;color:#fff">Faire monter les compétences<br>et renforcer le capital humain<br>des <span style="color:#5fd0ea">centres d'affaires</span>.</div>
+  <div class="left"><div class="fw"><div class="fr bg">
+    <div style="position:absolute;left:110px;top:110px" class="sur">La raison d'être</div>
+    <div style="position:absolute;left:110px;top:190px;width:1700px;font-family:var(--serif);font-size:96px;font-weight:600;line-height:1.08;color:#0f2744">Faire monter les compétences<br>et renforcer le capital humain<br>des centres d'affaires.</div>
+    <div style="position:absolute;left:110px;top:640px;width:1700px">
+      <div class="sur" style="color:#a8324a">Le contexte</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-top:22px">
+        <div class="ctx"><b>Deux métiers</b><span>GRE et CCE, au cœur du réseau entreprises d'Attijariwafa bank</span></div>
+        <div class="ctx"><b>Un référentiel</b><span>à traduire en gestes professionnels, du premier rendez-vous au comité</span></div>
+        <div class="ctx"><b>Deux exigences</b><span>gagner des clients, et sécuriser chaque engagement</span></div>
+      </div>
+    </div>
+    <style>.ctx{border-top:3px solid #0f2744;padding-top:18px}.ctx b{display:block;font-family:var(--serif);font-size:44px;font-weight:600;color:#0f2744}.ctx span{display:block;font-size:28px;color:#3f5168;line-height:1.35;margin-top:8px}</style>
   </div></div></div>
   <div class="right">
-    <div class="n">02</div><div class="tc">0:06 – 0:20 · Message central</div>
-    <div class="role">Un programme d'upskilling</div>
+    <div class="n">02</div><div class="tc">0:06 – 0:24 · Raison d'être</div>
+    <div class="role">Pourquoi, et dans quel contexte</div>
     <div class="lab">Voix off</div>
-    <div class="vo">« Dans un centre d'affaires, la valeur se crée dans une conversation&nbsp;: un dirigeant, un projet, et un banquier qui doit comprendre avant de s'engager. Ce programme est né pour donner à ces banquiers les moyens d'être à la hauteur de cette conversation. »</div>
-    <div class="lab">À l'écran</div><div class="t">Ta phrase de raison d'être, en trois lignes, non prononcée. « Centres d'affaires » s'allume en dernier.</div>
+    <div class="vo">« Dans un centre d'affaires, tout se joue dans la qualité du banquier face au dirigeant. Ce programme est né pour élever ce niveau, et en faire un actif durable pour la banque. »</div>
+    <div class="lab">À l'écran</div><div class="t">La raison d'être en très grand, puis trois éléments de contexte qui arrivent un par un.</div>
   </div>
-  <div class="foot">Écran 2 / 7 · Synthèse DG, p. 2 et 12</div>
+  <div class="foot">Écran 2 / 9 · Synthèse DG, p. 2, 3 et 12</div>
 </section>
 
 <!-- ============ 3 · APPORTS ============ -->
 <section class="page">
-  <div class="left"><div class="fw"><div class="fr bg-light">
-    <div class="band"><div class="sur">Ce que le programme apporte</div><div class="ttl">Pour la banque,<br>pour chaque participant</div></div>
-    <div class="card" style="position:absolute;left:110px;top:410px;width:820px;height:500px;padding:36px 40px">
-      <div class="sur" style="color:#2f6d9e">Pour la banque</div>
-      <div class="ap"><div class="disc"><svg viewBox="0 0 48 48"><path d="M6 40 L18 26 L28 32 L42 12"/><path d="M32 12 H42 V22"/></svg></div><div><b>Compétitivité commerciale</b><span>Clients mieux conseillés, relations gagnées et gardées</span></div></div>
-      <div class="ap"><div class="disc"><svg viewBox="0 0 48 48"><path d="M24 6 L40 12 V24 C40 34 32 40 24 43 C16 40 8 34 8 24 V12 Z"/><path d="M17 24 L22 29 L31 19"/></svg></div><div><b>Maîtrise des risques</b><span>Dossiers mieux instruits, engagements sécurisés</span></div></div>
+  <div class="left"><div class="fw"><div class="fr bg">
+    <div class="band"><div class="sur">Ce que le programme apporte</div></div>
+    <div style="position:absolute;left:110px;top:170px;width:820px">
+      <div style="font-family:var(--serif);font-size:56px;font-weight:600;color:#a8324a">Pour la banque</div>
+      <div style="margin-top:40px;display:flex;flex-direction:column;gap:56px">
+        <div class="bk"><div class="disc" style="width:120px;height:120px"><svg width="60" height="60" viewBox="0 0 48 48" class="ico"><path d="M6 40 L18 26 L28 32 L42 12"/><path d="M32 12 H42 V22"/></svg></div><b>Compétitivité<br>commerciale</b></div>
+        <div class="bk"><div class="disc" style="width:120px;height:120px"><svg width="60" height="60" viewBox="0 0 48 48" class="ico"><path d="M24 6 L40 12 V24 C40 34 32 40 24 43 C16 40 8 34 8 24 V12 Z"/><path d="M17 24 L22 29 L31 19"/></svg></div><b>Maîtrise<br>des risques</b></div>
+      </div>
     </div>
-    <div class="card" style="position:absolute;left:970px;top:410px;width:840px;height:500px;padding:36px 40px">
-      <div class="sur" style="color:#2f6d9e">Pour chaque participant</div>
-      <div class="ap"><div class="disc"><svg viewBox="0 0 48 48"><path d="M8 38 H40"/><path d="M12 38 V22 M24 38 V14 M36 38 V26"/></svg></div><div><b>Un socle commun</b><span>De la lecture de l'entreprise à l'entrée en relation</span></div></div>
-      <div class="ap"><div class="disc"><svg viewBox="0 0 48 48"><path d="M10 34 C10 22 38 22 38 34"/><circle cx="24" cy="15" r="7"/><path d="M6 40 H42"/></svg></div><div><b>Un avis défendable en comité</b><span>L'analyse devient décision argumentée</span></div></div>
-      <div class="ap"><div class="disc"><svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="11"/><path d="M17 29 L14 43 L24 37 L34 43 L31 29"/></svg></div><div><b>Une certification</b><span>Délivrée devant un jury</span></div></div>
+    <style>.bk{display:flex;align-items:center;gap:36px}.bk b{font-family:var(--serif);font-size:84px;font-weight:600;line-height:1;color:#0f2744}</style>
+    <div style="position:absolute;left:1000px;top:170px;width:2px;height:780px;background:#c3c7cc"></div>
+    <div style="position:absolute;left:1070px;top:170px;width:760px">
+      <div style="font-family:var(--serif);font-size:56px;font-weight:600;color:#a8324a">Pour le participant</div>
+      <div style="margin-top:40px;display:flex;flex-direction:column;gap:34px">
+        <div class="pt"><span>1</span>Une forte immersion dans le métier bancaire</div>
+        <div class="pt"><span>2</span>Un gain de temps dans sa progression</div>
+        <div class="pt"><span>3</span>La reconnaissance et la validation de ses acquis</div>
+        <div class="pt"><span>4</span>Une certification</div>
+      </div>
     </div>
-    <style>.ap{display:flex;gap:22px;align-items:center;margin-top:30px}.ap b{display:block;font-family:var(--serif);font-size:36px;font-weight:600;color:#0f2744;line-height:1.1}.ap span{display:block;font-size:24px;color:#3f5168;margin-top:6px;line-height:1.3}</style>
-    <div class="src" style="top:944px">Source&nbsp;: synthèse DG, p.&nbsp;3 et 5</div>
+    <style>.pt{display:flex;gap:26px;align-items:baseline;font-size:40px;line-height:1.2;color:#0b1f38}.pt span{font-family:var(--serif);font-size:56px;font-weight:600;color:#9aa8ba;width:40px;flex:none}</style>
   </div></div></div>
   <div class="right">
-    <div class="n">03</div><div class="tc">0:20 – 0:46 · Comparer</div>
-    <div class="role">Un double bénéfice</div>
+    <div class="n">03</div><div class="tc">0:24 – 0:50 · Comparer</div>
+    <div class="role">Les deux gagnants</div>
     <div class="lab">Voix off</div>
-    <div class="vo">« La banque y gagne deux fois&nbsp;: des clients qui restent parce qu'ils sont bien conseillés, et des engagements plus sûrs parce que les dossiers sont mieux instruits. Et chaque participant en sort avec une base partagée, un jugement qui tient face à un comité, et un titre certifié. »</div>
-    <div class="lab">À l'écran</div><div class="t">Face-à-face de deux cartes. Chaque ligne arrive quand la voix l'évoque, d'abord à gauche (banque), puis à droite (participant). Le texte écran reste différent de la voix.</div>
+    <div class="vo">« La banque y gagne sur deux fronts&nbsp;: elle conquiert, et elle se protège. Le participant, lui, vit le métier de l'intérieur, avance plus vite, voit ce qu'il sait faire reconnu, et repart avec un titre. »</div>
+    <div class="lab">À l'écran</div><div class="t">À gauche, les deux apports pour la banque, en très grand. À droite, tes quatre apports pour le participant, qui arrivent un par un.</div>
   </div>
-  <div class="foot">Écran 3 / 7 · Synthèse DG, p. 3 et 5</div>
+  <div class="foot">Écran 3 / 9 · Synthèse DG, p. 5 et ta liste</div>
 </section>
 
-<!-- ============ 4 · TROIS PILIERS ============ -->
+<!-- ============ 4 · SEPT MODALITÉS (escalier) ============ -->
 <section class="page">
-  <div class="left"><div class="fw"><div class="fr bg-light">
-    <div class="band"><div class="sur">Les objectifs</div><div class="ttl">Trois blocs de compétences,<br>calés sur la relation client</div></div>
-    <div style="position:absolute;left:110px;top:400px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;width:1700px">
-      <div class="card pl"><div class="pn">01</div><div class="pt">Comprendre</div><div class="ps">l'entreprise et son écosystème</div>
-        <ul><li>Lecture sectorielle et business model</li><li>Analyse financière orientée risque</li><li>Lecture juridique et fiscale</li></ul></div>
-      <div class="card pl"><div class="pn">02</div><div class="pt">Décider</div><div class="ps">structurer et sécuriser l'engagement</div>
-        <ul><li>Analyse financière pour la décision de crédit</li><li>Financement de la croissance&nbsp;: CMT, leasing</li><li>Lecture critique des dossiers</li></ul></div>
-      <div class="card pl" style="background:#0f2744;border-color:#0f2744"><div class="pn" style="color:#9db6d6">03</div><div class="pt" style="color:#fff">Piloter</div><div class="ps" style="color:#c9d6e6">développer et accompagner la relation</div>
-        <ul style="color:#dbe7f6"><li>Posture de banquier conseil</li><li>Prospection et origination</li><li>Clients en difficulté</li></ul></div>
-    </div>
-    <style>.pl{padding:34px 36px;min-height:500px}.pn{font-family:var(--serif);font-size:30px;color:#2f6d9e;font-weight:600}.pt{font-family:var(--serif);font-size:62px;font-weight:600;color:#0f2744;line-height:1;margin-top:6px}.ps{font-size:25px;color:#6f8198;margin-top:10px}.pl ul{margin:26px 0 0;padding-left:26px;font-size:26px;line-height:1.5;color:#3f5168}</style>
-    <div class="src" style="top:944px">Source&nbsp;: synthèse DG, p.&nbsp;3</div>
-  </div></div></div>
-  <div class="right">
-    <div class="n">04</div><div class="tc">0:46 – 1:12 · Décomposer</div>
-    <div class="role">Ce que l'on cherche à construire</div>
-    <div class="lab">Voix off</div>
-    <div class="vo">« Le référentiel métier a été traduit en trois paliers, chacun calé sur un moment réel de la relation. D'abord, lire une entreprise, son secteur, ses comptes, son cadre. Ensuite, trancher une demande de financement avec un avis argumenté. Enfin, faire vivre et grandir un portefeuille, jusqu'à aller chercher de nouveaux clients. »</div>
-    <div class="lab">À l'écran</div><div class="t">Trois piliers qui s'élèvent l'un après l'autre, chacun avec ses modules. Le troisième en navy : il mène au bootcamp.</div>
-  </div>
-  <div class="foot">Écran 4 / 7 · Synthèse DG, p. 3</div>
-</section>
-
-<!-- ============ 5 · MODALITÉS ============ -->
-<section class="page">
-  <div class="left"><div class="fw"><div class="fr bg-light">
+  <div class="left"><div class="fw"><div class="fr bg">
     <div class="band"><div class="sur">Comment nous avons fait</div><div class="ttl">Sept modalités,<br>du premier jour au jury</div></div>
-    <svg width="1700" height="20" style="position:absolute;left:110px;top:497px"><path d="M40 10 H1660" stroke="#c7d3e2" stroke-width="6" stroke-linecap="round"/></svg>
-    <div style="position:absolute;left:110px;top:450px;display:grid;grid-template-columns:repeat(7,1fr);gap:16px;width:1700px">
-      <div class="md"><div class="disc"><svg viewBox="0 0 48 48"><path d="M10 40 V12 H30 L38 20 V40 Z"/><path d="M30 12 V20 H38"/><path d="M16 28 H32 M16 34 H28"/></svg></div><b>Onboarding</b><span>Lancement avec l'Académie, règles de certification</span></div>
-      <div class="md"><div class="disc"><svg viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="24" rx="3"/><path d="M20 15 L29 21 L20 27 Z"/><path d="M14 40 H34"/></svg></div><b>Cours en ligne</b><span>8 cours, capsules, outils, exercices</span></div>
-      <div class="md"><div class="disc"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="7"/><path d="M10 40 C10 30 38 30 38 40"/><path d="M4 22 H12 M36 22 H44"/></svg></div><b>Workshop pratique</b><span>Experts praticiens, cas réels marocains</span></div>
-      <div class="md"><div class="disc"><svg viewBox="0 0 48 48"><path d="M8 42 V18 L24 8 L40 18 V42 Z"/><path d="M19 42 V30 H29 V42"/></svg></div><b>Immersion terrain</b><span>En centre d'affaires, avec un tuteur</span></div>
-      <div class="md"><div class="disc"><svg viewBox="0 0 48 48"><path d="M12 25 L20 33 L36 15"/><circle cx="24" cy="24" r="19"/></svg></div><b>Validation</b><span>Une épreuve par compétence, seuil 70/100</span></div>
-      <div class="md"><div class="disc"><svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="12"/><path d="M30 30 L41 41"/></svg></div><b>Action terrain</b><span>Origination sur de vrais prospects</span></div>
-      <div class="md md-last"><div class="disc" style="background:#0f2744"><svg viewBox="0 0 48 48" style="stroke:#fff"><circle cx="24" cy="20" r="11"/><path d="M17 29 L14 43 L24 37 L34 43 L31 29"/></svg></div><b>Certification</b><span>Soutenance devant un jury</span></div>
-    </div>
-    <style>.md{display:flex;flex-direction:column;align-items:flex-start;gap:16px}.md .disc{width:104px;height:104px;border:5px solid #eef1f5}.md .disc svg{width:50px;height:50px}.md b{font-family:var(--serif);font-size:34px;font-weight:600;color:#0f2744;line-height:1.05}.md span{font-size:24px;color:#3f5168;line-height:1.35}</style>
-    <div class="src" style="top:944px">Source&nbsp;: synthèse DG, p.&nbsp;4, 7 et 8</div>
+    <svg width="1700" height="640" style="position:absolute;left:110px;top:380px" fill="none">
+      <path d="M0 600 H230 V520 H470 V440 H710 V360 H950 V280 H1190 V200 H1430 V120 H1700" stroke="#0f2744" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M1430 120 H1700" stroke="#a8324a" stroke-width="7"/>
+    </svg>
+    <div class="st" style="left:110px;top:870px"><b>1</b>Onboarding</div>
+    <div class="st" style="left:350px;top:790px"><b>2</b>Cours en ligne</div>
+    <div class="st" style="left:590px;top:710px"><b>3</b>Workshop pratique</div>
+    <div class="st" style="left:830px;top:630px"><b>4</b>Immersion terrain</div>
+    <div class="st" style="left:1070px;top:550px"><b>5</b>Validation</div>
+    <div class="st" style="left:1310px;top:470px"><b>6</b>Action terrain&nbsp;:<br>origination</div>
+    <div class="st" style="left:1550px;top:390px;color:#a8324a"><b style="color:#a8324a">7</b>Certification</div>
+    <style>.st{position:absolute;width:230px;font-size:30px;font-weight:500;line-height:1.15;color:#0b1f38;transform:translateY(-100%);padding-bottom:16px}.st b{display:block;font-family:var(--serif);font-size:54px;font-weight:600;color:#0f2744;line-height:1}</style>
   </div></div></div>
   <div class="right">
-    <div class="n">05</div><div class="tc">1:12 – 1:46 · Raconter</div>
-    <div class="role">La mécanique du parcours</div>
+    <div class="n">04</div><div class="tc">0:50 – 1:20 · Raconter</div>
+    <div class="role">Un escalier, marche après marche</div>
     <div class="lab">Voix off</div>
-    <div class="vo">« Concrètement, tout démarre par un lancement avec l'Académie, pour fixer le cap et les règles. Chaque compétence se prépare d'abord en ligne. Elle s'éprouve ensuite en atelier, sur des dossiers du marché marocain, puis en agence, aux côtés d'un tuteur. Elle n'est acquise qu'une fois validée. Ensuite vient le terrain, le vrai&nbsp;: aller chercher des clients. Et au bout, un jury. »</div>
-    <div class="lab">À l'écran</div><div class="t">Sept étapes sur un fil, chacune avec son pictogramme dans un disque. Chaque disque s'allume au mot ; la certification en navy, en dernier.</div>
+    <div class="vo">« Le parcours se monte comme un escalier. On ouvre avec l'Académie. On apprend en ligne. On s'exerce en atelier sur des dossiers réels. On découvre le métier en agence. On prouve ce qu'on sait. On va chercher de vrais clients. Et on termine devant un jury. »</div>
+    <div class="lab">Animation</div><div class="t">L'escalier se trace marche par marche ; chaque modalité apparaît quand la voix la nomme, l'une après l'autre, jamais d'un bloc. La dernière marche, la certification, passe en rouge.</div>
   </div>
-  <div class="foot">Écran 5 / 7 · Synthèse DG, p. 4, 7, 8</div>
+  <div class="foot">Écran 4 / 9 · Synthèse DG, p. 4 et 7</div>
 </section>
 
-<!-- ============ 6 · DÉROULÉ ============ -->
+<!-- ============ 5 · DOCTRINE ============ -->
 <section class="page">
-  <div class="left"><div class="fw"><div class="fr bg-light">
-    <div class="band"><div class="sur">Le déroulé · 2026</div><div class="ttl">D'avril à novembre,<br>bloc après bloc</div></div>
-    <div style="position:absolute;left:110px;top:400px;width:1700px">
-      <div style="display:grid;grid-template-columns:150px repeat(8,1fr);font-size:20px;letter-spacing:.14em;color:#6f8198;border-bottom:3px solid #0f2744;padding-bottom:12px">
-        <span></span><span>AVR</span><span>MAI</span><span>JUIN</span><span>JUIL</span><span>AOÛT</span><span>SEPT</span><span>OCT</span><span>NOV</span>
-      </div>
-      <div class="gl"><span class="gn">Onboarding</span><div class="gb" style="grid-column:2/3;background:#9db6d6">Avril</div></div>
-      <div class="gl"><span class="gn">Bloc 1</span><div class="gb" style="grid-column:2/5;background:#1c3f63">Comprendre</div></div>
-      <div class="gl"><span class="gn">Bloc 2</span><div class="gb" style="grid-column:3/5;background:#2f6d9e">Décider</div></div>
-      <div class="gl"><span class="gn">Bloc 3</span><div class="gb" style="grid-column:7/9;background:#0f2744">Piloter</div></div>
-      <div class="gl"><span class="gn">Bootcamp</span><div class="gb" style="grid-column:9/10;background:#a8324a">19–20</div></div>
-      <div style="display:flex;gap:16px;margin-top:30px;align-items:center;font-size:24px;color:#3f5168">
-        <span style="font-size:20px;letter-spacing:.16em;color:#6f8198">DANS CHAQUE BLOC</span>
-        <span class="cy">Cours en ligne</span><span class="cy">Travaux pratiques</span><span class="cy">Validation</span><span class="cy">Restitution à l'Académie</span>
+  <div class="left"><div class="fw"><div class="fr bg">
+    <div style="position:absolute;left:110px;top:96px;width:900px">
+      <div class="sur">La doctrine du programme</div>
+      <div style="font-family:var(--serif);font-size:72px;font-weight:600;line-height:1.06;color:#0f2744;margin-top:16px">Les meilleures compétences du marché, pour la banque leader</div>
+      <div style="font-size:32px;line-height:1.4;color:#3f5168;margin-top:34px">Une approche différenciée, et différenciante.</div>
+      <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:wrap">
+        <span class="dp">Proximité client</span><span class="dp">Le pourquoi d'abord</span><span class="dp">Les bonnes pratiques</span>
       </div>
     </div>
-    <style>.gl{display:grid;grid-template-columns:150px repeat(8,1fr);align-items:center;height:72px;border-bottom:1px solid #c7d3e2}.gn{grid-column:1/2;font-family:var(--serif);font-size:28px;font-weight:600;color:#0f2744}.gb{height:46px;border-radius:23px;color:#fff;font-size:21px;display:flex;align-items:center;padding:0 18px;white-space:nowrap;overflow:hidden;grid-row:1}.cy{background:#fff;border:1px solid #c7d3e2;border-radius:999px;padding:10px 22px}</style>
-    <div class="src" style="top:944px">Source&nbsp;: synthèse DG, p.&nbsp;6&nbsp;; programme du bootcamp</div>
+    <style>.dp{border:2px solid #0f2744;border-radius:999px;padding:12px 28px;font-size:28px;font-weight:500;color:#0f2744}</style>
+    <!-- cycle de la relation client -->
+    <svg width="900" height="780" viewBox="0 0 900 780" style="position:absolute;left:990px;top:170px" fill="none">
+      <circle cx="390" cy="390" r="270" stroke="#c3c7cc" stroke-width="3"/>
+      <path d="M390 120 A270 270 0 0 1 660 390" stroke="#0f2744" stroke-width="8"/>
+      <path d="M660 390 A270 270 0 0 1 390 660" stroke="#2f6d9e" stroke-width="8"/>
+      <path d="M390 660 A270 270 0 0 1 120 390" stroke="#6f8198" stroke-width="8"/>
+      <path d="M120 390 A270 270 0 0 1 390 120" stroke="#a8324a" stroke-width="8"/>
+      <g fill="#fff" stroke-width="6"><circle cx="390" cy="120" r="22" stroke="#a8324a"/><circle cx="660" cy="390" r="22" stroke="#0f2744"/><circle cx="390" cy="660" r="22" stroke="#2f6d9e"/><circle cx="120" cy="390" r="22" stroke="#6f8198"/></g>
+      <text x="390" y="378" text-anchor="middle" font-family="Newsreader" font-size="46" font-weight="600" fill="#0f2744">La relation</text>
+      <text x="390" y="428" text-anchor="middle" font-family="Newsreader" font-size="46" font-weight="600" fill="#0f2744">client</text>
+      <g font-family="DM Sans" font-size="30" font-weight="500" fill="#0b1f38">
+        <text x="390" y="68" text-anchor="middle">Origination</text>
+        <text x="700" y="380">Entrée en</text><text x="700" y="414">relation</text>
+        <text x="390" y="730" text-anchor="middle">Fidélisation</text>
+        <text x="80" y="398" text-anchor="end">Suivi</text>
+      </g>
+    </svg>
   </div></div></div>
   <div class="right">
-    <div class="n">06</div><div class="tc">1:46 – 2:14 · Raconter dans le temps</div>
-    <div class="role">La timeline</div>
+    <div class="n">05</div><div class="tc">1:20 – 1:50 · Doctrine</div>
+    <div class="role">Ce que nous cherchons</div>
     <div class="lab">Voix off</div>
-    <div class="vo">« La promotion entre en avril. Le premier bloc court jusqu'à l'été, le deuxième s'y superpose au printemps. Le troisième occupe la rentrée. Et chaque fois, le même cycle&nbsp;: apprendre en ligne, pratiquer, être évalué, puis rendre compte à l'Académie. Jusqu'aux deux journées de novembre. »</div>
-    <div class="lab">À l'écran</div><div class="t">Un diagramme de Gantt : chaque barre pousse quand la voix nomme son bloc ; la barre rouge du bootcamp arrive en dernier. Le cycle de quatre étapes s'affiche en pastilles dessous.</div>
+    <div class="vo">« Une banque leader doit aligner les meilleurs profils du marché. Notre parti pris&nbsp;: être au plus près du client, comprendre son pourquoi avant de proposer, et maîtriser chaque moment de la relation, du premier contact au suivi dans la durée. »</div>
+    <div class="lab">À l'écran</div><div class="t">À gauche, ta doctrine. À droite, le cycle de la relation client : origination, entrée en relation, fidélisation, suivi. Chaque arc se trace au mot, la relation client au centre.</div>
   </div>
-  <div class="foot">Écran 6 / 7 · Synthèse DG, p. 6</div>
+  <div class="foot">Écran 5 / 9 · Doctrine dictée par Rachid</div>
 </section>
 
-<!-- ============ 7 · CERTIFICATION ============ -->
+<!-- ============ 6 · TROIS BLOCS ============ -->
 <section class="page">
-  <div class="left"><div class="fw"><div class="fr bg-navy">
-    <div style="position:absolute;left:110px;top:120px" class="sur"><span style="color:#9db6d6">Au bout du parcours</span></div>
-    <div style="position:absolute;left:110px;top:230px;font-family:var(--serif);font-size:96px;font-weight:600;line-height:1.06;color:#fff">Défendre un dossier<br>devant un jury</div>
-    <div style="position:absolute;left:110px;top:560px;display:flex;gap:70px">
-      <div class="kp"><b>2 à 3</b><span>prospects réels<br>par participant</span></div>
-      <div class="kp"><b>2</b><span>journées de<br>bootcamp</span></div>
-      <div class="kp"><b>1</b><span>soutenance<br>pour la certification</span></div>
-    </div>
-    <style>.kp b{display:block;font-family:var(--serif);font-size:120px;font-weight:600;color:#5fd0ea;line-height:1}.kp span{display:block;font-size:30px;color:#c9d6e6;margin-top:12px;line-height:1.3}</style>
-    <div style="position:absolute;left:1430px;top:610px;transform:rotate(-10deg);border:7px solid #e8798c;color:#e8798c;border-radius:16px;padding:14px 28px;font-family:var(--sans);font-weight:700;font-size:46px;letter-spacing:.14em">CERTIFIÉ</div>
+  <div class="left"><div class="fw"><div class="fr bg">
+    <div class="band"><div class="sur">Pour y arriver</div><div class="ttl">Trois blocs de compétences,<br>calés sur la relation client</div></div>
+    <svg width="1720" height="600" style="position:absolute;left:100px;top:400px" fill="none">
+      <circle cx="300" cy="290" r="270" fill="#ffffff" fill-opacity=".7" stroke="#0f2744" stroke-width="4"/>
+      <circle cx="860" cy="290" r="270" fill="#ffffff" fill-opacity=".7" stroke="#2f6d9e" stroke-width="4"/>
+      <circle cx="1420" cy="290" r="270" fill="#0f2744" stroke="#0f2744" stroke-width="4"/>
+      <path d="M575 290 H585 M1135 290 H1145" stroke="#a8324a" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+    <div class="cb" style="left:150px"><i>01</i><b>Comprendre</b><span>l'entreprise<br>et son écosystème</span></div>
+    <div class="cb" style="left:710px"><i>02</i><b>Décider</b><span>structurer et sécuriser<br>l'engagement</span></div>
+    <div class="cb" style="left:1270px;color:#fff"><i style="color:#9db6d6">03</i><b style="color:#fff">Piloter</b><span style="color:#dbe7f6">développer et accompagner<br>la relation</span></div>
+    <style>.cb{position:absolute;top:560px;width:500px;text-align:center}.cb i{display:block;font-style:normal;font-family:var(--serif);font-size:36px;color:#2f6d9e;font-weight:600}.cb b{display:block;font-family:var(--serif);font-size:80px;font-weight:600;color:#0f2744;line-height:1;margin-top:6px}.cb span{display:block;font-size:30px;color:#3f5168;line-height:1.3;margin-top:16px}</style>
   </div></div></div>
   <div class="right">
-    <div class="n">07</div><div class="tc">2:14 – 2:30 · Clôture</div>
-    <div class="role">La dernière marche</div>
+    <div class="n">06</div><div class="tc">1:50 – 2:10 · Les trois blocs</div>
+    <div class="role">Trois cercles qui s'enchaînent</div>
     <div class="lab">Voix off</div>
-    <div class="vo">« La dernière marche est la plus exigeante. Chacun choisit de vraies entreprises, construit son dossier, et le soutient comme on présente une opportunité en comité. C'est là que se gagne la certification. »</div>
-    <div class="lab">À l'écran</div><div class="t">Les trois chiffres montent un par un, puis le tampon « Certifié » frappe. Fin de la première partie, fondu au noir.</div>
+    <div class="vo">« Pour y arriver, trois paliers. Savoir lire une entreprise. Savoir trancher. Savoir faire grandir une relation. »</div>
+    <div class="lab">À l'écran</div><div class="t">Trois grands cercles qui apparaissent l'un après l'autre et se relient. Le troisième se remplit : il mène au terrain.</div>
   </div>
-  <div class="foot">Écran 7 / 7 · Synthèse DG, p. 7</div>
+  <div class="foot">Écran 6 / 9 · Synthèse DG, p. 3</div>
 </section>
+
+BLOCS
 
 <script>
 (function(){

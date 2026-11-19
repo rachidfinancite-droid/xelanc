@@ -100,6 +100,9 @@ def case_img(name):
     return data_uri(p) if os.path.exists(p) else None
 
 html_blocs, last = make(BLOCS, banner, nb, 6, clean_banner, case_img)
+from origination import make as make_orig
+html_orig, last = make_orig(last, nb, case_img)
+html_blocs += html_orig
 s = s.replace('BLOCS', html_blocs)
 open(A('planches-artifact.html'), 'w').write(s)
 print('ok', len(s) // 1024, 'Ko', 'écrans:', last)

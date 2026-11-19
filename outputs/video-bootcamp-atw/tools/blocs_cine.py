@@ -2,10 +2,10 @@
 (bannière en plein écran, textes posés dedans), validation, résultats."""
 
 ACCROCHE = {
-    '01': ("Avant de financer,<br><em>comprendre.</em>",
-           "Lire le secteur, le business model, les chiffres et le cadre juridique : une entreprise se comprend avant de se financer."),
+    '01': ("Avant de financer l'entreprise,<br><em>la comprendre.</em>",
+           "Lire le secteur, le business model, les chiffres et le cadre juridique."),
     '02': ("De l'analyse<br>à la <em>décision.</em>",
-           "Un avis argumenté et chiffré, défendable en comité, jusqu'au business plan du client : c'est là que se joue la qualité d'un engagement."),
+           "Un avis argumenté et chiffré, défendable en comité, jusqu'au business plan du client."),
     '03': ("Gagner le client,<br><em>le garder.</em>",
            "Aller chercher l'entreprise au bon moment, puis devenir son partenaire de référence, dans la durée."),
 }
@@ -73,7 +73,7 @@ ECRAN_DESC = {
 
 STYLE = """<style>
 .kick{font-size:24px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#c8a96a}
-.acc{font-family:var(--serif);font-size:150px;font-weight:500;line-height:1.02;color:#fff}.acc em{color:#c8a96a}
+.acc{font-family:var(--serif);font-size:110px;font-weight:500;line-height:1.02;color:#fff}.acc em{color:#c8a96a}
 .cp{flex:1;border-top:2px solid rgba(200,169,106,.6);padding-top:16px;font-size:26px;line-height:1.3;color:#dbe3ee}
 .cp span{display:block;font-family:var(--serif);font-size:34px;color:#c8a96a}
 .ex{border-left:3px solid #c8a96a;padding:6px 0 6px 26px;font-family:var(--serif);font-size:44px;color:#fff;line-height:1.1}
@@ -124,41 +124,49 @@ def make(blocs, banner, nb, start, clean_banner, case_img=lambda n: None):
     out = []
     for b in blocs:
         k = b['num']
-        first = banner(b['cours'][0]['id'])
+        fid = b['cours'][0]['id']
+        first = clean_banner(fid)
         acc, sous = ACCROCHE[k]
 
-        # 1. Ouverture : la première bannière du bloc, floutée et assombrie, et le nom du bloc
-        left = (f'<div style="position:absolute;inset:-40px;background:url({first}) center/cover;filter:blur(14px) brightness(.38) saturate(.6)"></div>'
-                '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,34,.92) 0%,rgba(6,16,34,.55) 60%,rgba(6,16,34,.3) 100%)"></div>'
-                '<div style="position:absolute;left:130px;top:250px;width:1500px">'
-                f'<div class="kick">Bloc {k} &nbsp;·&nbsp; {b["periode"]}</div>'
-                f'<div style="font-family:var(--serif);font-size:230px;font-weight:500;line-height:.95;color:#fff;margin-top:30px">{b["nom"]}</div>'
-                '<div style="width:120px;height:3px;background:#c8a96a;margin-top:50px"></div>'
-                f'<div style="font-family:var(--serif);font-style:italic;font-size:54px;color:#d9e2ee;margin-top:36px">{nb(b["sous"])}</div></div>')
+        # 1. Ouverture : la bannière du bloc bien visible, l'écran coupé en tiers.
+        #    Premier tiers : « Bloc 1 » et la période. Deux tiers suivants : le titre complet du bloc.
+        left = (f'<div style="position:absolute;inset:0;background:url({first}) center/cover;filter:brightness(.92) saturate(.9)"></div>'
+                + ('<div style="position:absolute;left:0;top:0;bottom:0;width:80%;backdrop-filter:blur(70px) saturate(.9);-webkit-backdrop-filter:blur(70px) saturate(.9);' '-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 86%,transparent 100%)"></div>' if fid in ('c6', 'c7', 'c8') else '') + '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,34,.62) 0%,rgba(6,16,34,.4) 33%,rgba(6,16,34,.12) 100%)"></div>'
+                '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(200,169,106,.8)"></div>'
+                '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
+                f'<div style="font-family:var(--serif);font-size:120px;font-weight:600;line-height:1;color:#fff">Bloc {int(k)}</div>'
+                f'<div style="font-family:var(--serif);font-size:56px;font-weight:500;line-height:1.15;color:#c8a96a;margin-top:22px">{b["periode"].replace(" 2026", "")}</div>'
+                '<div style="font-size:24px;letter-spacing:.24em;color:#d9e2ee;margin-top:14px">2026</div></div>'
+                '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:1100px">'
+                f'<div style="font-family:var(--serif);font-size:150px;font-weight:600;line-height:.98;color:#fff">{b["nom"]}</div>'
+                f'<div style="font-family:var(--serif);font-size:84px;font-weight:500;font-style:italic;line-height:1.08;color:#fff;margin-top:20px">{nb(b["sous"])}</div></div>')
         out.append(page(left, nxt(), f'Bloc {k} · ouverture', b['nom'], 'Aucune. Montée musicale.',
-                        "La première bannière du bloc, floutée et assombrie, sert de décor. Le nom du bloc apparaît, puis le filet doré se trace.",
+                        "La bannière du bloc en fond, visible. À gauche, « Bloc » et la période ; à droite, le titre complet du bloc. Le filet doré se trace entre les deux.",
                         'Bannière de la plateforme'))
 
-        # 2. La promesse du bloc
-        comps = ''.join(f'<div class="cp"><span>{c["num"]}</span>{nb(c["titre"].split(" :")[0])}</div>' for c in b['cours'])
+        # 2. L'objectif, même construction en tiers.
         left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,#173158 0%,#0b1a33 60%,#060f20 100%)"></div>'
-                '<div style="position:absolute;left:130px;top:150px" class="kick">L\'objectif</div>'
-                f'<div class="acc" style="position:absolute;left:130px;top:240px;width:1650px">{acc}</div>'
-                f'<div style="position:absolute;left:130px;top:640px;width:1100px;font-size:34px;line-height:1.45;color:#c9d6e6">{nb(sous)}</div>'
-                f'<div style="position:absolute;left:130px;top:860px;width:1660px;display:flex;gap:56px">{comps}</div>')
-        out.append(page(left, nxt(), f'Bloc {k} · objectif', 'La promesse du bloc', f'« {VO_OBJ[k]} »',
-                        "La phrase s'écrit mot à mot, le mot en italique doré arrive en dernier. Les compétences du bloc s'alignent en bas.",
+                '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(200,169,106,.8)"></div>'
+                '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
+                '<div style="font-family:var(--serif);font-size:96px;font-weight:600;line-height:1.02;color:#fff">Objectif<br>du bloc</div>'
+                f'<div style="font-size:24px;letter-spacing:.24em;color:#c8a96a;margin-top:26px;text-transform:uppercase">Bloc {int(k)} · {b["nom"]}</div></div>'
+                f'<div class="acc" style="position:absolute;left:720px;top:50%;transform:translateY(-58%);width:1100px">{acc}'
+                f'<div style="font-family:var(--sans);font-size:36px;line-height:1.4;color:#c9d6e6;margin-top:40px;font-weight:400">{nb(sous)}</div></div>')
+        out.append(page(left, nxt(), f'Bloc {k} · objectif', "L'objectif du bloc", f'« {VO_OBJ[k]} »',
+                        "À gauche, « Objectif du bloc ». À droite, la phrase en grand, le dernier mot en italique doré, puis le sous-titre.",
                         b['obj_src']))
 
         # 3. Une compétence par écran : la bannière en plein écran (sans son texte incrusté),
         #    le titre complet en un seul bloc, puis l'objectif en sous-titre.
         for c in b['cours']:
             img = clean_banner(c['id'])
-            veil = ('<div style="position:absolute;inset:0;background:linear-gradient(90deg,#0b1a33 0%,#0b1a33 66%,rgba(11,26,51,.6) 74%,rgba(11,26,51,0) 86%)"></div>'
+            veil = ('<div style="position:absolute;left:0;top:0;bottom:0;width:80%;backdrop-filter:blur(70px) saturate(.9);-webkit-backdrop-filter:blur(70px) saturate(.9);'
+                    '-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 86%,transparent 100%)"></div>'
+                    '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,51,.6) 0%,rgba(11,26,51,.35) 45%,rgba(11,26,51,0) 65%)"></div>'
                     if c['id'] in ('c6', 'c7', 'c8') else
-                    '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,51,.6) 0%,rgba(11,26,51,0) 60%)"></div>')
+                    '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,51,.45) 0%,rgba(11,26,51,.15) 45%,rgba(11,26,51,0) 60%)"></div>')
             left = (f'<img src="{img}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{veil}'
-                    '<div style="position:absolute;left:120px;top:50%;transform:translateY(-50%);width:900px">'
+                    '<div style="position:absolute;left:120px;top:50%;transform:translateY(-50%);width:900px;text-shadow:0 2px 18px rgba(0,0,0,.45)">'
                     f'<div class="kick">Compétence {c["num"]}</div>'
                     f'<div style="font-family:var(--serif);font-size:74px;font-weight:600;line-height:1.06;color:#fff;margin-top:26px">{nb(c["ecran_titre"])}</div>'
                     '<div style="width:110px;height:3px;background:#c8a96a;margin:42px 0 36px"></div>'

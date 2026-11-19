@@ -37,7 +37,7 @@ p{font-size:38px;line-height:1.3;color:#e8eef7}
   for (const c of COURS) {
     if (only.length && !only.includes(c.id)) continue;
     const tmp = path.join(require('os').tmpdir(), '_banniere_tmp.html');
-    require('fs').writeFileSync(tmp, clean ? page(c).replace(/<div class="txt">[\s\S]*?<\/div><\/body>/, '</body>') : page(c));
+    require('fs').writeFileSync(tmp, clean ? page(c).replace(/<div class="txt">[\s\S]*?<\/div><\/body>/, '</body>').replace(/\.grad\{[^}]*\}/, '.grad{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,51,.55) 0%,rgba(11,26,51,.25) 35%,rgba(11,26,51,0) 55%)}').replace('brightness(.82)', 'brightness(.95)') : page(c));
     await p.goto('file://' + tmp, { waitUntil: 'load' });
     await p.evaluate(() => document.fonts.ready);
     const dir = path.join(root, 'assets', 'bannieres', clean ? 'clean' : '');

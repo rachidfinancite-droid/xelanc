@@ -95,7 +95,11 @@ def clean_banner(cid):
     p = A('assets', 'bannieres', 'clean', cid + '.jpg')
     return data_uri(p) if os.path.exists(p) else banner(cid)
 
-html_blocs, last = make(BLOCS, banner, nb, 6, clean_banner)
+def case_img(name):
+    p = A('assets', 'cas', name + '.jpg')
+    return data_uri(p) if os.path.exists(p) else None
+
+html_blocs, last = make(BLOCS, banner, nb, 6, clean_banner, case_img)
 s = s.replace('BLOCS', html_blocs)
 open(A('planches-artifact.html'), 'w').write(s)
 print('ok', len(s) // 1024, 'Ko', 'écrans:', last)

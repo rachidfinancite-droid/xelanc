@@ -207,8 +207,8 @@ def make(start, nb, img):
     rows = [
         ('Le parcours', [('30', 'participants, GRE et CCE'), ('3', 'blocs, 8 compétences, 9 cours en ligne'),
                          ('7', 'mois de parcours, d\'avril à novembre'), ('2', 'jours de bootcamp d\'origination')]),
-        ('La plateforme', [('215', 'capsules : 162 leçons vidéo, 53 modules interactifs'), ('5\u202f929', 'capsules terminées par la promotion'),
-                           ('4\u202f415', 'vidéos regardées jusqu\'au bout'), ('800', 'heures de formation en ligne, 27 h par participant')]),
+        ('La plateforme', [('215', 'capsules réparties dans les 9 cours'), ('5\u202f929', 'capsules terminées sur 6\u202f450, soit 92\u202f%'),
+                           ('800', 'heures de formation en ligne, 27 h par participant'), ('44 h', 'le record d\'un participant sur la plateforme')]),
         ('La preuve', [('96\u202f%', 'des cours terminés : 259 sur 270'), ('22', 'participants sur 30 ont terminé les 9 cours'),
                        ('9', 'épreuves de validation'), ('6', 'études de cas sur des entreprises réelles')]),
         ('Le terrain', [('424', 'entreprises repérées et notées'), ('145', 'fiches prospect rédigées'),
@@ -222,7 +222,7 @@ def make(start, nb, img):
             '<div style="font-family:var(--serif);font-size:76px;font-weight:600;color:#fff;line-height:1.05;margin-top:14px">Le parcours, <em style="color:#c8a96a">en chiffres</em></div></div>'
             f'<div class="kfg">{grid}</div>')
     out.append(page(left, nxt(), 'Key facts', 'La preuve par les chiffres',
-                    "« Trente banquiers, huit cents heures de formation, plus de cinq mille capsules terminées. Et au bout, soixante-douze prospects prêts à être défendus. »",
+                    "« Trente banquiers, huit cents heures de formation, 92 % des capsules terminées. Et au bout, soixante-douze prospects prêts à être défendus. »",
                     "Les quatre lignes s'allument l'une après l'autre ; les chiffres défilent jusqu'à leur valeur.",
                     "Plateforme Thinkific (export du 15/11/2026), rapports d'évaluation, revue des travaux d'origination"))
     return STYLE + ''.join(out), n[0]

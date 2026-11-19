@@ -259,22 +259,25 @@ def make(start, nb, img):
     rows = ''.join(f'<div class="pk"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in
                    [('215', 'capsules vidéo réparties dans les 9 cours'), ('6\u202f450', 'capsules terminées : 100 % du programme suivi'),
                     ('800', 'heures de formation en ligne'), ('27 h', 'par participant en moyenne')])
-    mock = ('<div style="margin-top:44px;width:560px;border-radius:10px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.55);background:#fff">'
-            '<div style="height:36px;background:#e9ecf1;display:flex;align-items:center;gap:7px;padding:0 14px">'
-            '<i style="width:10px;height:10px;border-radius:50%;background:#ff5f57"></i><i style="width:10px;height:10px;border-radius:50%;background:#febc2e"></i><i style="width:10px;height:10px;border-radius:50%;background:#28c840"></i>'
-            '<div style="margin-left:12px;flex:1;height:24px;border-radius:12px;background:#fff;display:flex;align-items:center;padding-left:14px;font-size:16px;color:#33475f">🔒&nbsp; banking.xelanc.com</div></div>'
-            f'<div style="height:300px;background:url({shot}) top left/cover"></div></div>'
-            '<div style="margin-top:22px;font-size:26px;letter-spacing:.18em;color:#5fd0ea;font-weight:600">BANKING.XELANC.COM</div>')
-    tiles = ''.join(f'<div class="kv"><b>{a}</b><span>{nb(b)}</span></div>' for a, b in
-                    [('215', 'capsules vidéo réparties dans les 9 cours'), ('6\u202f450', 'capsules terminées : 100 % du programme suivi'),
-                     ('800', 'heures de formation en ligne'), ('27 h', 'par participant en moyenne')])
-    left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,#1b3a66 0%,#0b1a33 60%,#060f20 100%)"></div>' + FIL4 +
-            colonne('La plateforme', 'Une école<br><em style="color:#c8a96a">ouverte<br>en continu</em>', mock) +
-            f'<div class="kvg">{tiles}</div>')
-    out.append(page(left, nxt(), 'En chiffres · la plateforme', 'La plateforme',
-                    "« Une plateforme dédiée, ouverte à toute heure : deux cent quinze capsules, et huit cents heures de formation. »",
-                    "La page d'accueil de la plateforme glisse depuis la gauche ; l'adresse s'affiche. À droite, les quatre chiffres tombent l'un sous l'autre.",
-                    "banking.xelanc.com, plateforme Thinkific"))
+    # La plateforme, écran dédié : la vraie page d'accueil en grand
+    left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#1b3a66 0%,#0b1a33 60%,#060f20 100%)"></div>'
+            '<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:1680px;border-radius:16px;overflow:hidden;box-shadow:0 50px 120px rgba(0,0,0,.6);background:#fff">'
+            '<div style="height:64px;background:#e9ecf1;display:flex;align-items:center;gap:12px;padding:0 26px">'
+            '<i style="width:16px;height:16px;border-radius:50%;background:#ff5f57"></i><i style="width:16px;height:16px;border-radius:50%;background:#febc2e"></i><i style="width:16px;height:16px;border-radius:50%;background:#28c840"></i>'
+            '<div style="margin-left:30px;flex:1;height:42px;border-radius:21px;background:#fff;display:flex;align-items:center;padding-left:26px;font-size:28px;color:#1d3350;font-weight:500">🔒&nbsp; banking.xelanc.com</div></div>'
+            f'<div style="height:880px;background:url({shot}) top center/cover"></div></div>')
+    out.append(page(left, nxt(), 'En chiffres · la plateforme', 'banking.xelanc.com',
+                    "« Tout le parcours en ligne passe par une plateforme dédiée : banking.xelanc.com. »",
+                    "La page d'accueil de la plateforme, en grand, dans un navigateur. L'adresse s'inscrit dans la barre, puis légère avancée de caméra.",
+                    "banking.xelanc.com"))
+
+    # La plateforme, ses chiffres : même mise en page que les autres écrans
+    chiffres(photo('bannieres/clean/c2.jpg'), 'La plateforme', 'Une école<br><em style="color:#c8a96a">ouverte<br>en continu</em>',
+             [('215', 'capsules vidéo réparties dans les 9 cours'), ('6\u202f450', 'capsules terminées : 100 % du programme suivi'),
+              ('800', 'heures de formation en ligne'), ('27 h', 'par participant en moyenne')],
+             'En chiffres · la plateforme', 'La plateforme en chiffres',
+             "« Deux cent quinze capsules, huit cents heures de formation, et cent pour cent du programme suivi. »",
+             "Plateforme Thinkific")
 
     chiffres(photo('cas/terralis.jpg'), 'La preuve', 'Personne<br>n\'est <em style="color:#c8a96a">resté<br>en route</em>',
              [('100\u202f%', 'des cours terminés : 270 sur 270'), ('30\u202f/\u202f30', 'participants ont terminé les 9 cours'),

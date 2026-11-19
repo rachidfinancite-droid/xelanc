@@ -20,27 +20,27 @@ VALID = {
 
 EPREUVES = {
     '01': [
-        dict(synthese=False, type="Examen · module 1.1", img="lecture360", nom="Lecture 360°", ctx="",
+        dict(synthese=False, type="Examen · module 1.1", img="lecture360", nom="Lecture 360°", ctx="Examen individuel · QCM et essai",
              pb="Situer un client dans son secteur, décoder son business model et le relier à sa dynamique financière.", note="73", cert="76"),
         dict(synthese=False, type="Examen · module 1.2", img="bledor", nom="Blé d'Or", ctx="Cas réel d'instruction",
              pb="Cadrer l'objectif, qualifier l'information, décomposer les agrégats, et conclure sur une instruction défendable.", note="81", cert="83"),
         dict(synthese=False, type="Examen · module 1.3", img="maghreb", nom="Groupe Maghreb Industries", ctx="Cas juridique et fiscal",
              pb="Traduire les signaux juridiques et fiscaux en risque bancaire : garanties, covenants, pricing, décision.", note="84", cert="97"),
-        dict(synthese=True, type="Cas de synthèse", img="atlas", nom="La Table de l'Atlas", ctx="Restaurant · Marrakech",
+        dict(synthese=True, type="Bloc 1 · synthèse", img="atlas", nom="La Table de l'Atlas", ctx="Restaurant · Marrakech",
              pb="Un crédit de 4,5 MMAD sur 7 ans pour ouvrir un second établissement. Un dossier volontairement piégé : instruire et trancher.", note="76,5", cert="90"),
     ],
     '02': [
-        dict(synthese=False, type="Quiz de certification", img="quiz", nom="Analyse financière de crédit", ctx="",
+        dict(synthese=False, type="Quiz de certification", img="quiz", nom="Analyse financière de crédit", ctx="25 questions · une seule passation",
              pb="« Cette entreprise peut-elle rembourser ? » Des mises en situation chiffrées, du DCR aux équilibres du bilan, jusqu'à la décision en comité.", note="98", cert="100"),
-        dict(synthese=True, type="Cas de synthèse", img="achapost", nom="Groupe ACHAPOST", ctx="Grossiste-répartiteur pharmaceutique",
+        dict(synthese=True, type="Financement de la croissance", img="achapost", nom="Groupe ACHAPOST", ctx="Grossiste-répartiteur pharmaceutique",
              pb="Le BFR explose à 138,6 MDH, la trésorerie tombe à −139,6 MDH. Pas un crédit de croissance : une restructuration. La bonne réponse : « oui, sous conditions ».", note="68,5", cert="88"),
-        dict(synthese=True, type="Cas de synthèse · business plan", img="terralis", nom="TERRALIS SA", ctx="Conserverie · 120 MMAD de CA",
+        dict(synthese=True, type="Business plan", img="terralis", nom="TERRALIS SA", ctx="Conserverie · 120 MMAD de CA",
              pb="L'outil est saturé, le dirigeant hésite entre quatre options de croissance. Ce qu'il veut faire, la banque peut-elle le financer ?", note="78", cert="100"),
     ],
     '03': [
-        dict(synthese=False, type="Examen · prospection", img="objections", nom="Traitement des objections", ctx="",
-             pb="Vingt objections réelles de dirigeants, à transformer en suite d'entretien.", note="90", cert="87"),
-        dict(synthese=True, type="Cas de synthèse · banquier conseil", img="azura", nom="AZURA Peintures SA", ctx="Fabricant de peintures · 251 MMAD de CA",
+        dict(synthese=False, type="Examen · prospection", img="objections", nom="Traitement des objections", ctx="QCM individuel · 20 questions en 25 minutes",
+             pb="Vingt objections réelles de dirigeants, en cinq familles : banque en place, temps, besoin, prix et garanties, relance. Les transformer en suite d'entretien.", note="90", cert="87"),
+        dict(synthese=True, type="Banquier conseil", img="azura", nom="AZURA Peintures SA", ctx="Fabricant de peintures · 251 MMAD de CA",
              pb="Le client demande 8 MMAD de découvert, son vrai besoin dépasse 40 MMAD. Requalifier, refuser de façon constructive, proposer une offre globale.", note="81", cert="100"),
     ],
 }
@@ -71,6 +71,8 @@ ECRAN_DESC = {
     'c8': "Partir du besoin du client, jamais du produit, et piloter la relation dans la durée.",
 }
 
+SCRIM = '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,40,.86) 0%,rgba(8,20,40,.68) 34%,rgba(8,20,40,.32) 60%,rgba(8,20,40,0) 82%)"></div>'
+
 STYLE = """<style>
 .kick{font-size:24px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#c8a96a}
 .acc{font-family:var(--serif);font-size:110px;font-weight:500;line-height:1.02;color:#fff}.acc em{color:#c8a96a}
@@ -90,17 +92,20 @@ STYLE = """<style>
 .vs{background:#0f2744;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.25);padding:40px 46px;display:flex;align-items:center;gap:50px}
 .vs span{font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#c8a96a}.vs b{display:block;font-family:var(--serif);font-size:70px;font-weight:600;color:#fff;line-height:1;margin-top:10px}.vs i{display:block;font-style:normal;font-size:27px;line-height:1.35;color:#c9d6e6;margin-top:14px}
 .vsn{flex:none;text-align:right}.vsn strong{font-family:var(--serif);font-size:110px;font-weight:600;color:#fff;line-height:1}.vsn em{font-style:normal;font-size:34px;color:#9db6d6;margin-left:6px}.vsn i{display:block;font-style:normal;font-size:24px;color:#c8a96a;margin-top:8px}
-.vc{background:#fff;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.18);display:flex;flex-direction:column;height:100%;overflow:hidden}
-.vim{height:250px;flex:none;background-size:cover;background-position:center;position:relative}
-.vim::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,26,51,0) 55%,rgba(11,26,51,.35) 100%)}
-.vph{background:linear-gradient(135deg,#1c3f63,#0b1a33);display:flex;align-items:center;justify-content:center}.vph span{font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:#5fd0ea;position:relative;z-index:1}
-.vbody{padding:26px 30px 30px;display:flex;flex-direction:column;flex:1}
-.vbody>span{font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:#139fc4;font-weight:500}
-.vc b{display:block;font-family:var(--serif);font-size:42px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:12px}
-.vc em{display:block;font-style:normal;font-size:21px;color:#6f8198;margin-top:8px}
-.vc p{font-size:23px;line-height:1.4;color:#3f5168;margin:16px 0 0}
-.vn{margin-top:auto;border-top:2px solid #e3e5e8;padding-top:16px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.vn strong{font-family:var(--serif);font-size:78px;font-weight:600;color:#139fc4;line-height:1}.vn small{font-size:26px;color:#6f8198}.vn i{flex-basis:100%;font-style:normal;font-size:22px;color:#3f5168;margin-top:4px}
-.vcs{background:#0f2744}.vcs .vbody>span{color:#c8a96a}.vcs b{color:#fff}.vcs em{color:#9db6d6}.vcs p{color:#d6dfeb}.vcs .vn{border-top-color:rgba(255,255,255,.15)}.vcs .vn strong{color:#5fd0ea}.vcs .vn small{color:#9db6d6}.vcs .vn i{color:#c8a96a}
+.vc{background:#fff;border-radius:22px;box-shadow:0 14px 30px rgba(15,39,68,.16);display:flex;flex-direction:column;height:100%;overflow:hidden}
+.vim{height:270px;flex:none;background-size:cover;background-position:center;position:relative}
+.vph{background:linear-gradient(135deg,#1c3f63,#0b1a33)}
+.vtag{position:absolute;left:22px;top:22px;font-style:normal;font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:#0b1a33;background:#c8a96a;border-radius:999px;padding:8px 16px;font-weight:600}
+.vtag-x{background:#fff;color:#0f2744}
+.vbody{padding:28px 32px 30px;display:flex;flex-direction:column;flex:1}
+.vbody>span{font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:#139fc4;font-weight:600;min-height:24px}
+.vc b{display:block;font-family:var(--serif);font-size:42px;font-weight:600;color:#0f2744;line-height:1.06;margin-top:12px;min-height:90px}
+.vc em{display:block;font-style:normal;font-size:21px;color:#6f8198;margin-top:8px;min-height:28px}
+.vc p{font-size:23px;line-height:1.42;color:#3f5168;margin:16px 0 18px}
+.vc4 .vim{height:220px}.vc4 b{font-size:38px;min-height:82px}.vc4 p{font-size:21px}.vc4 .vn strong{font-size:96px}.vc4 .vbody{padding:24px 26px 26px}
+.vn{margin-top:auto;border-top:2px solid #e3e5e8;padding-top:14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.vn strong{font-family:var(--serif);font-size:112px;font-weight:600;color:#139fc4;line-height:.95}.vn small{font-size:30px;color:#6f8198}
+.vn i{flex-basis:100%;font-style:normal;font-size:24px;color:#0f2744;font-weight:500;margin-top:4px}
 .rs{border-top:2px solid #c8a96a;padding-top:28px}
 .rs b{display:block;font-family:var(--serif);font-size:110px;font-weight:500;color:#fff;line-height:1;white-space:nowrap}
 .rs span{display:block;font-size:30px;line-height:1.35;color:#c9d6e6;margin-top:20px}
@@ -130,16 +135,16 @@ def make(blocs, banner, nb, start, clean_banner, case_img=lambda n: None):
 
         # 1. Ouverture : la bannière du bloc bien visible, l'écran coupé en tiers.
         #    Premier tiers : « Bloc 1 » et la période. Deux tiers suivants : le titre complet du bloc.
-        left = (f'<div style="position:absolute;inset:0;background:url({first}) center/cover;filter:brightness(.92) saturate(.9)"></div>'
-                + ('<div style="position:absolute;left:0;top:0;bottom:0;width:80%;backdrop-filter:blur(70px) saturate(.9);-webkit-backdrop-filter:blur(70px) saturate(.9);' '-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 86%,transparent 100%)"></div>' if fid in ('c6', 'c7', 'c8') else '') + '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,34,.62) 0%,rgba(6,16,34,.4) 33%,rgba(6,16,34,.12) 100%)"></div>'
+        left = (f'<div style="position:absolute;inset:0;background:url({first}) center/cover"></div>'
+                + SCRIM +
                 '<div style="position:absolute;left:640px;top:180px;bottom:180px;width:2px;background:rgba(200,169,106,.8)"></div>'
                 '<div style="position:absolute;left:110px;top:50%;transform:translateY(-50%);width:470px">'
                 f'<div style="font-family:var(--serif);font-size:120px;font-weight:600;line-height:1;color:#fff">Bloc {int(k)}</div>'
                 f'<div style="font-family:var(--serif);font-size:56px;font-weight:500;line-height:1.15;color:#c8a96a;margin-top:22px">{b["periode"].replace(" 2026", "")}</div>'
                 '<div style="font-size:24px;letter-spacing:.24em;color:#d9e2ee;margin-top:14px">2026</div></div>'
-                '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:1100px">'
+                '<div style="position:absolute;left:720px;top:50%;transform:translateY(-50%);width:760px;text-shadow:0 2px 20px rgba(0,0,0,.35)">'
                 f'<div style="font-family:var(--serif);font-size:150px;font-weight:600;line-height:.98;color:#fff">{b["nom"]}</div>'
-                f'<div style="font-family:var(--serif);font-size:84px;font-weight:500;font-style:italic;line-height:1.08;color:#fff;margin-top:20px">{nb(b["sous"])}</div></div>')
+                f'<div style="font-family:var(--serif);font-size:72px;font-weight:500;font-style:italic;line-height:1.08;color:#fff;margin-top:20px">{nb(b["sous"])}</div></div>')
         out.append(page(left, nxt(), f'Bloc {k} · ouverture', b['nom'], 'Aucune. Montée musicale.',
                         "La bannière du bloc en fond, visible. À gauche, « Bloc » et la période ; à droite, le titre complet du bloc. Le filet doré se trace entre les deux.",
                         'Bannière de la plateforme'))
@@ -160,11 +165,7 @@ def make(blocs, banner, nb, start, clean_banner, case_img=lambda n: None):
         #    le titre complet en un seul bloc, puis l'objectif en sous-titre.
         for c in b['cours']:
             img = clean_banner(c['id'])
-            veil = ('<div style="position:absolute;left:0;top:0;bottom:0;width:80%;backdrop-filter:blur(70px) saturate(.9);-webkit-backdrop-filter:blur(70px) saturate(.9);'
-                    '-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 86%,transparent 100%)"></div>'
-                    '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,51,.6) 0%,rgba(11,26,51,.35) 45%,rgba(11,26,51,0) 65%)"></div>'
-                    if c['id'] in ('c6', 'c7', 'c8') else
-                    '<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,51,.45) 0%,rgba(11,26,51,.15) 45%,rgba(11,26,51,0) 60%)"></div>')
+            veil = SCRIM
             left = (f'<img src="{img}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{veil}'
                     '<div style="position:absolute;left:120px;top:50%;transform:translateY(-50%);width:900px;text-shadow:0 2px 18px rgba(0,0,0,.45)">'
                     f'<div class="kick">Compétence {c["num"]}</div>'
@@ -176,28 +177,43 @@ def make(blocs, banner, nb, start, clean_banner, case_img=lambda n: None):
                             "La bannière entre en plein écran avec un lent zoom avant. Le titre monte en un seul bloc, le filet doré se trace, puis l'objectif s'écrit en italique.",
                             'Bannière : plateforme banking.xelanc.com'))
 
-        # 4. La validation, sur fond gris : toutes les épreuves du bloc sur une même ligne.
-        #    Chaque carte : le type d'épreuve, le nom du dossier, son contexte, la problématique, puis la note.
+        # 4. La validation, sur fond gris. Toutes les cartes ont exactement la même forme :
+        #    image de même hauteur, type d'épreuve, nom du dossier sur deux lignes, contexte, problématique, note en grand.
+        #    Les cas de synthèse sont signalés par une étiquette dorée, sans changer la carte.
         ep = EPREUVES[k]
         ne = len(ep)
-        gap = 30
-        cw = int((1680 - gap * (ne - 1)) / ne)
+        gap = 32
+        titre_col = ne <= 2          # peu d'épreuves : le titre occupe le premier tiers, les cartes les deux autres
+        zone = 1680 - (560 if titre_col else 0)
+        x0 = 120 + (560 if titre_col else 0)
+        cw = int((zone - gap * (ne - 1)) / ne)
         cards = ''
         for e in ep:
-            syn = e['synthese']
             im = case_img(e['img'])
-            cards += (f'<div class="vc{" vcs" if syn else ""}" style="width:{cw}px">'
-                      + (f'<div class="vim" style="background-image:url({im})"></div>' if im else '<div class="vim vph"><span>Visuel à générer</span></div>') +
+            tag = '<i class="vtag">Cas de synthèse</i>' if e['synthese'] else '<i class="vtag vtag-x">Examen</i>'
+            cards += (f'<div class="vc{" vc4" if ne >= 4 else ""}" style="width:{cw}px">'
+                      + (f'<div class="vim" style="background-image:url({im})">{tag}</div>' if im else f'<div class="vim vph">{tag}</div>') +
                       f'<div class="vbody"><span>{nb(e["type"])}</span><b>{nb(e["nom"])}</b>'
-                      + (f'<em>{nb(e["ctx"])}</em>' if e.get('ctx') else '') +
+                      f'<em>{nb(e.get("ctx") or "")}</em>'
                       f'<p>{nb(e["pb"])}</p>'
                       f'<div class="vn"><strong>{e["note"]}</strong><small>/100</small><i>{e["cert"]}&nbsp;% de certifiés</i></div></div></div>')
         nsyn = sum(1 for e in ep if e['synthese'])
         sous = f'{ne - nsyn} examen{"s" if ne - nsyn > 1 else ""} et {nsyn} cas de synthèse'
+        pl = 's' if ne > 1 else ''
+        if titre_col:
+            head = ('<div style="position:absolute;left:120px;top:50%;transform:translateY(-50%);width:470px">'
+                    f'<div class="sur">La validation · bloc {k}</div>'
+                    f'<div style="font-family:var(--serif);font-size:200px;font-weight:600;color:#0f2744;line-height:.9;margin-top:24px">{ne}</div>'
+                    f'<div style="font-family:var(--serif);font-size:66px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:10px">épreuve{pl}<br>de validation</div>'
+                    f'<div style="font-size:28px;color:#3f5168;margin-top:24px">{sous}</div></div>')
+            top, hgt = 130, 820
+        else:
+            head = (f'<div style="position:absolute;left:120px;top:70px"><div class="sur">La validation · bloc {k} · {sous}</div>'
+                    f'<div style="font-family:var(--serif);font-size:72px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:12px">{ne} épreuve{pl} de validation</div></div>')
+            top, hgt = 230, 800
         left = ('<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 28% 18%,#f7f7f6 0%,#ececeb 45%,#dedfe0 100%)"></div>'
-                f'<div style="position:absolute;left:120px;top:70px"><div class="sur">La validation · bloc {k} · {sous}</div>'
-                f'<div style="font-family:var(--serif);font-size:72px;font-weight:600;color:#0f2744;line-height:1.05;margin-top:12px">{ne} épreuve{"s" if ne > 1 else ""} de validation</div></div>'
-                f'<div style="position:absolute;left:120px;top:230px;height:790px;display:flex;gap:{gap}px">{cards}</div>')
+                + head +
+                f'<div style="position:absolute;left:{x0}px;top:{top}px;height:{hgt}px;display:flex;gap:{gap}px">{cards}</div>')
         out.append(page(left, nxt(), f'Bloc {k} · validation', 'Prouver, pas déclarer',
                         "« Chaque compétence passe une épreuve, sur un dossier réel. Et le bloc se ferme sur un cas de synthèse. »",
                         "Les cartes arrivent de gauche à droite, une par une. Dans chaque carte : le nom du dossier, la problématique, puis la note qui défile.",

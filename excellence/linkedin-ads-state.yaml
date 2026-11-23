@@ -155,3 +155,12 @@ acces_linkedin_2026-11-01:
     industrie_investment_banking: "urn:li:industry:45"
     seniorite_director: "urn:li:seniority:6"
     fonction_finance: "urn:li:function:10"
+
+# --- Point du 2026-11-23 (session cloud, avant passation sur le Mac) ---
+passation_2026-11-23: "excellence/PASSATION-AGENT-LINKEDIN-2026-11-23.md (à lire en premier)"
+masterclass_2026-12-01:
+  decisions: ["pas de post sur le compte perso de Rachid ni sur Financité (clients banques)", "post d'Adam abandonné", "page XELANC : post neutre + visuel neutre (Menace ou atout ?)", "fort en privé (email, Meta, InMail), neutre en public", "pas de banquiers dans la communication"]
+  test_inmail: {budget: "100 € total, 24-30/11, 17 €/j", statut: "à créer en pause dans Campaign Manager (brief excellence/linkedin-inmail-masterclass-brief-2026-11-23.md)", seuils: "≥150 envois, ≥40 % ouverture, ≥3 inscrits"}
+  supermetrics_ecriture: "approuvée par Rachid mais refusée par LinkedIn (scope rw_ads manquant) : rien créé"
+  insight_tag: "posé sur xelanc.org ; aucune conversion déclarée dans Campaign Manager"
+  metricool_a_nettoyer: "brouillons « gratuit » page XELANC et Adam du 23/11 au 02/12"

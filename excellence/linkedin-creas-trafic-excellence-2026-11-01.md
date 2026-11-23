@@ -46,8 +46,8 @@ Point d'attention : le site annonce « 50 000 professionnels formés » et « 6 
 - **Visuel** : portrait de Rachid. Le fichier en ligne (240 px) est trop petit : il faut une photo haute définition.
 - **Texte d'intro** : « 30 ans dans la haute finance. Plus de 50 000 professionnels formés, en banque comme en entreprise.
   Mes parcours métiers sont maintenant en ligne : par le rôle, avec l'IA, par la preuve.
-  Créez votre accès gratuit sur XELANC. — Rachid El Maataoui »
-- **Titre** : « Les parcours métiers de la finance, par Rachid El Maataoui »
+  Créez votre accès gratuit sur XELANC. — Rachid ELMAATAOUI »
+- **Titre** : « Les parcours métiers de la finance, par Rachid ELMAATAOUI »
 - **Bouton** : En savoir plus
 
 ### Ce que je déconseille

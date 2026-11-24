@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulateur d'offre CCE seniors</title>
+<style>
+:root{
+  --bg:#faf8f4; --card:#ffffff; --ink:#1b2a3d; --muted:#6a7686; --line:#e3ddd2;
+  --navy:#1d4777; --accent:#c9532f; --soft:#f3ece2; --good:#2f7d57; --input:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12181f; --card:#1a222c; --ink:#e8edf3; --muted:#98a4b3; --line:#2c3744;
+    --navy:#8db6e6; --accent:#ee8763; --soft:#222c38; --good:#6cc79a; --input:#111820;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12181f; --card:#1a222c; --ink:#e8edf3; --muted:#98a4b3; --line:#2c3744;
+  --navy:#8db6e6; --accent:#ee8763; --soft:#222c38; --good:#6cc79a; --input:#111820;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:20px 16px 60px}
+header h1{font:600 26px/1.2 Georgia,"Times New Roman",serif;color:var(--navy);margin:0 0 4px}
+header p{margin:0;color:var(--muted)}
+.eyebrow{font:600 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;margin-top:20px;align-items:start}
+@media (max-width:980px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
+.card h2{font:600 17px/1.25 Georgia,serif;color:var(--navy);margin:0 0 2px}
+.card .sub{color:var(--muted);font-size:13px;margin:0 0 10px}
+.globals{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+label.f{display:block;font-size:12px;color:var(--muted)}
+label.f span{display:block;margin-bottom:4px}
+input[type=number]{width:100%;padding:7px 8px;border:1px solid var(--line);border-radius:6px;background:var(--input);color:var(--ink);font:inherit;font-variant-numeric:tabular-nums;text-align:right}
+input[type=number]:focus{outline:2px solid var(--navy);outline-offset:0}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+button{font:inherit;font-size:13px;padding:7px 12px;border-radius:6px;border:1px solid var(--line);background:var(--soft);color:var(--ink);cursor:pointer}
+button:hover{border-color:var(--navy)}
+button.primary{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font:600 10.5px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right;padding:6px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+th:nth-child(1),th:nth-child(2){text-align:left}
+td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right;vertical-align:middle}
+td.lbl{text-align:left;min-width:220px}
+td.chk{text-align:left;width:26px}
+td.unit{color:var(--muted);font-size:12px;white-space:nowrap}
+td.amt{font-weight:600;white-space:nowrap}
+td input[type=number]{width:96px}
+tr.off td.lbl,tr.off td.amt,tr.off td.unit{opacity:.4;text-decoration:line-through}
+tr.grp td{background:var(--soft);font:600 11px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left}
+tr.tot td{font-weight:700;border-bottom:none;color:var(--navy)}
+.tag{display:inline-block;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px;border-radius:4px;background:var(--soft);color:var(--muted);margin-right:6px}
+.side{position:sticky;top:12px}
+@media (max-width:980px){.side{position:static}}
+.big{font:600 34px/1.1 Georgia,serif;color:var(--navy)}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.kv:last-child{border-bottom:none}
+.kv b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.kv.hl b{color:var(--accent)}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+.small td,.small th{font-size:13px}
+.up{color:var(--accent)} .down{color:var(--good)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Attijari Academy · Financité Institute · document de travail</div>
+  <h1>Simulateur d'offre, parcours CCE seniors</h1>
+  <p>Modifiez les prix et les quantités, ligne par ligne. Tous les montants sont en MAD hors taxe.</p>
+</header>
+
+<div class="grid">
+<main>
+  <div class="card">
+    <h2>Hypothèses générales</h2>
+    <p class="sub">Changer un tarif ici l'applique à toutes les lignes du même type. Chaque ligne reste modifiable ensuite.</p>
+    <div class="globals">
+      <label class="f"><span>Participants</span><input type="number" id="g-participants" min="1" step="1"></label>
+      <label class="f"><span>Cours, par personne</span><input type="number" id="g-pCours" min="0" step="50"></label>
+      <label class="f"><span>Cas, par personne</span><input type="number" id="g-pCas" min="0" step="50"></label>
+      <label class="f"><span>Jour de salle</span><input type="number" id="g-pJour" min="0" step="100"></label>
+      <label class="f"><span>Groupes en salle</span><input type="number" id="g-groupes" min="1" step="1"></label>
+      <label class="f"><span>Remise commerciale, %</span><input type="number" id="g-remise" min="0" max="100" step="0.5"></label>
+    </div>
+    <div class="btns">
+      <button data-preset="complet" class="primary">Offre complète</button>
+      <button data-preset="sansMonitoring">Sans le bloc monitoring</button>
+      <button data-preset="ateliers1j">Ateliers d'origination à 1 jour</button>
+      <button data-preset="grille2025">Tarifs du contrat 2025</button>
+    </div>
+    <p class="note">Avec plusieurs groupes en salle, chaque jour d'atelier est facturé une fois par groupe.</p>
+  </div>
+
+  <div id="sections"></div>
+</main>
+
+<aside class="side">
+  <div class="card">
+    <div class="eyebrow">Total de la première cohorte</div>
+    <div class="big" id="o-net">–</div>
+    <div class="note" id="o-brut"></div>
+    <div style="margin-top:12px">
+      <div class="kv hl"><span>Par participant</span><b id="o-pp">–</b></div>
+      <div class="kv"><span>Cohortes suivantes, sans phase préparatoire</span><b id="o-next">–</b></div>
+      <div class="kv"><span>Par participant, cohortes suivantes</span><b id="o-nextpp">–</b></div>
+      <div class="kv"><span>Jours de salle par participant</span><b id="o-jours">–</b></div>
+      <div class="kv"><span>Jours d'animation facturés</span><b id="o-joursf">–</b></div>
+      <div class="kv"><span>Cours · cas</span><b id="o-nb">–</b></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Face au contrat 2025</h2>
+    <p class="sub">449 000 MAD pour 30, soit 14 966 par participant. 8 modules, 16 jours.</p>
+    <div class="kv"><span>Écart sur le total</span><b id="c-tot">–</b></div>
+    <div class="kv"><span>Écart par participant</span><b id="c-pp">–</b></div>
+    <div class="kv"><span>Même volume, aux tarifs 2025</span><b id="c-grille">–</b></div>
+    <div class="kv"><span>Part due à la hausse des tarifs</span><b id="c-effet">–</b></div>
+    <p class="note">Tarifs 2025 : 550 par personne et par module, 9 800 par jour. Les cas y sont comptés comme des modules.</p>
+  </div>
+
+  <div class="card">
+    <h2>Au format du contrat</h2>
+    <div class="tw"><table class="small" id="t-phase"></table></div>
+  </div>
+
+  <div class="card">
+    <h2>Par bloc</h2>
+    <div class="tw"><table class="small" id="t-bloc"></table></div>
+  </div>
+
+  <div class="card">
+    <div class="btns" style="margin-top:0">
+      <button id="b-reset">Revenir aux valeurs de départ</button>
+      <button id="b-print">Imprimer</button>
+    </div>
+    <p class="note">Vos saisies sont gardées dans ce navigateur.</p>
+  </div>
+</aside>
+</div>
+</div>
+
+<script>
+(function(){
+var KEY='simu-offre-cce-seniors-v1';
+var REF={total:449000,pp:14966,pCours:550,pJour:9800};
+
+function base(){
+  return {
+    g:{participants:30,pCours:700,pCas:900,pJour:11000,groupes:1,remise:0},
+    sections:[
+      {id:'prep',titre:'Phase préparatoire',sub:'Cadrage, assessment, conception du parcours, contenus, supports, onboarding.',lines:[
+        {t:'forfait',l:'Conception du parcours et cadrage',q:1,pu:120200,on:true}
+      ]},
+      {id:'b1',titre:'Bloc 1 · Mise à niveau',sub:'Six semaines. Les cours se voient en ligne avant chaque atelier.',lines:[
+        {t:'cours',l:'Le modèle économique de la PME',pu:700,on:true},
+        {t:'cours',l:'La lecture fiscale de l’entreprise',pu:700,on:true},
+        {t:'cours',l:'La lecture juridique de l’entreprise',pu:700,on:true},
+        {t:'cours',l:'Cibler les opérations à fort enjeu',pu:700,on:true},
+        {t:'cours',l:'Du besoin au montage',pu:700,on:true},
+        {t:'cours',l:'L’entreprise et son dirigeant, les métiers du groupe',pu:700,on:true},
+        {t:'salle',l:'Journée d’accueil',q:1,pu:11000,on:true},
+        {t:'salle',l:'Atelier, la lecture croisée de la PME',q:2,pu:11000,on:true},
+        {t:'salle',l:'Atelier, moyens et grands tickets',q:2,pu:11000,on:true},
+        {t:'salle',l:'Atelier, PME, patron et synergies',q:1,pu:11000,on:true}
+      ]},
+      {id:'b2',titre:'Bloc 2 · Origination',sub:'Trois mois. Deux cours de posture, puis six applications : un cas en ligne et son atelier.',lines:[
+        {t:'cours',l:'L’origination : se différencier par la posture de banquier conseil',pu:700,on:true},
+        {t:'cours',l:'Les bonnes pratiques d’origination',pu:700,on:true},
+        {t:'cas',l:'Cas 1, financer un saut de capacité',pu:900,on:true},
+        {t:'cas',l:'Cas 2, financer une croissance externe',pu:900,on:true},
+        {t:'cas',l:'Cas 3, accompagner une transmission',pu:900,on:true},
+        {t:'cas',l:'Cas 4, financer un déploiement à l’international',pu:900,on:true},
+        {t:'cas',l:'Cas 5, accompagner un grand contrat',pu:900,on:true},
+        {t:'cas',l:'Cas 6, réorganiser la dette d’une PME',pu:900,on:true},
+        {t:'salle',k:'orig',l:'Atelier du cas 1',q:2,pu:11000,on:true},
+        {t:'salle',k:'orig',l:'Atelier du cas 2',q:2,pu:11000,on:true},
+        {t:'salle',k:'orig',l:'Atelier du cas 3',q:2,pu:11000,on:true},
+        {t:'salle',k:'orig',l:'Atelier du cas 4',q:2,pu:11000,on:true},
+        {t:'salle',k:'orig',l:'Atelier du cas 5',q:2,pu:11000,on:true},
+        {t:'salle',k:'orig',l:'Atelier du cas 6',q:2,pu:11000,on:true},
+        {t:'salle',l:'Bootcamp de consolidation',q:2,pu:11000,on:true}
+      ]},
+      {id:'b3',titre:'Bloc 3 · Monitoring',sub:'Trois cours, chacun suivi de son atelier.',lines:[
+        {t:'cours',l:'Suivre et défendre son portefeuille',pu:700,on:true},
+        {t:'cours',l:'Veille et anticipation des difficultés',pu:700,on:true},
+        {t:'cours',l:'Restructurer un crédit en difficulté',pu:700,on:true},
+        {t:'salle',l:'Atelier, suivre et défendre son portefeuille',q:2,pu:11000,on:true},
+        {t:'salle',l:'Atelier, veille et anticipation',q:2,pu:11000,on:true},
+        {t:'salle',l:'Atelier, restructuration',q:2,pu:11000,on:true}
+      ]},
+      {id:'eval',titre:'Évaluation et suivi',sub:'Soutenance sur résultats, certification, suivi du pipeline après le programme.',lines:[
+        {t:'forfait',l:'Évaluation finale, certification et suivi 3 mois',q:1,pu:40000,on:true}
+      ]}
+    ]
+  };
+}
+
+var S=load()||base();
+
+function load(){try{var r=localStorage.getItem(KEY);return r?JSON.parse(r):null}catch(e){return null}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function num(v){var n=parseFloat(String(v).replace(',','.'));return isFinite(n)&&n>=0?n:0}
+function fmt(n){return Math.round(n).toLocaleString('fr-FR').replace(/ | /g,' ')}
+function pct(n){return (n>0?'+':'')+(Math.round(n*10)/10).toLocaleString('fr-FR')+' %'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+function amount(x,g){
+  if(!x.on) return 0;
+  if(x.t==='cours'||x.t==='cas') return g.participants*x.pu;
+  if(x.t==='salle') return x.q*x.pu*g.groupes;
+  return x.q*x.pu;
+}
+var UNIT={cours:'par personne',cas:'par personne',salle:'par jour',forfait:'forfait'};
+var TAG={cours:'Cours',cas:'Cas',salle:'Salle',forfait:'Forfait'};
+
+function render(){
+  ['participants','pCours','pCas','pJour','groupes','remise'].forEach(function(k){
+    document.getElementById('g-'+k).value=S.g[k];
+  });
+  var h='';
+  S.sections.forEach(function(sec,si){
+    h+='<div class="card"><h2>'+esc(sec.titre)+'</h2><p class="sub">'+esc(sec.sub)+'</p><div class="tw"><table>';
+    h+='<tr><th></th><th>Composante</th><th>Quantité</th><th>Prix unitaire</th><th></th><th>Montant</th></tr>';
+    sec.lines.forEach(function(x,li){
+      var id=si+'-'+li, qcell;
+      if(x.t==='cours'||x.t==='cas'){
+        qcell='<span data-qp="1">'+S.g.participants+'</span>';
+      }else{
+        qcell='<input type="number" min="0" step="'+(x.t==='salle'?'0.5':'1')+'" data-f="q" data-id="'+id+'" value="'+x.q+'" aria-label="Quantité">';
+      }
+      h+='<tr id="r-'+id+'" class="'+(x.on?'':'off')+'">'
+        +'<td class="chk"><input type="checkbox" data-f="on" data-id="'+id+'" '+(x.on?'checked':'')+' aria-label="Inclure"></td>'
+        +'<td class="lbl"><span class="tag">'+TAG[x.t]+'</span>'+esc(x.l)+'</td>'
+        +'<td>'+qcell+'</td>'
+        +'<td><input type="number" min="0" step="50" data-f="pu" data-id="'+id+'" value="'+x.pu+'" aria-label="Prix unitaire"></td>'
+        +'<td class="unit">'+UNIT[x.t]+'</td>'
+        +'<td class="amt" id="a-'+id+'"></td></tr>';
+    });
+    h+='<tr class="tot"><td></td><td class="lbl">Sous-total</td><td></td><td></td><td></td><td class="amt" id="s-'+si+'"></td></tr>';
+    h+='</table></div></div>';
+  });
+  document.getElementById('sections').innerHTML=h;
+  recalc();
+}
+
+function recalc(){
+  var g=S.g, brut=0, prep=0, jours=0, nbC=0, nbK=0;
+  var ph={prep:0,cours:0,cas:0,salle:0,eval:0}, qph={cours:0,cas:0,salle:0};
+  var blocs=[];
+  var ref=0;
+  S.sections.forEach(function(sec,si){
+    var st=0, b={titre:sec.titre,el:0,sa:0,fo:0};
+    sec.lines.forEach(function(x,li){
+      var a=amount(x,g); st+=a;
+      document.getElementById('a-'+si+'-'+li).textContent=fmt(a);
+      if(!x.on) return;
+      if(x.t==='cours'){ph.cours+=a;qph.cours++;nbC++;b.el+=a;ref+=g.participants*REF.pCours}
+      else if(x.t==='cas'){ph.cas+=a;qph.cas++;nbK++;b.el+=a;ref+=g.participants*REF.pCours}
+      else if(x.t==='salle'){ph.salle+=a;qph.salle+=x.q*g.groupes;jours+=x.q;b.sa+=a;ref+=x.q*g.groupes*REF.pJour}
+      else{ if(sec.id==='prep'){ph.prep+=a;prep+=a}else{ph.eval+=a} b.fo+=a; ref+=a }
+    });
+    document.getElementById('s-'+si).textContent=fmt(st);
+    b.total=st; blocs.push(b); brut+=st;
+  });
+  document.querySelectorAll('[data-qp]').forEach(function(e){e.textContent=g.participants});
+  var k=1-g.remise/100, net=brut*k, next=(brut-prep)*k, P=Math.max(1,g.participants);
+  document.getElementById('o-net').textContent=fmt(net)+' MAD';
+  document.getElementById('o-brut').textContent=g.remise>0?('Avant remise de '+g.remise.toLocaleString('fr-FR')+' % : '+fmt(brut)+' MAD'):'Hors taxe, sans remise';
+  document.getElementById('o-pp').textContent=fmt(net/P)+' MAD';
+  document.getElementById('o-next').textContent=fmt(next)+' MAD';
+  document.getElementById('o-nextpp').textContent=fmt(next/P)+' MAD';
+  document.getElementById('o-jours').textContent=jours.toLocaleString('fr-FR')+' j';
+  document.getElementById('o-joursf').textContent=qph.salle.toLocaleString('fr-FR')+' j';
+  document.getElementById('o-nb').textContent=nbC+' · '+nbK;
+
+  function cls(el,v){el.className=v>0?'up':(v<0?'down':'')}
+  var eT=document.getElementById('c-tot'), eP=document.getElementById('c-pp');
+  var dT=(net/REF.total-1)*100, dP=(net/P/REF.pp-1)*100;
+  eT.textContent=pct(dT); cls(eT,dT); eP.textContent=pct(dP); cls(eP,dP);
+  document.getElementById('c-grille').textContent=fmt(ref)+' MAD';
+  var eE=document.getElementById('c-effet'), eff=brut-ref;
+  eE.textContent=(eff>0?'+':'')+fmt(eff)+' MAD'; cls(eE,eff);
+
+  var rows=[
+    ['Préparatoire','Forfait','',ph.prep],
+    ['E-learning, cours','Cours',qph.cours,ph.cours],
+    ['E-learning, cas','Cas',qph.cas,ph.cas],
+    ['Salle','Jour',qph.salle,ph.salle],
+    ['Évaluation et suivi','Forfait','',ph.eval]
+  ];
+  var t='<tr><th>Phase</th><th style="text-align:left">Unité</th><th>Qté</th><th>Montant</th></tr>';
+  rows.forEach(function(r){t+='<tr><td class="lbl" style="min-width:0">'+r[0]+'</td><td style="text-align:left" class="unit">'+r[1]+'</td><td>'+(r[2]===''?'':r[2].toLocaleString('fr-FR'))+'</td><td class="amt">'+fmt(r[3])+'</td></tr>'});
+  t+='<tr class="tot"><td class="lbl" style="min-width:0">Total</td><td></td><td></td><td class="amt">'+fmt(brut)+'</td></tr>';
+  if(g.remise>0) t+='<tr class="tot"><td class="lbl" style="min-width:0">Après remise</td><td></td><td></td><td class="amt">'+fmt(net)+'</td></tr>';
+  document.getElementById('t-phase').innerHTML=t;
+
+  var u='<tr><th>Bloc</th><th>En ligne</th><th>Salle</th><th>Total</th></tr>';
+  blocs.forEach(function(b){u+='<tr><td class="lbl" style="min-width:0">'+esc(b.titre.replace(/^Bloc \d · /,''))+'</td><td>'+fmt(b.el)+'</td><td>'+fmt(b.sa)+'</td><td class="amt">'+fmt(b.total)+'</td></tr>'});
+  document.getElementById('t-bloc').innerHTML=u;
+  save();
+}
+
+document.getElementById('sections').addEventListener('input',function(e){
+  var d=e.target.dataset; if(!d.id) return;
+  var p=d.id.split('-'), x=S.sections[+p[0]].lines[+p[1]];
+  if(d.f==='on'){x.on=e.target.checked;document.getElementById('r-'+d.id).className=x.on?'':'off'}
+  else x[d.f]=num(e.target.value);
+  recalc();
+});
+
+function each(fn){S.sections.forEach(function(s){s.lines.forEach(function(x){fn(x,s)})})}
+var MAP={pCours:'cours',pCas:'cas',pJour:'salle'};
+['participants','pCours','pCas','pJour','groupes','remise'].forEach(function(k){
+  document.getElementById('g-'+k).addEventListener('input',function(e){
+    var v=num(e.target.value);
+    if(k==='participants'||k==='groupes') v=Math.max(1,Math.round(v)||1);
+    if(k==='remise') v=Math.min(100,v);
+    S.g[k]=v;
+    if(MAP[k]){
+      each(function(x){if(x.t===MAP[k]) x.pu=v});
+      document.querySelectorAll('input[data-f="pu"]').forEach(function(i){
+        var p=i.dataset.id.split('-'); i.value=S.sections[+p[0]].lines[+p[1]].pu;
+      });
+    }
+    recalc();
+  });
+});
+
+document.querySelectorAll('[data-preset]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var p=b.dataset.preset; S=base();
+    if(p==='sansMonitoring') each(function(x,s){if(s.id==='b3') x.on=false});
+    if(p==='ateliers1j') each(function(x){if(x.k==='orig') x.q=1});
+    if(p==='grille2025'){S.g.pCours=550;S.g.pCas=550;S.g.pJour=9800;
+      each(function(x){if(x.t==='cours'||x.t==='cas') x.pu=550; if(x.t==='salle') x.pu=9800})}
+    render();
+  });
+});
+document.getElementById('b-reset').addEventListener('click',function(){S=base();render()});
+document.getElementById('b-print').addEventListener('click',function(){window.print()});
+
+render();
+})();
+</script>
+</body>
+</html>
